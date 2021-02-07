@@ -47,7 +47,7 @@ class RouteButton extends StatelessWidget {
             color: Color(0xFF323233),
           ),
           type: MaterialType.button,
-          color: Color(0xFFF7F8FA),
+          color: Color(0xfff7f8fa),
           child: InkWell(
             splashColor: Colors.transparent,
             highlightColor: Color(0xFFEEF0F4),
