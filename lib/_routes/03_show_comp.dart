@@ -1,3 +1,5 @@
+import 'package:flant_app/show_pages/17_tag_page.dart';
+
 import '../show_pages/main.dart';
 
 import './_modals.dart';
@@ -103,6 +105,6 @@ var showCompRoutes = [
     name: "Tag",
     title: "标签",
     path: "/tag",
-    component: (context) => BadgePage(),
+    component: (context) => TagPage(),
   ),
 ];

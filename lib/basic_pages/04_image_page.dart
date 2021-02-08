@@ -187,7 +187,6 @@ class ImagePageText extends StatelessWidget {
       child: Text(
         this.text,
         style: TextStyle(
-          inherit: true,
           height: 1.6,
         ),
       ),
