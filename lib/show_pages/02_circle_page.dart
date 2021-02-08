@@ -7,21 +7,12 @@ import '../_components/main.dart';
 
 double formatRate(double rate) => math.min(math.max(rate, 0), 100);
 
-class CirclePage extends CompPageLayout {
+class CirclePage extends StatefulWidget {
   @override
-  Widget renderPageContent(BuildContext context) {
-    return FlanCircleExample();
-  }
+  _CirclePageState createState() => _CirclePageState();
 }
 
-class FlanCircleExample extends StatefulWidget {
-  FlanCircleExample({Key key}) : super(key: key);
-
-  @override
-  _FlanCircleExampleState createState() => _FlanCircleExampleState();
-}
-
-class _FlanCircleExampleState extends State<FlanCircleExample> {
+class _CirclePageState extends State<CirclePage> {
   double rate = 70.0;
   double currentRate1 = 70;
   double currentRate2 = 70;
@@ -42,7 +33,7 @@ class _FlanCircleExampleState extends State<FlanCircleExample> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return CompPage(
       children: [
         DocBlock(
           title: "基础用法",
