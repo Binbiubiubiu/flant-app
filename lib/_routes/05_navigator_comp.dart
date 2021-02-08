@@ -1,4 +1,5 @@
 import '../basic_pages/main.dart';
+import '../navigator_pages/main.dart';
 
 import './_modals.dart';
 
