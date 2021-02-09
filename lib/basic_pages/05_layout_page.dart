@@ -17,26 +17,26 @@ class LayoutPage extends StatelessWidget {
               children: [
                 FlanCol(
                   span: 8,
-                  child: _LayoutBlock("span: 8", _blue1),
+                  children: [_LayoutBlock("span: 8", _blue1)],
                 ),
                 FlanCol(
                   span: 8,
-                  child: _LayoutBlock("span: 8", _blue2),
+                  children: [_LayoutBlock("span: 8", _blue2)],
                 ),
                 FlanCol(
                   span: 8,
-                  child: _LayoutBlock("span: 8", _blue1),
+                  children: [_LayoutBlock("span: 8", _blue1)],
                 ),
               ],
             ),
             const SizedBox(height: 10.0),
             FlanRow(
               children: [
-                FlanCol(span: 4, child: _LayoutBlock("span: 4", _blue1)),
+                FlanCol(span: 4, children: [_LayoutBlock("span: 4", _blue1)]),
                 FlanCol(
                   offset: 4,
                   span: 10,
-                  child: _LayoutBlock("offset: 4, span: 10", _blue2),
+                  children: [_LayoutBlock("offset: 4, span: 10", _blue2)],
                 ),
               ],
             ),
@@ -46,7 +46,7 @@ class LayoutPage extends StatelessWidget {
                 FlanCol(
                   offset: 12,
                   span: 12,
-                  child: _LayoutBlock("offset: 4, span: 10", _blue1),
+                  children: [_LayoutBlock("offset: 4, span: 10", _blue1)],
                 ),
               ],
             ),
@@ -58,9 +58,9 @@ class LayoutPage extends StatelessWidget {
             FlanRow(
               gutter: 20.0,
               children: [
-                FlanCol(span: 8, child: _LayoutBlock("span: 8", _blue1)),
-                FlanCol(span: 8, child: _LayoutBlock("span: 8", _blue2)),
-                FlanCol(span: 8, child: _LayoutBlock("span: 8", _blue1)),
+                FlanCol(span: 8, children: [_LayoutBlock("span: 8", _blue1)]),
+                FlanCol(span: 8, children: [_LayoutBlock("span: 8", _blue2)]),
+                FlanCol(span: 8, children: [_LayoutBlock("span: 8", _blue1)]),
               ],
             ),
           ],
@@ -69,47 +69,47 @@ class LayoutPage extends StatelessWidget {
           title: "Flex 布局",
           children: [
             FlanRow(
-              justify: MainAxisAlignment.start,
+              justify: WrapAlignment.start,
               children: [
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue2)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue2)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
               ],
             ),
             const SizedBox(height: 10.0),
             FlanRow(
-              justify: MainAxisAlignment.center,
+              justify: WrapAlignment.center,
               children: [
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue2)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue2)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
               ],
             ),
             const SizedBox(height: 10.0),
             FlanRow(
-              justify: MainAxisAlignment.end,
+              justify: WrapAlignment.end,
               children: [
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue2)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue2)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
               ],
             ),
             const SizedBox(height: 10.0),
             FlanRow(
-              justify: MainAxisAlignment.spaceBetween,
+              justify: WrapAlignment.spaceBetween,
               children: [
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue2)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue2)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
               ],
             ),
             const SizedBox(height: 10.0),
             FlanRow(
-              justify: MainAxisAlignment.spaceAround,
+              justify: WrapAlignment.spaceAround,
               children: [
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue2)),
-                FlanCol(span: 6, child: _LayoutBlock("span: 6", _blue1)),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue2)]),
+                FlanCol(span: 6, children: [_LayoutBlock("span: 6", _blue1)]),
               ],
             ),
           ],

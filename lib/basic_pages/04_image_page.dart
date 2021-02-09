@@ -2,7 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 import '../_components/main.dart';
 
-class ImagePage extends StatelessWidget {
+class ImagePage extends StatefulWidget {
+  @override
+  _ImagePageState createState() => _ImagePageState();
+}
+
+class _ImagePageState extends State<ImagePage> {
+  final String image = 'https://img01.yzcdn.cn/vant/cat.jpeg';
+  final fits = {
+    BoxFit.contain: "contain",
+    BoxFit.cover: "cover",
+    BoxFit.fill: "fill",
+    BoxFit.none: "none",
+    BoxFit.scaleDown: "scale-down",
+  };
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -11,18 +25,16 @@ class ImagePage extends StatelessWidget {
 
     return CompPage(
       children: [
-        DocBlock(
+        const DocBlock(
           title: "基础用法",
           children: [
-            Wrap(
-              spacing: 20.0,
-              runSpacing: 20.0,
+            FlanRow(
               children: [
-                const FlanImage(
+                FlanImage(
                   src: "https://img01.yzcdn.cn/vant/cat.jpeg",
                   width: 100.00,
                   height: 100.0,
-                ),
+                )
               ],
             ),
           ],
@@ -30,120 +42,79 @@ class ImagePage extends StatelessWidget {
         DocBlock(
           title: "填充模式",
           children: [
-            Wrap(
-              spacing: 20.0,
-              runSpacing: 20.0,
-              children: [
-                FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                  width: itemWidth,
-                  height: itemHeight,
-                  fit: BoxFit.contain,
-                  child: ImagePageText("contain"),
-                ),
-                FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                  width: itemWidth,
-                  height: itemHeight,
-                  fit: BoxFit.cover,
-                  child: ImagePageText("cover"),
-                ),
-                FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                  width: itemWidth,
-                  height: itemHeight,
-                  fit: BoxFit.fill,
-                  child: ImagePageText("fill"),
-                ),
-                FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                  width: itemWidth,
-                  height: itemHeight,
-                  fit: BoxFit.none,
-                  child: ImagePageText("none"),
-                ),
-                FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                  width: itemWidth,
-                  height: itemHeight,
-                  fit: BoxFit.scaleDown,
-                  child: ImagePageText("scale-down"),
-                ),
-              ],
+            FlanRow(
+              gutter: 20.0,
+              children: this.fits.keys.map((fit) {
+                final txt = this.fits[fit];
+                return FlanCol(
+                  key: ValueKey(txt),
+                  span: 8,
+                  children: [
+                    FlanImage(
+                      src: this.image,
+                      width: double.infinity,
+                      height: itemHeight,
+                      fit: fit,
+                    ),
+                    ImagePageText(txt),
+                  ],
+                );
+              }).toList(),
             ),
           ],
         ),
         DocBlock(
           title: "圆形图片",
           children: [
-            Wrap(
-              spacing: 20.0,
-              runSpacing: 20.0,
-              children: [
-                Wrap(
-                  spacing: 20.0,
-                  runSpacing: 20.0,
+            FlanRow(
+              gutter: 20.0,
+              children: this.fits.keys.map((fit) {
+                final txt = this.fits[fit];
+                return FlanCol(
+                  key: ValueKey(txt),
+                  span: 8,
                   children: [
                     FlanImage(
-                      src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                      width: itemWidth,
+                      src: this.image,
+                      width: double.infinity,
                       height: itemHeight,
-                      fit: BoxFit.contain,
+                      fit: fit,
                       round: true,
                     ),
-                    FlanImage(
-                      src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                      width: itemWidth,
-                      height: itemHeight,
-                      fit: BoxFit.cover,
-                    ),
-                    FlanImage(
-                      src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                      width: itemWidth,
-                      height: itemHeight,
-                      fit: BoxFit.fill,
-                      round: true,
-                    ),
-                    FlanImage(
-                      src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                      width: itemWidth,
-                      height: itemHeight,
-                      fit: BoxFit.none,
-                      round: true,
-                    ),
-                    FlanImage(
-                      src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                      width: itemWidth,
-                      height: itemHeight,
-                      fit: BoxFit.scaleDown,
-                      round: true,
-                    ),
+                    ImagePageText(txt),
                   ],
-                ),
-              ],
+                );
+              }).toList(),
             ),
           ],
         ),
         DocBlock(
           title: "加载中提示",
           children: [
-            Wrap(
-              spacing: 20.0,
-              runSpacing: 20.0,
+            FlanRow(
+              gutter: 20.0,
               children: [
-                FlanImage(
-                  // src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                  width: itemWidth,
-                  height: itemHeight,
+                FlanCol(
+                  span: 8,
+                  children: [
+                    FlanImage(
+                      width: double.infinity,
+                      height: itemHeight,
+                    ),
+                  ],
                 ),
-                FlanImage(
-                  // src: "https://img01.yzcdn.cn/vant/cat.jpeg",
-                  width: itemWidth,
-                  height: itemHeight,
-                  loadingSlot: FlanIcon(
-                    name: FlanIcons.shop,
-                  ),
-                ),
+                FlanCol(
+                  span: 8,
+                  children: [
+                    FlanImage(
+                      width: double.infinity,
+                      height: itemHeight,
+                      loadingSlot: FlanIcon(
+                        name: FlanIcons.shop,
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ],
@@ -151,20 +122,29 @@ class ImagePage extends StatelessWidget {
         DocBlock(
           title: "加载失败提示",
           children: [
-            Wrap(
-              spacing: 20.0,
-              runSpacing: 20.0,
+            FlanRow(
+              gutter: 20.0,
               children: [
-                const FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat",
-                  width: 100.00,
-                  height: 100.0,
+                FlanCol(
+                  span: 8,
+                  children: [
+                    FlanImage(
+                      src: "https://img01.yzcdn.cn/vant/cat",
+                      width: double.infinity,
+                      height: itemHeight,
+                    )
+                  ],
                 ),
-                const FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat",
-                  width: 100.00,
-                  height: 100.0,
-                  errorSlot: Text("加载失败"),
+                FlanCol(
+                  span: 8,
+                  children: [
+                    FlanImage(
+                      src: "https://img01.yzcdn.cn/vant/cat",
+                      width: double.infinity,
+                      height: itemHeight,
+                      errorSlot: Text("加载失败"),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -182,13 +162,12 @@ class ImagePageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      height: 48.0,
+      alignment: Alignment.center,
       padding: const EdgeInsets.only(top: 5.0),
       child: Text(
         this.text,
-        style: TextStyle(
-          height: 1.6,
-        ),
       ),
     );
   }
