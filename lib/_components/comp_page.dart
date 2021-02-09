@@ -13,7 +13,7 @@ class CompPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dynamic query =
+    Map<String, String> query =
         ModalRoute.of(context).settings.arguments ?? {"title": "目标页面"};
 
     return Scaffold(

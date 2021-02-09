@@ -17,20 +17,13 @@ class DocBlock extends StatelessWidget {
   final EdgeInsets padding;
   final List<Widget> children;
 
-  factory DocBlock.noPadding({
+  DocBlock.noPadding({
     Key key,
-    String title,
-    double size,
-    List<Widget> children,
-  }) {
-    return DocBlock(
-      key: key,
-      title: title,
-      size: size,
-      children: children,
-      padding: EdgeInsets.zero,
-    );
-  }
+    this.title,
+    this.size = 14.0,
+    this.children,
+  })  : this.padding = EdgeInsets.zero,
+        super(key: key);
 
   EdgeInsets get subTitlePadding {
     if (this.padding == EdgeInsets.zero) {

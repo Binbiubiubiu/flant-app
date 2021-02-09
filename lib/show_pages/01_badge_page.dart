@@ -111,25 +111,25 @@ class BadgePage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanBadge(
-                  contentSlot: const FlanIcon(
-                    name: FlanIcons.success,
+                FlanBadge(
+                  contentSlot: FlanIcon(
+                    iconData: FlanIcons.success,
                     size: 12.0,
                     height: 16.0,
                   ),
                   child: FlanBadgeChildBlock(),
                 ),
-                const FlanBadge(
-                  contentSlot: const FlanIcon(
-                    name: FlanIcons.cross,
+                FlanBadge(
+                  contentSlot: FlanIcon(
+                    iconData: FlanIcons.cross,
                     size: 12.0,
                     height: 16.0,
                   ),
                   child: FlanBadgeChildBlock(),
                 ),
-                const FlanBadge(
-                  contentSlot: const FlanIcon(
-                    name: FlanIcons.down,
+                FlanBadge(
+                  contentSlot: FlanIcon(
+                    iconData: FlanIcons.down,
                     size: 12.0,
                     height: 16.0,
                   ),

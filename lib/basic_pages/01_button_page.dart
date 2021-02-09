@@ -17,23 +17,23 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   text: "主要按钮",
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
+                const FlanButton(
                   text: "信息按钮",
                   type: FlanButtonType.primary,
                 ),
-                FlanButton(
+                const FlanButton(
                   text: "默认按钮",
                   type: FlanButtonType.normal,
                 ),
-                FlanButton(
+                const FlanButton(
                   text: "危险按钮",
                   type: FlanButtonType.danger,
                 ),
-                FlanButton(
+                const FlanButton(
                   text: "警告按钮",
                   type: FlanButtonType.warning,
                 ),
@@ -48,12 +48,12 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   text: "朴素按钮",
                   plain: true,
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
+                const FlanButton(
                   text: "朴素按钮",
                   plain: true,
                   type: FlanButtonType.primary,
@@ -69,13 +69,13 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   text: "朴素按钮",
                   plain: true,
                   hairline: true,
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
+                const FlanButton(
                   text: "朴素按钮",
                   plain: true,
                   hairline: true,
@@ -92,12 +92,12 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   text: "禁用按钮",
                   disabled: true,
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
+                const FlanButton(
                   text: "禁用按钮",
                   disabled: true,
                   type: FlanButtonType.primary,
@@ -113,15 +113,15 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   loading: true,
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
+                const FlanButton(
                   loading: true,
                   type: FlanButtonType.primary,
                 ),
-                FlanButton(
+                const FlanButton(
                   loading: true,
                   text: "加载中...",
                   type: FlanButtonType.primary,
@@ -137,17 +137,17 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   square: true,
                   text: "方形按钮",
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
+                const FlanButton(
                   round: true,
                   text: "圆形按钮",
                   type: FlanButtonType.primary,
                 ),
-                FlanButton(
+                const FlanButton(
                   round: true,
                   plain: true,
                   text: "圆形按钮",
@@ -164,17 +164,17 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
-                  icon: FlanIcons.plus,
+                const FlanButton(
+                  iconData: FlanIcons.plus,
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
-                  icon: FlanIcons.plus,
+                const FlanButton(
+                  iconData: FlanIcons.plus,
                   text: "按钮",
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
-                  icon: "https://img01.yzcdn.cn/vant/user-active.png",
+                const FlanButton(
+                  iconUrl: "https://img01.yzcdn.cn/vant/user-active.png",
                   plain: true,
                   text: "按钮",
                   type: FlanButtonType.primary,
@@ -190,22 +190,22 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   size: FlanButtonSize.large,
                   text: "大号按钮",
                   type: FlanButtonType.success,
                 ),
-                FlanButton(
+                const FlanButton(
                   size: FlanButtonSize.normal,
                   text: "普通按钮",
                   type: FlanButtonType.primary,
                 ),
-                FlanButton(
+                const FlanButton(
                   size: FlanButtonSize.small,
                   text: "小型按钮",
                   type: FlanButtonType.primary,
                 ),
-                FlanButton(
+                const FlanButton(
                   size: FlanButtonSize.mini,
                   text: "迷你按钮",
                   type: FlanButtonType.primary,
@@ -221,7 +221,7 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   text: "块级元素",
                   block: true,
                   type: FlanButtonType.success,
@@ -237,15 +237,15 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   text: "URL跳转",
                   type: FlanButtonType.success,
-                  to: "/cell",
+                  toName: "/cell",
                 ),
                 FlanButton(
                   text: "路由跳转",
                   type: FlanButtonType.success,
-                  to: MaterialPageRoute(
+                  toRoute: MaterialPageRoute(
                     builder: (BuildContext context) => CellPage(),
                     settings: RouteSettings(
                       name: "/cell",
@@ -264,17 +264,17 @@ class ButtonPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanButton(
+                const FlanButton(
                   color: Color(0xFF7232DD),
                   text: "单色按钮",
                 ),
-                FlanButton(
+                const FlanButton(
                   color: Color(0xFFFF0000),
                   text: "单色按钮",
                   plain: true,
                 ),
-                FlanButton(
-                  color: LinearGradient(
+                const FlanButton(
+                  gradient: LinearGradient(
                     colors: [Colors.cyan, Colors.blue, Colors.blueAccent],
                   ),
                   text: "渐变色按钮",

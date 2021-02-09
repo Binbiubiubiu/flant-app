@@ -10,7 +10,7 @@ class LayoutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CompPage(
       children: [
-        DocBlock(
+        const DocBlock(
           title: "基础用法",
           children: [
             FlanRow(
@@ -52,7 +52,7 @@ class LayoutPage extends StatelessWidget {
             ),
           ],
         ),
-        DocBlock(
+        const DocBlock(
           title: "在列元素之间增加间距",
           children: [
             FlanRow(
@@ -65,7 +65,7 @@ class LayoutPage extends StatelessWidget {
             ),
           ],
         ),
-        DocBlock(
+        const DocBlock(
           title: "Flex 布局",
           children: [
             FlanRow(
