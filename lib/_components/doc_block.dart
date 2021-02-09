@@ -9,7 +9,7 @@ class DocBlock extends StatelessWidget {
     this.title,
     this.size = 14.0,
     this.padding = defaultDocBlockPadding,
-    this.children = const [],
+    this.children,
   }) : super(key: key);
 
   final String title;
@@ -41,17 +41,23 @@ class DocBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> children = [];
+    if (this.title != null) {
+      children.add(SubTitle(
+        size: this.size,
+        text: this.title,
+        padding: this.subTitlePadding,
+      ));
+    }
+    if (this.children != null) {
+      children.addAll(this.children);
+    }
+
     return Padding(
       padding: this.padding,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SubTitle(
-            size: this.size,
-            text: this.title,
-            padding: this.subTitlePadding,
-          )
-        ]..addAll(this.children),
+        children: children,
       ),
     );
   }
@@ -60,7 +66,7 @@ class DocBlock extends StatelessWidget {
 class SubTitle extends StatelessWidget {
   const SubTitle({
     Key key,
-    this.text,
+    this.text = "",
     this.size = 14.0,
     this.padding = defaultSubTitlePadding,
   }) : super(key: key);

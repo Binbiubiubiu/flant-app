@@ -1,3 +1,5 @@
+import 'package:flant_app/basic_pages/05_layout_page.dart';
+
 import '../basic_pages/main.dart';
 
 import './_modals.dart';
@@ -31,7 +33,7 @@ var basicCompRoutes = [
     name: "Layout",
     title: "布局",
     path: "/layout",
-    component: (context) => CellPage(),
+    component: (context) => LayoutPage(),
   ),
   CompRoute(
     name: "Popup",
