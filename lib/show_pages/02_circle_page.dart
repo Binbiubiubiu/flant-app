@@ -97,7 +97,7 @@ class _CirclePageState extends State<CirclePage> {
                   currentRate: this.currentRate4,
                   rate: this.rate,
                   speed: 100.0,
-                  color: LinearGradient(
+                  gradient: LinearGradient(
                     colors: [
                       Color(0xff3fecff),
                       Color(0xff6149f6),
