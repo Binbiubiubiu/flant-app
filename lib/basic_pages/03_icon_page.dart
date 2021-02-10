@@ -14,12 +14,12 @@ class IconPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanIcon(
-                  iconData: FlanIcons.chat_o,
+                const FlanIcon.icon(
+                  FlanIcons.chat_o,
                   size: 32.0,
                 ),
-                FlanIcon(
-                  iconUrl: "https://b.yzcdn.cn/vant/icon-demo-1126.png",
+                const FlanIcon.url(
+                  "https://b.yzcdn.cn/vant/icon-demo-1126.png",
                   size: 32.0,
                 ),
               ],
@@ -33,18 +33,18 @@ class IconPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanIcon(
-                  iconData: FlanIcons.chat_o,
+                const FlanIcon.icon(
+                  FlanIcons.chat_o,
                   dot: true,
                   size: 32.0,
                 ),
-                FlanIcon(
-                  iconData: FlanIcons.chat_o,
+                const FlanIcon.icon(
+                  FlanIcons.chat_o,
                   badge: "9",
                   size: 32.0,
                 ),
-                FlanIcon(
-                  iconData: FlanIcons.chat_o,
+                const FlanIcon.icon(
+                  FlanIcons.chat_o,
                   badge: "99+",
                   size: 32.0,
                 ),
@@ -59,13 +59,13 @@ class IconPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanIcon(
-                  iconData: FlanIcons.cart_o,
+                const FlanIcon.icon(
+                  FlanIcons.cart_o,
                   color: Colors.blue,
                   size: 32.0,
                 ),
-                FlanIcon(
-                  iconData: FlanIcons.fire_o,
+                const FlanIcon.icon(
+                  FlanIcons.fire_o,
                   color: Colors.green,
                   size: 32.0,
                 ),
@@ -80,12 +80,12 @@ class IconPage extends StatelessWidget {
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                FlanIcon(
-                  iconData: FlanIcons.chat_o,
+                const FlanIcon.icon(
+                  FlanIcons.chat_o,
                   size: 40.0,
                 ),
-                FlanIcon(
-                  iconData: FlanIcons.chat_o,
+                const FlanIcon.icon(
+                  FlanIcons.chat_o,
                   size: 48.0,
                 ),
               ],

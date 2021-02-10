@@ -17,7 +17,7 @@ class DocBlock extends StatelessWidget {
   final EdgeInsets padding;
   final List<Widget> children;
 
-  DocBlock.noPadding({
+  const DocBlock.noPadding({
     Key key,
     this.title,
     this.size = 14.0,

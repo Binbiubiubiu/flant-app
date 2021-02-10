@@ -37,18 +37,18 @@ var basicCompRoutes = [
     name: "Popup",
     title: "弹出层",
     path: "/popup",
-    component: (context) => CellPage(),
+    component: (context) => PopupPage(),
   ),
   CompRoute(
     name: "Style",
     title: "内置样式",
     path: "/style",
-    component: (context) => CellPage(),
+    component: (context) => StylePage(),
   ),
   CompRoute(
     name: "Toast",
     title: "轻提示",
     path: "/toast",
-    component: (context) => CellPage(),
+    component: (context) => ToastPage(),
   ),
 ];

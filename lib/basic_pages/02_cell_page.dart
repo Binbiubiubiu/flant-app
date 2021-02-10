@@ -8,10 +8,10 @@ class CellPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CompPage(
       children: [
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "基础用法",
           children: [
-            const FlanCellGroup(
+            FlanCellGroup(
               children: [
                 FlanCell(
                   title: "单元格",
@@ -26,7 +26,7 @@ class CellPage extends StatelessWidget {
             )
           ],
         ),
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "单元格大小",
           children: [
             const FlanCellGroup(
@@ -46,17 +46,18 @@ class CellPage extends StatelessWidget {
             )
           ],
         ),
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "展示图标",
           children: [
-            const FlanCell(
+            FlanCell(
               title: "单元格",
               value: "内容",
+              size: FlanCellSize.large,
               iconData: FlanIcons.location_o,
             ),
           ],
         ),
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "只设置value",
           children: [
             const FlanCell(
@@ -64,7 +65,7 @@ class CellPage extends StatelessWidget {
             )
           ],
         ),
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "展示箭头",
           children: [
             const FlanCellGroup(
@@ -113,10 +114,10 @@ class CellPage extends StatelessWidget {
             )
           ],
         ),
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "分组标题",
           children: [
-            const FlanCellGroup(
+            FlanCellGroup(
               title: "分组1",
               children: [
                 FlanCell(
@@ -125,7 +126,7 @@ class CellPage extends StatelessWidget {
                 ),
               ],
             ),
-            const FlanCellGroup(
+            FlanCellGroup(
               title: "分组2",
               children: [
                 FlanCell(
@@ -136,7 +137,7 @@ class CellPage extends StatelessWidget {
             ),
           ],
         ),
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "使用插槽",
           children: [
             FlanCellGroup(
@@ -155,10 +156,10 @@ class CellPage extends StatelessWidget {
             ),
           ],
         ),
-        DocBlock.noPadding(
+        const DocBlock.noPadding(
           title: "垂直居中",
           children: [
-            const FlanCell(
+            FlanCell(
               center: true,
               title: "单元格",
               value: "内容",
