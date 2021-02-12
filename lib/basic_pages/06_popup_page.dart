@@ -9,7 +9,7 @@ class PopupPage extends StatefulWidget {
 
 class _PopupPageState extends State<PopupPage> {
   bool showBasic = false;
-  bool showTop = false;
+  bool showTop = true;
   bool showBottom = false;
   bool showLeft = false;
   bool showRight = false;
@@ -22,7 +22,7 @@ class _PopupPageState extends State<PopupPage> {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    var selectedRadio = "selectedRadio";
+
     return CompPage(
       children: [
         DocBlock(
@@ -93,23 +93,7 @@ class _PopupPageState extends State<PopupPage> {
                   this.showBottom = show;
                 });
               },
-              lazyRender: true,
-              child: SizedBox(
-                height: screenSize.height * .3,
-                child: StatefulBuilder(
-                  builder: (BuildContext context, setState) {
-                    return RaisedButton(
-                      onPressed: () {
-                        setState(() {
-                          print(this);
-                          selectedRadio = "132";
-                        });
-                      },
-                      child: Text(selectedRadio),
-                    );
-                  },
-                ),
-              ),
+              child: SizedBox(height: screenSize.height * .3),
             ),
             FlanCell(
               title: "左侧弹出",
@@ -152,6 +136,128 @@ class _PopupPageState extends State<PopupPage> {
               },
               child: SizedBox(
                   width: screenSize.width * .3, height: double.infinity),
+            ),
+          ],
+        ),
+        DocBlock(
+          title: "关闭图标",
+          children: [
+            FlanCell(
+              title: "关闭图标",
+              isLink: true,
+              onClick: () {
+                this.setState(() {
+                  this.showCloseIcon = true;
+                });
+                // showAboutDialog(context: null)
+              },
+            ),
+            FlanCell(
+              title: "自定义图标",
+              isLink: true,
+              onClick: () {
+                this.setState(() {
+                  this.showCustomCloseIcon = true;
+                });
+                // showAboutDialog(context: null)
+              },
+            ),
+            FlanCell(
+              title: "图标位置",
+              isLink: true,
+              onClick: () {
+                this.setState(() {
+                  this.showCustomIconPosition = true;
+                });
+                // showAboutDialog(context: null)
+              },
+            ),
+            FlanPopup(
+              show: this.showCloseIcon,
+              position: FlanPopupPosition.bottom,
+              closeable: true,
+              onChange: (bool show) {
+                this.setState(() {
+                  this.showCloseIcon = show;
+                });
+              },
+              child: SizedBox(height: screenSize.height * .3),
+            ),
+            FlanPopup(
+              show: this.showCustomCloseIcon,
+              position: FlanPopupPosition.bottom,
+              closeable: true,
+              closeIconData: FlanIcons.close,
+              onChange: (bool show) {
+                this.setState(() {
+                  this.showCustomCloseIcon = show;
+                });
+              },
+              child: SizedBox(height: screenSize.height * .3),
+            ),
+            FlanPopup(
+              show: this.showCustomIconPosition,
+              position: FlanPopupPosition.bottom,
+              closeable: true,
+              closeIconPosition: FlanPopupCloseIconPosition.topLeft,
+              onChange: (bool show) {
+                this.setState(() {
+                  this.showCustomIconPosition = show;
+                });
+              },
+              child: SizedBox(height: screenSize.height * .3),
+            ),
+          ],
+        ),
+        DocBlock(
+          title: "圆角边框",
+          children: [
+            FlanCell(
+              title: "圆角弹窗",
+              isLink: true,
+              onClick: () {
+                this.setState(() {
+                  this.showRoundCorner = true;
+                });
+                // showAboutDialog(context: null)
+              },
+            ),
+            FlanPopup(
+              show: this.showRoundCorner,
+              position: FlanPopupPosition.bottom,
+              round: true,
+              onChange: (bool show) {
+                this.setState(() {
+                  this.showRoundCorner = show;
+                });
+              },
+              child: SizedBox(height: screenSize.height * .3),
+            ),
+          ],
+        ),
+        DocBlock(
+          title: "指定挂载节点",
+          children: [
+            FlanCell(
+              title: "指定挂载节点",
+              isLink: true,
+              onClick: () {
+                this.setState(() {
+                  this.showGetContainer = true;
+                });
+                // showAboutDialog(context: null)
+              },
+            ),
+            FlanPopup(
+              show: this.showGetContainer,
+              onChange: (bool show) {
+                this.setState(() {
+                  this.showGetContainer = show;
+                });
+              },
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
+              ),
             ),
           ],
         ),
