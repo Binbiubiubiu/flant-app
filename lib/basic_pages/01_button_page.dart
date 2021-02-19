@@ -165,11 +165,11 @@ class ButtonPage extends StatelessWidget {
               runSpacing: 20.0,
               children: [
                 const FlanButton(
-                  iconData: FlanIcons.plus,
+                  iconName: FlanIcons.plus,
                   type: FlanButtonType.success,
                 ),
                 const FlanButton(
-                  iconData: FlanIcons.plus,
+                  iconName: FlanIcons.plus,
                   text: "按钮",
                   type: FlanButtonType.success,
                 ),

@@ -8,12 +8,16 @@ class DocBlock extends StatelessWidget {
     Key key,
     this.title,
     this.size = 14.0,
+    this.card = false,
     this.padding = defaultDocBlockPadding,
     this.children,
-  }) : super(key: key);
+  })  : assert(size != null),
+        assert(card != null),
+        super(key: key);
 
   final String title;
   final double size;
+  final bool card;
   final EdgeInsets padding;
   final List<Widget> children;
 
@@ -21,13 +25,14 @@ class DocBlock extends StatelessWidget {
     Key key,
     this.title,
     this.size = 14.0,
+    this.card = false,
     this.children,
   })  : this.padding = EdgeInsets.zero,
         super(key: key);
 
   EdgeInsets get subTitlePadding {
     if (this.padding == EdgeInsets.zero) {
-      return defaultSubTitlePadding.add(defaultDocBlockPadding);
+      return defaultSubTitlePadding + defaultDocBlockPadding;
     }
     return defaultSubTitlePadding;
   }
@@ -42,8 +47,19 @@ class DocBlock extends StatelessWidget {
         padding: this.subTitlePadding,
       ));
     }
+
     if (this.children != null) {
-      children.addAll(this.children);
+      if (this.card) {
+        final box = ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          child: Column(
+            children: this.children,
+          ),
+        );
+        children.add(box);
+      } else {
+        children.addAll(this.children);
+      }
     }
 
     return Padding(

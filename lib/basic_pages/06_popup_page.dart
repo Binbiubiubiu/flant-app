@@ -9,7 +9,7 @@ class PopupPage extends StatefulWidget {
 
 class _PopupPageState extends State<PopupPage> {
   bool showBasic = false;
-  bool showTop = true;
+  bool showTop = false;
   bool showBottom = false;
   bool showLeft = false;
   bool showRight = false;
@@ -187,7 +187,7 @@ class _PopupPageState extends State<PopupPage> {
               show: this.showCustomCloseIcon,
               position: FlanPopupPosition.bottom,
               closeable: true,
-              closeIconData: FlanIcons.close,
+              closeIconName: FlanIcons.close,
               onChange: (bool show) {
                 this.setState(() {
                   this.showCustomCloseIcon = show;

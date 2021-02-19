@@ -116,7 +116,7 @@ class BadgePage extends StatelessWidget {
                     height: 16.0,
                     alignment: Alignment.center,
                     child: FlanIcon(
-                      iconData: FlanIcons.success,
+                      iconName: FlanIcons.success,
                       size: 12.0,
                     ),
                   ),
@@ -127,7 +127,7 @@ class BadgePage extends StatelessWidget {
                     height: 16.0,
                     alignment: Alignment.center,
                     child: FlanIcon(
-                      iconData: FlanIcons.cross,
+                      iconName: FlanIcons.cross,
                       size: 12.0,
                     ),
                   ),
@@ -138,7 +138,7 @@ class BadgePage extends StatelessWidget {
                     height: 16.0,
                     alignment: Alignment.center,
                     child: FlanIcon(
-                      iconData: FlanIcons.down,
+                      iconName: FlanIcons.down,
                       size: 12.0,
                     ),
                   ),

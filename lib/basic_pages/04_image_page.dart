@@ -110,7 +110,7 @@ class _ImagePageState extends State<ImagePage> {
                       width: double.infinity,
                       height: itemHeight,
                       loadingSlot: FlanIcon(
-                        iconData: FlanIcons.shop,
+                        iconName: FlanIcons.shop,
                       ),
                     ),
                   ],
