@@ -1,5 +1,3 @@
-import 'package:flant_app/show_pages/17_tag_page.dart';
-
 import '../show_pages/main.dart';
 
 import './_modals.dart';
@@ -81,7 +79,7 @@ var showCompRoutes = [
     name: "Skeleton",
     title: "骨架屏",
     path: "/skeleton",
-    component: (context) => BadgePage(),
+    component: (context) => SkeletonPage(),
   ),
   CompRoute(
     name: "Steps",
