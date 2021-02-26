@@ -1,5 +1,5 @@
-import 'package:flant/styles/icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flant/styles/icons.dart';
 import 'package:flant/components/base/button.dart';
 
 import '../_components/main.dart';

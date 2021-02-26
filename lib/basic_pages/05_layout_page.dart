@@ -9,6 +9,7 @@ class LayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CompPage(
+      backgroundColor: Colors.white,
       children: [
         const DocBlock(
           title: "基础用法",

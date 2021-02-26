@@ -24,6 +24,7 @@ class _ImagePageState extends State<ImagePage> {
     final itemHeight = width * 0.27;
 
     return CompPage(
+      backgroundColor: Colors.white,
       children: [
         const DocBlock(
           title: "基础用法",

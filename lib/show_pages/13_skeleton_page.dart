@@ -9,17 +9,18 @@ class SkeletonPage extends StatelessWidget {
   Widget build(BuildContext context) {
     bool show = false;
     return CompPage(
+      backgroundColor: Colors.white,
       children: [
         DocBlock.noPadding(
           title: "基础用法",
           children: [
-            const FlanSkeleton(title: true, row: 3),
+            FlanSkeleton(title: true, row: 3),
           ],
         ),
         DocBlock.noPadding(
           title: "显示头像",
           children: [
-            const FlanSkeleton(title: true, avatar: true, row: 3),
+            FlanSkeleton(title: true, avatar: true, row: 3),
           ],
         ),
         DocBlock.noPadding(

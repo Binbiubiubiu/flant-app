@@ -24,6 +24,7 @@ class BadgePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
+      backgroundColor: Colors.white,
       children: [
         DocBlock(
           title: "基础用法",

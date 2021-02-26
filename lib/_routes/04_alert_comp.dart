@@ -26,7 +26,7 @@ var alertCompRoutes = [
     name: "Loading",
     title: "加载",
     path: "/loading",
-    component: (context) => CellPage(),
+    component: (context) => LoadingPage(),
   ),
   CompRoute(
     name: "Notify",

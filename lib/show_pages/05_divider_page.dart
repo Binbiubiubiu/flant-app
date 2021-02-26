@@ -7,6 +7,7 @@ class DividerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
+      backgroundColor: Colors.white,
       children: [
         DocBlock.noPadding(
           title: "基础用法",

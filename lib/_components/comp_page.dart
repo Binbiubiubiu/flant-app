@@ -5,11 +5,14 @@ class CompPage extends StatelessWidget {
     Key key,
     this.child,
     this.children,
+    this.backgroundColor = const Color(0xfff7f8fa),
   })  : assert(!(child != null && children != null)),
+        assert(backgroundColor != null),
         super(key: key);
 
   final Widget child;
   final List<Widget> children;
+  final Color backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class CompPage extends StatelessWidget {
         centerTitle: true,
         title: Text(query["title"]),
       ),
-      backgroundColor: Color(0xfff7f8fa),
+      backgroundColor: this.backgroundColor,
       body: SafeArea(
         child: this.buildPageContent(context),
       ),
