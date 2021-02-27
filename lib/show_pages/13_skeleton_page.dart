@@ -31,9 +31,17 @@ class SkeletonPage extends StatelessWidget {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Switch(
-                      value: show,
-                      onChanged: (s) => setState(() => show = s),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 8.0,
+                        left: 16.0,
+                        right: 16.0,
+                      ),
+                      child: FlanSwitch(
+                        value: show,
+                        onChange: (s) => setState(() => show = s),
+                        size: 24.0,
+                      ),
                     ),
                     FlanSkeleton(
                       title: true,
