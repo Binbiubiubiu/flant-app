@@ -22,22 +22,33 @@ class ToastPage extends StatelessWidget {
               title: "加载提示",
               isLink: true,
               onClick: () {
-                showToast(context, type: FlanToastType.loading);
+                showToast(
+                  context,
+                  type: FlanToastType.loading,
+                  message: "加载中...",
+                );
               },
             ),
             FlanCell(
               title: "成功提示",
               isLink: true,
               onClick: () {
-                showToast(context,
-                    type: FlanToastType.success, message: "成功文案");
+                showToast(
+                  context,
+                  type: FlanToastType.success,
+                  message: "成功文案",
+                );
               },
             ),
             FlanCell(
               title: "失败提示",
               isLink: true,
               onClick: () {
-                showToast(context, type: FlanToastType.fail, message: "失败文案");
+                showToast(
+                  context,
+                  type: FlanToastType.fail,
+                  message: "失败文案",
+                );
               },
             ),
           ],

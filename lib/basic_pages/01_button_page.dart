@@ -3,6 +3,7 @@ import 'package:flant/styles/icons.dart';
 import 'package:flant/components/base/button.dart';
 
 import '../_components/main.dart';
+import 'package:flant/components/alert/loading.dart' show FlanLoadingType;
 import './02_cell_page.dart';
 
 class ButtonPage extends StatelessWidget {
@@ -119,7 +120,8 @@ class ButtonPage extends StatelessWidget {
                 ),
                 const FlanButton(
                   loading: true,
-                  type: FlanButtonType.primary,
+                  loadingType: FlanLoadingType.spinner,
+                  type: FlanButtonType.success,
                 ),
                 const FlanButton(
                   loading: true,

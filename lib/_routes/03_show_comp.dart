@@ -37,7 +37,7 @@ var showCompRoutes = [
     name: "Empty",
     title: "空状态",
     path: "/empty",
-    component: (context) => BadgePage(),
+    component: (context) => EmptyPage(),
   ),
   CompRoute(
     name: "ImagePreview",
@@ -73,7 +73,7 @@ var showCompRoutes = [
     name: "Progress",
     title: "进度条",
     path: "/progress",
-    component: (context) => BadgePage(),
+    component: (context) => ProgressPage(),
   ),
   CompRoute(
     name: "Skeleton",
