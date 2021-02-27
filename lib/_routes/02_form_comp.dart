@@ -36,7 +36,7 @@ var formCompRoutes = [
   ),
   CompRoute(
     name: "Form",
-    title: "输入框",
+    title: "表单",
     path: "/form",
     component: (context) => CellPage(),
   ),
@@ -92,7 +92,7 @@ var formCompRoutes = [
     name: "Switch",
     title: "开关",
     path: "/switch",
-    component: (context) => CellPage(),
+    component: (context) => SwitchPage(),
   ),
   CompRoute(
     name: "Uploader",
