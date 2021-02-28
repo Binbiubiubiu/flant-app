@@ -61,7 +61,7 @@ var showCompRoutes = [
     name: "NoticeBar",
     title: "通知栏",
     path: "/noticebar",
-    component: (context) => BadgePage(),
+    component: (context) => NoticeBarPage(),
   ),
   CompRoute(
     name: "Popover",
