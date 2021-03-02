@@ -19,7 +19,7 @@ var showCompRoutes = [
     name: "Collapse",
     title: "折叠面板",
     path: "/collapse",
-    component: (context) => BadgePage(),
+    component: (context) => CollapsePage(),
   ),
   CompRoute(
     name: "CountDown",
