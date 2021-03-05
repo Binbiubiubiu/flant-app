@@ -2,22 +2,19 @@ import 'package:flutter/material.dart';
 
 class CompPage extends StatelessWidget {
   const CompPage({
-    Key key,
+    Key? key,
     this.child,
-    this.children,
+    this.children = const <Widget>[],
     this.backgroundColor = const Color(0xfff7f8fa),
-  })  : assert(!(child != null && children != null)),
-        assert(backgroundColor != null),
-        super(key: key);
+  }) : super(key: key);
 
-  final Widget child;
+  final Widget? child;
   final List<Widget> children;
   final Color backgroundColor;
 
   @override
   Widget build(BuildContext context) {
-    Map<String, String> query =
-        ModalRoute.of(context).settings.arguments ?? {"title": "目标页面"};
+    dynamic query = (ModalRoute.of(context)?.settings.arguments);
 
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +38,7 @@ class CompPage extends StatelessWidget {
       bottom: 20.0,
     );
 
-    if (this.children != null) {
+    if (this.children.length > 0) {
       return ListView(
         padding: pPagePadding,
         children: this.children,

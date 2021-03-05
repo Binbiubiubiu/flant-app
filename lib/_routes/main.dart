@@ -22,8 +22,8 @@ class CompRouter {
   static Map<String, WidgetBuilder> get pathMap {
     Map<String, WidgetBuilder> map = {};
     routes.forEach((group) {
-      group.routes.forEach((item) {
-        map[item.path] = item.component;
+      group.routes!.forEach((item) {
+        map[item.path!] = item.component!;
       });
     });
     return map;

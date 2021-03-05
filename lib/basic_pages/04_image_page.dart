@@ -46,7 +46,7 @@ class _ImagePageState extends State<ImagePage> {
             FlanRow(
               gutter: 20.0,
               children: this.fits.keys.map((fit) {
-                final txt = this.fits[fit];
+                final txt = this.fits[fit] as String;
                 return FlanCol(
                   key: ValueKey(txt),
                   span: 8,
@@ -70,7 +70,7 @@ class _ImagePageState extends State<ImagePage> {
             FlanRow(
               gutter: 20.0,
               children: this.fits.keys.map((fit) {
-                final txt = this.fits[fit];
+                final txt = this.fits[fit] as String;
                 return FlanCol(
                   key: ValueKey(txt),
                   span: 8,
@@ -157,7 +157,7 @@ class _ImagePageState extends State<ImagePage> {
 }
 
 class ImagePageText extends StatelessWidget {
-  const ImagePageText(this.text, {Key key}) : super(key: key);
+  const ImagePageText(this.text, {Key? key}) : super(key: key);
 
   final String text;
 

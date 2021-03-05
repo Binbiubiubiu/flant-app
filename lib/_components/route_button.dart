@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class RouteButton extends StatelessWidget {
   const RouteButton({
-    Key key,
+    Key? key,
     this.text,
-    @required this.onPressed,
+    required this.onPressed,
   }) : super(key: key);
 
-  final String text;
+  final String? text;
 
   final VoidCallback onPressed;
 
@@ -19,7 +19,7 @@ class RouteButton extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(this.text),
+          Text(this.text ?? ""),
           Spacer(),
           RotatedBox(
             quarterTurns: 2,

@@ -5,7 +5,7 @@ import 'package:flant/components/show/badge.dart';
 import '../_components/main.dart';
 
 class FlanBadgeChildBlock extends StatelessWidget {
-  const FlanBadgeChildBlock({Key key}) : super(key: key);
+  const FlanBadgeChildBlock({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

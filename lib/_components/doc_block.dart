@@ -5,28 +5,26 @@ const defaultSubTitlePadding = EdgeInsets.only(top: 24.0, bottom: 16.0);
 
 class DocBlock extends StatelessWidget {
   const DocBlock({
-    Key key,
+    Key? key,
     this.title,
     this.size = 14.0,
     this.card = false,
     this.padding = defaultDocBlockPadding,
-    this.children,
-  })  : assert(size != null),
-        assert(card != null),
-        super(key: key);
+    this.children = const <Widget>[],
+  }) : super(key: key);
 
-  final String title;
+  final String? title;
   final double size;
   final bool card;
   final EdgeInsets padding;
   final List<Widget> children;
 
   const DocBlock.noPadding({
-    Key key,
+    Key? key,
     this.title,
     this.size = 14.0,
     this.card = false,
-    this.children,
+    this.children = const <Widget>[],
   })  : this.padding = EdgeInsets.zero,
         super(key: key);
 
@@ -48,7 +46,7 @@ class DocBlock extends StatelessWidget {
       ));
     }
 
-    if (this.children != null) {
+    if (this.children.length > 0) {
       if (this.card) {
         final box = ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -74,13 +72,13 @@ class DocBlock extends StatelessWidget {
 
 class SubTitle extends StatelessWidget {
   const SubTitle({
-    Key key,
+    Key? key,
     this.text = "",
     this.size = 14.0,
     this.padding = defaultSubTitlePadding,
   }) : super(key: key);
 
-  final String text;
+  final String? text;
   final double size;
   final EdgeInsets padding;
 
@@ -89,7 +87,7 @@ class SubTitle extends StatelessWidget {
     return Padding(
       padding: this.padding,
       child: Text(
-        this.text,
+        this.text ?? "",
         style: TextStyle(
           color: const Color.fromRGBO(69, 90, 100, 0.6),
           fontSize: this.size,

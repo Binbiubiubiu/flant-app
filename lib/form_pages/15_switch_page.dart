@@ -25,7 +25,7 @@ class _SwitchPageState extends State<SwitchPage> {
           children: [
             FlanSwitch(
               value: this.checked,
-              onChange: (value) {
+              onChange: (bool value) {
                 this.setState(() => this.checked = value);
               },
             ),
@@ -37,7 +37,7 @@ class _SwitchPageState extends State<SwitchPage> {
             FlanSwitch(
               value: this.checked,
               disabled: true,
-              onChange: (value) {
+              onChange: (bool value) {
                 this.setState(() => this.checked = value);
               },
             ),
@@ -49,7 +49,7 @@ class _SwitchPageState extends State<SwitchPage> {
             FlanSwitch(
               value: this.checked,
               loading: true,
-              onChange: (value) {
+              onChange: (bool value) {
                 this.setState(() => this.checked = value);
               },
             ),
@@ -61,7 +61,7 @@ class _SwitchPageState extends State<SwitchPage> {
             FlanSwitch(
               value: this.checked2,
               size: 24.0,
-              onChange: (value) {
+              onChange: (bool value) {
                 this.setState(() => this.checked2 = value);
               },
             ),
@@ -74,7 +74,7 @@ class _SwitchPageState extends State<SwitchPage> {
               value: this.checked3,
               activeColor: const Color(0xffee0a24),
               inActiveColor: const Color(0xffdcdee0),
-              onChange: (value) {
+              onChange: (bool value) {
                 this.setState(() => this.checked3 = value);
               },
             ),
@@ -85,7 +85,7 @@ class _SwitchPageState extends State<SwitchPage> {
           children: [
             FlanSwitch(
               value: this.checked4,
-              onChange: (value) {
+              onChange: (bool value) {
                 this.setState(() => this.checked4 = value);
               },
             ),
@@ -100,7 +100,7 @@ class _SwitchPageState extends State<SwitchPage> {
               rightIconSlot: FlanSwitch(
                 value: this.checked5,
                 size: 24.0,
-                onChange: (value) {
+                onChange: (bool value) {
                   this.setState(() => this.checked5 = value);
                 },
               ),

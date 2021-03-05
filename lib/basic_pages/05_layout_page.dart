@@ -124,7 +124,7 @@ class _LayoutBlock extends StatelessWidget {
   const _LayoutBlock(
     this.text,
     this.color, {
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   final String text;

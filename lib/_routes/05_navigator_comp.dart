@@ -20,7 +20,7 @@ var navigatorCompRoutes = [
     name: "NavBar",
     title: "导航栏",
     path: "/navbar",
-    component: (context) => CellPage(),
+    component: (context) => TabbarPage(),
   ),
   CompRoute(
     name: "Pagination",
@@ -44,7 +44,7 @@ var navigatorCompRoutes = [
     name: "Tabbar",
     title: "标签栏",
     path: "/tabbar",
-    component: (context) => CellPage(),
+    component: (context) => TabbarPage(),
   ),
   CompRoute(
     name: "TreeSelect",

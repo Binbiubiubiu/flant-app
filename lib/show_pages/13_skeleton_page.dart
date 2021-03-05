@@ -39,7 +39,7 @@ class SkeletonPage extends StatelessWidget {
                       ),
                       child: FlanSwitch(
                         value: show,
-                        onChange: (s) => setState(() => show = s),
+                        onChange: (bool s) => setState(() => show = s),
                         size: 24.0,
                       ),
                     ),

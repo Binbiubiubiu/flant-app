@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -69,14 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       );
 
-      var children = group.routes;
+      var children = group.routes!;
       for (var i = 0; i < children.length; i++) {
         var route = children.elementAt(i);
         result.add(RouteButton(
           text: [route.name, route.title].join(" "),
           onPressed: () {
             Navigator.of(context).pushNamed(
-              route.path,
+              route.path!,
               arguments: {
                 "title": route.name,
               },
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class _FlantAppTitle extends StatelessWidget {
-  const _FlantAppTitle({Key key}) : super(key: key);
+  const _FlantAppTitle({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -119,7 +119,7 @@ class _FlantAppTitle extends StatelessWidget {
 }
 
 class _FlantAppSubTitle extends StatelessWidget {
-  const _FlantAppSubTitle({Key key}) : super(key: key);
+  const _FlantAppSubTitle({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

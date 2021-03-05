@@ -50,7 +50,7 @@ class StylePage extends StatelessWidget {
 }
 
 class FlanAnimationExample extends StatefulWidget {
-  const FlanAnimationExample({Key key}) : super(key: key);
+  const FlanAnimationExample({Key? key}) : super(key: key);
 
   @override
   _FlanAnimationExampleState createState() => _FlanAnimationExampleState();

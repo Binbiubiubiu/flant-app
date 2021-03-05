@@ -23,10 +23,8 @@ class _CollapsePageState extends State<CollapsePage> {
           children: [
             FlanCollapse(
               value: this.active1,
-              onChange: (value) => this.setState(() {
-                print(value);
-                this.active1 = value;
-              }),
+              onChange: (List<String> value) =>
+                  this.setState(() => this.active1 = value),
               children: [
                 FlanCollapseItem(
                   title: "标题1",
@@ -49,10 +47,8 @@ class _CollapsePageState extends State<CollapsePage> {
           children: [
             FlanCollapse(
               value: this.active2,
-              onChange: (value) => this.setState(() {
-                print(value);
-                this.active2 = value;
-              }),
+              onChange: (String value) =>
+                  this.setState(() => this.active2 = value),
               accordion: true,
               children: [
                 FlanCollapseItem(
@@ -76,7 +72,8 @@ class _CollapsePageState extends State<CollapsePage> {
           children: [
             FlanCollapse(
               value: this.active3,
-              onChange: (value) => this.setState(() => this.active3 = value),
+              onChange: (List<String> value) =>
+                  this.setState(() => this.active3 = value),
               children: [
                 FlanCollapseItem(
                   title: "标题1",
@@ -101,7 +98,8 @@ class _CollapsePageState extends State<CollapsePage> {
           children: [
             FlanCollapse(
               value: this.active4,
-              onChange: (value) => this.setState(() => this.active4 = value),
+              onChange: (List<String> value) =>
+                  this.setState(() => this.active4 = value),
               children: [
                 FlanCollapseItem(
                   titleSlot: Row(
