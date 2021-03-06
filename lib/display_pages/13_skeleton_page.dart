@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/styles/var.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
@@ -12,19 +13,19 @@ class SkeletonPage extends StatelessWidget {
       backgroundColor: Colors.white,
       children: [
         DocBlock.noPadding(
-          title: "基础用法",
+          title: tr("basicUsage"),
           children: [
             FlanSkeleton(title: true, row: 3),
           ],
         ),
         DocBlock.noPadding(
-          title: "显示头像",
+          title: tr("Skeleton.showAvatar"),
           children: [
             FlanSkeleton(title: true, avatar: true, row: 3),
           ],
         ),
         DocBlock.noPadding(
-          title: "显示子组件",
+          title: tr("Skeleton.showChildren"),
           children: [
             StatefulBuilder(
               builder: (context, setState) {
@@ -69,7 +70,7 @@ class SkeletonPage extends StatelessWidget {
                               child: Text.rich(
                                 TextSpan(children: [
                                   TextSpan(
-                                    text: "关于 Vant\n",
+                                    text: "${tr("Skeleton.title")}\n",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18.0,
@@ -78,8 +79,7 @@ class SkeletonPage extends StatelessWidget {
                                   ),
                                   WidgetSpan(child: Container(height: 10.0)),
                                   TextSpan(
-                                    text:
-                                        "Vant 是一套轻量、可靠的移动端 Vue 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用。",
+                                    text: tr("Skeleton.desc"),
                                     style: TextStyle(
                                       fontSize: 14.0,
                                       height: 1.5,

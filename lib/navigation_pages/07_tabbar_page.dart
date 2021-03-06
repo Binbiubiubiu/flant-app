@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/flant.dart';
 import 'package:flutter/material.dart';
 import '../_components/main.dart';
@@ -22,7 +23,7 @@ class _TabbarPageState extends State<TabbarPage> {
     return CompPage(
       children: [
         DocBlock.noPadding(
-          title: "基本用法",
+          title: tr('basicUsage'),
           children: [
             FlanTabbar(
               value: this.active,
@@ -32,26 +33,26 @@ class _TabbarPageState extends State<TabbarPage> {
               children: [
                 FlanTabbarItem(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "通过名称匹配",
+          title: tr("Tabbar.matchByName"),
           children: [
             FlanTabbar(
               value: this.activeName,
@@ -62,29 +63,29 @@ class _TabbarPageState extends State<TabbarPage> {
                 FlanTabbarItem(
                   name: "home",
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   name: "search",
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   name: "friends",
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   name: "setting",
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "徽标提示",
+          title: tr('Tabbar.badge'),
           children: [
             FlanTabbar(
               value: active2,
@@ -94,29 +95,29 @@ class _TabbarPageState extends State<TabbarPage> {
               children: [
                 FlanTabbarItem(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   dot: true,
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   badge: "5",
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   badge: "10",
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "自定义图标",
+          title: tr('Tabbar.customIcon'),
           children: [
             FlanTabbar(
               value: active3,
@@ -133,22 +134,22 @@ class _TabbarPageState extends State<TabbarPage> {
                         : Image.network(
                             "https://img01.yzcdn.cn/vant/user-inactive.png");
                   },
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "自定义颜色",
+          title: tr("Tabbar.customColor"),
           children: [
             FlanTabbar(
               value: active4,
@@ -160,49 +161,49 @@ class _TabbarPageState extends State<TabbarPage> {
               children: [
                 FlanTabbarItem(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "监听切换事件",
+          title: tr("Tabbar.switchEvent"),
           children: [
             FlanTabbar(
               value: active5,
               onChange: (int index) {
                 this.setState(() => active5 = index);
-                showToast(context, message: "标签$index被点击");
+                showToast(context, message: "${tr('tab')} ${index + 1}");
               },
               children: [
                 FlanTabbarItem(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
                 FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text("标签"),
+                  textBuilder: (context, active) => Text(tr("tab")),
                 ),
               ],
             ),

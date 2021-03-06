@@ -1,5 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flant/components/alert/loading.dart';
+import 'package:flant/flant.dart';
 
 import '../_components/main.dart';
 
@@ -10,7 +11,7 @@ class LoadingPage extends StatelessWidget {
       backgroundColor: Colors.white,
       children: [
         DocBlock(
-          title: "加载类型",
+          title: tr("Loading.type"),
           children: [
             const SizedBox(height: 15.0),
             Row(
@@ -24,7 +25,7 @@ class LoadingPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "自定义颜色",
+          title: tr("Loading.color"),
           children: [
             const SizedBox(height: 15.0),
             Row(
@@ -41,7 +42,7 @@ class LoadingPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "自定义大小",
+          title: tr("Loading.size"),
           children: [
             const SizedBox(height: 15.0),
             Row(
@@ -55,27 +56,27 @@ class LoadingPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "加载文案",
+          title: tr("Loading.text"),
           children: [
             const SizedBox(height: 15.0),
-            FlanLoading(size: 24.0, child: Text("加载中...")),
+            FlanLoading(size: 24.0, child: Text(FlanS.current!.loading)),
             const SizedBox(height: 15.0),
           ],
         ),
         DocBlock(
-          title: "垂直排列",
+          title: tr("Loading.vertical"),
           children: [
             const SizedBox(height: 15.0),
             FlanLoading(
               size: 24.0,
               vertical: true,
-              child: Text("加载中..."),
+              child: Text(FlanS.current!.loading),
             ),
             const SizedBox(height: 15.0),
           ],
         ),
         DocBlock(
-          title: "自定义文本颜色",
+          title: tr("Loading.textColor"),
           children: [
             const SizedBox(height: 15.0),
             Row(
@@ -84,14 +85,14 @@ class LoadingPage extends StatelessWidget {
                   size: 24.0,
                   vertical: true,
                   color: const Color(0xff0094ff),
-                  child: Text("加载中..."),
+                  child: Text(FlanS.current!.loading),
                 ),
                 SizedBox(width: 20.0),
                 FlanLoading(
                   size: 24.0,
                   vertical: true,
                   textColor: const Color(0xff0094ff),
-                  child: Text("加载中..."),
+                  child: Text(FlanS.current!.loading),
                 ),
               ],
             ),

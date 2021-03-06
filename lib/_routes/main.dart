@@ -1,31 +1,34 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import './01_basic_comp.dart';
 import './02_form_comp.dart';
 import './03_show_comp.dart';
-import './04_alert_comp.dart';
-import './05_navigator_comp.dart';
-import './06_work_comp.dart';
+import './04_action_comp.dart';
+import './05_navigation_comp.dart';
+import './06_business_comp.dart';
 import './_modals.dart';
 
 export './_modals.dart';
 
 class CompRouter {
-  static final List<CompRoute> routes = [
-    CompRoute.group("基础组件", routes: basicCompRoutes),
-    CompRoute.group("表单组件", routes: formCompRoutes),
-    CompRoute.group("展示组件", routes: showCompRoutes),
-    CompRoute.group("反馈组件", routes: alertCompRoutes),
-    CompRoute.group("导航组件", routes: navigatorCompRoutes),
-    CompRoute.group("业务组件", routes: workCompRoutes),
-  ];
+  static List<CompRoute> routes = [];
+  static Map<String, WidgetBuilder> pathMap = {};
 
-  static Map<String, WidgetBuilder> get pathMap {
-    Map<String, WidgetBuilder> map = {};
+  static void init() {
+    routes = [
+      CompRoute.group(tr("Nav.BasicComponents"), routes: basicCompRoutes),
+      CompRoute.group(tr("Nav.FormComponents"), routes: formCompRoutes),
+      CompRoute.group(tr("Nav.DisplayComponents"), routes: showCompRoutes),
+      CompRoute.group(tr("Nav.ActionComponents"), routes: actionCompRoutes),
+      CompRoute.group(tr("Nav.NavigationComponents"),
+          routes: navigationCompRoutes),
+      CompRoute.group(tr("Nav.BusinessComponents"), routes: businessCompRoutes),
+    ];
+
     routes.forEach((group) {
       group.routes!.forEach((item) {
-        map[item.path!] = item.component!;
+        pathMap[item.path!] = item.component!;
       });
     });
-    return map;
   }
 }

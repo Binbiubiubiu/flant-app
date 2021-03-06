@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 import '../_components/main.dart';
@@ -8,11 +9,11 @@ const _blue2 = Color(0xff66c6f2);
 class LayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const CompPage(
+    return CompPage(
       backgroundColor: Colors.white,
       children: [
-        const DocBlock(
-          title: "基础用法",
+        DocBlock(
+          title: tr('basicUsage'),
           children: [
             FlanRow(
               children: [
@@ -53,8 +54,8 @@ class LayoutPage extends StatelessWidget {
             ),
           ],
         ),
-        const DocBlock(
-          title: "在列元素之间增加间距",
+        DocBlock(
+          title: tr('Layout.title2'),
           children: [
             FlanRow(
               gutter: 20.0,
@@ -66,8 +67,8 @@ class LayoutPage extends StatelessWidget {
             ),
           ],
         ),
-        const DocBlock(
-          title: "Flex 布局",
+        DocBlock(
+          title: tr('Layout.justify'),
           children: [
             FlanRow(
               justify: WrapAlignment.start,

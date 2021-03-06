@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 
@@ -21,132 +22,132 @@ class _TagPageState extends State<TagPage> {
   Widget build(BuildContext context) {
     return CompPage(
       children: [
-        const DocBlock(
-          title: "基础用法",
+        DocBlock(
+          title: tr("basicUsage"),
           children: [
             FlanCell(
-              title: "primary 类型",
+              title: "primary ${tr('Tag.type')}",
               child: FlanTag(
                 type: FlanTagType.primary,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "success 类型",
+              title: "success ${tr('Tag.type')}",
               child: FlanTag(
                 type: FlanTagType.success,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "danger 类型",
+              title: "danger ${tr('Tag.type')}",
               child: FlanTag(
                 type: FlanTagType.danger,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "warning 类型",
+              title: "warning ${tr('Tag.type')}",
               child: FlanTag(
                 type: FlanTagType.warning,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
           ],
         ),
         DocBlock(
-          title: "样式风格",
+          title: tr("Tag.tagStyle"),
           children: [
-            const FlanCell(
-              title: "空心样式",
+            FlanCell(
+              title: tr("Tag.plain"),
               child: FlanTag(
                 plain: true,
                 type: FlanTagType.primary,
-                child: Text("标签"),
-              ),
-            ),
-            const FlanCell(
-              title: "圆角样式",
-              child: FlanTag(
-                round: true,
-                type: FlanTagType.primary,
-                child: Text("标签"),
-              ),
-            ),
-            const FlanCell(
-              title: "标记样式",
-              child: FlanTag(
-                mark: true,
-                type: FlanTagType.primary,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "可关闭标签",
+              title: tr("Tag.round"),
+              child: FlanTag(
+                round: true,
+                type: FlanTagType.primary,
+                child: Text(tr('tag')),
+              ),
+            ),
+            FlanCell(
+              title: tr("Tag.mark"),
+              child: FlanTag(
+                mark: true,
+                type: FlanTagType.primary,
+                child: Text(tr('tag')),
+              ),
+            ),
+            FlanCell(
+              title: tr("Tag.closeable"),
               child: FlanTag(
                 closeable: true,
                 show: this.show,
                 onClose: this.close,
                 size: FlanTagSize.medium,
                 type: FlanTagType.primary,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
           ],
         ),
-        const DocBlock(
-          title: "标签大小",
+        DocBlock(
+          title: tr("Tag.customSize"),
           children: [
             FlanCell(
-              title: "小号标签",
+              title: tr("Tag.smallSize"),
               child: FlanTag(
                 type: FlanTagType.primary,
                 size: FlanTagSize.normal,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "中号标签",
+              title: tr("Tag.mediumSize"),
               child: FlanTag(
                 type: FlanTagType.primary,
                 size: FlanTagSize.medium,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "大号标签",
+              title: tr("Tag.largeSize"),
               child: FlanTag(
                 type: FlanTagType.primary,
                 size: FlanTagSize.large,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
           ],
         ),
-        const DocBlock(
-          title: "自定义颜色",
+        DocBlock(
+          title: tr("Tag.customColor"),
           children: [
             FlanCell(
-              title: "背景颜色",
+              title: tr("Tag.customBgColor"),
               child: FlanTag(
                 color: Color(0xff7232dd),
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "文字颜色",
+              title: tr("Tag.customTextColor"),
               child: FlanTag(
                 color: Color(0xffffe1e1),
                 textColor: Color(0xffad0000),
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: "空心颜色",
+              title: tr("Tag.customPlainColor"),
               child: FlanTag(
                 color: Color(0xff7232dd),
                 plain: true,
-                child: Text("标签"),
+                child: Text(tr('tag')),
               ),
             ),
           ],

@@ -1,7 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flant/styles/icons.dart';
-import 'package:flant/components/base/icon.dart';
-import 'package:flant/components/show/badge.dart';
+import 'package:flant/flant.dart';
 import '../_components/main.dart';
 
 class FlanBadgeChildBlock extends StatelessWidget {
@@ -27,7 +26,7 @@ class BadgePage extends StatelessWidget {
       backgroundColor: Colors.white,
       children: [
         DocBlock(
-          title: "基础用法",
+          title: tr('basicUsage'),
           children: [
             Wrap(
               spacing: 20.0,
@@ -54,7 +53,7 @@ class BadgePage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "最大值",
+          title: tr('Badge.max'),
           children: [
             Wrap(
               spacing: 20.0,
@@ -80,7 +79,7 @@ class BadgePage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "自定义颜色",
+          title: tr('Badge.customColor'),
           children: [
             Wrap(
               spacing: 20.0,
@@ -106,7 +105,7 @@ class BadgePage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "自定义徽标内容",
+          title: tr('Badge.customContent'),
           children: [
             Wrap(
               spacing: 20.0,
@@ -150,7 +149,7 @@ class BadgePage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "独立展示",
+          title: tr('Badge.standalone'),
           children: [
             Wrap(
               spacing: 20.0,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 import '../_components/main.dart';
@@ -8,112 +9,115 @@ class ToastPage extends StatelessWidget {
     return CompPage(
       children: [
         DocBlock(
-          title: "基础用法",
+          title: tr("basicUsage"),
           card: true,
           children: [
             FlanCell(
-              title: "文字提示",
+              title: tr("Toast.title1"),
               isLink: true,
               onClick: () {
-                showToast(context, message: "文字提示");
+                showToast(
+                  context,
+                  message: tr("Toast.title1"),
+                );
               },
             ),
             FlanCell(
-              title: "加载提示",
+              title: tr("Toast.title2"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
                   type: FlanToastType.loading,
-                  message: "加载中...",
+                  message: FlanS.current!.loading,
                 );
               },
             ),
             FlanCell(
-              title: "成功提示",
+              title: tr("Toast.success"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
                   type: FlanToastType.success,
-                  message: "成功文案",
+                  message: tr("Toast.text2"),
                 );
               },
             ),
             FlanCell(
-              title: "失败提示",
+              title: tr("Toast.fail"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
                   type: FlanToastType.fail,
-                  message: "失败文案",
+                  message: tr("Toast.text3"),
                 );
               },
             ),
           ],
         ),
         DocBlock(
-          title: "自定义图标",
+          title: tr("Toast.customIcon"),
           card: true,
           children: [
             FlanCell(
-              title: "自定义图标",
+              title: tr("Toast.customIcon"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
                   iconName: FlanIcons.like_o,
-                  message: "自定义图标",
+                  message: tr("Toast.customIcon"),
                 );
               },
             ),
             FlanCell(
-              title: "自定义图片",
+              title: tr("Toast.customImage"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
                   iconUrl: "https://img01.yzcdn.cn/vant/logo.png",
-                  message: "自定义图片",
+                  message: tr("Toast.customImage"),
                 );
               },
             ),
             FlanCell(
-              title: "自定义加载图标",
+              title: tr("Toast.loadingType"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
                   iconUrl: "https://img01.yzcdn.cn/vant/logo.png",
-                  message: "自定义图片",
+                  message: FlanS.current!.loading,
                 );
               },
             ),
           ],
         ),
         DocBlock(
-          title: "自定义位置",
+          title: tr("Toast.customPosition"),
           card: true,
           children: [
             FlanCell(
-              title: "顶部展示",
+              title: tr("Toast.positionTop"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
-                  message: "顶部展示",
+                  message: tr("Toast.positionTop"),
                   position: FlanToastPosition.top,
                 );
               },
             ),
             FlanCell(
-              title: "底部展示",
+              title: tr("Toast.positionBottom"),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
-                  message: "底部展示",
+                  message: tr("Toast.positionBottom"),
                   position: FlanToastPosition.bottom,
                 );
               },
@@ -121,11 +125,11 @@ class ToastPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "动态更新提示",
+          title: tr("Toast.updateMessage"),
           card: true,
           children: [
             FlanCell(
-              title: "动态更新提示",
+              title: tr("Toast.updateMessage"),
               isLink: true,
               onClick: () {},
             ),

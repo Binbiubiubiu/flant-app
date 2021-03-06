@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 import '../_components/main.dart';
@@ -26,10 +27,10 @@ class _PopupPageState extends State<PopupPage> {
     return CompPage(
       children: [
         DocBlock(
-          title: "基础用法",
+          title: tr("basicUsage"),
           children: [
             FlanCell(
-              title: "展示弹出层",
+              title: tr("Popup.buttonBasic"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -45,18 +46,18 @@ class _PopupPageState extends State<PopupPage> {
                   this.showBasic = show;
                 });
               },
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
-                child: Text("内容", style: TextStyle(fontSize: 16.0)),
+                child: Text(tr("content"), style: TextStyle(fontSize: 16.0)),
               ),
             ),
           ],
         ),
         DocBlock(
-          title: "弹出位置",
+          title: tr("Popup.position"),
           children: [
             FlanCell(
-              title: "顶部弹出",
+              title: tr("Popup.buttonTop"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -76,7 +77,7 @@ class _PopupPageState extends State<PopupPage> {
               child: SizedBox(height: screenSize.height * .3),
             ),
             FlanCell(
-              title: "底部弹出",
+              title: tr("Popup.buttonBottom"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -96,7 +97,7 @@ class _PopupPageState extends State<PopupPage> {
               child: SizedBox(height: screenSize.height * .3),
             ),
             FlanCell(
-              title: "左侧弹出",
+              title: tr("Popup.buttonLeft"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -117,7 +118,7 @@ class _PopupPageState extends State<PopupPage> {
                   width: screenSize.width * .3, height: double.infinity),
             ),
             FlanCell(
-              title: "右侧弹出",
+              title: tr("Popup.buttonRight"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -140,10 +141,10 @@ class _PopupPageState extends State<PopupPage> {
           ],
         ),
         DocBlock(
-          title: "关闭图标",
+          title: tr("Popup.closeIcon"),
           children: [
             FlanCell(
-              title: "关闭图标",
+              title: tr("Popup.closeIcon"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -153,7 +154,7 @@ class _PopupPageState extends State<PopupPage> {
               },
             ),
             FlanCell(
-              title: "自定义图标",
+              title: tr("Popup.customCloseIcon"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -163,7 +164,7 @@ class _PopupPageState extends State<PopupPage> {
               },
             ),
             FlanCell(
-              title: "图标位置",
+              title: tr("Popup.customIconPosition"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -210,10 +211,10 @@ class _PopupPageState extends State<PopupPage> {
           ],
         ),
         DocBlock(
-          title: "圆角边框",
+          title: tr("Popup.roundCorner"),
           children: [
             FlanCell(
-              title: "圆角弹窗",
+              title: tr("Popup.roundCorner"),
               isLink: true,
               onClick: () {
                 this.setState(() {
@@ -236,10 +237,10 @@ class _PopupPageState extends State<PopupPage> {
           ],
         ),
         DocBlock(
-          title: "指定挂载节点",
+          title: tr("Popup.teleport"),
           children: [
             FlanCell(
-              title: "指定挂载节点",
+              title: tr("Popup.teleport"),
               isLink: true,
               onClick: () {
                 this.setState(() {

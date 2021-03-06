@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 
@@ -9,53 +10,53 @@ class EmptyPage extends StatelessWidget {
     return CompPage(
       backgroundColor: Colors.white,
       children: [
-        const DocBlock(
-          title: "基础用法",
+        DocBlock(
+          title: tr("basicUsage"),
           children: [
             FlanEmpty(
-              description: "描述文字",
+              description: tr("Empty.description"),
             ),
           ],
         ),
-        const DocBlock(
-          title: "图片类型",
+        DocBlock(
+          title: tr("Empty.imageType"),
           children: [
             FlanEmpty(
               imageType: FlanEmptyImageType.error,
-              description: "描述文字",
+              description: tr("Empty.description"),
             ),
             FlanEmpty(
               imageType: FlanEmptyImageType.network,
-              description: "描述文字",
+              description: tr("Empty.description"),
             ),
             FlanEmpty(
               imageType: FlanEmptyImageType.search,
-              description: "描述文字",
+              description: tr("Empty.description"),
             ),
           ],
         ),
-        const DocBlock(
-          title: "自定义图片",
+        DocBlock(
+          title: tr("Empty.customImage"),
           children: [
             FlanEmpty(
               imageSize: 90.0,
               imageUrl: "https://img01.yzcdn.cn/vant/custom-empty-image.png",
-              description: "描述文字",
+              description: tr("Empty.description"),
             ),
           ],
         ),
-        const DocBlock(
-          title: "底部内容",
+        DocBlock(
+          title: tr("Empty.bottomContent"),
           children: [
             FlanEmpty(
-              description: "描述文字",
+              description: tr("Empty.description"),
               child: SizedBox(
                 width: 160.0,
                 height: 40.0,
                 child: FlanButton(
                   round: true,
                   type: FlanButtonType.danger,
-                  child: Text("描述"),
+                  child: Text(tr("button")),
                 ),
               ),
             ),

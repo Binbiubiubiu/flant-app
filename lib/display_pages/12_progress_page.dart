@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 
@@ -9,8 +10,8 @@ class ProgressPage extends StatelessWidget {
     return CompPage(
       backgroundColor: Colors.white,
       children: [
-        const DocBlock(
-          title: "基础用法",
+        DocBlock(
+          title: tr("basicUsage"),
           children: [
             Padding(
               padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
@@ -18,8 +19,8 @@ class ProgressPage extends StatelessWidget {
             ),
           ],
         ),
-        const DocBlock(
-          title: "线条粗细",
+        DocBlock(
+          title: tr("Progress.strokeWidth"),
           children: [
             Padding(
               padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
@@ -30,8 +31,8 @@ class ProgressPage extends StatelessWidget {
             ),
           ],
         ),
-        const DocBlock(
-          title: "置灰",
+        DocBlock(
+          title: tr("Progress.title2"),
           children: [
             Padding(
               padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
@@ -42,15 +43,15 @@ class ProgressPage extends StatelessWidget {
             ),
           ],
         ),
-        const DocBlock(
-          title: "样式定制",
+        DocBlock(
+          title: tr("Progress.title3"),
           children: [
             Padding(
               padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
               child: FlanProgress(
                 color: const Color(0xfff2806a),
                 percentage: 25.0,
-                pivotText: "橙色",
+                pivotText: tr("orange"),
               ),
             ),
             Padding(
@@ -58,7 +59,7 @@ class ProgressPage extends StatelessWidget {
               child: FlanProgress(
                 color: const Color(0xffee0a24),
                 percentage: 50.0,
-                pivotText: "红色",
+                pivotText: tr("red"),
               ),
             ),
             Padding(
@@ -70,7 +71,7 @@ class ProgressPage extends StatelessWidget {
                 ]),
                 pivotColor: Color(0xff7232dd),
                 percentage: 75.0,
-                pivotText: "紫色",
+                pivotText: tr("purple"),
               ),
             ),
           ],

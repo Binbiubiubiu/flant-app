@@ -1,9 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flant/styles/icons.dart';
-import 'package:flant/components/base/button.dart';
+import 'package:flant/flant.dart';
 
 import '../_components/main.dart';
-import 'package:flant/components/alert/loading.dart' show FlanLoadingType;
 import './02_cell_page.dart';
 
 class ButtonPage extends StatelessWidget {
@@ -12,30 +11,30 @@ class ButtonPage extends StatelessWidget {
     return CompPage(
       children: [
         DocBlock(
-          title: "按钮类型",
+          title: tr("Button.type"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
-                  text: "主要按钮",
+                FlanButton(
+                  text: tr("Button.success"),
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
-                  text: "信息按钮",
+                FlanButton(
+                  text: tr("Button.primary"),
                   type: FlanButtonType.primary,
                 ),
-                const FlanButton(
-                  text: "默认按钮",
+                FlanButton(
+                  text: tr("Button.normal"),
                   type: FlanButtonType.normal,
                 ),
-                const FlanButton(
-                  text: "危险按钮",
+                FlanButton(
+                  text: tr("Button.danger"),
                   type: FlanButtonType.danger,
                 ),
-                const FlanButton(
-                  text: "警告按钮",
+                FlanButton(
+                  text: tr("Button.warning"),
                   type: FlanButtonType.warning,
                 ),
               ],
@@ -43,19 +42,19 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "朴素按钮",
+          title: tr("Button.plain"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
-                  text: "朴素按钮",
+                FlanButton(
+                  text: tr("Button.plain"),
                   plain: true,
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
-                  text: "朴素按钮",
+                FlanButton(
+                  text: tr("Button.plain"),
                   plain: true,
                   type: FlanButtonType.primary,
                 ),
@@ -64,20 +63,20 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "细边框",
+          title: tr("Button.hairline"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
-                  text: "朴素按钮",
+                FlanButton(
+                  text: tr("Button.hairlineButton"),
                   plain: true,
                   hairline: true,
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
-                  text: "朴素按钮",
+                FlanButton(
+                  text: tr("Button.hairlineButton"),
                   plain: true,
                   hairline: true,
                   type: FlanButtonType.primary,
@@ -87,19 +86,19 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "禁用状态",
+          title: tr("disabled"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
-                  text: "禁用按钮",
+                FlanButton(
+                  text: tr("disabled"),
                   disabled: true,
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
-                  text: "禁用按钮",
+                FlanButton(
+                  text: tr("disabled"),
                   disabled: true,
                   type: FlanButtonType.primary,
                 ),
@@ -108,7 +107,7 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "加载状态",
+          title: tr("Button.loading"),
           children: [
             Wrap(
               spacing: 20.0,
@@ -123,9 +122,9 @@ class ButtonPage extends StatelessWidget {
                   loadingType: FlanLoadingType.spinner,
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
+                FlanButton(
                   loading: true,
-                  text: "加载中...",
+                  text: tr("Button.loadingText"),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -133,26 +132,20 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "按钮形状",
+          title: tr("Button.shape"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
+                FlanButton(
                   square: true,
-                  text: "方形按钮",
+                  text: tr("Button.square"),
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
+                FlanButton(
                   round: true,
-                  text: "圆形按钮",
-                  type: FlanButtonType.primary,
-                ),
-                const FlanButton(
-                  round: true,
-                  plain: true,
-                  text: "圆形按钮",
+                  text: tr("Button.round"),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -160,7 +153,7 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "图标按钮",
+          title: tr("Button.icon"),
           children: [
             Wrap(
               spacing: 20.0,
@@ -170,15 +163,15 @@ class ButtonPage extends StatelessWidget {
                   iconName: FlanIcons.plus,
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
+                FlanButton(
                   iconName: FlanIcons.plus,
-                  text: "按钮",
+                  text: tr("button"),
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
+                FlanButton(
                   iconUrl: "https://img01.yzcdn.cn/vant/user-active.png",
                   plain: true,
-                  text: "按钮",
+                  text: tr("button"),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -186,30 +179,30 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "按钮尺寸",
+          title: tr("Button.size"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
+                FlanButton(
                   size: FlanButtonSize.large,
-                  text: "大号按钮",
+                  text: tr("Button.large"),
                   type: FlanButtonType.success,
                 ),
-                const FlanButton(
+                FlanButton(
                   size: FlanButtonSize.normal,
-                  text: "普通按钮",
+                  text: tr("Button.normal"),
                   type: FlanButtonType.primary,
                 ),
-                const FlanButton(
+                FlanButton(
                   size: FlanButtonSize.small,
-                  text: "小型按钮",
+                  text: tr("Button.small"),
                   type: FlanButtonType.primary,
                 ),
-                const FlanButton(
+                FlanButton(
                   size: FlanButtonSize.mini,
-                  text: "迷你按钮",
+                  text: tr("Button.mini"),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -217,14 +210,14 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "块级元素",
+          title: tr("Button.blockElement"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
-                  text: "块级元素",
+                FlanButton(
+                  text: tr("Button.blockElement"),
                   block: true,
                   type: FlanButtonType.success,
                 ),
@@ -233,19 +226,19 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "页面导航",
+          title: tr("Button.router"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
-                  text: "URL跳转",
+                FlanButton(
+                  text: tr("Button.urlRoute"),
                   type: FlanButtonType.success,
                   toName: "/cell",
                 ),
                 FlanButton(
-                  text: "路由跳转",
+                  text: tr("Button.vueRoute"),
                   type: FlanButtonType.success,
                   toRoute: MaterialPageRoute(
                     builder: (BuildContext context) => CellPage(),
@@ -260,26 +253,26 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "自定义颜色",
+          title: tr("Button.customColor"),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
-                const FlanButton(
+                FlanButton(
                   color: Color(0xFF7232DD),
-                  text: "单色按钮",
+                  text: tr("Button.pure"),
                 ),
-                const FlanButton(
+                FlanButton(
                   color: Color(0xFFFF0000),
-                  text: "单色按钮",
+                  text: tr("Button.pure"),
                   plain: true,
                 ),
-                const FlanButton(
+                FlanButton(
                   gradient: LinearGradient(
                     colors: [Colors.cyan, Colors.blue, Colors.blueAccent],
                   ),
-                  text: "渐变色按钮",
+                  text: tr("Button.gradient"),
                 ),
               ],
             ),

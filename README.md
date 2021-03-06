@@ -1,6 +1,6 @@
-# Flant App
+# flant App
 
-Flant ui 示例 demo
+flant ui 示例 demo
 
 ### 运行
 

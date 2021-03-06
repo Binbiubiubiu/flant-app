@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 import '../_components/main.dart';
@@ -20,14 +21,13 @@ class _ImagePageState extends State<ImagePage> {
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
-    final itemWidth = (width - 16.0 * 2 - 20.0 * 2) / 3;
     final itemHeight = width * 0.27;
 
     return CompPage(
       backgroundColor: Colors.white,
       children: [
-        const DocBlock(
-          title: "基础用法",
+        DocBlock(
+          title: tr("basicUsage"),
           children: [
             FlanRow(
               children: [
@@ -41,7 +41,7 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: "填充模式",
+          title: tr("Image.fitMode"),
           children: [
             FlanRow(
               gutter: 20.0,
@@ -65,7 +65,7 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: "圆形图片",
+          title: tr("Image.round"),
           children: [
             FlanRow(
               gutter: 20.0,
@@ -90,7 +90,7 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: "加载中提示",
+          title: tr("Image.loading"),
           children: [
             FlanRow(
               gutter: 20.0,
@@ -102,6 +102,7 @@ class _ImagePageState extends State<ImagePage> {
                       width: double.infinity,
                       height: itemHeight,
                     ),
+                    ImagePageText(tr('Image.defaultTip')),
                   ],
                 ),
                 FlanCol(
@@ -114,6 +115,7 @@ class _ImagePageState extends State<ImagePage> {
                         iconName: FlanIcons.shop,
                       ),
                     ),
+                    ImagePageText(tr('Image.customTip')),
                   ],
                 )
               ],
@@ -121,7 +123,7 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: "加载失败提示",
+          title: tr("Image.error"),
           children: [
             FlanRow(
               gutter: 20.0,
@@ -133,7 +135,8 @@ class _ImagePageState extends State<ImagePage> {
                       src: "https://img01.yzcdn.cn/vant/cat",
                       width: double.infinity,
                       height: itemHeight,
-                    )
+                    ),
+                    ImagePageText(tr('Image.defaultTip')),
                   ],
                 ),
                 FlanCol(
@@ -145,6 +148,7 @@ class _ImagePageState extends State<ImagePage> {
                       height: itemHeight,
                       errorSlot: Text("加载失败"),
                     ),
+                    ImagePageText(tr('Image.customTip')),
                   ],
                 ),
               ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 
@@ -19,7 +20,7 @@ class _CollapsePageState extends State<CollapsePage> {
     return CompPage(
       children: [
         DocBlock.noPadding(
-          title: "基础用法",
+          title: tr("basicUsage"),
           children: [
             FlanCollapse(
               value: this.active1,
@@ -27,23 +28,23 @@ class _CollapsePageState extends State<CollapsePage> {
                   this.setState(() => this.active1 = value),
               children: [
                 FlanCollapseItem(
-                  title: "标题1",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}1",
+                  child: Text(tr("Collapse.text")),
                 ),
                 FlanCollapseItem(
-                  title: "标题2",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}2",
+                  child: Text(tr("Collapse.text")),
                 ),
                 FlanCollapseItem(
-                  title: "标题3",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}3",
+                  child: Text(tr("Collapse.text")),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "手风琴",
+          title: tr("Collapse.accordion"),
           children: [
             FlanCollapse(
               value: this.active2,
@@ -52,23 +53,23 @@ class _CollapsePageState extends State<CollapsePage> {
               accordion: true,
               children: [
                 FlanCollapseItem(
-                  title: "标题1",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}1",
+                  child: Text(tr("Collapse.text")),
                 ),
                 FlanCollapseItem(
-                  title: "标题2",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}2",
+                  child: Text(tr("Collapse.text")),
                 ),
                 FlanCollapseItem(
-                  title: "标题3",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}3",
+                  child: Text(tr("Collapse.text")),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "禁用状态",
+          title: tr("disabled"),
           children: [
             FlanCollapse(
               value: this.active3,
@@ -76,17 +77,17 @@ class _CollapsePageState extends State<CollapsePage> {
                   this.setState(() => this.active3 = value),
               children: [
                 FlanCollapseItem(
-                  title: "标题1",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}1",
+                  child: Text(tr("Collapse.text")),
                 ),
                 FlanCollapseItem(
-                  title: "标题2",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}2",
+                  child: Text(tr("Collapse.text")),
                   disabled: true,
                 ),
                 FlanCollapseItem(
-                  title: "标题3",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}3",
+                  child: Text(tr("Collapse.text")),
                   disabled: true,
                 ),
               ],
@@ -94,7 +95,7 @@ class _CollapsePageState extends State<CollapsePage> {
           ],
         ),
         DocBlock.noPadding(
-          title: "自定义标题内容",
+          title: tr('titleSlot'),
           children: [
             FlanCollapse(
               value: this.active4,
@@ -105,7 +106,7 @@ class _CollapsePageState extends State<CollapsePage> {
                   titleSlot: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text("标题1"),
+                      Text("${tr('title')}1"),
                       SizedBox(width: 5.0),
                       FlanIcon.name(
                         FlanIcons.question_o,
@@ -114,12 +115,12 @@ class _CollapsePageState extends State<CollapsePage> {
                       ),
                     ],
                   ),
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  child: Text(tr("Collapse.text")),
                 ),
                 FlanCollapseItem(
-                  title: "标题2",
-                  value: "内容",
-                  child: Text("代码是写出来给人看的，附带能在机器上运行"),
+                  title: "${tr('title')}2",
+                  value: tr("content"),
+                  child: Text(tr("Collapse.text")),
                   iconName: FlanIcons.shop_o,
                 ),
               ],

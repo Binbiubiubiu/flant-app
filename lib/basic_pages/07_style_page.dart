@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/styles/var.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
@@ -8,24 +9,24 @@ class StylePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CompPage(
       children: [
-        const DocBlock(
-          title: "文字省略",
+        DocBlock(
+          title: tr("Style.ellipsis"),
           children: [
             Text(
-              "这是一段最多显示一行的文字，后面的内容会省略这是一段最多显示一行的文字，后面的内容会省略",
+              tr("Style.text1"),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             SizedBox(height: 16.0),
             Text(
-              "这是一段最多显示一行的文字，后面的内容会省略这是一段最多显示一行的文字，后面的内容会省略这是一段最多显示一行的文字，后面的内容会省略这是一段最多显示一行的文字，后面的内容会省略",
+              tr("Style.text2"),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ],
         ),
         DocBlock(
-          title: "1px 边框",
+          title: tr("Style.hairline"),
           card: true,
           children: [
             Container(
@@ -63,7 +64,7 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
   @override
   Widget build(BuildContext context) {
     return DocBlock(
-      title: "动画",
+      title: tr("Style.animation"),
       card: true,
       children: [
         FlanCell(

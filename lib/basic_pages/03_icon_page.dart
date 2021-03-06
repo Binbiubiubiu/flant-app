@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 import '../_components/main.dart';
@@ -8,7 +9,7 @@ class IconPage extends StatelessWidget {
     return CompPage(
       children: [
         DocBlock(
-          title: "基础用法",
+          title: tr("basicUsage"),
           children: [
             Wrap(
               spacing: 20.0,
@@ -27,7 +28,7 @@ class IconPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "徽标提示",
+          title: tr("Icon.badge"),
           children: [
             Wrap(
               spacing: 20.0,
@@ -53,7 +54,7 @@ class IconPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "图标颜色",
+          title: tr("Icon.color"),
           children: [
             Wrap(
               spacing: 20.0,
@@ -74,7 +75,7 @@ class IconPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: "图标大小",
+          title: tr("Icon.size"),
           children: [
             Wrap(
               spacing: 20.0,

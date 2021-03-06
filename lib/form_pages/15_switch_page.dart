@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 
@@ -21,7 +22,7 @@ class _SwitchPageState extends State<SwitchPage> {
     return CompPage(
       children: [
         DocBlock(
-          title: "基础用法",
+          title: tr('basicUsage'),
           children: [
             FlanSwitch(
               value: this.checked,
@@ -32,7 +33,7 @@ class _SwitchPageState extends State<SwitchPage> {
           ],
         ),
         DocBlock(
-          title: "禁用状态",
+          title: tr('disabled'),
           children: [
             FlanSwitch(
               value: this.checked,
@@ -44,7 +45,7 @@ class _SwitchPageState extends State<SwitchPage> {
           ],
         ),
         DocBlock(
-          title: "加载状态",
+          title: tr('loadingStatus'),
           children: [
             FlanSwitch(
               value: this.checked,
@@ -56,7 +57,7 @@ class _SwitchPageState extends State<SwitchPage> {
           ],
         ),
         DocBlock(
-          title: "自定义大小",
+          title: tr('Switch.customSize'),
           children: [
             FlanSwitch(
               value: this.checked2,
@@ -68,7 +69,7 @@ class _SwitchPageState extends State<SwitchPage> {
           ],
         ),
         DocBlock(
-          title: "自定义颜色",
+          title: tr('Switch.customColor'),
           children: [
             FlanSwitch(
               value: this.checked3,
@@ -81,7 +82,7 @@ class _SwitchPageState extends State<SwitchPage> {
           ],
         ),
         DocBlock(
-          title: "异步控制",
+          title: tr('Switch.asyncControl'),
           children: [
             FlanSwitch(
               value: this.checked4,
@@ -92,11 +93,11 @@ class _SwitchPageState extends State<SwitchPage> {
           ],
         ),
         DocBlock.noPadding(
-          title: "搭配单元格使用",
+          title: tr('Switch.withCell'),
           children: [
             FlanCell(
               center: true,
-              title: "标题",
+              title: tr('title'),
               rightIconSlot: FlanSwitch(
                 value: this.checked5,
                 size: 24.0,

@@ -1,17 +1,42 @@
+import 'package:flant/flant.dart';
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import './_components/main.dart';
 import './_routes/main.dart';
 
-void main() {
-  runApp(MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  CompRouter.init();
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: [Locale('en'), Locale('zh')],
+      path: 'assets/i18n', // <-- change the path of the translation files
+      fallbackLocale: Locale('zh'),
+      // assetLoader: CodegenLoader(),
+      saveLocale: false,
+      useOnlyLangCode: true,
+      child: MyApp(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flant',
+      title: tr("App.title"),
+      localizationsDelegates: context.localizationDelegates
+        ..add(FlanS.delegate),
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
         primaryColor: Colors.white,
         appBarTheme: AppBarTheme(
@@ -21,22 +46,26 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: "Flant"),
+      home: MyHomePage(),
       routes: CompRouter.pathMap,
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    CompRouter.init();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
     source.forEach((group) {
       result.add(
         SubTitle(
-          text: group.title,
+          text: tr(group.name),
           padding: const EdgeInsets.only(top: 24.0, bottom: 16.0, left: 18.0),
         ),
       );
@@ -73,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
       for (var i = 0; i < children.length; i++) {
         var route = children.elementAt(i);
         result.add(RouteButton(
-          text: [route.name, route.title].join(" "),
+          text: tr("Nav.${route.name}"),
           onPressed: () {
             Navigator.of(context).pushNamed(
               route.path!,
@@ -103,13 +132,13 @@ class _FlantAppTitle extends StatelessWidget {
       child: Row(
         children: [
           Image.network(
-            "https://img.yzcdn.cn/vant/logo.png",
+            tr("App.logo"),
             width: 32.0,
             height: 32.0,
           ),
           SizedBox(width: 16.0),
           Text(
-            "Flant",
+            tr("App.title"),
             style: TextStyle(fontSize: 32.0),
           )
         ],
@@ -127,7 +156,7 @@ class _FlantAppSubTitle extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 16.0),
       padding: const EdgeInsets.only(left: 16.0),
       child: Text(
-        "轻量、可靠的移动端 Flutter 组件库",
+        tr("App.description"),
         style: TextStyle(
           color: Color.fromRGBO(69, 90, 100, 0.6),
         ),

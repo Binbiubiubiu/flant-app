@@ -2,18 +2,16 @@ import 'package:flutter/material.dart';
 
 class CompRoute {
   CompRoute({
-    this.name = "",
-    required this.title,
-    this.routes,
+    required this.name,
     this.path,
+    this.routes,
     this.component,
   });
-  final String? name;
-  final String title;
+  final String name;
   final String? path;
   final WidgetBuilder? component;
   final List<CompRoute>? routes;
 
   static group(String gName, {List<CompRoute> routes = const []}) =>
-      CompRoute(title: gName, routes: routes);
+      CompRoute(name: gName, routes: routes);
 }

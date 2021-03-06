@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 
@@ -10,58 +11,58 @@ class NoticeBarPage extends StatelessWidget {
       backgroundColor: Colors.white,
       children: [
         DocBlock.noPadding(
-          title: "基础用法",
+          title: tr("basicUsage"),
           children: [
             FlanNoticeBar(
               scrollable: true,
               leftIconName: FlanIcons.volume_o,
-              text: "在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。",
+              text: tr("NoticeBar.text"),
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "滚动播放",
+          title: tr("NoticeBar.scrollable"),
           children: [
             FlanNoticeBar(
               scrollable: true,
-              text: "技术是开发它的人的共同灵魂。",
+              text: tr("NoticeBar.shortText"),
             ),
             SizedBox(height: 4.0),
             FlanNoticeBar(
               scrollable: false,
-              text: "在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。",
+              text: tr("NoticeBar.text"),
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "多行展示",
+          title: tr("NoticeBar.wrapable"),
           children: [
             FlanNoticeBar(
               scrollable: false,
               wrapable: true,
-              text: "在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准",
+              text: tr("NoticeBar.text"),
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "通知栏模式",
+          title: tr("NoticeBar.mode"),
           children: [
             FlanNoticeBar(
               mode: FlanNoticeBarMode.closeable,
-              text: "技术是开发它的人的共同灵魂。",
+              text: tr("NoticeBar.shortText"),
             ),
             SizedBox(height: 4.0),
             FlanNoticeBar(
               mode: FlanNoticeBarMode.link,
-              text: "技术是开发它的人的共同灵魂。",
+              text: tr("NoticeBar.shortText"),
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "自定义样式",
+          title: tr("NoticeBar.customStyle"),
           children: [
             FlanNoticeBar(
-              text: "技术是开发它的人的共同灵魂。",
+              text: tr("NoticeBar.shortText"),
               color: Color(0xff1989fa),
               background: Color(0xffecf9ff),
               leftIconName: FlanIcons.info_o,
@@ -69,7 +70,7 @@ class NoticeBarPage extends StatelessWidget {
           ],
         ),
         DocBlock.noPadding(
-          title: "垂直滚动",
+          title: tr("NoticeBar.verticalScroll"),
           children: [
             FlanNoticeBar(
               scrollable: false,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flant/flant.dart';
 import '../_components/main.dart';
@@ -8,80 +9,80 @@ class CellPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CompPage(
       children: [
-        const DocBlock.noPadding(
-          title: "基础用法",
+        DocBlock.noPadding(
+          title: tr("basicUsage"),
           children: [
             FlanCellGroup(
               children: [
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
                 ),
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
-                  label: "描述信息",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
+                  label: tr("desc"),
                 ),
               ],
             )
           ],
         ),
-        const DocBlock.noPadding(
-          title: "单元格大小",
+        DocBlock.noPadding(
+          title: tr("Cell.largeSize"),
           children: [
-            const FlanCellGroup(
+            FlanCellGroup(
               children: [
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
                   size: FlanCellSize.large,
                 ),
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
-                  label: "描述信息",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
+                  label: tr("desc"),
                   size: FlanCellSize.large,
                 ),
               ],
             )
           ],
         ),
-        const DocBlock.noPadding(
-          title: "展示图标",
+        DocBlock.noPadding(
+          title: tr("Cell.showIcon"),
           children: [
             FlanCell(
-              title: "单元格",
-              value: "内容",
+              title: tr("Cell.cell"),
+              value: tr("content"),
               size: FlanCellSize.large,
               iconName: FlanIcons.location_o,
             ),
           ],
         ),
-        const DocBlock.noPadding(
-          title: "只设置value",
+        DocBlock.noPadding(
+          title: tr("Cell.valueOnly"),
           children: [
-            const FlanCell(
-              value: "内容",
+            FlanCell(
+              value: tr("content"),
             )
           ],
         ),
-        const DocBlock.noPadding(
-          title: "展示箭头",
+        DocBlock.noPadding(
+          title: tr("Cell.showArrow"),
           children: [
-            const FlanCellGroup(
+            FlanCellGroup(
               children: [
                 FlanCell(
-                  title: "单元格",
+                  title: tr("Cell.cell"),
                   isLink: true,
                 ),
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
                   isLink: true,
                 ),
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
                   arrowDirection: FlanCellArrowDirection.down,
                   isLink: true,
                 ),
@@ -90,17 +91,17 @@ class CellPage extends StatelessWidget {
           ],
         ),
         DocBlock.noPadding(
-          title: "页面导航",
+          title: tr("Cell.router"),
           children: [
             FlanCellGroup(
               children: [
-                const FlanCell(
-                  title: "URL 跳转",
+                FlanCell(
+                  title: tr("Cell.urlRoute"),
                   isLink: true,
                   toName: "/button",
                 ),
                 FlanCell(
-                  title: "路由跳转",
+                  title: tr("Cell.vueRoute"),
                   isLink: true,
                   toRoute: MaterialPageRoute(
                     builder: (BuildContext context) => ButtonPage(),
@@ -114,41 +115,41 @@ class CellPage extends StatelessWidget {
             )
           ],
         ),
-        const DocBlock.noPadding(
-          title: "分组标题",
+        DocBlock.noPadding(
+          title: tr("Cell.groupTitle"),
           children: [
             FlanCellGroup(
-              title: "分组1",
+              title: "${tr('Cell.group')} 1",
               children: [
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
                 ),
               ],
             ),
             FlanCellGroup(
-              title: "分组2",
+              title: "${tr('Cell.group')} 2",
               children: [
                 FlanCell(
-                  title: "单元格",
-                  value: "内容",
+                  title: tr("Cell.cell"),
+                  value: tr("content"),
                 ),
               ],
             ),
           ],
         ),
-        const DocBlock.noPadding(
-          title: "使用插槽",
+        DocBlock.noPadding(
+          title: tr("Cell.useSlots"),
           children: [
             FlanCellGroup(
               children: [
                 FlanCell(
-                  titleSlot: Text("单元格"),
-                  value: "内容",
+                  titleSlot: Text(tr("Cell.cell")),
+                  value: tr("content"),
                   isLink: true,
                 ),
                 FlanCell(
-                  title: "单元格",
+                  title: tr("Cell.cell"),
                   iconName: FlanIcons.shop_o,
                   rightIconSlot: FlanIcon.name(FlanIcons.search),
                 ),
@@ -156,14 +157,14 @@ class CellPage extends StatelessWidget {
             ),
           ],
         ),
-        const DocBlock.noPadding(
+        DocBlock.noPadding(
           title: "垂直居中",
           children: [
             FlanCell(
               center: true,
-              title: "单元格",
-              value: "内容",
-              label: "描述信息",
+              title: tr("Cell.cell"),
+              value: tr("content"),
+              label: tr("desc"),
             ),
           ],
         ),

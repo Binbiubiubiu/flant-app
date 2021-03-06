@@ -1,8 +1,8 @@
 import 'dart:math' as math;
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flant/components/show/circle.dart';
-import 'package:flant/components/base/button.dart';
+import 'package:flant/flant.dart';
 import '../_components/main.dart';
 
 double formatRate(double rate) => math.min(math.max(rate, 0), 100);
@@ -36,14 +36,14 @@ class _CirclePageState extends State<CirclePage> {
     return CompPage(
       children: [
         DocBlock(
-          title: "基础用法",
+          title: tr('basicUsage'),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
                 FlanCircle(
-                  key: const ValueKey("基础用法"),
+                  key: ValueKey(tr('basicUsage')),
                   currentRate: this.currentRate1,
                   rate: this.rate,
                   speed: 100.0,
@@ -59,19 +59,19 @@ class _CirclePageState extends State<CirclePage> {
           ],
         ),
         DocBlock(
-          title: "样式定制",
+          title: tr('Circle.customStyle'),
           children: [
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
               children: [
                 FlanCircle(
-                  key: const ValueKey("宽度定制"),
+                  key: ValueKey(tr('Circle.customWidth')),
                   currentRate: this.currentRate2,
                   rate: this.rate,
                   speed: 100.0,
                   strokeWidth: 6.0,
-                  text: "宽度定制",
+                  text: tr('Circle.customWidth'),
                   onChange: (val) {
                     setState(() {
                       this.currentRate2 = val;
@@ -79,13 +79,13 @@ class _CirclePageState extends State<CirclePage> {
                   },
                 ),
                 FlanCircle(
-                  key: const ValueKey("颜色定制"),
+                  key: ValueKey(tr('Circle.customColor')),
                   currentRate: this.currentRate3,
                   rate: this.rate,
                   speed: 100.0,
                   layerColor: Color(0xffebedf0),
                   color: Color(0xFFEE0A24),
-                  text: "颜色定制",
+                  text: tr('Circle.customColor'),
                   onChange: (val) {
                     setState(() {
                       this.currentRate3 = val;
@@ -93,7 +93,7 @@ class _CirclePageState extends State<CirclePage> {
                   },
                 ),
                 FlanCircle(
-                  key: const ValueKey("渐变色"),
+                  key: ValueKey(tr('Circle.gradient')),
                   currentRate: this.currentRate4,
                   rate: this.rate,
                   speed: 100.0,
@@ -103,7 +103,7 @@ class _CirclePageState extends State<CirclePage> {
                       Color(0xff6149f6),
                     ],
                   ),
-                  text: "渐变色",
+                  text: tr('Circle.gradient'),
                   onChange: (val) {
                     setState(() {
                       this.currentRate4 = val;
@@ -111,13 +111,13 @@ class _CirclePageState extends State<CirclePage> {
                   },
                 ),
                 FlanCircle(
-                  key: const ValueKey("逆时针"),
+                  key: ValueKey(tr('Circle.counterClockwise')),
                   currentRate: this.currentRate4,
                   rate: this.rate,
                   speed: 100.0,
                   color: Color(0xff07c160),
                   clockwise: false,
-                  text: "逆时针",
+                  text: tr('Circle.counterClockwise'),
                   onChange: (val) {
                     setState(() {
                       this.currentRate4 = val;
@@ -125,14 +125,14 @@ class _CirclePageState extends State<CirclePage> {
                   },
                 ),
                 FlanCircle(
-                  key: const ValueKey("大小定制"),
+                  key: ValueKey(tr('Circle.customSize')),
                   currentRate: this.currentRate4,
                   rate: this.rate,
                   speed: 100.0,
                   color: Color(0xff7232dd),
                   clockwise: false,
                   size: 120.0,
-                  text: "大小定制",
+                  text: tr('Circle.customSize'),
                   onChange: (val) {
                     setState(() {
                       this.currentRate4 = val;
@@ -148,14 +148,14 @@ class _CirclePageState extends State<CirclePage> {
                   FlanButton(
                     type: FlanButtonType.success,
                     size: FlanButtonSize.small,
-                    text: "增加",
+                    text: tr("add"),
                     onClick: this.add,
                   ),
                   SizedBox(width: 10.0),
                   FlanButton(
                     type: FlanButtonType.danger,
                     size: FlanButtonSize.small,
-                    text: "减少",
+                    text: tr("decrease"),
                     onClick: this.sub,
                   ),
                 ],
