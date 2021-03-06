@@ -14,7 +14,8 @@ class CompPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dynamic query = (ModalRoute.of(context)?.settings.arguments);
+    dynamic query =
+        (ModalRoute.of(context)?.settings.arguments) ?? {"title": "当前页面"};
 
     return Scaffold(
       appBar: AppBar(

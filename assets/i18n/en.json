@@ -78,7 +78,9 @@
     "ContactEdit": "ContactEdit",
     "ContactList": "ContactList",
     "Coupon": "Coupon",
-    "SubmitBar": "SubmitBar"
+    "GoodsAction": "GoodsAction",
+    "SubmitBar": "SubmitBar",
+    "Sku": "Sku"
   },
   "add": "Add",
   "decrease": "Decrease",

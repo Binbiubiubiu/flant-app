@@ -12,23 +12,30 @@ export './_modals.dart';
 
 class CompRouter {
   static List<CompRoute> routes = [];
-  static Map<String, WidgetBuilder> pathMap = {};
+  static Map<String, CompRoute> pathMap = {};
 
   static void init() {
     routes = [
-      CompRoute.group(tr("Nav.BasicComponents"), routes: basicCompRoutes),
-      CompRoute.group(tr("Nav.FormComponents"), routes: formCompRoutes),
-      CompRoute.group(tr("Nav.DisplayComponents"), routes: showCompRoutes),
-      CompRoute.group(tr("Nav.ActionComponents"), routes: actionCompRoutes),
-      CompRoute.group(tr("Nav.NavigationComponents"),
-          routes: navigationCompRoutes),
-      CompRoute.group(tr("Nav.BusinessComponents"), routes: businessCompRoutes),
+      CompRoute.group("BasicComponents", routes: basicCompRoutes),
+      CompRoute.group("FormComponents", routes: formCompRoutes),
+      CompRoute.group("DisplayComponents", routes: showCompRoutes),
+      CompRoute.group("ActionComponents", routes: actionCompRoutes),
+      CompRoute.group("NavigationComponents", routes: navigationCompRoutes),
+      CompRoute.group("BusinessComponents", routes: businessCompRoutes),
     ];
 
     routes.forEach((group) {
       group.routes!.forEach((item) {
-        pathMap[item.path!] = item.component!;
+        pathMap[item.path!] = item;
       });
     });
+  }
+
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
+    final route = pathMap[settings.name]!;
+    return MaterialPageRoute(
+      builder: route.component!,
+      settings: settings.copyWith(arguments: {"title": route.name}),
+    );
   }
 }

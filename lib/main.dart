@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: tr("App.title"),
+      onGenerateTitle: (context) => tr("App.title"),
       localizationsDelegates: context.localizationDelegates
         ..add(FlanS.delegate),
       supportedLocales: context.supportedLocales,
@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
-      routes: CompRouter.pathMap,
+      onGenerateRoute: CompRouter.onGenerateRoute,
     );
   }
 }
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
     source.forEach((group) {
       result.add(
         SubTitle(
-          text: tr(group.name),
+          text: tr("Nav.${group.name}"),
           padding: const EdgeInsets.only(top: 24.0, bottom: 16.0, left: 18.0),
         ),
       );

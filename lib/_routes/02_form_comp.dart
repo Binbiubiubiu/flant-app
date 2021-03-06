@@ -20,8 +20,8 @@ var formCompRoutes = [
     component: (context) => CellPage(),
   ),
   CompRoute(
-    name: "DatetimePick",
-    path: "/datetimepick",
+    name: "DatetimePicker",
+    path: "/datetimePicker",
     component: (context) => CellPage(),
   ),
   CompRoute(

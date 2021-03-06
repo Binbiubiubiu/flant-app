@@ -78,7 +78,9 @@
     "ContactEdit": "ContactEdit 联系人编辑",
     "ContactList": "ContactList 联系人列表",
     "Coupon": "Coupon 优惠券",
-    "SubmitBar": "SubmitBar 提交订单栏"
+    "GoodsAction": "GoodsAction 商品导航",
+    "SubmitBar": "SubmitBar 提交订单栏",
+    "Sku": "Sku 商品规格"
   },
   "add": "增加",
   "decrease": "减少",
