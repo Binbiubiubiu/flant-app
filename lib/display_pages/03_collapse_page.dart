@@ -95,7 +95,7 @@ class _CollapsePageState extends State<CollapsePage> {
           ],
         ),
         DocBlock.noPadding(
-          title: tr('titleSlot'),
+          title: tr('Collapse.titleSlot'),
           children: [
             FlanCollapse(
               value: this.active4,

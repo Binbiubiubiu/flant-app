@@ -15,6 +15,7 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr("Toast.title1"),
               isLink: true,
+              border: true,
               onClick: () {
                 showToast(
                   context,
@@ -25,6 +26,7 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr("Toast.title2"),
               isLink: true,
+              border: true,
               onClick: () {
                 showToast(
                   context,
@@ -36,6 +38,7 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr("Toast.success"),
               isLink: true,
+              border: true,
               onClick: () {
                 showToast(
                   context,
@@ -64,6 +67,7 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr("Toast.customIcon"),
               isLink: true,
+              border: true,
               onClick: () {
                 showToast(
                   context,
@@ -75,6 +79,7 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr("Toast.customImage"),
               isLink: true,
+              border: true,
               onClick: () {
                 showToast(
                   context,
@@ -103,6 +108,7 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr("Toast.positionTop"),
               isLink: true,
+              border: true,
               onClick: () {
                 showToast(
                   context,

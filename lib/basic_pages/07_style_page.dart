@@ -70,6 +70,7 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
         FlanCell(
           title: "Fade",
           isLink: true,
+          border: true,
           onClick: () {
             this._startAnimate(kFlanFadeTransitionBuilder);
           },
@@ -77,6 +78,7 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
         FlanCell(
           title: "Slide Up",
           isLink: true,
+          border: true,
           onClick: () {
             this._startAnimate(kFlanSlideUpTransitionBuilder);
           },
@@ -84,6 +86,7 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
         FlanCell(
           title: "Slide Down",
           isLink: true,
+          border: true,
           onClick: () {
             this._startAnimate(kFlanSlideDownTransitionBuilder);
           },
@@ -91,6 +94,7 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
         FlanCell(
           title: "Slide Left",
           isLink: true,
+          border: true,
           onClick: () {
             this._startAnimate(kFlanSlideLeftTransitionBuilder);
           },
