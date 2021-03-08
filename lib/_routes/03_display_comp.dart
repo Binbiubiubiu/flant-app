@@ -2,7 +2,7 @@ import '../display_pages/main.dart';
 
 import './_modals.dart';
 
-var showCompRoutes = [
+var displayCompRoutes = [
   CompRoute(
     name: "Badge",
     path: "/badge",
@@ -21,7 +21,7 @@ var showCompRoutes = [
   CompRoute(
     name: "CountDown",
     path: "/countdown",
-    component: (context) => BadgePage(),
+    component: (context) => CountDownPage(),
   ),
   CompRoute(
     name: "Divider",

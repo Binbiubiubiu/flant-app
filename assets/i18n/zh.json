@@ -309,5 +309,16 @@
     "color": "自定义颜色",
     "vertical": "垂直排列",
     "textColor": "自定义文本颜色"
+  },
+  "CountDown": {
+    "reset": "重置",
+    "pause": "暂停",
+    "start": "开始",
+    "finished": "倒计时结束",
+    "millisecond": "毫秒级渲染",
+    "customStyle": "自定义样式",
+    "customFormat": "自定义格式",
+    "manualControl": "手动控制",
+    "formatWithDay": "DD 天 HH 时 mm 分 ss 秒"
   }
 }

@@ -309,5 +309,16 @@
     "color": "Color",
     "vertical": "Vertical",
     "textColor": "Text Color"
+  },
+  "CountDown": {
+    "reset": "Reset",
+    "pause": "Pause",
+    "start": "Start",
+    "finished": "Finished",
+    "millisecond": "Millisecond",
+    "customStyle": "Custom Style",
+    "customFormat": "Custom Format",
+    "manualControl": "Manual Control",
+    "formatWithDay": "DD Day, HH:mm:ss"
   }
 }

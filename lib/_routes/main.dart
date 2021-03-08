@@ -1,8 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import './01_basic_comp.dart';
 import './02_form_comp.dart';
-import './03_show_comp.dart';
+import './03_display_comp.dart';
 import './04_action_comp.dart';
 import './05_navigation_comp.dart';
 import './06_business_comp.dart';
@@ -18,7 +17,7 @@ class CompRouter {
     routes = [
       CompRoute.group("BasicComponents", routes: basicCompRoutes),
       CompRoute.group("FormComponents", routes: formCompRoutes),
-      CompRoute.group("DisplayComponents", routes: showCompRoutes),
+      CompRoute.group("DisplayComponents", routes: displayCompRoutes),
       CompRoute.group("ActionComponents", routes: actionCompRoutes),
       CompRoute.group("NavigationComponents", routes: navigationCompRoutes),
       CompRoute.group("BusinessComponents", routes: businessCompRoutes),
