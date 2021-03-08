@@ -71,29 +71,26 @@ class _CountDownPageState extends State<CountDownPage> {
               format: "ss:SSS",
               onFinish: onFinish,
             ),
-            Row(
+            SizedBox(height: 15.0),
+            FlanGrid(
+              columnNum: 3,
+              clickable: true,
               children: [
-                Expanded(
-                  child: FlanButton(
-                    iconName: FlanIcons.play_circle_o,
-                    text: tr("CountDown.start"),
-                    onClick: start,
-                  ),
+                FlanGridItem(
+                  iconName: FlanIcons.play_circle_o,
+                  text: tr("CountDown.start"),
+                  onClick: start,
                 ),
-                Expanded(
-                  child: FlanButton(
-                    iconName: FlanIcons.pause_circle_o,
-                    text: tr("CountDown.pause"),
-                    onClick: pause,
-                  ),
+                FlanGridItem(
+                  iconName: FlanIcons.pause_circle_o,
+                  text: tr("CountDown.pause"),
+                  onClick: pause,
                 ),
-                Expanded(
-                  child: FlanButton(
-                    iconName: FlanIcons.replay,
-                    text: tr("CountDown.reset"),
-                    onClick: reset,
-                  ),
-                )
+                FlanGridItem(
+                  iconName: FlanIcons.replay,
+                  text: tr("CountDown.reset"),
+                  onClick: reset,
+                ),
               ],
             )
           ],

@@ -320,5 +320,17 @@
     "customFormat": "自定义格式",
     "manualControl": "手动控制",
     "formatWithDay": "DD 天 HH 时 mm 分 ss 秒"
+  },
+  "Grid": {
+    "text": "文字",
+    "route": "页面导航",
+    "gutter": "格子间距",
+    "square": "正方形格子",
+    "columnNum": "自定义列数",
+    "customContent": "自定义内容",
+    "urlRoute": "URL 跳转",
+    "vueRoute": "路由跳转",
+    "showBadge": "徽标提示",
+    "horizontal": "内容横排"
   }
 }

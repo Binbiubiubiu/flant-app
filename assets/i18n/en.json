@@ -320,5 +320,17 @@
     "customFormat": "Custom Format",
     "manualControl": "Manual Control",
     "formatWithDay": "DD Day, HH:mm:ss"
+  },
+  "Grid": {
+    "text": "Text",
+    "route": "Route",
+    "gutter": "Gutter",
+    "square": "Square",
+    "columnNum": "Column Num",
+    "customContent": "Custom Content",
+    "urlRoute": "URL",
+    "vueRoute": "Vue Router",
+    "showBadge": "Show Badge",
+    "horizontal": "Horizontal"
   }
 }

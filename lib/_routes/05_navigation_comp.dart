@@ -7,7 +7,7 @@ var navigationCompRoutes = [
   CompRoute(
     name: "Grid",
     path: "/grid",
-    component: (context) => CellPage(),
+    component: (context) => GridPage(),
   ),
   CompRoute(
     name: "IndexBar",
