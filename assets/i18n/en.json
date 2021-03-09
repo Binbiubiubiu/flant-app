@@ -332,5 +332,9 @@
     "vueRoute": "Vue Router",
     "showBadge": "Show Badge",
     "horizontal": "Horizontal"
+  },
+  "Overlay": {
+    "showOverlay": "Show Overlay",
+    "embeddedContent": "Embedded Content"
   }
 }

@@ -32,7 +32,7 @@ var actionCompRoutes = [
   CompRoute(
     name: "Overlay",
     path: "/overlay",
-    component: (context) => CellPage(),
+    component: (context) => OverlayPage(),
   ),
   CompRoute(
     name: "PullRefresh",
