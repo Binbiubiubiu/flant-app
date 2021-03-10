@@ -9,32 +9,32 @@ class ButtonPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("Button.type"),
-          children: [
+          title: tr('Button.type'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
-                  text: tr("Button.success"),
+                  text: tr('Button.success'),
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
-                  text: tr("Button.primary"),
+                  text: tr('Button.primary'),
                   type: FlanButtonType.primary,
                 ),
                 FlanButton(
-                  text: tr("Button.normal"),
+                  text: tr('Button.normal'),
                   type: FlanButtonType.normal,
                 ),
                 FlanButton(
-                  text: tr("Button.danger"),
+                  text: tr('Button.danger'),
                   type: FlanButtonType.danger,
                 ),
                 FlanButton(
-                  text: tr("Button.warning"),
+                  text: tr('Button.warning'),
                   type: FlanButtonType.warning,
                 ),
               ],
@@ -42,19 +42,19 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.plain"),
-          children: [
+          title: tr('Button.plain'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
-                  text: tr("Button.plain"),
+                  text: tr('Button.plain'),
                   plain: true,
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
-                  text: tr("Button.plain"),
+                  text: tr('Button.plain'),
                   plain: true,
                   type: FlanButtonType.primary,
                 ),
@@ -63,20 +63,20 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.hairline"),
-          children: [
+          title: tr('Button.hairline'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
-                  text: tr("Button.hairlineButton"),
+                  text: tr('Button.hairlineButton'),
                   plain: true,
                   hairline: true,
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
-                  text: tr("Button.hairlineButton"),
+                  text: tr('Button.hairlineButton'),
                   plain: true,
                   hairline: true,
                   type: FlanButtonType.primary,
@@ -86,19 +86,19 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("disabled"),
-          children: [
+          title: tr('disabled'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
-                  text: tr("disabled"),
+                  text: tr('disabled'),
                   disabled: true,
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
-                  text: tr("disabled"),
+                  text: tr('disabled'),
                   disabled: true,
                   type: FlanButtonType.primary,
                 ),
@@ -107,12 +107,12 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.loading"),
-          children: [
+          title: tr('Button.loading'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 const FlanButton(
                   loading: true,
                   type: FlanButtonType.success,
@@ -124,7 +124,7 @@ class ButtonPage extends StatelessWidget {
                 ),
                 FlanButton(
                   loading: true,
-                  text: tr("Button.loadingText"),
+                  text: tr('Button.loadingText'),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -132,20 +132,20 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.shape"),
-          children: [
+          title: tr('Button.shape'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
                   square: true,
-                  text: tr("Button.square"),
+                  text: tr('Button.square'),
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
                   round: true,
-                  text: tr("Button.round"),
+                  text: tr('Button.round'),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -153,25 +153,25 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.icon"),
-          children: [
+          title: tr('Button.icon'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 const FlanButton(
                   iconName: FlanIcons.plus,
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
                   iconName: FlanIcons.plus,
-                  text: tr("button"),
+                  text: tr('button'),
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
-                  iconUrl: "https://img01.yzcdn.cn/vant/user-active.png",
+                  iconUrl: 'https://img01.yzcdn.cn/vant/user-active.png',
                   plain: true,
-                  text: tr("button"),
+                  text: tr('button'),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -179,30 +179,30 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.size"),
-          children: [
+          title: tr('Button.size'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
                   size: FlanButtonSize.large,
-                  text: tr("Button.large"),
+                  text: tr('Button.large'),
                   type: FlanButtonType.success,
                 ),
                 FlanButton(
                   size: FlanButtonSize.normal,
-                  text: tr("Button.normal"),
+                  text: tr('Button.normal'),
                   type: FlanButtonType.primary,
                 ),
                 FlanButton(
                   size: FlanButtonSize.small,
-                  text: tr("Button.small"),
+                  text: tr('Button.small'),
                   type: FlanButtonType.primary,
                 ),
                 FlanButton(
                   size: FlanButtonSize.mini,
-                  text: tr("Button.mini"),
+                  text: tr('Button.mini'),
                   type: FlanButtonType.primary,
                 ),
               ],
@@ -210,14 +210,14 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.blockElement"),
-          children: [
+          title: tr('Button.blockElement'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
-                  text: tr("Button.blockElement"),
+                  text: tr('Button.blockElement'),
                   block: true,
                   type: FlanButtonType.success,
                 ),
@@ -226,25 +226,25 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.router"),
-          children: [
+          title: tr('Button.router'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
-                  text: tr("Button.urlRoute"),
+                  text: tr('Button.urlRoute'),
                   type: FlanButtonType.success,
-                  toName: "/cell",
+                  toName: '/cell',
                 ),
                 FlanButton(
-                  text: tr("Button.vueRoute"),
+                  text: tr('Button.vueRoute'),
                   type: FlanButtonType.success,
-                  toRoute: MaterialPageRoute(
+                  toRoute: MaterialPageRoute<dynamic>(
                     builder: (BuildContext context) => CellPage(),
-                    settings: RouteSettings(
-                      name: "/cell",
-                      arguments: {"title": "Cell"},
+                    settings: const RouteSettings(
+                      name: '/cell',
+                      arguments: <String, String>{'title': 'Cell'},
                     ),
                   ),
                 ),
@@ -253,26 +253,30 @@ class ButtonPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Button.customColor"),
-          children: [
+          title: tr('Button.customColor'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanButton(
-                  color: Color(0xFF7232DD),
-                  text: tr("Button.pure"),
+                  color: const Color(0xFF7232DD),
+                  text: tr('Button.pure'),
                 ),
                 FlanButton(
-                  color: Color(0xFFFF0000),
-                  text: tr("Button.pure"),
+                  color: const Color(0xFFFF0000),
+                  text: tr('Button.pure'),
                   plain: true,
                 ),
                 FlanButton(
-                  gradient: LinearGradient(
-                    colors: [Colors.cyan, Colors.blue, Colors.blueAccent],
+                  gradient: const LinearGradient(
+                    colors: <Color>[
+                      Colors.cyan,
+                      Colors.blue,
+                      Colors.blueAccent
+                    ],
                   ),
-                  text: tr("Button.gradient"),
+                  text: tr('Button.gradient'),
                 ),
               ],
             ),

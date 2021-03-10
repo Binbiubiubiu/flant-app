@@ -12,6 +12,7 @@ class CompRoute {
   final WidgetBuilder? component;
   final List<CompRoute>? routes;
 
-  static group(String gName, {List<CompRoute> routes = const []}) =>
+  static CompRoute group(String gName,
+          {List<CompRoute> routes = const <CompRoute>[]}) =>
       CompRoute(name: gName, routes: routes);
 }

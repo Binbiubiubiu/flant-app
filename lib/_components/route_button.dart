@@ -14,14 +14,14 @@ class RouteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Widget result = Container(
-      padding: EdgeInsets.symmetric(horizontal: 15.0),
+      padding: const EdgeInsets.symmetric(horizontal: 15.0),
       height: 40.0,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(this.text ?? ""),
-          Spacer(),
-          RotatedBox(
+        children: <Widget>[
+          Text(text ?? ''),
+          const Spacer(),
+          const RotatedBox(
             quarterTurns: 2,
             child: Icon(
               Icons.arrow_back_ios_sharp,
@@ -37,21 +37,21 @@ class RouteButton extends StatelessWidget {
       button: true,
       enabled: true,
       child: ClipRRect(
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(20.0),
         ),
         child: Material(
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
             fontSize: 14.0,
             fontWeight: FontWeight.w600,
             color: Color(0xFF323233),
           ),
           type: MaterialType.button,
-          color: Color(0xfff7f8fa),
+          color: const Color(0xfff7f8fa),
           child: InkWell(
             splashColor: Colors.transparent,
-            highlightColor: Color(0xFFEEF0F4),
-            onTap: this.onPressed,
+            highlightColor: const Color(0xFFEEF0F4),
+            onTap: onPressed,
             child: result,
           ),
         ),

@@ -1,52 +1,54 @@
-import '../basic_pages/main.dart';
+import 'package:flutter/widgets.dart';
+
 import '../action_pages/main.dart';
+import '../basic_pages/main.dart';
 
 import './_modals.dart';
 
-var actionCompRoutes = [
+List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(
-    name: "ActionSheet",
-    path: "/ActionSheet",
-    component: (context) => CellPage(),
+    name: 'ActionSheet',
+    path: '/ActionSheet',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Dialog",
-    path: "/dialog",
-    component: (context) => CellPage(),
+    name: 'Dialog',
+    path: '/dialog',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "DropdownMenu",
-    path: "/dropdownmenu",
-    component: (context) => CellPage(),
+    name: 'DropdownMenu',
+    path: '/dropdownmenu',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Loading",
-    path: "/loading",
-    component: (context) => LoadingPage(),
+    name: 'Loading',
+    path: '/loading',
+    component: (BuildContext context) => LoadingPage(),
   ),
   CompRoute(
-    name: "Notify",
-    path: "/notify",
-    component: (context) => CellPage(),
+    name: 'Notify',
+    path: '/notify',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Overlay",
-    path: "/overlay",
-    component: (context) => OverlayPage(),
+    name: 'Overlay',
+    path: '/overlay',
+    component: (BuildContext context) => OverlayPage(),
   ),
   CompRoute(
-    name: "PullRefresh",
-    path: "/pullRefresh",
-    component: (context) => CellPage(),
+    name: 'PullRefresh',
+    path: '/pullRefresh',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "ShareSheet",
-    path: "/shareSheet",
-    component: (context) => CellPage(),
+    name: 'ShareSheet',
+    path: '/shareSheet',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "SwipeCell",
-    path: "/swipecell",
-    component: (context) => CellPage(),
+    name: 'SwipeCell',
+    path: '/swipecell',
+    component: (BuildContext context) => CellPage(),
   ),
 ];

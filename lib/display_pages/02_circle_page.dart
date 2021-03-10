@@ -19,38 +19,38 @@ class _CirclePageState extends State<CirclePage> {
   double currentRate3 = 70;
   double currentRate4 = 70;
 
-  add() {
+  void add() {
     setState(() {
-      this.rate = formatRate(this.rate + 20);
+      rate = formatRate(rate + 20);
     });
   }
 
-  sub() {
+  void sub() {
     setState(() {
-      this.rate = formatRate(this.rate - 20);
+      rate = formatRate(rate - 20);
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
           title: tr('basicUsage'),
-          children: [
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanCircle(
-                  key: ValueKey(tr('basicUsage')),
-                  currentRate: this.currentRate1,
-                  rate: this.rate,
+                  key: ValueKey<String>(tr('basicUsage')),
+                  currentRate: currentRate1,
+                  rate: rate,
                   speed: 100.0,
-                  text: "${currentRate1.round()}%",
-                  onChange: (val) {
+                  text: '${currentRate1.round()}%',
+                  onChange: (double val) {
                     setState(() {
-                      this.currentRate1 = val;
+                      currentRate1 = val;
                     });
                   },
                 ),
@@ -60,82 +60,82 @@ class _CirclePageState extends State<CirclePage> {
         ),
         DocBlock(
           title: tr('Circle.customStyle'),
-          children: [
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
+              children: <Widget>[
                 FlanCircle(
-                  key: ValueKey(tr('Circle.customWidth')),
-                  currentRate: this.currentRate2,
-                  rate: this.rate,
+                  key: ValueKey<String>(tr('Circle.customWidth')),
+                  currentRate: currentRate2,
+                  rate: rate,
                   speed: 100.0,
                   strokeWidth: 6.0,
                   text: tr('Circle.customWidth'),
-                  onChange: (val) {
+                  onChange: (double val) {
                     setState(() {
-                      this.currentRate2 = val;
+                      currentRate2 = val;
                     });
                   },
                 ),
                 FlanCircle(
-                  key: ValueKey(tr('Circle.customColor')),
-                  currentRate: this.currentRate3,
-                  rate: this.rate,
+                  key: ValueKey<String>(tr('Circle.customColor')),
+                  currentRate: currentRate3,
+                  rate: rate,
                   speed: 100.0,
-                  layerColor: Color(0xffebedf0),
-                  color: Color(0xFFEE0A24),
+                  layerColor: const Color(0xffebedf0),
+                  color: const Color(0xFFEE0A24),
                   text: tr('Circle.customColor'),
-                  onChange: (val) {
+                  onChange: (double val) {
                     setState(() {
-                      this.currentRate3 = val;
+                      currentRate3 = val;
                     });
                   },
                 ),
                 FlanCircle(
-                  key: ValueKey(tr('Circle.gradient')),
-                  currentRate: this.currentRate4,
-                  rate: this.rate,
+                  key: ValueKey<String>(tr('Circle.gradient')),
+                  currentRate: currentRate4,
+                  rate: rate,
                   speed: 100.0,
-                  gradient: LinearGradient(
-                    colors: [
+                  gradient: const LinearGradient(
+                    colors: <Color>[
                       Color(0xff3fecff),
                       Color(0xff6149f6),
                     ],
                   ),
                   text: tr('Circle.gradient'),
-                  onChange: (val) {
+                  onChange: (double val) {
                     setState(() {
-                      this.currentRate4 = val;
+                      currentRate4 = val;
                     });
                   },
                 ),
                 FlanCircle(
-                  key: ValueKey(tr('Circle.counterClockwise')),
-                  currentRate: this.currentRate4,
-                  rate: this.rate,
+                  key: ValueKey<String>(tr('Circle.counterClockwise')),
+                  currentRate: currentRate4,
+                  rate: rate,
                   speed: 100.0,
-                  color: Color(0xff07c160),
+                  color: const Color(0xff07c160),
                   clockwise: false,
                   text: tr('Circle.counterClockwise'),
-                  onChange: (val) {
+                  onChange: (double val) {
                     setState(() {
-                      this.currentRate4 = val;
+                      currentRate4 = val;
                     });
                   },
                 ),
                 FlanCircle(
-                  key: ValueKey(tr('Circle.customSize')),
-                  currentRate: this.currentRate4,
-                  rate: this.rate,
+                  key: ValueKey<String>(tr('Circle.customSize')),
+                  currentRate: currentRate4,
+                  rate: rate,
                   speed: 100.0,
-                  color: Color(0xff7232dd),
+                  color: const Color(0xff7232dd),
                   clockwise: false,
                   size: 120.0,
                   text: tr('Circle.customSize'),
-                  onChange: (val) {
+                  onChange: (double val) {
                     setState(() {
-                      this.currentRate4 = val;
+                      currentRate4 = val;
                     });
                   },
                 ),
@@ -144,19 +144,19 @@ class _CirclePageState extends State<CirclePage> {
             Padding(
               padding: const EdgeInsets.only(top: 30.0),
               child: Row(
-                children: [
+                children: <Widget>[
                   FlanButton(
                     type: FlanButtonType.success,
                     size: FlanButtonSize.small,
-                    text: tr("add"),
-                    onClick: this.add,
+                    text: tr('add'),
+                    onClick: add,
                   ),
-                  SizedBox(width: 10.0),
+                  const SizedBox(width: 10.0),
                   FlanButton(
                     type: FlanButtonType.danger,
                     size: FlanButtonSize.small,
-                    text: tr("decrease"),
-                    onClick: this.sub,
+                    text: tr('decrease'),
+                    onClick: sub,
                   ),
                 ],
               ),

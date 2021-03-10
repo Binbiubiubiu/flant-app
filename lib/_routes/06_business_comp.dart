@@ -1,62 +1,63 @@
+import 'package:flutter/widgets.dart';
+
 import '../basic_pages/main.dart';
-import '../business_pages/main.dart';
 
 import './_modals.dart';
 
-var businessCompRoutes = [
+List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
-    name: "AddressEdit",
-    path: "/addressedit",
-    component: (context) => CellPage(),
+    name: 'AddressEdit',
+    path: '/addressedit',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "AddressList",
-    path: "/addresslist",
-    component: (context) => CellPage(),
+    name: 'AddressList',
+    path: '/addresslist',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Area",
-    path: "/area",
-    component: (context) => CellPage(),
+    name: 'Area',
+    path: '/area',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Card",
-    path: "/card",
-    component: (context) => CellPage(),
+    name: 'Card',
+    path: '/card',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "ContactCard",
-    path: "/contactcard",
-    component: (context) => CellPage(),
+    name: 'ContactCard',
+    path: '/contactcard',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "ContactEdit",
-    path: "/contactedit",
-    component: (context) => CellPage(),
+    name: 'ContactEdit',
+    path: '/contactedit',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "ContactList",
-    path: "/contactlist",
-    component: (context) => CellPage(),
+    name: 'ContactList',
+    path: '/contactlist',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Coupon",
-    path: "/coupon",
-    component: (context) => CellPage(),
+    name: 'Coupon',
+    path: '/coupon',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "GoodsAction",
-    path: "/goodsaction",
-    component: (context) => CellPage(),
+    name: 'GoodsAction',
+    path: '/goodsaction',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "SubmitBar",
-    path: "/submitbar",
-    component: (context) => CellPage(),
+    name: 'SubmitBar',
+    path: '/submitbar',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Sku",
-    path: "/sku",
-    component: (context) => CellPage(),
+    name: 'Sku',
+    path: '/sku',
+    component: (BuildContext context) => CellPage(),
   ),
 ];

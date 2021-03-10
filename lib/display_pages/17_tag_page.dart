@@ -13,18 +13,18 @@ class _TagPageState extends State<TagPage> {
   bool show = true;
 
   void close() {
-    this.setState(() {
-      this.show = false;
+    setState(() {
+      show = false;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
             FlanCell(
               title: "primary ${tr('Tag.type')}",
               child: FlanTag(
@@ -56,10 +56,10 @@ class _TagPageState extends State<TagPage> {
           ],
         ),
         DocBlock(
-          title: tr("Tag.tagStyle"),
-          children: [
+          title: tr('Tag.tagStyle'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Tag.plain"),
+              title: tr('Tag.plain'),
               child: FlanTag(
                 plain: true,
                 type: FlanTagType.primary,
@@ -67,7 +67,7 @@ class _TagPageState extends State<TagPage> {
               ),
             ),
             FlanCell(
-              title: tr("Tag.round"),
+              title: tr('Tag.round'),
               child: FlanTag(
                 round: true,
                 type: FlanTagType.primary,
@@ -75,7 +75,7 @@ class _TagPageState extends State<TagPage> {
               ),
             ),
             FlanCell(
-              title: tr("Tag.mark"),
+              title: tr('Tag.mark'),
               child: FlanTag(
                 mark: true,
                 type: FlanTagType.primary,
@@ -83,11 +83,11 @@ class _TagPageState extends State<TagPage> {
               ),
             ),
             FlanCell(
-              title: tr("Tag.closeable"),
+              title: tr('Tag.closeable'),
               child: FlanTag(
                 closeable: true,
-                show: this.show,
-                onClose: this.close,
+                show: show,
+                onClose: close,
                 size: FlanTagSize.medium,
                 type: FlanTagType.primary,
                 child: Text(tr('tag')),
@@ -96,10 +96,10 @@ class _TagPageState extends State<TagPage> {
           ],
         ),
         DocBlock(
-          title: tr("Tag.customSize"),
-          children: [
+          title: tr('Tag.customSize'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Tag.smallSize"),
+              title: tr('Tag.smallSize'),
               child: FlanTag(
                 type: FlanTagType.primary,
                 size: FlanTagSize.normal,
@@ -107,7 +107,7 @@ class _TagPageState extends State<TagPage> {
               ),
             ),
             FlanCell(
-              title: tr("Tag.mediumSize"),
+              title: tr('Tag.mediumSize'),
               child: FlanTag(
                 type: FlanTagType.primary,
                 size: FlanTagSize.medium,
@@ -115,7 +115,7 @@ class _TagPageState extends State<TagPage> {
               ),
             ),
             FlanCell(
-              title: tr("Tag.largeSize"),
+              title: tr('Tag.largeSize'),
               child: FlanTag(
                 type: FlanTagType.primary,
                 size: FlanTagSize.large,
@@ -125,27 +125,27 @@ class _TagPageState extends State<TagPage> {
           ],
         ),
         DocBlock(
-          title: tr("Tag.customColor"),
-          children: [
+          title: tr('Tag.customColor'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Tag.customBgColor"),
+              title: tr('Tag.customBgColor'),
               child: FlanTag(
-                color: Color(0xff7232dd),
+                color: const Color(0xff7232dd),
                 child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: tr("Tag.customTextColor"),
+              title: tr('Tag.customTextColor'),
               child: FlanTag(
-                color: Color(0xffffe1e1),
-                textColor: Color(0xffad0000),
+                color: const Color(0xffffe1e1),
+                textColor: const Color(0xffad0000),
                 child: Text(tr('tag')),
               ),
             ),
             FlanCell(
-              title: tr("Tag.customPlainColor"),
+              title: tr('Tag.customPlainColor'),
               child: FlanTag(
-                color: Color(0xff7232dd),
+                color: const Color(0xff7232dd),
                 plain: true,
                 child: Text(tr('tag')),
               ),

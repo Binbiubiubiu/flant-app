@@ -9,150 +9,150 @@ class GridPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock.noPadding(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
             FlanGrid(
-              children: List.generate(
+              children: List<FlanGridItem>.generate(
                 4,
-                (index) => FlanGridItem(
-                  key: ValueKey(index),
+                (int index) => FlanGridItem(
+                  key: ValueKey<int>(index),
                   iconName: FlanIcons.photo_o,
-                  text: tr("Grid.text"),
+                  text: tr('Grid.text'),
                 ),
               ),
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Grid.columnNum"),
-          children: [
+          title: tr('Grid.columnNum'),
+          children: <Widget>[
             FlanGrid(
               columnNum: 3,
-              children: List.generate(
+              children: List<FlanGridItem>.generate(
                 6,
-                (index) => FlanGridItem(
-                  key: ValueKey(index),
+                (int index) => FlanGridItem(
+                  key: ValueKey<int>(index),
                   iconName: FlanIcons.photo_o,
-                  text: tr("Grid.text"),
+                  text: tr('Grid.text'),
                 ),
               ),
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Grid.customContent"),
-          children: [
-            FlanGrid(
+          title: tr('Grid.customContent'),
+          children: <Widget>[
+            const FlanGrid(
               columnNum: 3,
               border: false,
-              children: [
+              children: <FlanGridItem>[
                 FlanGridItem(
                   child: FlanImage(
                     fit: BoxFit.contain,
-                    src: "https://img01.yzcdn.cn/vant/apple-1.jpg",
+                    src: 'https://img01.yzcdn.cn/vant/apple-1.jpg',
                   ),
                 ),
                 FlanGridItem(
                   child: FlanImage(
                     fit: BoxFit.contain,
-                    src: "https://img01.yzcdn.cn/vant/apple-2.jpg",
+                    src: 'https://img01.yzcdn.cn/vant/apple-2.jpg',
                   ),
                 ),
                 FlanGridItem(
                   child: FlanImage(
                     fit: BoxFit.contain,
-                    src: "https://img01.yzcdn.cn/vant/apple-3.jpg",
+                    src: 'https://img01.yzcdn.cn/vant/apple-3.jpg',
                   ),
                 ),
               ],
             ),
             DocBlock.noPadding(
-              title: tr("Grid.square"),
-              children: [
+              title: tr('Grid.square'),
+              children: <Widget>[
                 FlanGrid(
                   square: true,
-                  children: List.generate(
+                  children: List<FlanGridItem>.generate(
                     8,
-                    (index) => FlanGridItem(
-                      key: ValueKey(index),
+                    (int index) => FlanGridItem(
+                      key: ValueKey<int>(index),
                       iconName: FlanIcons.photo_o,
-                      text: tr("Grid.text"),
+                      text: tr('Grid.text'),
                     ),
                   ),
                 ),
               ],
             ),
             DocBlock.noPadding(
-              title: tr("Grid.gutter"),
-              children: [
+              title: tr('Grid.gutter'),
+              children: <Widget>[
                 FlanGrid(
                   gutter: 10.0,
-                  children: List.generate(
+                  children: List<FlanGridItem>.generate(
                     8,
-                    (index) => FlanGridItem(
-                      key: ValueKey(index),
+                    (int index) => FlanGridItem(
+                      key: ValueKey<int>(index),
                       iconName: FlanIcons.photo_o,
-                      text: tr("Grid.text"),
+                      text: tr('Grid.text'),
                     ),
                   ),
                 ),
               ],
             ),
             DocBlock.noPadding(
-              title: tr("Grid.horizontal"),
-              children: [
+              title: tr('Grid.horizontal'),
+              children: <Widget>[
                 FlanGrid(
                   columnNum: 3,
                   direction: Axis.horizontal,
-                  children: List.generate(
+                  children: List<FlanGridItem>.generate(
                     3,
-                    (index) => FlanGridItem(
-                      key: ValueKey(index),
+                    (int index) => FlanGridItem(
+                      key: ValueKey<int>(index),
                       iconName: FlanIcons.photo_o,
-                      text: tr("Grid.text"),
+                      text: tr('Grid.text'),
                     ),
                   ),
                 ),
               ],
             ),
             DocBlock.noPadding(
-              title: tr("Grid.route"),
-              children: [
+              title: tr('Grid.route'),
+              children: <Widget>[
                 FlanGrid(
                   columnNum: 2,
                   clickable: true,
-                  children: [
+                  children: <FlanGridItem>[
                     FlanGridItem(
                       iconName: FlanIcons.home_o,
-                      text: tr("Grid.vueRoute"),
-                      toName: "/button",
+                      text: tr('Grid.vueRoute'),
+                      toName: '/button',
                     ),
                     FlanGridItem(
                       iconName: FlanIcons.search,
-                      text: tr("Grid.urlRoute"),
-                      toName: "/button",
+                      text: tr('Grid.urlRoute'),
+                      toName: '/button',
                     )
                   ],
                 ),
               ],
             ),
             DocBlock.noPadding(
-              title: tr("Grid.showBadge"),
-              children: [
+              title: tr('Grid.showBadge'),
+              children: <Widget>[
                 FlanGrid(
                   columnNum: 2,
-                  children: [
+                  children: <FlanGridItem>[
                     FlanGridItem(
                       iconName: FlanIcons.home_o,
-                      text: tr("Grid.text"),
+                      text: tr('Grid.text'),
                       dot: true,
                     ),
                     FlanGridItem(
                       iconName: FlanIcons.search,
-                      text: tr("Grid.text"),
-                      badge: "99+",
+                      text: tr('Grid.text'),
+                      badge: '99+',
                     )
                   ],
                 ),

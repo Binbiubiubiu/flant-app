@@ -12,9 +12,9 @@ Future<void> main() async {
 
   runApp(
     EasyLocalization(
-      supportedLocales: [Locale('en'), Locale('zh')],
+      supportedLocales: const <Locale>[Locale('en'), Locale('zh')],
       path: 'assets/i18n', // <-- change the path of the translation files
-      fallbackLocale: Locale('zh'),
+      fallbackLocale: const Locale('zh'),
       // assetLoader: CodegenLoader(),
       saveLocale: false,
       useOnlyLangCode: true,
@@ -32,28 +32,28 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      onGenerateTitle: (context) => tr("App.title"),
+      onGenerateTitle: (BuildContext context) => tr('App.title'),
       localizationsDelegates: context.localizationDelegates
         ..add(FlanS.delegate),
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
         primaryColor: Colors.white,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           elevation: 0.0,
         ),
         scaffoldBackgroundColor: Colors.white,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
       onGenerateRoute: CompRouter.onGenerateRoute,
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
             right: 20.0,
             bottom: 20.0,
           ),
-          children: [
+          children: <Widget>[
             const _FlantAppTitle(),
             const _FlantAppSubTitle(),
             ...renderList(CompRouter.routes)
@@ -88,35 +88,35 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   List<Widget> renderList(List<CompRoute> source) {
-    List<Widget> result = [];
+    final List<Widget> result = <Widget>[];
 
-    source.forEach((group) {
+    for (int i = 0; i < source.length; i++) {
+      final CompRoute group = source[i];
+
       result.add(
         SubTitle(
-          text: tr("Nav.${group.name}"),
+          text: tr('Nav.${group.name}'),
           padding: const EdgeInsets.only(top: 24.0, bottom: 16.0, left: 18.0),
         ),
       );
 
-      var children = group.routes!;
-      for (var i = 0; i < children.length; i++) {
-        var route = children.elementAt(i);
+      final List<CompRoute> children = group.routes!;
+      for (int i = 0; i < children.length; i++) {
+        final CompRoute route = children.elementAt(i);
         result.add(RouteButton(
-          text: tr("Nav.${route.name}"),
+          text: tr('Nav.${route.name}'),
           onPressed: () {
             Navigator.of(context).pushNamed(
               route.path!,
-              arguments: {
-                "title": route.name,
-              },
+              arguments: <String, String>{'title': route.name},
             );
           },
         ));
         if (i != children.length - 1) {
-          result.add(SizedBox(height: 20.0));
+          result.add(const SizedBox(height: 20.0));
         }
       }
-    });
+    }
 
     return result;
   }
@@ -130,16 +130,16 @@ class _FlantAppTitle extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(left: 16.0, top: 45.0, bottom: 16.0),
       child: Row(
-        children: [
+        children: <Widget>[
           Image.network(
-            tr("App.logo"),
+            tr('App.logo'),
             width: 32.0,
             height: 32.0,
           ),
-          SizedBox(width: 16.0),
+          const SizedBox(width: 16.0),
           Text(
-            tr("App.title"),
-            style: TextStyle(fontSize: 32.0),
+            tr('App.title'),
+            style: const TextStyle(fontSize: 32.0),
           )
         ],
       ),
@@ -156,8 +156,8 @@ class _FlantAppSubTitle extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 16.0),
       padding: const EdgeInsets.only(left: 16.0),
       child: Text(
-        tr("App.description"),
-        style: TextStyle(
+        tr('App.description'),
+        style: const TextStyle(
           color: Color.fromRGBO(69, 90, 100, 0.6),
         ),
       ),

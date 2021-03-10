@@ -1,87 +1,89 @@
+import 'package:flutter/widgets.dart';
+
 import '../basic_pages/main.dart';
 import '../form_pages/main.dart';
 
 import './_modals.dart';
 
-var formCompRoutes = [
+List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
-    name: "Calendar",
-    path: "/calendar",
-    component: (context) => CellPage(),
+    name: 'Calendar',
+    path: '/calendar',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Cascader",
-    path: "/cascader",
-    component: (context) => CellPage(),
+    name: 'Cascader',
+    path: '/cascader',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Checkbox",
-    path: "/checkbox",
-    component: (context) => CellPage(),
+    name: 'Checkbox',
+    path: '/checkbox',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "DatetimePicker",
-    path: "/datetimePicker",
-    component: (context) => CellPage(),
+    name: 'DatetimePicker',
+    path: '/datetimePicker',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Field",
-    path: "/field",
-    component: (context) => CellPage(),
+    name: 'Field',
+    path: '/field',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Form",
-    path: "/form",
-    component: (context) => CellPage(),
+    name: 'Form',
+    path: '/form',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "NumberKeyboard",
-    path: "/numberkeyboard",
-    component: (context) => CellPage(),
+    name: 'NumberKeyboard',
+    path: '/numberkeyboard',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "PasswordInput",
-    path: "/passwordinput",
-    component: (context) => CellPage(),
+    name: 'PasswordInput',
+    path: '/passwordinput',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Picker",
-    path: "/picker",
-    component: (context) => CellPage(),
+    name: 'Picker',
+    path: '/picker',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Radio",
-    path: "/radio",
-    component: (context) => CellPage(),
+    name: 'Radio',
+    path: '/radio',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Rate",
-    path: "/rate",
-    component: (context) => CellPage(),
+    name: 'Rate',
+    path: '/rate',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Search",
-    path: "/search",
-    component: (context) => CellPage(),
+    name: 'Search',
+    path: '/search',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Slider",
-    path: "/slider",
-    component: (context) => CellPage(),
+    name: 'Slider',
+    path: '/slider',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Stepper",
-    path: "/Stepper",
-    component: (context) => CellPage(),
+    name: 'Stepper',
+    path: '/Stepper',
+    component: (BuildContext context) => CellPage(),
   ),
   CompRoute(
-    name: "Switch",
-    path: "/switch",
-    component: (context) => SwitchPage(),
+    name: 'Switch',
+    path: '/switch',
+    component: (BuildContext context) => SwitchPage(),
   ),
   CompRoute(
-    name: "Uploader",
-    path: "/uploader",
-    component: (context) => CellPage(),
+    name: 'Uploader',
+    path: '/uploader',
+    component: (BuildContext context) => CellPage(),
   ),
 ];

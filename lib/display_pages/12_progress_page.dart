@@ -9,10 +9,10 @@ class ProgressPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CompPage(
       backgroundColor: Colors.white,
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: const <Widget>[
             Padding(
               padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
               child: FlanProgress(percentage: 50.0),
@@ -20,8 +20,8 @@ class ProgressPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Progress.strokeWidth"),
-          children: [
+          title: tr('Progress.strokeWidth'),
+          children: const <Widget>[
             Padding(
               padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
               child: FlanProgress(
@@ -32,8 +32,8 @@ class ProgressPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Progress.title2"),
-          children: [
+          title: tr('Progress.title2'),
+          children: const <Widget>[
             Padding(
               padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
               child: FlanProgress(
@@ -44,34 +44,36 @@ class ProgressPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Progress.title3"),
-          children: [
+          title: tr('Progress.title3'),
+          children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
+              padding: const EdgeInsets.only(top: 5.0, bottom: 10.0),
               child: FlanProgress(
                 color: const Color(0xfff2806a),
                 percentage: 25.0,
-                pivotText: tr("orange"),
+                pivotText: tr('orange'),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
+              padding: const EdgeInsets.only(top: 5.0, bottom: 10.0),
               child: FlanProgress(
                 color: const Color(0xffee0a24),
                 percentage: 50.0,
-                pivotText: tr("red"),
+                pivotText: tr('red'),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 5.0, bottom: 10.0),
+              padding: const EdgeInsets.only(top: 5.0, bottom: 10.0),
               child: FlanProgress(
-                gradient: const LinearGradient(colors: [
-                  const Color(0xffbe99ff),
-                  const Color(0xff7232dd),
-                ]),
-                pivotColor: Color(0xff7232dd),
+                gradient: const LinearGradient(
+                  colors: <Color>[
+                    Color(0xffbe99ff),
+                    Color(0xff7232dd),
+                  ],
+                ),
+                pivotColor: const Color(0xff7232dd),
                 percentage: 75.0,
-                pivotText: tr("purple"),
+                pivotText: tr('purple'),
               ),
             ),
           ],

@@ -20,89 +20,89 @@ class _SwitchPageState extends State<SwitchPage> {
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
           title: tr('basicUsage'),
-          children: [
-            FlanSwitch(
-              value: this.checked,
+          children: <Widget>[
+            FlanSwitch<bool>(
+              value: checked,
               onChange: (bool value) {
-                this.setState(() => this.checked = value);
+                setState(() => checked = value);
               },
             ),
           ],
         ),
         DocBlock(
           title: tr('disabled'),
-          children: [
-            FlanSwitch(
-              value: this.checked,
+          children: <Widget>[
+            FlanSwitch<bool>(
+              value: checked,
               disabled: true,
               onChange: (bool value) {
-                this.setState(() => this.checked = value);
+                setState(() => checked = value);
               },
             ),
           ],
         ),
         DocBlock(
           title: tr('loadingStatus'),
-          children: [
-            FlanSwitch(
-              value: this.checked,
+          children: <Widget>[
+            FlanSwitch<bool>(
+              value: checked,
               loading: true,
               onChange: (bool value) {
-                this.setState(() => this.checked = value);
+                setState(() => checked = value);
               },
             ),
           ],
         ),
         DocBlock(
           title: tr('Switch.customSize'),
-          children: [
-            FlanSwitch(
-              value: this.checked2,
+          children: <Widget>[
+            FlanSwitch<bool>(
+              value: checked2,
               size: 24.0,
               onChange: (bool value) {
-                this.setState(() => this.checked2 = value);
+                setState(() => checked2 = value);
               },
             ),
           ],
         ),
         DocBlock(
           title: tr('Switch.customColor'),
-          children: [
-            FlanSwitch(
-              value: this.checked3,
+          children: <Widget>[
+            FlanSwitch<bool>(
+              value: checked3,
               activeColor: const Color(0xffee0a24),
               inActiveColor: const Color(0xffdcdee0),
               onChange: (bool value) {
-                this.setState(() => this.checked3 = value);
+                setState(() => checked3 = value);
               },
             ),
           ],
         ),
         DocBlock(
           title: tr('Switch.asyncControl'),
-          children: [
-            FlanSwitch(
-              value: this.checked4,
+          children: <Widget>[
+            FlanSwitch<bool>(
+              value: checked4,
               onChange: (bool value) {
-                this.setState(() => this.checked4 = value);
+                setState(() => checked4 = value);
               },
             ),
           ],
         ),
         DocBlock.noPadding(
           title: tr('Switch.withCell'),
-          children: [
+          children: <Widget>[
             FlanCell(
               center: true,
               title: tr('title'),
-              rightIconSlot: FlanSwitch(
-                value: this.checked5,
+              rightIconSlot: FlanSwitch<bool>(
+                value: checked5,
                 size: 24.0,
                 onChange: (bool value) {
-                  this.setState(() => this.checked5 = value);
+                  setState(() => checked5 = value);
                 },
               ),
             ),

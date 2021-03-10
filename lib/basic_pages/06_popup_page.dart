@@ -22,117 +22,126 @@ class _PopupPageState extends State<PopupPage> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
+    final Size screenSize = MediaQuery.of(context).size;
 
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Popup.buttonBasic"),
+              title: tr('Popup.buttonBasic'),
               isLink: true,
               onClick: () {
-                this.setState(() {
-                  this.showBasic = true;
+                setState(() {
+                  showBasic = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showBasic,
+              show: showBasic,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showBasic = show;
+                setState(() {
+                  showBasic = show;
                 });
               },
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
-                child: Text(tr("content"), style: TextStyle(fontSize: 16.0)),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 30.0,
+                  horizontal: 50.0,
+                ),
+                child: Text(
+                  tr('content'),
+                  style: const TextStyle(fontSize: 16.0),
+                ),
               ),
             ),
           ],
         ),
         DocBlock(
-          title: tr("Popup.position"),
-          children: [
+          title: tr('Popup.position'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Popup.buttonTop"),
+              title: tr('Popup.buttonTop'),
               isLink: true,
+              border: true,
               onClick: () {
-                this.setState(() {
-                  this.showTop = true;
+                setState(() {
+                  showTop = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showTop,
+              show: showTop,
               position: FlanPopupPosition.top,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showTop = show;
+                setState(() {
+                  showTop = show;
                 });
               },
               child: SizedBox(height: screenSize.height * .3),
             ),
             FlanCell(
-              title: tr("Popup.buttonBottom"),
+              title: tr('Popup.buttonBottom'),
               isLink: true,
+              border: true,
               onClick: () {
-                this.setState(() {
-                  this.showBottom = true;
+                setState(() {
+                  showBottom = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showBottom,
+              show: showBottom,
               position: FlanPopupPosition.bottom,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showBottom = show;
+                setState(() {
+                  showBottom = show;
                 });
               },
               child: SizedBox(height: screenSize.height * .3),
             ),
             FlanCell(
-              title: tr("Popup.buttonLeft"),
+              title: tr('Popup.buttonLeft'),
               isLink: true,
+              border: true,
               onClick: () {
-                this.setState(() {
-                  this.showLeft = true;
+                setState(() {
+                  showLeft = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showLeft,
+              show: showLeft,
               position: FlanPopupPosition.left,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showLeft = show;
+                setState(() {
+                  showLeft = show;
                 });
               },
               child: SizedBox(
                   width: screenSize.width * .3, height: double.infinity),
             ),
             FlanCell(
-              title: tr("Popup.buttonRight"),
+              title: tr('Popup.buttonRight'),
               isLink: true,
               onClick: () {
-                this.setState(() {
-                  this.showRight = true;
+                setState(() {
+                  showRight = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showRight,
+              show: showRight,
               position: FlanPopupPosition.right,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showRight = show;
+                setState(() {
+                  showRight = show;
                 });
               },
               child: SizedBox(
@@ -141,69 +150,71 @@ class _PopupPageState extends State<PopupPage> {
           ],
         ),
         DocBlock(
-          title: tr("Popup.closeIcon"),
-          children: [
+          title: tr('Popup.closeIcon'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Popup.closeIcon"),
+              title: tr('Popup.closeIcon'),
               isLink: true,
+              border: true,
               onClick: () {
-                this.setState(() {
-                  this.showCloseIcon = true;
+                setState(() {
+                  showCloseIcon = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanCell(
-              title: tr("Popup.customCloseIcon"),
+              title: tr('Popup.customCloseIcon'),
               isLink: true,
+              border: true,
               onClick: () {
-                this.setState(() {
-                  this.showCustomCloseIcon = true;
+                setState(() {
+                  showCustomCloseIcon = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanCell(
-              title: tr("Popup.customIconPosition"),
+              title: tr('Popup.customIconPosition'),
               isLink: true,
               onClick: () {
-                this.setState(() {
-                  this.showCustomIconPosition = true;
+                setState(() {
+                  showCustomIconPosition = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showCloseIcon,
+              show: showCloseIcon,
               position: FlanPopupPosition.bottom,
               closeable: true,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showCloseIcon = show;
+                setState(() {
+                  showCloseIcon = show;
                 });
               },
               child: SizedBox(height: screenSize.height * .3),
             ),
             FlanPopup(
-              show: this.showCustomCloseIcon,
+              show: showCustomCloseIcon,
               position: FlanPopupPosition.bottom,
               closeable: true,
               closeIconName: FlanIcons.close,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showCustomCloseIcon = show;
+                setState(() {
+                  showCustomCloseIcon = show;
                 });
               },
               child: SizedBox(height: screenSize.height * .3),
             ),
             FlanPopup(
-              show: this.showCustomIconPosition,
+              show: showCustomIconPosition,
               position: FlanPopupPosition.bottom,
               closeable: true,
               closeIconPosition: FlanPopupCloseIconPosition.topLeft,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showCustomIconPosition = show;
+                setState(() {
+                  showCustomIconPosition = show;
                 });
               },
               child: SizedBox(height: screenSize.height * .3),
@@ -211,25 +222,25 @@ class _PopupPageState extends State<PopupPage> {
           ],
         ),
         DocBlock(
-          title: tr("Popup.roundCorner"),
-          children: [
+          title: tr('Popup.roundCorner'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Popup.roundCorner"),
+              title: tr('Popup.roundCorner'),
               isLink: true,
               onClick: () {
-                this.setState(() {
-                  this.showRoundCorner = true;
+                setState(() {
+                  showRoundCorner = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showRoundCorner,
+              show: showRoundCorner,
               position: FlanPopupPosition.bottom,
               round: true,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showRoundCorner = show;
+                setState(() {
+                  showRoundCorner = show;
                 });
               },
               child: SizedBox(height: screenSize.height * .3),
@@ -237,23 +248,23 @@ class _PopupPageState extends State<PopupPage> {
           ],
         ),
         DocBlock(
-          title: tr("Popup.teleport"),
-          children: [
+          title: tr('Popup.teleport'),
+          children: <Widget>[
             FlanCell(
-              title: tr("Popup.teleport"),
+              title: tr('Popup.teleport'),
               isLink: true,
               onClick: () {
-                this.setState(() {
-                  this.showGetContainer = true;
+                setState(() {
+                  showGetContainer = true;
                 });
                 // showAboutDialog(context: null)
               },
             ),
             FlanPopup(
-              show: this.showGetContainer,
+              show: showGetContainer,
               onChange: (bool show) {
-                this.setState(() {
-                  this.showGetContainer = show;
+                setState(() {
+                  showGetContainer = show;
                 });
               },
               child: const Padding(

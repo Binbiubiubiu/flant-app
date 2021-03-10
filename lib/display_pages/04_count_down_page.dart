@@ -6,7 +6,7 @@ import 'package:flant/flant.dart';
 import '../_components/main.dart';
 
 class CountDownPage extends StatefulWidget {
-  CountDownPage({Key? key}) : super(key: key);
+  const CountDownPage({Key? key}) : super(key: key);
 
   @override
   _CountDownPageState createState() => _CountDownPageState();
@@ -21,39 +21,39 @@ class _CountDownPageState extends State<CountDownPage> {
   Widget build(BuildContext context) {
     return CompPage(
       backgroundColor: Colors.white,
-      children: [
+      children: <Widget>[
         DocBlock(
           title: tr('basicUsage'),
-          children: [
+          children: <Widget>[
             FlanCountDown(time: time),
           ],
         ),
         DocBlock(
           title: tr('CountDown.customFormat'),
-          children: [
-            FlanCountDown(time: time, format: tr("CountDown.formatWithDay")),
+          children: <Widget>[
+            FlanCountDown(time: time, format: tr('CountDown.formatWithDay')),
           ],
         ),
         DocBlock(
           title: tr('CountDown.millisecond'),
-          children: [
-            FlanCountDown(time: time, format: "HH:mm:ss:SS", millisecond: true),
+          children: <Widget>[
+            FlanCountDown(time: time, format: 'HH:mm:ss:SS', millisecond: true),
           ],
         ),
         DocBlock(
           title: tr('CountDown.customStyle'),
-          children: [
+          children: <Widget>[
             FlanCountDown(
               time: time,
-              builder: (currentTime) {
+              builder: (CurrentTime currentTime) {
                 return Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    _buildBlock("${currentTime.hours}"),
+                  children: <Widget>[
+                    _buildBlock('${currentTime.hours}'),
                     _buildColon(),
-                    _buildBlock("${currentTime.minutes}"),
+                    _buildBlock('${currentTime.minutes}'),
                     _buildColon(),
-                    _buildBlock("${currentTime.seconds}"),
+                    _buildBlock('${currentTime.seconds}'),
                   ],
                 );
               },
@@ -62,33 +62,33 @@ class _CountDownPageState extends State<CountDownPage> {
         ),
         DocBlock(
           title: tr('CountDown.manualControl'),
-          children: [
+          children: <Widget>[
             FlanCountDown(
               key: countDown,
               millisecond: true,
               time: 3000,
               autoStart: false,
-              format: "ss:SSS",
+              format: 'ss:SSS',
               onFinish: onFinish,
             ),
-            SizedBox(height: 15.0),
+            const SizedBox(height: 15.0),
             FlanGrid(
               columnNum: 3,
               clickable: true,
-              children: [
+              children: <FlanGridItem>[
                 FlanGridItem(
                   iconName: FlanIcons.play_circle_o,
-                  text: tr("CountDown.start"),
+                  text: tr('CountDown.start'),
                   onClick: start,
                 ),
                 FlanGridItem(
                   iconName: FlanIcons.pause_circle_o,
-                  text: tr("CountDown.pause"),
+                  text: tr('CountDown.pause'),
                   onClick: pause,
                 ),
                 FlanGridItem(
                   iconName: FlanIcons.replay,
-                  text: tr("CountDown.reset"),
+                  text: tr('CountDown.reset'),
                   onClick: reset,
                 ),
               ],
@@ -99,20 +99,20 @@ class _CountDownPageState extends State<CountDownPage> {
     );
   }
 
-  start() {
+  void start() {
     countDown.currentState?.start();
   }
 
-  pause() {
+  void pause() {
     countDown.currentState?.pause();
   }
 
-  reset() {
+  void reset() {
     countDown.currentState?.reset();
   }
 
-  onFinish() {
-    showToast(context, message: tr("CountDown.finished"));
+  void onFinish() {
+    showToast(context, message: tr('CountDown.finished'));
   }
 
   Widget _buildBlock(String num) {
@@ -126,7 +126,7 @@ class _CountDownPageState extends State<CountDownPage> {
       ),
       child: Text(
         num,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 12.0,
           color: Colors.white,
           height: 1.0,
@@ -136,10 +136,10 @@ class _CountDownPageState extends State<CountDownPage> {
   }
 
   Widget _buildColon() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4.0),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 4.0),
       child: Text(
-        ":",
+        ':',
         style: TextStyle(
           fontSize: 12.0,
           color: ThemeVars.red,

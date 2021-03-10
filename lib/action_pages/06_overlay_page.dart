@@ -17,15 +17,15 @@ class _OverlayPageState extends State<OverlayPage> {
   Widget build(BuildContext context) {
     return CompPage(
       backgroundColor: Colors.white,
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
             FlanButton(
               type: FlanButtonType.primary,
-              text: tr("Overlay.showOverlay"),
+              text: tr('Overlay.showOverlay'),
               onClick: () {
-                this.setState(() {
+                setState(() {
                   show = true;
                 });
               },
@@ -33,7 +33,7 @@ class _OverlayPageState extends State<OverlayPage> {
             FlanOverlay(
               show: show,
               onClick: () {
-                this.setState(() {
+                setState(() {
                   show = false;
                 });
               },
@@ -41,13 +41,13 @@ class _OverlayPageState extends State<OverlayPage> {
           ],
         ),
         DocBlock(
-          title: tr("Overlay.embeddedContent"),
-          children: [
+          title: tr('Overlay.embeddedContent'),
+          children: <Widget>[
             FlanButton(
               type: FlanButtonType.primary,
-              text: tr("Overlay.embeddedContent"),
+              text: tr('Overlay.embeddedContent'),
               onClick: () {
-                this.setState(() {
+                setState(() {
                   showEmbedded = true;
                 });
               },
@@ -55,7 +55,7 @@ class _OverlayPageState extends State<OverlayPage> {
             FlanOverlay(
               show: showEmbedded,
               onClick: () {
-                this.setState(() {
+                setState(() {
                   showEmbedded = false;
                 });
               },

@@ -10,29 +10,29 @@ class ImagePage extends StatefulWidget {
 
 class _ImagePageState extends State<ImagePage> {
   final String image = 'https://img01.yzcdn.cn/vant/cat.jpeg';
-  final fits = {
-    BoxFit.contain: "contain",
-    BoxFit.cover: "cover",
-    BoxFit.fill: "fill",
-    BoxFit.none: "none",
-    BoxFit.scaleDown: "scale-down",
+  final Map<BoxFit, String> fits = <BoxFit, String>{
+    BoxFit.contain: 'contain',
+    BoxFit.cover: 'cover',
+    BoxFit.fill: 'fill',
+    BoxFit.none: 'none',
+    BoxFit.scaleDown: 'scale-down',
   };
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final itemHeight = width * 0.27;
+    final double width = MediaQuery.of(context).size.width;
+    final double itemHeight = width * 0.27;
 
     return CompPage(
       backgroundColor: Colors.white,
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: const <Widget>[
             FlanRow(
-              children: [
+              children: <Widget>[
                 FlanImage(
-                  src: "https://img01.yzcdn.cn/vant/cat.jpeg",
+                  src: 'https://img01.yzcdn.cn/vant/cat.jpeg',
                   width: 100.00,
                   height: 100.0,
                 )
@@ -41,18 +41,18 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: tr("Image.fitMode"),
-          children: [
+          title: tr('Image.fitMode'),
+          children: <Widget>[
             FlanRow(
               gutter: 20.0,
-              children: this.fits.keys.map((fit) {
-                final txt = this.fits[fit] as String;
+              children: fits.keys.map((BoxFit fit) {
+                final String txt = fits[fit]!;
                 return FlanCol(
-                  key: ValueKey(txt),
+                  key: ValueKey<String>(txt),
                   span: 8,
-                  children: [
+                  children: <Widget>[
                     FlanImage(
-                      src: this.image,
+                      src: image,
                       width: double.infinity,
                       height: itemHeight,
                       fit: fit,
@@ -65,18 +65,18 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: tr("Image.round"),
-          children: [
+          title: tr('Image.round'),
+          children: <Widget>[
             FlanRow(
               gutter: 20.0,
-              children: this.fits.keys.map((fit) {
-                final txt = this.fits[fit] as String;
+              children: fits.keys.map((BoxFit fit) {
+                final String txt = fits[fit]!;
                 return FlanCol(
-                  key: ValueKey(txt),
+                  key: ValueKey<String>(txt),
                   span: 8,
-                  children: [
+                  children: <Widget>[
                     FlanImage(
-                      src: this.image,
+                      src: image,
                       width: double.infinity,
                       height: itemHeight,
                       fit: fit,
@@ -90,14 +90,14 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: tr("Image.loading"),
-          children: [
+          title: tr('Image.loading'),
+          children: <Widget>[
             FlanRow(
               gutter: 20.0,
-              children: [
+              children: <Widget>[
                 FlanCol(
                   span: 8,
-                  children: [
+                  children: <Widget>[
                     FlanImage(
                       width: double.infinity,
                       height: itemHeight,
@@ -107,11 +107,11 @@ class _ImagePageState extends State<ImagePage> {
                 ),
                 FlanCol(
                   span: 8,
-                  children: [
+                  children: <Widget>[
                     FlanImage(
                       width: double.infinity,
                       height: itemHeight,
-                      loadingSlot: FlanIcon(
+                      loadingSlot: const FlanIcon(
                         iconName: FlanIcons.shop,
                       ),
                     ),
@@ -123,16 +123,16 @@ class _ImagePageState extends State<ImagePage> {
           ],
         ),
         DocBlock(
-          title: tr("Image.error"),
-          children: [
+          title: tr('Image.error'),
+          children: <Widget>[
             FlanRow(
               gutter: 20.0,
-              children: [
+              children: <Widget>[
                 FlanCol(
                   span: 8,
-                  children: [
+                  children: <Widget>[
                     FlanImage(
-                      src: "https://img01.yzcdn.cn/vant/cat",
+                      src: 'https://img01.yzcdn.cn/vant/cat',
                       width: double.infinity,
                       height: itemHeight,
                     ),
@@ -141,12 +141,12 @@ class _ImagePageState extends State<ImagePage> {
                 ),
                 FlanCol(
                   span: 8,
-                  children: [
+                  children: <Widget>[
                     FlanImage(
-                      src: "https://img01.yzcdn.cn/vant/cat",
+                      src: 'https://img01.yzcdn.cn/vant/cat',
                       width: double.infinity,
                       height: itemHeight,
-                      errorSlot: Text("加载失败"),
+                      errorSlot: const Text('加载失败'),
                     ),
                     ImagePageText(tr('Image.customTip')),
                   ],
@@ -171,9 +171,7 @@ class ImagePageText extends StatelessWidget {
       height: 48.0,
       alignment: Alignment.center,
       padding: const EdgeInsets.only(top: 5.0),
-      child: Text(
-        this.text,
-      ),
+      child: Text(text),
     );
   }
 }

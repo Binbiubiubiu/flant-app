@@ -16,69 +16,77 @@ class _TabbarPageState extends State<TabbarPage> {
   int active3 = 0;
   int active4 = 0;
   int active5 = 0;
-  String activeName = "home";
+  String activeName = 'home';
 
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock.noPadding(
           title: tr('basicUsage'),
-          children: [
-            FlanTabbar(
-              value: this.active,
+          children: <Widget>[
+            FlanTabbar<int>(
+              value: active,
               onChange: (int index) {
-                this.setState(() => active = index);
+                setState(() => active = index);
               },
-              children: [
-                FlanTabbarItem(
+              children: <FlanTabbarItem<int>>[
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Tabbar.matchByName"),
-          children: [
-            FlanTabbar(
-              value: this.activeName,
+          title: tr('Tabbar.matchByName'),
+          children: <Widget>[
+            FlanTabbar<String>(
+              value: activeName,
               onChange: (String index) {
-                this.setState(() => activeName = index);
+                setState(() => activeName = index);
               },
-              children: [
-                FlanTabbarItem(
-                  name: "home",
+              children: <FlanTabbarItem<String>>[
+                FlanTabbarItem<String>(
+                  name: 'home',
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
-                  name: "search",
+                FlanTabbarItem<String>(
+                  name: 'search',
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
-                  name: "friends",
+                FlanTabbarItem<String>(
+                  name: 'friends',
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
-                  name: "setting",
+                FlanTabbarItem<String>(
+                  name: 'setting',
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
               ],
             ),
@@ -86,31 +94,35 @@ class _TabbarPageState extends State<TabbarPage> {
         ),
         DocBlock.noPadding(
           title: tr('Tabbar.badge'),
-          children: [
-            FlanTabbar(
+          children: <Widget>[
+            FlanTabbar<int>(
               value: active2,
               onChange: (int index) {
-                this.setState(() => active2 = index);
+                setState(() => active2 = index);
               },
-              children: [
-                FlanTabbarItem(
+              children: <FlanTabbarItem<int>>[
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   dot: true,
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
-                  badge: "5",
+                FlanTabbarItem<int>(
+                  badge: '5',
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
-                  badge: "10",
+                FlanTabbarItem<int>(
+                  badge: '10',
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
               ],
             ),
@@ -118,92 +130,104 @@ class _TabbarPageState extends State<TabbarPage> {
         ),
         DocBlock.noPadding(
           title: tr('Tabbar.customIcon'),
-          children: [
-            FlanTabbar(
+          children: <Widget>[
+            FlanTabbar<int>(
               value: active3,
               onChange: (int index) {
-                this.setState(() => active3 = index);
+                setState(() => active3 = index);
               },
-              children: [
-                FlanTabbarItem(
-                  badge: "3",
-                  iconBuilder: (context, active) {
+              children: <FlanTabbarItem<int>>[
+                FlanTabbarItem<int>(
+                  badge: '3',
+                  iconBuilder: (BuildContext context, bool active) {
                     return active
                         ? Image.network(
-                            "https://img01.yzcdn.cn/vant/user-active.png")
+                            'https://img01.yzcdn.cn/vant/user-active.png')
                         : Image.network(
-                            "https://img01.yzcdn.cn/vant/user-inactive.png");
+                            'https://img01.yzcdn.cn/vant/user-inactive.png');
                   },
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                // ignore: always_specify_types
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Tabbar.customColor"),
-          children: [
-            FlanTabbar(
+          title: tr('Tabbar.customColor'),
+          children: <Widget>[
+            FlanTabbar<int>(
               value: active4,
               onChange: (int index) {
-                this.setState(() => active4 = index);
+                setState(() => active4 = index);
               },
               activeColor: const Color(0xffee0a24),
               inactiveColor: const Color(0xff000000),
-              children: [
-                FlanTabbarItem(
+              children: <FlanTabbarItem<int>>[
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Tabbar.switchEvent"),
-          children: [
-            FlanTabbar(
+          title: tr('Tabbar.switchEvent'),
+          children: <Widget>[
+            FlanTabbar<int>(
               value: active5,
               onChange: (int index) {
-                this.setState(() => active5 = index);
+                setState(() => active5 = index);
                 showToast(context, message: "${tr('tab')} ${index + 1}");
               },
-              children: [
-                FlanTabbarItem(
+              children: <FlanTabbarItem<int>>[
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.home_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.search,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.friends_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
-                FlanTabbarItem(
+                FlanTabbarItem<int>(
                   iconName: FlanIcons.setting_o,
-                  textBuilder: (context, active) => Text(tr("tab")),
+                  textBuilder: (BuildContext context, bool active) =>
+                      Text(tr('tab')),
                 ),
               ],
             ),

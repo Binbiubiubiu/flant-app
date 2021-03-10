@@ -7,24 +7,24 @@ class ToastPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("basicUsage"),
+          title: tr('basicUsage'),
           card: true,
-          children: [
+          children: <Widget>[
             FlanCell(
-              title: tr("Toast.title1"),
+              title: tr('Toast.title1'),
               isLink: true,
               border: true,
               onClick: () {
                 showToast(
                   context,
-                  message: tr("Toast.title1"),
+                  message: tr('Toast.title1'),
                 );
               },
             ),
             FlanCell(
-              title: tr("Toast.title2"),
+              title: tr('Toast.title2'),
               isLink: true,
               border: true,
               onClick: () {
@@ -36,65 +36,65 @@ class ToastPage extends StatelessWidget {
               },
             ),
             FlanCell(
-              title: tr("Toast.success"),
+              title: tr('Toast.success'),
               isLink: true,
               border: true,
               onClick: () {
                 showToast(
                   context,
                   type: FlanToastType.success,
-                  message: tr("Toast.text2"),
+                  message: tr('Toast.text2'),
                 );
               },
             ),
             FlanCell(
-              title: tr("Toast.fail"),
+              title: tr('Toast.fail'),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
                   type: FlanToastType.fail,
-                  message: tr("Toast.text3"),
+                  message: tr('Toast.text3'),
                 );
               },
             ),
           ],
         ),
         DocBlock(
-          title: tr("Toast.customIcon"),
+          title: tr('Toast.customIcon'),
           card: true,
-          children: [
+          children: <Widget>[
             FlanCell(
-              title: tr("Toast.customIcon"),
+              title: tr('Toast.customIcon'),
               isLink: true,
               border: true,
               onClick: () {
                 showToast(
                   context,
                   iconName: FlanIcons.like_o,
-                  message: tr("Toast.customIcon"),
+                  message: tr('Toast.customIcon'),
                 );
               },
             ),
             FlanCell(
-              title: tr("Toast.customImage"),
+              title: tr('Toast.customImage'),
               isLink: true,
               border: true,
               onClick: () {
                 showToast(
                   context,
-                  iconUrl: "https://img01.yzcdn.cn/vant/logo.png",
-                  message: tr("Toast.customImage"),
+                  iconUrl: 'https://img01.yzcdn.cn/vant/logo.png',
+                  message: tr('Toast.customImage'),
                 );
               },
             ),
             FlanCell(
-              title: tr("Toast.loadingType"),
+              title: tr('Toast.loadingType'),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
-                  iconUrl: "https://img01.yzcdn.cn/vant/logo.png",
+                  iconUrl: 'https://img01.yzcdn.cn/vant/logo.png',
                   message: FlanS.current!.loading,
                 );
               },
@@ -102,28 +102,28 @@ class ToastPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Toast.customPosition"),
+          title: tr('Toast.customPosition'),
           card: true,
-          children: [
+          children: <Widget>[
             FlanCell(
-              title: tr("Toast.positionTop"),
+              title: tr('Toast.positionTop'),
               isLink: true,
               border: true,
               onClick: () {
                 showToast(
                   context,
-                  message: tr("Toast.positionTop"),
+                  message: tr('Toast.positionTop'),
                   position: FlanToastPosition.top,
                 );
               },
             ),
             FlanCell(
-              title: tr("Toast.positionBottom"),
+              title: tr('Toast.positionBottom'),
               isLink: true,
               onClick: () {
                 showToast(
                   context,
-                  message: tr("Toast.positionBottom"),
+                  message: tr('Toast.positionBottom'),
                   position: FlanToastPosition.bottom,
                 );
               },
@@ -131,11 +131,11 @@ class ToastPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Toast.updateMessage"),
+          title: tr('Toast.updateMessage'),
           card: true,
-          children: [
+          children: <Widget>[
             FlanCell(
-              title: tr("Toast.updateMessage"),
+              title: tr('Toast.updateMessage'),
               isLink: true,
               onClick: () {},
             ),

@@ -10,84 +10,82 @@ class CollapsePage extends StatefulWidget {
 }
 
 class _CollapsePageState extends State<CollapsePage> {
-  List<String> active1 = ["0"];
-  String active2 = "0";
-  List<String> active3 = [];
-  List<String> active4 = [];
+  List<String> active1 = <String>['0'];
+  String active2 = '0';
+  List<String> active3 = <String>[];
+  List<String> active4 = <String>[];
 
   @override
   Widget build(BuildContext context) {
+    final FlanCollapseItem flanCollapseItem = FlanCollapseItem(
+      title: "${tr('title')}2",
+      // child: Text(tr("Collapse.text")),
+      disabled: true,
+    );
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock.noPadding(
-          title: tr("basicUsage"),
-          children: [
-            FlanCollapse(
-              value: this.active1,
-              onChange: (List<String> value) =>
-                  this.setState(() => this.active1 = value),
-              children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
+            FlanCollapse<List<String>>(
+              value: active1,
+              onChange: (List<String> value) => setState(() => active1 = value),
+              children: <FlanCollapseItem>[
                 FlanCollapseItem(
                   title: "${tr('title')}1",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
                 FlanCollapseItem(
                   title: "${tr('title')}2",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
                 FlanCollapseItem(
                   title: "${tr('title')}3",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Collapse.accordion"),
-          children: [
-            FlanCollapse(
-              value: this.active2,
-              onChange: (String value) =>
-                  this.setState(() => this.active2 = value),
+          title: tr('Collapse.accordion'),
+          children: <Widget>[
+            FlanCollapse<String>(
+              value: active2,
+              onChange: (String value) => setState(() => active2 = value),
               accordion: true,
-              children: [
+              children: <FlanCollapseItem>[
                 FlanCollapseItem(
                   title: "${tr('title')}1",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
                 FlanCollapseItem(
                   title: "${tr('title')}2",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
                 FlanCollapseItem(
                   title: "${tr('title')}3",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("disabled"),
-          children: [
-            FlanCollapse(
-              value: this.active3,
-              onChange: (List<String> value) =>
-                  this.setState(() => this.active3 = value),
-              children: [
+          title: tr('disabled'),
+          children: <Widget>[
+            FlanCollapse<List<String>>(
+              value: active3,
+              onChange: (List<String> value) => setState(() => active3 = value),
+              children: <FlanCollapseItem>[
                 FlanCollapseItem(
                   title: "${tr('title')}1",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
-                FlanCollapseItem(
-                  title: "${tr('title')}2",
-                  child: Text(tr("Collapse.text")),
-                  disabled: true,
-                ),
+                flanCollapseItem,
                 FlanCollapseItem(
                   title: "${tr('title')}3",
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                   disabled: true,
                 ),
               ],
@@ -96,31 +94,30 @@ class _CollapsePageState extends State<CollapsePage> {
         ),
         DocBlock.noPadding(
           title: tr('Collapse.titleSlot'),
-          children: [
-            FlanCollapse(
-              value: this.active4,
-              onChange: (List<String> value) =>
-                  this.setState(() => this.active4 = value),
-              children: [
+          children: <Widget>[
+            FlanCollapse<List<String>>(
+              value: active4,
+              onChange: (List<String> value) => setState(() => active4 = value),
+              children: <FlanCollapseItem>[
                 FlanCollapseItem(
                   titleSlot: Row(
                     mainAxisSize: MainAxisSize.min,
-                    children: [
+                    children: <Widget>[
                       Text("${tr('title')}1"),
-                      SizedBox(width: 5.0),
-                      FlanIcon.name(
+                      const SizedBox(width: 5.0),
+                      const FlanIcon.name(
                         FlanIcons.question_o,
                         size: 15.0,
                         color: Color(0xff1989fa),
                       ),
                     ],
                   ),
-                  child: Text(tr("Collapse.text")),
+                  child: Text(tr('Collapse.text')),
                 ),
                 FlanCollapseItem(
                   title: "${tr('title')}2",
-                  value: tr("content"),
-                  child: Text(tr("Collapse.text")),
+                  value: tr('content'),
+                  child: Text(tr('Collapse.text')),
                   iconName: FlanIcons.shop_o,
                 ),
               ],

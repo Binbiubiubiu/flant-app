@@ -8,27 +8,27 @@ class StylePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("Style.ellipsis"),
-          children: [
+          title: tr('Style.ellipsis'),
+          children: <Widget>[
             Text(
-              tr("Style.text1"),
+              tr('Style.text1'),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Text(
-              tr("Style.text2"),
+              tr('Style.text2'),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ],
         ),
         DocBlock(
-          title: tr("Style.hairline"),
+          title: tr('Style.hairline'),
           card: true,
-          children: [
+          children: <Widget>[
             Container(
               height: 30.0,
               color: Colors.white,
@@ -64,77 +64,77 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
   @override
   Widget build(BuildContext context) {
     return DocBlock(
-      title: tr("Style.animation"),
+      title: tr('Style.animation'),
       card: true,
-      children: [
+      children: <Widget>[
         FlanCell(
-          title: "Fade",
+          title: 'Fade',
           isLink: true,
           border: true,
           onClick: () {
-            this._startAnimate(kFlanFadeTransitionBuilder);
+            _startAnimate(kFlanFadeTransitionBuilder);
           },
         ),
         FlanCell(
-          title: "Slide Up",
+          title: 'Slide Up',
           isLink: true,
           border: true,
           onClick: () {
-            this._startAnimate(kFlanSlideUpTransitionBuilder);
+            _startAnimate(kFlanSlideUpTransitionBuilder);
           },
         ),
         FlanCell(
-          title: "Slide Down",
+          title: 'Slide Down',
           isLink: true,
           border: true,
           onClick: () {
-            this._startAnimate(kFlanSlideDownTransitionBuilder);
+            _startAnimate(kFlanSlideDownTransitionBuilder);
           },
         ),
         FlanCell(
-          title: "Slide Left",
+          title: 'Slide Left',
           isLink: true,
           border: true,
           onClick: () {
-            this._startAnimate(kFlanSlideLeftTransitionBuilder);
+            _startAnimate(kFlanSlideLeftTransitionBuilder);
           },
         ),
         FlanCell(
-          title: "Slide Right",
+          title: 'Slide Right',
           isLink: true,
           onClick: () {
-            this._startAnimate(kFlanSlideRightTransitionBuilder);
+            _startAnimate(kFlanSlideRightTransitionBuilder);
           },
         ),
         FlanTransition(
-          transitionBuilder: this.transitionBuilder,
+          transitionBuilder: transitionBuilder,
           child: Visibility(
-            visible: this.show,
+            visible: show,
             child: Container(
               width: 100.0,
               height: 100.0,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: ThemeVars.blue,
                 borderRadius: BorderRadius.all(Radius.circular(8.0)),
               ),
             ),
           ),
         ),
-        SizedBox(height: 100.0),
+        const SizedBox(height: 100.0),
       ],
     );
   }
 
-  _startAnimate(FlanTransitionBuilder transitionBuilder) {
-    this.setState(() {
-      this.transitionBuilder = transitionBuilder;
-      this.show = true;
+  void _startAnimate(FlanTransitionBuilder transitionBuilder) {
+    setState(() {
+      transitionBuilder = transitionBuilder;
+      show = true;
     });
 
-    Future.delayed(const Duration(seconds: 2)).then((value) {
-      if (this.mounted) {
-        this.setState(() {
-          this.show = false;
+    Future<dynamic>.delayed(const Duration(seconds: 2)).then((dynamic value) {
+      if (mounted) {
+        setState(() {
+          show = false;
         });
       }
     });

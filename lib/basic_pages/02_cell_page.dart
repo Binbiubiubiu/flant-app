@@ -8,39 +8,39 @@ class CellPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock.noPadding(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
             FlanCellGroup(
-              children: [
+              children: <FlanCell>[
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
                 ),
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
-                  label: tr("desc"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
+                  label: tr('desc'),
                 ),
               ],
             )
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Cell.largeSize"),
-          children: [
+          title: tr('Cell.largeSize'),
+          children: <Widget>[
             FlanCellGroup(
-              children: [
+              children: <FlanCell>[
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
                   size: FlanCellSize.large,
                 ),
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
-                  label: tr("desc"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
+                  label: tr('desc'),
                   size: FlanCellSize.large,
                 ),
               ],
@@ -48,41 +48,41 @@ class CellPage extends StatelessWidget {
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Cell.showIcon"),
-          children: [
+          title: tr('Cell.showIcon'),
+          children: <FlanCell>[
             FlanCell(
-              title: tr("Cell.cell"),
-              value: tr("content"),
+              title: tr('Cell.cell'),
+              value: tr('content'),
               size: FlanCellSize.large,
               iconName: FlanIcons.location_o,
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Cell.valueOnly"),
-          children: [
+          title: tr('Cell.valueOnly'),
+          children: <FlanCell>[
             FlanCell(
-              value: tr("content"),
+              value: tr('content'),
             )
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Cell.showArrow"),
-          children: [
+          title: tr('Cell.showArrow'),
+          children: <Widget>[
             FlanCellGroup(
-              children: [
+              children: <FlanCell>[
                 FlanCell(
-                  title: tr("Cell.cell"),
+                  title: tr('Cell.cell'),
                   isLink: true,
                 ),
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
                   isLink: true,
                 ),
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
                   arrowDirection: FlanCellArrowDirection.down,
                   isLink: true,
                 ),
@@ -91,23 +91,23 @@ class CellPage extends StatelessWidget {
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Cell.router"),
-          children: [
+          title: tr('Cell.router'),
+          children: <Widget>[
             FlanCellGroup(
-              children: [
+              children: <FlanCell>[
                 FlanCell(
-                  title: tr("Cell.urlRoute"),
+                  title: tr('Cell.urlRoute'),
                   isLink: true,
-                  toName: "/button",
+                  toName: '/button',
                 ),
                 FlanCell(
-                  title: tr("Cell.vueRoute"),
+                  title: tr('Cell.vueRoute'),
                   isLink: true,
-                  toRoute: MaterialPageRoute(
+                  toRoute: MaterialPageRoute<dynamic>(
                     builder: (BuildContext context) => ButtonPage(),
-                    settings: RouteSettings(
-                      name: "/button",
-                      arguments: {"title": "Button"},
+                    settings: const RouteSettings(
+                      name: '/button',
+                      arguments: <String, String>{'title': 'Button'},
                     ),
                   ),
                 ),
@@ -116,55 +116,55 @@ class CellPage extends StatelessWidget {
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Cell.groupTitle"),
-          children: [
+          title: tr('Cell.groupTitle'),
+          children: <Widget>[
             FlanCellGroup(
               title: "${tr('Cell.group')} 1",
-              children: [
+              children: <FlanCell>[
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
                 ),
               ],
             ),
             FlanCellGroup(
               title: "${tr('Cell.group')} 2",
-              children: [
+              children: <FlanCell>[
                 FlanCell(
-                  title: tr("Cell.cell"),
-                  value: tr("content"),
+                  title: tr('Cell.cell'),
+                  value: tr('content'),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Cell.useSlots"),
-          children: [
+          title: tr('Cell.useSlots'),
+          children: <Widget>[
             FlanCellGroup(
-              children: [
+              children: <FlanCell>[
                 FlanCell(
-                  titleSlot: Text(tr("Cell.cell")),
-                  value: tr("content"),
+                  titleSlot: Text(tr('Cell.cell')),
+                  value: tr('content'),
                   isLink: true,
                 ),
                 FlanCell(
-                  title: tr("Cell.cell"),
+                  title: tr('Cell.cell'),
                   iconName: FlanIcons.shop_o,
-                  rightIconSlot: FlanIcon.name(FlanIcons.search),
+                  rightIconSlot: const FlanIcon.name(FlanIcons.search),
                 ),
               ],
             ),
           ],
         ),
         DocBlock.noPadding(
-          title: "垂直居中",
-          children: [
+          title: '垂直居中',
+          children: <Widget>[
             FlanCell(
               center: true,
-              title: tr("Cell.cell"),
-              value: tr("content"),
-              label: tr("desc"),
+              title: tr('Cell.cell'),
+              value: tr('content'),
+              label: tr('desc'),
             ),
           ],
         ),

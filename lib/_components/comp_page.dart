@@ -14,41 +14,41 @@ class CompPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dynamic query =
-        (ModalRoute.of(context)?.settings.arguments) ?? {"title": "当前页面"};
+    final dynamic query = (ModalRoute.of(context)?.settings.arguments) ??
+        <String, String>{'title': '当前页面'};
 
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(query["title"]),
+        title: Text(query['title'] as String),
       ),
-      backgroundColor: this.backgroundColor,
+      backgroundColor: backgroundColor,
       body: SafeArea(
-        child: this.buildPageContent(context),
+        child: buildPageContent(context),
       ),
     );
   }
 
-  buildAppBar(BuildContext context) {
+  void buildAppBar(BuildContext context) {
     return;
   }
 
-  buildPageContent(BuildContext context) {
-    final pPagePadding = const EdgeInsets.only(
+  Widget buildPageContent(BuildContext context) {
+    const EdgeInsets pPagePadding = EdgeInsets.only(
       top: 0.0,
       bottom: 20.0,
     );
 
-    if (this.children.length > 0) {
+    if (children.isNotEmpty) {
       return ListView(
         padding: pPagePadding,
-        children: this.children,
+        children: children,
       );
     }
 
     return Padding(
       padding: pPagePadding,
-      child: this.child,
+      child: child,
     );
   }
 }

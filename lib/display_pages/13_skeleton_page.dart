@@ -11,34 +11,35 @@ class SkeletonPage extends StatelessWidget {
     bool show = false;
     return CompPage(
       backgroundColor: Colors.white,
-      children: [
+      children: <Widget>[
         DocBlock.noPadding(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
             FlanSkeleton(title: true, row: 3),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Skeleton.showAvatar"),
-          children: [
+          title: tr('Skeleton.showAvatar'),
+          children: <Widget>[
             FlanSkeleton(title: true, avatar: true, row: 3),
           ],
         ),
         DocBlock.noPadding(
-          title: tr("Skeleton.showChildren"),
-          children: [
+          title: tr('Skeleton.showChildren'),
+          children: <Widget>[
             StatefulBuilder(
-              builder: (context, setState) {
+              builder: (BuildContext context,
+                  void Function(void Function()) setState) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.only(
                         bottom: 8.0,
                         left: 16.0,
                         right: 16.0,
                       ),
-                      child: FlanSwitch(
+                      child: FlanSwitch<bool>(
                         value: show,
                         onChange: (bool s) => setState(() => show = s),
                         size: 24.0,
@@ -55,37 +56,39 @@ class SkeletonPage extends StatelessWidget {
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: <Widget>[
                             Padding(
                               padding: const EdgeInsets.only(
                                 right: ThemeVars.paddingMd,
                               ),
                               child: Image.network(
-                                "https://img01.yzcdn.cn/vant/logo.png",
+                                'https://img01.yzcdn.cn/vant/logo.png',
                                 width: 32.0,
                                 height: 32.0,
                               ),
                             ),
                             Expanded(
                               child: Text.rich(
-                                TextSpan(children: [
-                                  TextSpan(
-                                    text: "${tr("Skeleton.title")}\n",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18.0,
-                                      height: 1.4,
+                                TextSpan(
+                                  children: <InlineSpan>[
+                                    TextSpan(
+                                      text: "${tr("Skeleton.title")}\n",
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18.0,
+                                        height: 1.4,
+                                      ),
                                     ),
-                                  ),
-                                  WidgetSpan(child: Container(height: 10.0)),
-                                  TextSpan(
-                                    text: tr("Skeleton.desc"),
-                                    style: TextStyle(
-                                      fontSize: 14.0,
-                                      height: 1.5,
+                                    WidgetSpan(child: Container(height: 10.0)),
+                                    TextSpan(
+                                      text: tr('Skeleton.desc'),
+                                      style: const TextStyle(
+                                        fontSize: 14.0,
+                                        height: 1.5,
+                                      ),
                                     ),
-                                  ),
-                                ]),
+                                  ],
+                                ),
                               ),
                             ),
                           ],

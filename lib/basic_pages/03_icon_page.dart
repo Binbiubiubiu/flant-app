@@ -7,20 +7,20 @@ class IconPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
-      children: [
+      children: <Widget>[
         DocBlock(
-          title: tr("basicUsage"),
-          children: [
+          title: tr('basicUsage'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
-                const FlanIcon.name(
+              children: const <Widget>[
+                FlanIcon.name(
                   FlanIcons.chat_o,
                   size: 32.0,
                 ),
-                const FlanIcon.url(
-                  "https://b.yzcdn.cn/vant/icon-demo-1126.png",
+                FlanIcon.url(
+                  'https://b.yzcdn.cn/vant/icon-demo-1126.png',
                   size: 32.0,
                 ),
               ],
@@ -28,25 +28,25 @@ class IconPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Icon.badge"),
-          children: [
+          title: tr('Icon.badge'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
-                const FlanIcon.name(
+              children: const <Widget>[
+                FlanIcon.name(
                   FlanIcons.chat_o,
                   dot: true,
                   size: 32.0,
                 ),
-                const FlanIcon.name(
+                FlanIcon.name(
                   FlanIcons.chat_o,
-                  badge: "9",
+                  badge: '9',
                   size: 32.0,
                 ),
-                const FlanIcon.name(
+                FlanIcon.name(
                   FlanIcons.chat_o,
-                  badge: "99+",
+                  badge: '99+',
                   size: 32.0,
                 ),
               ],
@@ -54,18 +54,18 @@ class IconPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Icon.color"),
-          children: [
+          title: tr('Icon.color'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
-                const FlanIcon.name(
+              children: const <Widget>[
+                FlanIcon.name(
                   FlanIcons.cart_o,
                   color: Colors.blue,
                   size: 32.0,
                 ),
-                const FlanIcon.name(
+                FlanIcon.name(
                   FlanIcons.fire_o,
                   color: Colors.green,
                   size: 32.0,
@@ -75,17 +75,17 @@ class IconPage extends StatelessWidget {
           ],
         ),
         DocBlock(
-          title: tr("Icon.size"),
-          children: [
+          title: tr('Icon.size'),
+          children: <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: [
-                const FlanIcon.name(
+              children: const <Widget>[
+                FlanIcon.name(
                   FlanIcons.chat_o,
                   size: 40.0,
                 ),
-                const FlanIcon.name(
+                FlanIcon.name(
                   FlanIcons.chat_o,
                   size: 48.0,
                 ),
