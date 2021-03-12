@@ -15,9 +15,9 @@ class LoadingPage extends StatelessWidget {
           children: <Widget>[
             const SizedBox(height: 15.0),
             Row(
-              children: <Widget>[
+              children: const <Widget>[
                 FlanLoading(),
-                const SizedBox(width: 20.0),
+                SizedBox(width: 20.0),
                 FlanLoading(type: FlanLoadingType.spinner),
               ],
             ),
@@ -29,12 +29,12 @@ class LoadingPage extends StatelessWidget {
           children: <Widget>[
             const SizedBox(height: 15.0),
             Row(
-              children: <Widget>[
-                FlanLoading(color: const Color(0xff1989fa)),
-                const SizedBox(width: 20.0),
+              children: const <Widget>[
+                FlanLoading(color: Color(0xff1989fa)),
+                SizedBox(width: 20.0),
                 FlanLoading(
                   type: FlanLoadingType.spinner,
-                  color: const Color(0xff1989fa),
+                  color: Color(0xff1989fa),
                 ),
               ],
             ),
@@ -46,9 +46,9 @@ class LoadingPage extends StatelessWidget {
           children: <Widget>[
             const SizedBox(height: 15.0),
             Row(
-              children: <Widget>[
+              children: const <Widget>[
                 FlanLoading(size: 24.0),
-                const SizedBox(width: 20.0),
+                SizedBox(width: 20.0),
                 FlanLoading(type: FlanLoadingType.spinner, size: 24.0),
               ],
             ),

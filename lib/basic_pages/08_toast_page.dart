@@ -94,7 +94,8 @@ class ToastPage extends StatelessWidget {
               onClick: () {
                 showToast(
                   context,
-                  iconUrl: 'https://img01.yzcdn.cn/vant/logo.png',
+                  type: FlanToastType.loading,
+                  loadingType: FlanLoadingType.spinner,
                   message: FlanS.current!.loading,
                 );
               },

@@ -9,7 +9,7 @@ List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Grid',
     path: '/grid',
-    component: (BuildContext context) => const GridPage(),
+    component: (BuildContext context) => GridPage(),
   ),
   CompRoute(
     name: 'IndexBar',
@@ -19,7 +19,7 @@ List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
     name: 'NavBar',
     path: '/navbar',
-    component: (BuildContext context) => const TabbarPage(),
+    component: (BuildContext context) => NavBarPage(),
   ),
   CompRoute(
     name: 'Pagination',
@@ -39,7 +39,7 @@ List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Tabbar',
     path: '/tabbar',
-    component: (BuildContext context) => const TabbarPage(),
+    component: (BuildContext context) => TabbarPage(),
   ),
   CompRoute(
     name: 'TreeSelect',

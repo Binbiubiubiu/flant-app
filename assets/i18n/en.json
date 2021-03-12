@@ -336,5 +336,8 @@
   "Overlay": {
     "showOverlay": "Show Overlay",
     "embeddedContent": "Embedded Content"
+  },
+  "NavBar": {
+    "useSlot": "Use Slot"
   }
 }

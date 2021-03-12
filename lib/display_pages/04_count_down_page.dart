@@ -60,16 +60,19 @@ class _CountDownPageState extends State<CountDownPage> {
             ),
           ],
         ),
-        DocBlock(
+        DocBlock.noPadding(
           title: tr('CountDown.manualControl'),
           children: <Widget>[
-            FlanCountDown(
-              key: countDown,
-              millisecond: true,
-              time: 3000,
-              autoStart: false,
-              format: 'ss:SSS',
-              onFinish: onFinish,
+            Padding(
+              padding: const EdgeInsets.only(left: ThemeVars.paddingMd),
+              child: FlanCountDown(
+                key: countDown,
+                millisecond: true,
+                time: 3000,
+                autoStart: false,
+                format: 'ss:SSS',
+                onFinish: onFinish,
+              ),
             ),
             const SizedBox(height: 15.0),
             FlanGrid(

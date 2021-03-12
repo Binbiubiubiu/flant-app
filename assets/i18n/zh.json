@@ -336,5 +336,8 @@
   "Overlay": {
     "showOverlay": "显示遮罩层",
     "embeddedContent": "嵌入内容"
+  },
+  "NavBar": {
+    "useSlot": "使用插槽"
   }
 }
