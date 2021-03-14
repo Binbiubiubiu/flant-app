@@ -339,5 +339,49 @@
   },
   "NavBar": {
     "useSlot": "Use Slot"
+  },
+  "Form": {
+    "BasicUsage": {
+      "submit": "Submit",
+      "username": "Username",
+      "password": "Password",
+      "requireUsername": "Username is required",
+      "requirePassword": "Password is required"
+    }
+  },
+  "Field": {
+    "BasicUsage": {
+      "label": "Label",
+      "placeholder": "Text"
+    },
+    "CustomType": {
+      "text": "Text",
+      "digit": "Digit",
+      "phone": "Phone",
+      "number": "Number",
+      "customType": "Custom Type",
+      "smsPlaceholder": "SMS",
+      "textPlaceholder": "Text",
+      "digitPlaceholder": "Digit",
+      "phonePlaceholder": "Phone",
+      "numberPlaceholder": "Number"
+    },
+    "Disabled": {
+      "text": "Text",
+      "disabled": "Disable input box",
+      "inputReadonly": "Input Readonly",
+      "inputDisabled": "Input Disabled"
+    },
+    "ShowIcon": {
+      "text": "Text",
+      "showIcon": "Show Icon",
+      "showClearIcon": "Show Clear Icon"
+    },
+    "InsertButton": {
+      "sms": "SMS",
+      "sendSMS": "Send SMS",
+      "insertButton": "Insert Button",
+      "smsPlaceholder": "SMS"
+    }
   }
 }

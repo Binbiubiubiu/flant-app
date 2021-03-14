@@ -1,13 +1,15 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../_components/main.dart';
 
-class SearchPage extends StatelessWidget {
+class FormPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const CompPage(
+    return CompPage(
       children: <Widget>[
-        DocBlock(
+        DocBlock.noPadding(
+          title: tr('basicUsage'),
           children: <Widget>[],
         ),
       ],
