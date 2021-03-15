@@ -29,12 +29,12 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Field',
     path: '/field',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => FieldPage(),
   ),
   CompRoute(
     name: 'Form',
     path: '/form',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => FormPage(),
   ),
   CompRoute(
     name: 'NumberKeyboard',
@@ -64,7 +64,7 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Search',
     path: '/search',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => SearchPage(),
   ),
   CompRoute(
     name: 'Slider',
