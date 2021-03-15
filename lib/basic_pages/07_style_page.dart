@@ -35,7 +35,7 @@ class StylePage extends StatelessWidget {
               alignment: Alignment.center,
               child: Container(
                 margin: const EdgeInsets.only(top: 15.0),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   border: Border(
                     top: FlanHairLine(),
                   ),
