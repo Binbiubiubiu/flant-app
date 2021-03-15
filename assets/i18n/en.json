@@ -377,11 +377,38 @@
       "showIcon": "Show Icon",
       "showClearIcon": "Show Clear Icon"
     },
+    "ErrorInfo": {
+      "phone": "Phone",
+      "errorInfo": "Error Info",
+      "phoneError": "Invalid phone",
+      "phonePlaceholder": "Phone"
+    },
     "InsertButton": {
       "sms": "SMS",
       "sendSMS": "Send SMS",
       "insertButton": "Insert Button",
       "smsPlaceholder": "SMS"
+    },
+    "FormatValue": {
+      "text": "Text",
+      "formatValue": "Format Value",
+      "formatOnBlur": "Format On Blur",
+      "formatOnChange": "Format On Change"
+    },
+    "Autosize": {
+      "sms": "SMS",
+      "autosize": "Auto Resize",
+      "placeholder": "Message"
+    },
+    "ShowWordLimit": {
+      "message": "Message",
+      "placeholder": "Message",
+      "showWordLimit": "Show Word Limit"
+    },
+    "InputAlign": {
+      "text": "Text",
+      "inputAlign": "Input Align",
+      "alignPlaceHolder": "Input Align Right"
     }
   }
 }

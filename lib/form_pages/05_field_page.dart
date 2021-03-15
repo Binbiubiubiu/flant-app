@@ -15,7 +15,12 @@ class FieldPage extends StatelessWidget {
         _CustomType(),
         _Disabled(),
         _ShowIcon(),
+        _ErrorInfo(),
         _InsertButton(),
+        _FormatValue(),
+        _AutoSize(),
+        _ShowWordLimit(),
+        _InputAlign(),
       ],
     );
   }
@@ -176,6 +181,41 @@ class __ShowIconState extends State<_ShowIcon> {
   }
 }
 
+class _ErrorInfo extends StatefulWidget {
+  @override
+  __ErrorInfoState createState() => __ErrorInfoState();
+}
+
+class __ErrorInfoState extends State<_ErrorInfo> {
+  String phone = '123';
+  String username = '';
+  @override
+  Widget build(BuildContext context) {
+    return DocBlock.noPadding(
+      title: tr('Field.ErrorInfo.errorInfo'),
+      children: <Widget>[
+        FlanField<String>(
+          label: tr('username'),
+          placeholder: tr('usernamePlaceholder'),
+          value: username,
+          onInput: (String val) => setState(() => username = val),
+          error: true,
+          isRequired: true,
+          border: true,
+        ),
+        FlanField<String>(
+          label: tr('Field.ErrorInfo.phone'),
+          placeholder: tr('Field.ErrorInfo.phonePlaceholder'),
+          isRequired: true,
+          errorMessage: tr('Field.ErrorInfo.phoneError'),
+          value: phone,
+          onInput: (String val) => setState(() => phone = val),
+        ),
+      ],
+    );
+  }
+}
+
 class _InsertButton extends StatefulWidget {
   @override
   __InsertButtonState createState() => __InsertButtonState();
@@ -199,6 +239,121 @@ class __InsertButtonState extends State<_InsertButton> {
             child: Text(tr('Field.InsertButton.sendSMS')),
           ),
           center: true,
+        ),
+      ],
+    );
+  }
+}
+
+class _FormatValue extends StatefulWidget {
+  @override
+  __FormatValueState createState() => __FormatValueState();
+}
+
+class __FormatValueState extends State<_FormatValue> {
+  String value1 = '';
+  String value2 = '';
+
+  String formatter(String value) => value.replaceAll(RegExp(r'\d'), '');
+
+  @override
+  Widget build(BuildContext context) {
+    return DocBlock.noPadding(
+      title: tr('Field.FormatValue.formatValue'),
+      children: <Widget>[
+        FlanField<String>(
+          label: tr('Field.FormatValue.text'),
+          placeholder: tr('Field.FormatValue.formatOnChange'),
+          formatter: formatter,
+          border: true,
+          value: value1,
+          onInput: (String val) => setState(() => value1 = val),
+        ),
+        FlanField<String>(
+          label: tr('Field.FormatValue.text'),
+          placeholder: tr('Field.FormatValue.formatOnBlur'),
+          formatter: formatter,
+          formatTrigger: FlanFieldFormatTrigger.onBlur,
+          value: value2,
+          onInput: (String val) => setState(() => value2 = val),
+        ),
+      ],
+    );
+  }
+}
+
+class _AutoSize extends StatefulWidget {
+  @override
+  __AutoSizeState createState() => __AutoSizeState();
+}
+
+class __AutoSizeState extends State<_AutoSize> {
+  String value = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return DocBlock.noPadding(
+      title: tr('Field.Autosize.autosize'),
+      children: <Widget>[
+        FlanField<String>(
+          label: tr('Field.Autosize.message'),
+          placeholder: tr('Field.Autosize.placeholder'),
+          value: value,
+          onInput: (String val) => setState(() => value = val),
+          // autosize: true,
+          rows: 1,
+          type: FlanFieldType.textarea,
+        ),
+      ],
+    );
+  }
+}
+
+class _ShowWordLimit extends StatefulWidget {
+  @override
+  __ShowWordLimitState createState() => __ShowWordLimitState();
+}
+
+class __ShowWordLimitState extends State<_ShowWordLimit> {
+  String value = '';
+  @override
+  Widget build(BuildContext context) {
+    return DocBlock.noPadding(
+      title: tr('Field.ShowWordLimit.showWordLimit'),
+      children: <Widget>[
+        FlanField<String>(
+          label: tr('Field.ShowWordLimit.message'),
+          placeholder: tr('Field.ShowWordLimit.placeholder'),
+          value: value,
+          onInput: (String val) => setState(() => value = val),
+          showWordLimit: true,
+          rows: 2,
+          maxLength: 50,
+          type: FlanFieldType.textarea,
+        ),
+      ],
+    );
+  }
+}
+
+class _InputAlign extends StatefulWidget {
+  @override
+  __InputAlignState createState() => __InputAlignState();
+}
+
+class __InputAlignState extends State<_InputAlign> {
+  String value = '';
+  @override
+  Widget build(BuildContext context) {
+    return DocBlock.noPadding(
+      title: tr('Field.InputAlign.inputAlign'),
+      children: <Widget>[
+        FlanField<String>(
+          label: tr('Field.InputAlign.text'),
+          placeholder: tr('Field.InputAlign.alignPlaceHolder'),
+          value: value,
+          onInput: (String val) => setState(() => value = val),
+          inputAlign: TextAlign.right,
         ),
       ],
     );

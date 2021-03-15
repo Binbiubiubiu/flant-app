@@ -377,11 +377,38 @@
       "showIcon": "显示图标",
       "showClearIcon": "显示清除图标"
     },
+    "ErrorInfo": {
+      "phone": "手机号",
+      "errorInfo": "错误提示",
+      "phoneError": "手机号格式错误",
+      "phonePlaceholder": "请输入手机号"
+    },
     "InsertButton": {
       "sms": "短信验证码",
       "sendSMS": "发送验证码",
       "insertButton": "插入按钮",
       "smsPlaceholder": "请输入短信验证码"
+    },
+    "FormatValue": {
+      "text": "文本",
+      "formatValue": "格式化输入内容",
+      "formatOnBlur": "在失焦时执行格式化",
+      "formatOnChange": "在输入时执行格式化"
+    },
+    "Autosize": {
+      "message": "留言",
+      "autosize": "高度自适应",
+      "placeholder": "请输入留言"
+    },
+    "ShowWordLimit": {
+      "message": "留言",
+      "placeholder": "请输入留言",
+      "showWordLimit": "显示字数统计"
+    },
+    "InputAlign": {
+      "text": "文本",
+      "inputAlign": "输入框内容对齐",
+      "alignPlaceHolder": "输入框内容右对齐"
     }
   }
 }
