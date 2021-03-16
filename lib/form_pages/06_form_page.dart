@@ -10,7 +10,7 @@ class FormPage extends StatelessWidget {
       children: <Widget>[
         DocBlock.noPadding(
           title: tr('basicUsage'),
-          children: <Widget>[],
+          children: const <Widget>[],
         ),
       ],
     );

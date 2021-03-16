@@ -31,7 +31,7 @@ class ToastPage extends StatelessWidget {
                 showToast(
                   context,
                   type: FlanToastType.loading,
-                  message: FlanS.current!.loading,
+                  message: FlanS.current.loading,
                 );
               },
             ),
@@ -96,7 +96,7 @@ class ToastPage extends StatelessWidget {
                   context,
                   type: FlanToastType.loading,
                   loadingType: FlanLoadingType.spinner,
-                  message: FlanS.current!.loading,
+                  message: FlanS.current.loading,
                 );
               },
             ),
