@@ -73,7 +73,7 @@ List<CompRoute> displayCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Steps',
     path: '/steps',
-    component: (BuildContext context) => BadgePage(),
+    component: (BuildContext context) => StepsPage(),
   ),
   CompRoute(
     name: 'Sticky',

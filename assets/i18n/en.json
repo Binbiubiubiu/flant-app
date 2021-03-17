@@ -410,5 +410,18 @@
       "inputAlign": "Input Align",
       "alignPlaceHolder": "Input Align Right"
     }
+  },
+  "Steps": {
+    "nextStep": "Next Step",
+    "step1": "Step1",
+    "step2": "Step2",
+    "step3": "Step3",
+    "step4": "Step4",
+    "title2": "Description",
+    "title3": "Vertical Steps",
+    "status1": "【City】Status1",
+    "status2": "【City】Status2",
+    "status3": "【City】Status3",
+    "customStyle": "Custom Style"
   }
 }
