@@ -94,7 +94,7 @@ class ActionBarPage extends StatelessWidget {
                 ),
                 FlanActionBarButton(
                   type: FlanButtonType.danger,
-                  text: tr('ActionBar.button2'),
+                  text: tr('ActionBar.button1'),
                 ),
                 FlanActionBarButton(
                   type: FlanButtonType.warning,
@@ -120,7 +120,7 @@ class ActionBarPage extends StatelessWidget {
                 FlanActionBarButton(
                   color: const Color(0xffbe99ff),
                   type: FlanButtonType.warning,
-                  text: tr('ActionBar.button2'),
+                  text: tr('ActionBar.button1'),
                 ),
                 FlanActionBarButton(
                   color: const Color(0xff7232dd),
