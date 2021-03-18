@@ -423,5 +423,18 @@
     "status2": "【City】Status2",
     "status3": "【City】Status3",
     "customStyle": "Custom Style"
+  },
+  "ActionBar": {
+    "icon1": "Icon1",
+    "icon2": "Icon2",
+    "icon3": "Icon3",
+    "button1": "Button",
+    "button2": "Button",
+    "iconBadge": "Icon Badge",
+    "collected": "Collected",
+    "clickIcon": "Click Icon",
+    "clickButton": "Click Button",
+    "customIconColor": "Custom Icon Color",
+    "customButtonColor": "Custom Button Color"
   }
 }

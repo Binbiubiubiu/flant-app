@@ -7,6 +7,11 @@ import './_modals.dart';
 
 List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
+    name: 'ActionBar',
+    path: '/actionbar',
+    component: (BuildContext context) => ActionBarPage(),
+  ),
+  CompRoute(
     name: 'Grid',
     path: '/grid',
     component: (BuildContext context) => GridPage(),
