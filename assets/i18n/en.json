@@ -436,5 +436,14 @@
     "clickButton": "Click Button",
     "customIconColor": "Custom Icon Color",
     "customButtonColor": "Custom Button Color"
+  },
+  "Search": {
+    "label": "Address",
+    "disabled": "Disabled",
+    "inputAlign": "Input Align",
+    "background": "Custom Background Color",
+    "placeholder": "Placeholder",
+    "customButton": "Custom Action Button",
+    "listenToEvents": "Listen to Events"
   }
 }
