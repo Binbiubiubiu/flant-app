@@ -445,5 +445,10 @@
     "placeholder": "Placeholder",
     "customButton": "Custom Action Button",
     "listenToEvents": "Listen to Events"
+  },
+  "Card": {
+    "title": "Goods Name",
+    "discountInfo": "Discount Info",
+    "customContent": "Custom Content"
   }
 }

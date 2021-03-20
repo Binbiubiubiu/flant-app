@@ -1,3 +1,4 @@
+import 'package:flant_app/business_pages/main.dart';
 import 'package:flutter/widgets.dart';
 
 import '../basic_pages/main.dart';
@@ -23,7 +24,7 @@ List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Card',
     path: '/card',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => CardPage(),
   ),
   CompRoute(
     name: 'ContactCard',
