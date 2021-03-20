@@ -450,5 +450,12 @@
     "title": "商品名称",
     "discountInfo": "营销信息",
     "customContent": "自定义内容"
+  },
+  "Pagination": {
+    "title2": "简单模式",
+    "title3": "显示省略号",
+    "title4": "自定义按钮",
+    "prevText": "上一页",
+    "nextText": "下一页"
   }
 }

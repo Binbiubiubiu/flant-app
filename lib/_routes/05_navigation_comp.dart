@@ -29,7 +29,7 @@ List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Pagination',
     path: '/pagination',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => PaginationPage(),
   ),
   CompRoute(
     name: 'Sidebar',

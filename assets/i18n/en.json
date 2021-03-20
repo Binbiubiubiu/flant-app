@@ -450,5 +450,12 @@
     "title": "Goods Name",
     "discountInfo": "Discount Info",
     "customContent": "Custom Content"
+  },
+  "Pagination": {
+    "title2": "Simple Mode",
+    "title3": "Show ellipses",
+    "title4": "Custom Button",
+    "prevText": "Prev",
+    "nextText": "Next"
   }
 }
