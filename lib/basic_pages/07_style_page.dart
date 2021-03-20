@@ -126,8 +126,9 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
   }
 
   void _startAnimate(FlanTransitionBuilder transitionBuilder) {
+    print(transitionBuilder);
     setState(() {
-      transitionBuilder = transitionBuilder;
+      this.transitionBuilder = transitionBuilder;
       show = true;
     });
 
