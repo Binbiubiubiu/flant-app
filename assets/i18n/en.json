@@ -457,5 +457,14 @@
     "title4": "Custom Button",
     "prevText": "Prev",
     "nextText": "Next"
+  },
+  "SubmitBar": {
+    "tip1": "Some tips",
+    "tip2": "Some tips, ",
+    "tip3": "Link",
+    "check": "Label",
+    "submit": "Submit",
+    "clickLink": "Click Link",
+    "clickButton": "Submit"
   }
 }

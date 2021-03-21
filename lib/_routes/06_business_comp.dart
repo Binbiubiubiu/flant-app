@@ -54,6 +54,6 @@ List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
     name: 'SubmitBar',
     path: '/submitbar',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => SubmitBarPage(),
   ),
 ];
