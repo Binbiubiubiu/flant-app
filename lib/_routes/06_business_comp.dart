@@ -29,7 +29,7 @@ List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
     name: 'ContactCard',
     path: '/contactcard',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => ContactCardPage(),
   ),
   CompRoute(
     name: 'ContactEdit',

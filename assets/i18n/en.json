@@ -466,5 +466,12 @@
     "submit": "Submit",
     "clickLink": "Click Link",
     "clickButton": "Submit"
+  },
+  "ContactCard": {
+    "add": "Add",
+    "edit": "Edit",
+    "name": "John Snow",
+    "addContact": "Add Contact",
+    "editContact": "Edit Contact"
   }
 }
