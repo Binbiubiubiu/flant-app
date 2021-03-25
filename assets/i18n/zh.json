@@ -473,5 +473,15 @@
     "name": "张三",
     "addContact": "添加联系人",
     "editContact": "编辑联系人"
+  },
+  "Rate": {
+    "halfStar": "半星",
+    "disabled": "禁用状态",
+    "customIcon": "自定义图标",
+    "customStyle": "自定义样式",
+    "customCount": "自定义数量",
+    "readonly": "只读状态",
+    "changeEvent": "监听 change 事件",
+    "toastContent": "当前值：$value"
   }
 }

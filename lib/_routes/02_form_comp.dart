@@ -59,7 +59,7 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Rate',
     path: '/rate',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => RatePage(),
   ),
   CompRoute(
     name: 'Search',

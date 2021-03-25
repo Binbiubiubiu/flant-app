@@ -473,5 +473,15 @@
     "name": "John Snow",
     "addContact": "Add Contact",
     "editContact": "Edit Contact"
+  },
+  "Rate": {
+    "halfStar": "Half Star",
+    "disabled": "Disabled",
+    "customIcon": "Custom Icon",
+    "customStyle": "Custom Style",
+    "customCount": "Custom Count",
+    "readonly": "Readonly",
+    "changeEvent": "Change Event",
+    "toastContent": "current value：$value"
   }
 }
