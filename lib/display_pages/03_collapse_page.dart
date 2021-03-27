@@ -27,9 +27,10 @@ class _CollapsePageState extends State<CollapsePage> {
         DocBlock.noPadding(
           title: tr('basicUsage'),
           children: <Widget>[
-            FlanCollapse<List<String>>(
+            FlanCollapse(
               value: active1,
-              onChange: (List<String> value) => setState(() => active1 = value),
+              onChange: (dynamic value) =>
+                  setState(() => active1 = value as List<String>),
               children: <FlanCollapseItem>[
                 FlanCollapseItem(
                   title: "${tr('title')}1",
@@ -50,9 +51,10 @@ class _CollapsePageState extends State<CollapsePage> {
         DocBlock.noPadding(
           title: tr('Collapse.accordion'),
           children: <Widget>[
-            FlanCollapse<String>(
+            FlanCollapse(
               value: active2,
-              onChange: (String value) => setState(() => active2 = value),
+              onChange: (dynamic value) =>
+                  setState(() => active2 = value as String),
               accordion: true,
               children: <FlanCollapseItem>[
                 FlanCollapseItem(
@@ -74,9 +76,10 @@ class _CollapsePageState extends State<CollapsePage> {
         DocBlock.noPadding(
           title: tr('disabled'),
           children: <Widget>[
-            FlanCollapse<List<String>>(
+            FlanCollapse(
               value: active3,
-              onChange: (List<String> value) => setState(() => active3 = value),
+              onChange: (dynamic value) =>
+                  setState(() => active3 = value as List<String>),
               children: <FlanCollapseItem>[
                 FlanCollapseItem(
                   title: "${tr('title')}1",
@@ -95,9 +98,10 @@ class _CollapsePageState extends State<CollapsePage> {
         DocBlock.noPadding(
           title: tr('Collapse.titleSlot'),
           children: <Widget>[
-            FlanCollapse<List<String>>(
+            FlanCollapse(
               value: active4,
-              onChange: (List<String> value) => setState(() => active4 = value),
+              onChange: (dynamic value) =>
+                  setState(() => active4 = value as List<String>),
               children: <FlanCollapseItem>[
                 FlanCollapseItem(
                   titleSlot: Row(

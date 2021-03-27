@@ -483,5 +483,32 @@
     "readonly": "只读状态",
     "changeEvent": "监听 change 事件",
     "toastContent": "当前值：$value"
+  },
+  "Checkbox": {
+    "checkbox": "复选框",
+    "customIcon": "自定义图标",
+    "customIconSize": "自定义大小",
+    "customColor": "自定义颜色",
+    "customShape": "自定义形状",
+    "title3": "复选框组",
+    "title4": "限制最大可选数",
+    "title5": "搭配单元格组件使用",
+    "toggleAll": "全选与反选",
+    "checkAll": "全选",
+    "inverse": "反选",
+    "horizontal": "水平排列",
+    "disableLabel": "禁用文本点击"
+  },
+  "Radio": {
+    "radio": "单选框",
+    "text1": "未选中禁用",
+    "text2": "选中且禁用",
+    "withCell": "与 Cell 组件一起使用",
+    "horizontal": "水平排列",
+    "customIcon": "自定义图标",
+    "customColor": "自定义颜色",
+    "customShape": "自定义形状",
+    "customIconSize": "自定义大小",
+    "disableLabel": "禁用文本点击"
   }
 }

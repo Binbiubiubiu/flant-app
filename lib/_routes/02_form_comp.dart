@@ -19,7 +19,7 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Checkbox',
     path: '/checkbox',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => CheckboxPage(),
   ),
   CompRoute(
     name: 'DatetimePicker',
@@ -54,7 +54,7 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Radio',
     path: '/radio',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => RadioPage(),
   ),
   CompRoute(
     name: 'Rate',

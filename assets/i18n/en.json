@@ -483,5 +483,32 @@
     "readonly": "Readonly",
     "changeEvent": "Change Event",
     "toastContent": "current value：$value"
+  },
+  "Checkbox": {
+    "checkbox": "Checkbox",
+    "customIcon": "Custom Icon",
+    "customIconSize": "Custom Icon Size",
+    "customColor": "Custom Color",
+    "customShape": "Custom Shape",
+    "title3": "Checkbox Group",
+    "title4": "Maximum amount of checked options",
+    "title5": "Inside a Cell",
+    "toggleAll": "Toggle All",
+    "checkAll": "Check All",
+    "inverse": "Inverse",
+    "horizontal": "Horizontal",
+    "disableLabel": "Disable label click"
+  },
+  "Radio": {
+    "radio": "Radio",
+    "text1": "Disabled",
+    "text2": "Disabled and checked",
+    "withCell": "Inside a Cell",
+    "horizontal": "Hrizontal",
+    "customIcon": "Custom Icon",
+    "customColor": "Custom Color",
+    "customShape": "Custom Shape",
+    "customIconSize": "Custom Icon Size",
+    "disableLabel": "Disable label click"
   }
 }
