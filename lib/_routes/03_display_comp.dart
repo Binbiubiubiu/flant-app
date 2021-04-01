@@ -1,7 +1,8 @@
+// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
+// 🌎 Project imports:
 import '../display_pages/main.dart';
-
 import './_modals.dart';
 
 List<CompRoute> displayCompRoutes = <CompRoute>[

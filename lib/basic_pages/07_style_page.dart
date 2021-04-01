@@ -1,7 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flant/styles/var.dart';
+// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+
+// 📦 Package imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/flant.dart';
+import 'package:flant/styles/var.dart';
+
+// 🌎 Project imports:
 import '../_components/main.dart';
 
 class StylePage extends StatelessWidget {
