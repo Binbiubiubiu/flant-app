@@ -48,18 +48,16 @@ class DocBlock extends StatelessWidget {
       ));
     }
 
-    if (children.isNotEmpty) {
-      if (card) {
-        final ClipRRect box = ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-          child: Column(
-            children: this.children,
-          ),
-        );
-        children.add(box);
-      } else {
-        children.addAll(this.children);
-      }
+    if (card) {
+      final ClipRRect box = ClipRRect(
+        borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+        child: Column(
+          children: this.children,
+        ),
+      );
+      children.add(box);
+    } else {
+      children.addAll(this.children);
     }
 
     return Padding(

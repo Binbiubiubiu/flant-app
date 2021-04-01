@@ -510,5 +510,32 @@
     "customShape": "Custom Shape",
     "customIconSize": "Custom Icon Size",
     "disableLabel": "Disable label click"
+  },
+  "List": {
+    "errorInfo": "Error Info",
+    "errorText": "Request failed. Click to reload",
+    "pullRefresh": "PullRefresh",
+    "finishedText": "Finished"
+  },
+  "Slider": {
+    "text": "Current value: ",
+    "title1": "Basic Usage",
+    "title2": "Dual thumb mode",
+    "title3": "Range",
+    "title4": "Disabled",
+    "title5": "Step size",
+    "vertical": "Vertical",
+    "customStyle": "Custom Style",
+    "customButton": "Custom Button"
+  },
+  "Stepper": {
+    "step": "Step",
+    "range": "Range",
+    "integer": "Integer",
+    "roundTheme": "Round Theme",
+    "customSize": "Custom Size",
+    "beforeChange": "Before Change",
+    "disableInput": "Disable Input",
+    "decimalLength": "Decimal Length"
   }
 }

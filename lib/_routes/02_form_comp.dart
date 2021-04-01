@@ -69,12 +69,12 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Slider',
     path: '/slider',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => SliderPage(),
   ),
   CompRoute(
     name: 'Stepper',
     path: '/Stepper',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => StepperPage(),
   ),
   CompRoute(
     name: 'Switch',

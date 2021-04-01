@@ -48,7 +48,7 @@ List<CompRoute> displayCompRoutes = <CompRoute>[
   CompRoute(
     name: 'List',
     path: '/list',
-    component: (BuildContext context) => BadgePage(),
+    component: (BuildContext context) => ListPage(),
   ),
   CompRoute(
     name: 'NoticeBar',
