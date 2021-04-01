@@ -9,3 +9,9 @@ flutter pub global run dartdoc:dartdoc
 
 # 生产国际化代码
 flutter pub run intl_utils:generate
+
+# 格式化import sorter
+flutter pub run import_sorter:main
+
+# 打包命令
+flutter build apk --release -t lib/main.dart --no-tree-shake-icons --target-platform android-arm
