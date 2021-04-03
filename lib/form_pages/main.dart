@@ -1,6 +1,8 @@
 export './03_checkbox.dart';
 export './05_field_page.dart';
 export './06_form_page.dart';
+export './07_number_keyboard.dart';
+export './08_password_input.dart';
 export './10_radio.dart';
 export './11_rate_page.dart';
 export './12_search_page.dart';

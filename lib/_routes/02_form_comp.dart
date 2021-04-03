@@ -40,12 +40,12 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'NumberKeyboard',
     path: '/numberkeyboard',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => NumberKeyboardPage(),
   ),
   CompRoute(
     name: 'PasswordInput',
     path: '/passwordinput',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => PasswordInputPage(),
   ),
   CompRoute(
     name: 'Picker',

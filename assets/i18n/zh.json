@@ -537,5 +537,29 @@
     "beforeChange": "异步变更",
     "disableInput": "禁用输入框",
     "decimalLength": "固定小数位数"
+  },
+  "PasswordInput": {
+    "info": "密码为 6 位数字",
+    "showInfo": "提示信息",
+    "addGutter": "格子间距",
+    "errorInfo": "密码错误",
+    "removeMask": "明文展示",
+    "customLength": "自定义长度"
+  },
+  "NumberKeyboard": {
+    "close": "完成",
+    "input": "输入",
+    "title": "键盘标题",
+    "button1": "弹出默认键盘",
+    "button2": "弹出带右侧栏的键盘",
+    "button3": "弹出身份证号键盘",
+    "button4": "弹出带标题的键盘",
+    "button5": "弹出配置多个按键的键盘",
+    "button6": "弹出配置随机数字的键盘",
+    "bindValue": "双向绑定",
+    "clickToInput": "点此输入",
+    "extraKey": "左下角按键内容",
+    "multiExtraKey": "配置多个按键",
+    "randomKeyOrder": "随机数字键盘"
   }
 }

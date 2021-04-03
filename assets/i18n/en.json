@@ -537,5 +537,29 @@
     "beforeChange": "Before Change",
     "disableInput": "Disable Input",
     "decimalLength": "Decimal Length"
+  },
+  "PasswordInput": {
+    "info": "Some tips",
+    "showInfo": "Show Info",
+    "addGutter": "Add Gutter",
+    "errorInfo": "Password Mistake",
+    "removeMask": "Remove Mask",
+    "customLength": "Custom Length"
+  },
+  "NumberKeyboard": {
+    "close": "Close",
+    "input": "Input",
+    "title": "Keyboard Title",
+    "button1": "Show Default Keyboard",
+    "button2": "Show Keyboard With Sidebar",
+    "button3": "Show IdNumber Keyboard",
+    "button4": "Show Keyboard With Title",
+    "button5": "Show Keyboard With Multiple ExtraKey",
+    "button6": "Show Keyboard With Random Key Order",
+    "bindValue": "Bind Value",
+    "clickToInput": "Click To Input",
+    "extraKey": "IdNumber Keyboard",
+    "multiExtraKey": "Multiple ExtraKey",
+    "randomKeyOrder": "Random Key Order"
   }
 }
