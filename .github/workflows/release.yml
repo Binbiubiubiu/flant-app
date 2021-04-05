@@ -20,7 +20,7 @@ jobs:
       - name: Checkout flant
         uses: actions/checkout@v2
         with:
-          repository: https://github.com/Simon-Bin/flant
+          repository: Simon-Bin/flant
           ref: master
       - name: Checkout flant_app
         uses: actions/checkout@v2
@@ -52,4 +52,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: build/app/outputs/apk/release/*.apk
+          path: example/build/app/outputs/apk/release/*.apk
+
