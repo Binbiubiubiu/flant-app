@@ -561,5 +561,25 @@
     "extraKey": "IdNumber Keyboard",
     "multiExtraKey": "Multiple ExtraKey",
     "randomKeyOrder": "Random Key Order"
+  },
+  "Picker": {
+    "city": "City",
+    "cascade": "Cascade",
+    "withPopup": "With Popup",
+    "chooseCity": "Choose City",
+    "showToolbar": "Show Toolbar",
+    "defaultIndex": "Default Index",
+    "disableOption": "Disable Option",
+    "multipleColumns": "Multiple Columns",
+    "setColumnValues": "Set Column Values",
+    "customChildrenKey": "Custom Columns Fields",
+    "textColumns": "[\"Delaware\", \"Florida\", \"Georqia\", \"Indiana\", \"Maine\"]",
+    "disabledColumns": "[{\"text\":\"Delaware\",\"disabled\":true},{\"text\":\"Florida\"},{\"text\":\"Georqia\"}]",
+    "cascadeColumns": "[{\"text\":\"Zhejiang\",\"children\":[{\"text\":\"Hangzhou\",\"children\":[{\"text\":\"Xihu\"},{\"text\":\"Yuhang\"}]},{\"text\":\"Wenzhou\",\"children\":[{\"text\":\"Lucheng\"},{\"text\":\"Ouhai\"}]}]},{\"text\":\"Fujian\",\"children\":[{\"text\":\"Fuzhou\",\"children\":[{\"text\":\"Gulou\"},{\"text\":\"Taijiang\"}]},{\"text\":\"Xiamen\",\"children\":[{\"text\":\"Siming\"},{\"text\":\"Haicang\"}]}]}]",
+    "customChildrenColumns": "[{\"cityName\":\"Zhejiang\",\"cities\":[{\"cityName\":\"Hangzhou\",\"cities\":[{\"cityName\":\"Xihu\"},{\"cityName\":\"Yuhang\"}]},{\"cityName\":\"Wenzhou\",\"cities\":[{\"cityName\":\"Lucheng\"},{\"cityName\":\"Ouhai\"}]}]},{\"cityName\":\"Fujian\",\"cities\":[{\"cityName\":\"Fuzhou\",\"cities\":[{\"cityName\":\"Gulou\"},{\"cityName\":\"Taijiang\"}]},{\"cityName\":\"Xiamen\",\"cities\":[{\"cityName\":\"Siming\"},{\"cityName\":\"Haicang\"}]}]}]",
+    "dateColumns": "[{\"values\":[\"Monday\",\"Tuesday\",\"Wednesday\",\"Thusday\",\"Friday\"],\"defaultIndex\":2},{\"values\":[\"Morging\",\"Afternoon\",\"Evening\"],\"defaultIndex\":1}]",
+    "column3": "{\"Group1\":[\"Delaware\",\"Florida\",\"Georqia\",\"Indiana\",\"Maine\"],\"Group2\":[\"Alabama\",\"Kansas\",\"Louisiana\",\"Texas\"]}",
+    "toastContent": "Value: {value}, Index：{index}",
+    "loadingStatus": "loading Status"
   }
 }

@@ -50,7 +50,7 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Picker',
     path: '/picker',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => PickerPage(),
   ),
   CompRoute(
     name: 'Radio',
