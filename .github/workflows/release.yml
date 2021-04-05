@@ -45,9 +45,9 @@ jobs:
       - run: flutter pub get
 
       # 执行测试
-      - run: flutter test
+      # - run: flutter test
       # 打包 APK
-      - run: flutter build apk --release
+      - run: cd example && flutter build apk --release
       - name: Upload Release
         uses: actions/upload-artifact@v2
         with:
