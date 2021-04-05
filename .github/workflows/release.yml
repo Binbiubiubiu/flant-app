@@ -50,14 +50,15 @@ jobs:
       # - run: flutter test
       # 打包 APK
       - run: cd example && flutter build apk --release -t lib/main.dart --no-tree-shake-icons --target-platform android-arm
+      # https://github.com/svenstaro/upload-release-action
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           # A personal access token for the GitHub repository in which the release will be created and edited.
           # It is recommended to create the access token with the following scopes: `repo, user, admin:repo_hook`.
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: example/build/app/outputs/flutter-apk/app-release.apk
-          asset_name: flant_app
+          file: example/build/app/outputs/flutter-apk/*.apk
+          file_glob: true
           tag: ${{ github.ref }}
 #       - name: Upload Release
 #         uses: actions/upload-artifact@v2
