@@ -25,7 +25,7 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'DatetimePicker',
     path: '/datetimePicker',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => DatetimePickerPage(),
   ),
   CompRoute(
     name: 'Field',
