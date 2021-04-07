@@ -347,6 +347,18 @@
       "password": "Password",
       "requireUsername": "Username is required",
       "requirePassword": "Password is required"
+    },
+    "ValidateRules": {
+      "label": "Label",
+      "title": "Validate Rules",
+      "submit": "Submit",
+      "message": "Error message",
+      "invalid": "{val} is invalid",
+      "pattern": "Use pattern",
+      "validator": "Use validator",
+      "validating": "Validating...",
+      "asyncValidator": "Use async validator",
+      "validatorMessage": "Use validator to return message"
     }
   },
   "Field": {

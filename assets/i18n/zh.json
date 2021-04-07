@@ -347,6 +347,18 @@
       "password": "密码",
       "requireUsername": "请填写用户名",
       "requirePassword": "请填写密码"
+    },
+    "ValidateRules": {
+      "label": "文本",
+      "title": "校验规则",
+      "submit": "提交",
+      "message": "请输入正确内容",
+      "invalid": "{val} 不合法，请重新输入",
+      "pattern": "正则校验",
+      "validator": "函数校验",
+      "validating": "验证中...",
+      "asyncValidator": "异步函数校验",
+      "validatorMessage": "校验函数返回错误提示"
     }
   },
   "Field": {
