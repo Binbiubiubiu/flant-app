@@ -126,13 +126,14 @@ class __ValidateRulesState extends State<_ValidateRules> {
   String value3 = 'abc';
   String value4 = '';
 
-  RegExp pattern = RegExp('\d{6}');
+  RegExp pattern = RegExp(r'\d{6}');
 
   bool validator(dynamic val, FlanFieldRule rule) =>
-      RegExp('1\d{10}').hasMatch(val.toString());
+      RegExp(r'1\d{10}').hasMatch(val.toString());
 
   String validatorMessage(dynamic val, FlanFieldRule rule) =>
-      tr('Form.ValidateRules.invalid', namedArgs: {'val': val.toString()});
+      tr('Form.ValidateRules.invalid',
+          namedArgs: <String, String>{'val': val.toString()});
 
   Future<bool> asyncValidator(dynamic val, FlanFieldRule rule) {
     // showToast(context,type: FlanToastType.loading,message: tr('validating'),);

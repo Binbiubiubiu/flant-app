@@ -593,5 +593,8 @@
     "column3": "{\"Group1\":[\"Delaware\",\"Florida\",\"Georqia\",\"Indiana\",\"Maine\"],\"Group2\":[\"Alabama\",\"Kansas\",\"Louisiana\",\"Texas\"]}",
     "toastContent": "Value: {value}, Index：{index}",
     "loadingStatus": "loading Status"
+  },
+  "ContactEdit": {
+    "defaultLabel": "Set as the default contact"
   }
 }
