@@ -596,5 +596,12 @@
   },
   "ContactEdit": {
     "defaultLabel": "设为默认联系人"
+  },
+  "ContactList": {
+    "add": "新增",
+    "edit": "编辑",
+    "list": "[{\"id\":\"1\",\"name\":\"张三\",\"tel\":\"13000000000\",\"isDefault\":true},{\"id\":\"2\",\"name\":\"李四\",\"tel\":\"1310000000\"}]",
+    "select": "选择",
+    "defaultTagText": "默认"
   }
 }

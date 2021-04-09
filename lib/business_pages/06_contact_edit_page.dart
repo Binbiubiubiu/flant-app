@@ -8,12 +8,12 @@ import 'package:flant/flant.dart';
 // 🌎 Project imports:
 import '../_components/main.dart';
 
-class ContactEdit extends StatefulWidget {
+class ContactEditPage extends StatefulWidget {
   @override
   _ContactEditState createState() => _ContactEditState();
 }
 
-class _ContactEditState extends State<ContactEdit> {
+class _ContactEditState extends State<ContactEditPage> {
   FlanContactEditInfo editingContact = FlanContactEditInfo();
 
   void _onSave(FlanContactEditInfo info) {

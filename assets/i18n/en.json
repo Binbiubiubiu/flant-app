@@ -596,5 +596,12 @@
   },
   "ContactEdit": {
     "defaultLabel": "Set as the default contact"
+  },
+  "ContactList": {
+    "add": "Add",
+    "edit": "Edit",
+    "list": "[{\"id\":\"1\",\"name\":\"John Snow\",\"tel\":\"13000000000\",\"isDefault\":true},{\"id\":\"2\",\"name\":\"Ned Stark\",\"tel\":\"1310000000\"}]",
+    "select": "Select",
+    "defaultTagText": "default"
   }
 }

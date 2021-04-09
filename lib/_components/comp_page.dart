@@ -7,11 +7,13 @@ class CompPage extends StatelessWidget {
     this.child,
     this.children = const <Widget>[],
     this.backgroundColor = const Color(0xfff7f8fa),
+    this.bottom,
   }) : super(key: key);
 
   final Widget? child;
   final List<Widget> children;
   final Color backgroundColor;
+  final Widget? bottom;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class CompPage extends StatelessWidget {
       body: SafeArea(
         child: buildPageContent(context),
       ),
+      bottomNavigationBar: bottom,
     );
   }
 

@@ -35,12 +35,12 @@ List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
     name: 'ContactEdit',
     path: '/contactedit',
-    component: (BuildContext context) => ContactEdit(),
+    component: (BuildContext context) => ContactEditPage(),
   ),
   CompRoute(
     name: 'ContactList',
     path: '/contactlist',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => ContactListPage(),
   ),
   CompRoute(
     name: 'Coupon',
