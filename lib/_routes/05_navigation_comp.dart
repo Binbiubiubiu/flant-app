@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flant_app/navigation_pages/06_sidebar_page.dart';
 import 'package:flutter/widgets.dart';
 
 // 🌎 Project imports:
@@ -35,7 +36,7 @@ List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Sidebar',
     path: '/sidebar',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => SidebarPage(),
   ),
   CompRoute(
     name: 'Tab',

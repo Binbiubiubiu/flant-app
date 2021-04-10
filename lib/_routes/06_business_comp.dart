@@ -1,4 +1,5 @@
 // 🐦 Flutter imports:
+import 'package:flant_app/business_pages/02_address_list_page.dart';
 import 'package:flutter/widgets.dart';
 
 // 🌎 Project imports:
@@ -15,7 +16,7 @@ List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(
     name: 'AddressList',
     path: '/addresslist',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => AddressListPage(),
   ),
   CompRoute(
     name: 'Area',

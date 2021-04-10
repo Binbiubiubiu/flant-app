@@ -603,5 +603,19 @@
     "list": "[{\"id\":\"1\",\"name\":\"John Snow\",\"tel\":\"13000000000\",\"isDefault\":true},{\"id\":\"2\",\"name\":\"Ned Stark\",\"tel\":\"1310000000\"}]",
     "select": "Select",
     "defaultTagText": "default"
+  },
+  "Sidebar": {
+    "title": "Title",
+    "disabled": "Disabled",
+    "showBadge": "Show Badge",
+    "changeEvent": "Change Event"
+  },
+  "AddressList": {
+    "list": "[{\"id\":\"1\",\"name\":\"John Snow\",\"tel\":\"13000000000\",\"address\":\"Somewhere\",\"isDefault\":true},{\"id\":\"2\",\"name\":\"Ned Stark\",\"tel\":\"1310000000\",\"address\":\"Somewhere\"}]",
+    "disabledList": "[{\"id\":\"3\",\"name\":\"Tywin\",\"tel\":\"1320000000\",\"address\":\"Somewhere\"}]",
+    "add": "Add",
+    "edit": "Edit",
+    "disabledText": "The following address is out of range",
+    "defaultTagText": "Default"
   }
 }
