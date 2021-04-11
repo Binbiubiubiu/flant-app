@@ -617,5 +617,18 @@
     "edit": "编辑地址",
     "disabledText": "以下地址超出配送范围",
     "defaultTagText": "默认"
+  },
+  "DatetimePicker": {
+    "day": "日",
+    "year": "年",
+    "month": "月",
+    "timeType": "选择时间",
+    "dateType": "选择年月日",
+    "datetimeType": "选择完整时间",
+    "datehourType": "选择年月日小时",
+    "monthDayType": "选择月日",
+    "yearMonthType": "选择年月",
+    "optionFilter": "选项过滤器",
+    "sortColumns": "自定义列排序"
   }
 }

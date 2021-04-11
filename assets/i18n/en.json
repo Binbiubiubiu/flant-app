@@ -617,5 +617,18 @@
     "edit": "Edit",
     "disabledText": "The following address is out of range",
     "defaultTagText": "Default"
+  },
+  "DatetimePicker": {
+    "day": " Day",
+    "year": " Year",
+    "month": " Month",
+    "timeType": "Choose Time",
+    "dateType": "Choose Date",
+    "datetimeType": "Choose DateTime",
+    "datehourType": "Choose DateHour",
+    "monthDayType": "Choose Month-Day",
+    "yearMonthType": "Choose Year-Month",
+    "optionFilter": "Option Filter",
+    "sortColumns": "Columns Order"
   }
 }
