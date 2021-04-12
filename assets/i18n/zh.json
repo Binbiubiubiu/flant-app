@@ -630,5 +630,12 @@
     "yearMonthType": "选择年月",
     "optionFilter": "选项过滤器",
     "sortColumns": "自定义列排序"
+  },
+  "TreeSelect": {
+    "showBadge": "徽标提示",
+    "radioMode": "单选模式",
+    "multipleMode": "多选模式",
+    "customContent": "自定义内容",
+    "dataSimple": "[{ \"text\": \"分组 1\" }, { \"text\": \"分组 2\" }]"
   }
 }

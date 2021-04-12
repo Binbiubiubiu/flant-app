@@ -630,5 +630,12 @@
     "yearMonthType": "Choose Year-Month",
     "optionFilter": "Option Filter",
     "sortColumns": "Columns Order"
+  },
+  "TreeSelect": {
+    "showBadge": "Show Badge",
+    "radioMode": "Radio Mode",
+    "multipleMode": "Multiple Mode",
+    "customContent": "Custom Content",
+    "dataSimple": "[{ \"text\": \"Group 1\" }, { \"text\": \"Group 2\" }]"
   }
 }
