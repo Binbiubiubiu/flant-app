@@ -45,7 +45,7 @@ List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(
     name: 'ShareSheet',
     path: '/shareSheet',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => ShareSheetPage(),
   ),
   CompRoute(
     name: 'SwipeCell',

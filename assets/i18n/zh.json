@@ -637,5 +637,22 @@
     "multipleMode": "多选模式",
     "customContent": "自定义内容",
     "dataSimple": "[{ \"text\": \"分组 1\" }, { \"text\": \"分组 2\" }]"
+  },
+  "ShareSheet": {
+    "qq": "QQ",
+    "name": "名称",
+    "link": "复制链接",
+    "title": "立即分享给好友",
+    "weibo": "微博",
+    "wechat": "微信",
+    "poster": "分享海报",
+    "qrcode": "二维码",
+    "multiLine": "展示多行选项",
+    "showSheet": "显示分享面板",
+    "withDesc": "展示描述信息",
+    "customIcon": "自定义图标",
+    "description": "描述信息",
+    "weappQrcode": "小程序码",
+    "wechatMoments": "朋友圈"
   }
 }

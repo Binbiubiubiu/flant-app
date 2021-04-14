@@ -637,5 +637,22 @@
     "multipleMode": "Multiple Mode",
     "customContent": "Custom Content",
     "dataSimple": "[{ \"text\": \"Group 1\" }, { \"text\": \"Group 2\" }]"
+  },
+  "ShareSheet": {
+    "qq": "QQ",
+    "name": "Name",
+    "link": "Link",
+    "title": "Share",
+    "weibo": "Weibo",
+    "wechat": "Wechat",
+    "poster": "Poster",
+    "qrcode": "Qrcode",
+    "multiLine": "Multi Line",
+    "showSheet": "Show ShareSheet",
+    "withDesc": "Show Description",
+    "customIcon": "Custom Icon",
+    "description": "Description",
+    "weappQrcode": "Weapp Qrcode",
+    "wechatMoments": "Wechat Moments"
   }
 }

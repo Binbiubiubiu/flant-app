@@ -48,11 +48,11 @@ List<CompRoute> businessCompRoutes = <CompRoute>[
     path: '/coupon',
     component: (BuildContext context) => CellPage(),
   ),
-  CompRoute(
-    name: 'GoodsAction',
-    path: '/goodsaction',
-    component: (BuildContext context) => CellPage(),
-  ),
+  // CompRoute(
+  //   name: 'GoodsAction',
+  //   path: '/goodsaction',
+  //   component: (BuildContext context) => CellPage(),
+  // ),
   CompRoute(
     name: 'SubmitBar',
     path: '/submitbar',
