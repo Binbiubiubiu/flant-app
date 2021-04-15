@@ -654,5 +654,19 @@
     "description": "Description",
     "weappQrcode": "Weapp Qrcode",
     "wechatMoments": "Wechat Moments"
+  },
+  "ActionSheet": {
+    "option1": "Option 1",
+    "option2": "Option 2",
+    "option3": "Option 3",
+    "subname": "Description",
+    "showCancel": "Show Cancel Button",
+    "buttonText": "Show ActionSheet",
+    "customPanel": "Custom Panel",
+    "description": "Description",
+    "optionStatus": "Option Status",
+    "coloredOption": "Colored Option",
+    "disabledOption": "Disabled Option",
+    "showDescription": "Show Description"
   }
 }

@@ -654,5 +654,19 @@
     "description": "描述信息",
     "weappQrcode": "小程序码",
     "wechatMoments": "朋友圈"
+  },
+  "ActionSheet": {
+    "option1": "选项一",
+    "option2": "选项二",
+    "option3": "选项三",
+    "subname": "描述信息",
+    "showCancel": "展示取消按钮",
+    "buttonText": "弹出菜单",
+    "customPanel": "自定义面板",
+    "description": "这是一段描述信息",
+    "optionStatus": "选项状态",
+    "coloredOption": "着色选项",
+    "disabledOption": "禁用选项",
+    "showDescription": "展示描述信息"
   }
 }

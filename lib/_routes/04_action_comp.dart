@@ -10,7 +10,7 @@ List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(
     name: 'ActionSheet',
     path: '/ActionSheet',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => ActionSheetPage(),
   ),
   CompRoute(
     name: 'Dialog',
