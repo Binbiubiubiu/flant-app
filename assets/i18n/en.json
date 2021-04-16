@@ -668,5 +668,11 @@
     "coloredOption": "Colored Option",
     "disabledOption": "Disabled Option",
     "showDescription": "Show Description"
+  },
+  "Area": {
+    "title2": "Initial Value",
+    "title3": "Columns Number",
+    "title4": "Columns Placeholder",
+    "columnsPlaceholder": "[\"Choose\", \"Choose\", \"Choose\"]"
   }
 }
