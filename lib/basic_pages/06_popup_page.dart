@@ -51,7 +51,8 @@ class _PopupPageState extends State<PopupPage> {
                   showBasic = show;
                 });
               },
-              child: Padding(
+              child: Container(
+                color: Colors.white,
                 padding: const EdgeInsets.symmetric(
                   vertical: 30.0,
                   horizontal: 50.0,
@@ -86,7 +87,10 @@ class _PopupPageState extends State<PopupPage> {
                   showTop = show;
                 });
               },
-              child: SizedBox(height: screenSize.height * .3),
+              child: Container(
+                height: screenSize.height * .3,
+                color: Colors.white,
+              ),
             ),
             FlanCell(
               title: tr('Popup.buttonBottom'),
@@ -107,7 +111,10 @@ class _PopupPageState extends State<PopupPage> {
                   showBottom = show;
                 });
               },
-              child: SizedBox(height: screenSize.height * .3),
+              child: Container(
+                height: screenSize.height * .3,
+                color: Colors.white,
+              ),
             ),
             FlanCell(
               title: tr('Popup.buttonLeft'),
@@ -128,8 +135,11 @@ class _PopupPageState extends State<PopupPage> {
                   showLeft = show;
                 });
               },
-              child: SizedBox(
-                  width: screenSize.width * .3, height: double.infinity),
+              child: Container(
+                width: screenSize.width * .3,
+                height: double.infinity,
+                color: Colors.white,
+              ),
             ),
             FlanCell(
               title: tr('Popup.buttonRight'),
@@ -149,8 +159,11 @@ class _PopupPageState extends State<PopupPage> {
                   showRight = show;
                 });
               },
-              child: SizedBox(
-                  width: screenSize.width * .3, height: double.infinity),
+              child: Container(
+                width: screenSize.width * .3,
+                height: double.infinity,
+                color: Colors.white,
+              ),
             ),
           ],
         ),
@@ -198,7 +211,10 @@ class _PopupPageState extends State<PopupPage> {
                   showCloseIcon = show;
                 });
               },
-              child: SizedBox(height: screenSize.height * .3),
+              child: Container(
+                height: screenSize.height * .3,
+                color: Colors.white,
+              ),
             ),
             FlanPopup(
               show: showCustomCloseIcon,
@@ -210,7 +226,10 @@ class _PopupPageState extends State<PopupPage> {
                   showCustomCloseIcon = show;
                 });
               },
-              child: SizedBox(height: screenSize.height * .3),
+              child: Container(
+                height: screenSize.height * .3,
+                color: Colors.white,
+              ),
             ),
             FlanPopup(
               show: showCustomIconPosition,
@@ -222,7 +241,10 @@ class _PopupPageState extends State<PopupPage> {
                   showCustomIconPosition = show;
                 });
               },
-              child: SizedBox(height: screenSize.height * .3),
+              child: Container(
+                height: screenSize.height * .3,
+                color: Colors.white,
+              ),
             ),
           ],
         ),
@@ -248,7 +270,10 @@ class _PopupPageState extends State<PopupPage> {
                   showRoundCorner = show;
                 });
               },
-              child: SizedBox(height: screenSize.height * .3),
+              child: Container(
+                height: screenSize.height * .3,
+                color: Colors.white,
+              ),
             ),
           ],
         ),
@@ -272,8 +297,12 @@ class _PopupPageState extends State<PopupPage> {
                   showGetContainer = show;
                 });
               },
-              child: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
+              child: Container(
+                color: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                  vertical: 30.0,
+                  horizontal: 50.0,
+                ),
               ),
             ),
           ],

@@ -674,5 +674,14 @@
     "title3": "配置显示列",
     "title4": "配置列占位提示文字",
     "columnsPlaceholder": "[\"请选择\", \"请选择\", \"请选择\"]"
+  },
+  "Dialog": {
+    "alert1": "提示弹窗",
+    "alert2": "提示弹窗（无标题）",
+    "confirm": "确认弹窗",
+    "beforeClose": "异步关闭",
+    "roundButton": "圆角按钮样式",
+    "componentCall": "组件调用",
+    "content": "代码是写出来给人看的，附带能在机器上运行"
   }
 }

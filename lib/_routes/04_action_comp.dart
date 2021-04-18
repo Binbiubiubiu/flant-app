@@ -15,7 +15,7 @@ List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Dialog',
     path: '/dialog',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => DialogPage(),
   ),
   CompRoute(
     name: 'DropdownMenu',
