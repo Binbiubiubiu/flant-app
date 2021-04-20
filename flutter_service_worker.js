@@ -13,9 +13,9 @@ const RESOURCES = {
 "splash/img/dark-1x.png": "065bf18ccdf2ee36a8c59349079f30e2",
 "splash/img/light-2x.png": "e09d1bd220c4f1eceb74bc01fc74bf7d",
 "splash/style.css": "80caa280483d295806b2e556a6213066",
-"manifest.json": "343c9b90c50b2afe1041e25c2d1fc6de",
+"manifest.json": "2cbc0996e22c2bb91e16f57b452ebe2d",
 "index.html": "85507f8e3ddd6f2ca56af0d1b31c681a",
-"/flant-app/": "85507f8e3ddd6f2ca56af0d1b31c681a",
+"/": "85507f8e3ddd6f2ca56af0d1b31c681a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/easy_localization/i18n/ar.json": "acc0a8eebb2fcee312764600f7cc41ec",
 "assets/packages/easy_localization/i18n/ar-DZ.json": "acc0a8eebb2fcee312764600f7cc41ec",
@@ -36,7 +36,7 @@ const RESOURCES = {
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "/flant-app/",
+  "/",
 "main.dart.js",
 "index.html",
 "assets/NOTICES",
@@ -80,8 +80,8 @@ self.addEventListener("activate", function(event) {
       var origin = self.location.origin;
       for (var request of await contentCache.keys()) {
         var key = request.url.substring(origin.length + 1);
-        if (key == "/flant-app/") {
-          key = "/flant-app/";
+        if (key == "") {
+          key = "/";
         }
         // If a resource from the old manifest is not in the new cache, or if
         // the MD5 sum has changed, delete it. Otherwise the resource is left
@@ -123,7 +123,7 @@ self.addEventListener("fetch", (event) => {
     key = key.split('?v=')[0];
   }
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#') || key == '') {
-    key = '/flant_app/';
+    key = '/';
   }
   // If the URL is not the RESOURCE list then return to signal that the
   // browser should take over.
@@ -131,7 +131,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
   // If the URL is the index.html, perform an online-first request.
-  if (key == '/flant-app/') {
+  if (key == '/') {
     return onlineFirst(event);
   }
   event.respondWith(caches.open(CACHE_NAME)
@@ -169,8 +169,8 @@ async function downloadOffline() {
   var currentContent = {};
   for (var request of await contentCache.keys()) {
     var key = request.url.substring(origin.length + 1);
-    if (key == "/flant-app/") {
-      key = "/flant-app/";
+    if (key == "") {
+      key = "/";
     }
     currentContent[key] = true;
   }
