@@ -1,11 +1,11 @@
 {
   "name": "flant_app",
   "short_name": "flant_app",
-  "start_url": ".",
+  "start_url": "./flant_app",
   "display": "standalone",
   "background_color": "#0175C2",
   "theme_color": "#0175C2",
-  "description": "A new Flutter project.",
+  "description": "轻量、可靠的移动端 Flutter 组件库.",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [

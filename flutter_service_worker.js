@@ -13,7 +13,7 @@ const RESOURCES = {
 "splash/img/dark-1x.png": "065bf18ccdf2ee36a8c59349079f30e2",
 "splash/img/light-2x.png": "e09d1bd220c4f1eceb74bc01fc74bf7d",
 "splash/style.css": "80caa280483d295806b2e556a6213066",
-"manifest.json": "e190dbd68d775c44d6a03ade1b4277d1",
+"manifest.json": "343c9b90c50b2afe1041e25c2d1fc6de",
 "index.html": "85507f8e3ddd6f2ca56af0d1b31c681a",
 "/": "85507f8e3ddd6f2ca56af0d1b31c681a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
