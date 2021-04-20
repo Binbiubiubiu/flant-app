@@ -80,7 +80,7 @@ self.addEventListener("activate", function(event) {
       var origin = self.location.origin;
       for (var request of await contentCache.keys()) {
         var key = request.url.substring(origin.length + 1);
-        if (key == "/flant-app") {
+        if (key == "/flant-app/") {
           key = "/flant_app/";
         }
         // If a resource from the old manifest is not in the new cache, or if
@@ -169,7 +169,7 @@ async function downloadOffline() {
   var currentContent = {};
   for (var request of await contentCache.keys()) {
     var key = request.url.substring(origin.length + 1);
-    if (key == "/flant-app") {
+    if (key == "/flant-app/") {
       key = "/flant_app/";
     }
     currentContent[key] = true;
