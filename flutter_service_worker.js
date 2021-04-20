@@ -15,7 +15,7 @@ const RESOURCES = {
 "splash/style.css": "80caa280483d295806b2e556a6213066",
 "manifest.json": "343c9b90c50b2afe1041e25c2d1fc6de",
 "index.html": "85507f8e3ddd6f2ca56af0d1b31c681a",
-"/flant-app/": "85507f8e3ddd6f2ca56af0d1b31c681a",
+"/flant_app/": "85507f8e3ddd6f2ca56af0d1b31c681a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/easy_localization/i18n/ar.json": "acc0a8eebb2fcee312764600f7cc41ec",
 "assets/packages/easy_localization/i18n/ar-DZ.json": "acc0a8eebb2fcee312764600f7cc41ec",
@@ -80,7 +80,7 @@ self.addEventListener("activate", function(event) {
       var origin = self.location.origin;
       for (var request of await contentCache.keys()) {
         var key = request.url.substring(origin.length + 1);
-        if (key == "/flant-app/") {
+        if (key == "/flant_app") {
           key = "/flant_app/";
         }
         // If a resource from the old manifest is not in the new cache, or if
@@ -131,7 +131,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
   // If the URL is the index.html, perform an online-first request.
-  if (key == '/flant_app/') {
+  if (key == '/flant_app') {
     return onlineFirst(event);
   }
   event.respondWith(caches.open(CACHE_NAME)
@@ -169,7 +169,7 @@ async function downloadOffline() {
   var currentContent = {};
   for (var request of await contentCache.keys()) {
     var key = request.url.substring(origin.length + 1);
-    if (key == "/flant-app/") {
+    if (key == "/flant_app") {
       key = "/flant_app/";
     }
     currentContent[key] = true;
