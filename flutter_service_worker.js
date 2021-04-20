@@ -14,8 +14,8 @@ const RESOURCES = {
 "splash/img/light-2x.png": "e09d1bd220c4f1eceb74bc01fc74bf7d",
 "splash/style.css": "86126e7e4072786170390b7ceee604b3",
 "manifest.json": "e190dbd68d775c44d6a03ade1b4277d1",
-"index.html": "d8a2f631ada2ee4675d2421647188a78",
-"/": "d8a2f631ada2ee4675d2421647188a78",
+"index.html": "85507f8e3ddd6f2ca56af0d1b31c681a",
+"/": "85507f8e3ddd6f2ca56af0d1b31c681a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/easy_localization/i18n/ar.json": "acc0a8eebb2fcee312764600f7cc41ec",
 "assets/packages/easy_localization/i18n/ar-DZ.json": "acc0a8eebb2fcee312764600f7cc41ec",
@@ -26,10 +26,10 @@ const RESOURCES = {
 "assets/AssetManifest.json": "de681f2512ced52d1b0736e165b7066a",
 "assets/assets/fonts/vant_icon.ttf": "2854cb3b938e4715707a462988c5959b",
 "assets/assets/fonts/Iconfont.ttf": "993b97f8f98210a72df0f63687502d52",
-"assets/assets/i18n/en.json": "46892a93b6c9bb5d21806701ccf905cc",
-"assets/assets/i18n/zh.json": "138623982a236042d9a8426d69604077",
+"assets/assets/i18n/en.json": "8be745c7d012f39b7048cfceb00ea514",
+"assets/assets/i18n/zh.json": "4cb99265c3d93026969bedb931404eb7",
 "assets/FontManifest.json": "add056c04eb92906558a85664900515d",
-"main.dart.js": "55cf41db9c0c99d12832a29087cbef7d",
+"main.dart.js": "13438660383f8939aa54c33f3c1d8b3a",
 "version.json": "5d43bc02877bf5ad31fc8d6d569d5654"
 };
 

@@ -637,5 +637,51 @@
     "multipleMode": "多选模式",
     "customContent": "自定义内容",
     "dataSimple": "[{ \"text\": \"分组 1\" }, { \"text\": \"分组 2\" }]"
+  },
+  "ShareSheet": {
+    "qq": "QQ",
+    "name": "名称",
+    "link": "复制链接",
+    "title": "立即分享给好友",
+    "weibo": "微博",
+    "wechat": "微信",
+    "poster": "分享海报",
+    "qrcode": "二维码",
+    "multiLine": "展示多行选项",
+    "showSheet": "显示分享面板",
+    "withDesc": "展示描述信息",
+    "customIcon": "自定义图标",
+    "description": "描述信息",
+    "weappQrcode": "小程序码",
+    "wechatMoments": "朋友圈"
+  },
+  "ActionSheet": {
+    "option1": "选项一",
+    "option2": "选项二",
+    "option3": "选项三",
+    "subname": "描述信息",
+    "showCancel": "展示取消按钮",
+    "buttonText": "弹出菜单",
+    "customPanel": "自定义面板",
+    "description": "这是一段描述信息",
+    "optionStatus": "选项状态",
+    "coloredOption": "着色选项",
+    "disabledOption": "禁用选项",
+    "showDescription": "展示描述信息"
+  },
+  "Area": {
+    "title2": "选中省市区",
+    "title3": "配置显示列",
+    "title4": "配置列占位提示文字",
+    "columnsPlaceholder": "[\"请选择\", \"请选择\", \"请选择\"]"
+  },
+  "Dialog": {
+    "alert1": "提示弹窗",
+    "alert2": "提示弹窗（无标题）",
+    "confirm": "确认弹窗",
+    "beforeClose": "异步关闭",
+    "roundButton": "圆角按钮样式",
+    "componentCall": "组件调用",
+    "content": "代码是写出来给人看的，附带能在机器上运行"
   }
 }
