@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/components/cell.dart';
 import 'package:flant/components/stepper.dart';
-import 'package:flant/locale/l10n.dart';
 import 'package:flutter/material.dart';
 
 import '../_components/main.dart';

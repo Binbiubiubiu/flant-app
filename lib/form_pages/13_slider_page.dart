@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/components/slider.dart';
 import 'package:flant/components/toast.dart';
-import 'package:flant/locale/l10n.dart';
 import 'package:flant/styles/var.dart';
 import 'package:flutter/material.dart';
 

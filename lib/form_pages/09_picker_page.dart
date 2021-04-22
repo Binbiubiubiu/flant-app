@@ -205,7 +205,7 @@ class _PickerPageState extends State<PickerPage> {
   }
 
   List<dynamic> get columns {
-    List<String> keys = column3.keys.toList();
+    final List<String> keys = column3.keys.toList();
     return <dynamic>[
       <String, dynamic>{
         'values': keys,

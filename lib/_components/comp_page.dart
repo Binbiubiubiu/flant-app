@@ -1,5 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CompPage extends StatelessWidget {
   const CompPage({
@@ -38,9 +39,8 @@ class CompPage extends StatelessWidget {
   }
 
   Widget buildPageContent(BuildContext context) {
-    const EdgeInsets pPagePadding = EdgeInsets.only(
-      top: 0.0,
-      bottom: 20.0,
+    final EdgeInsets pPagePadding = EdgeInsets.only(
+      bottom: 20.0.w,
     );
 
     if (children.isNotEmpty) {

@@ -93,7 +93,7 @@ const Map<String, Map<String, String>> areaListEn =
     '810200': 'Kowloon',
     '810300': 'New Territories',
   },
-  'county_list': {
+  'county_list': <String, String>{
     '110101': 'Dongcheng',
     '110102': 'Xicheng',
     '110105': 'Chaoyang',

@@ -1,5 +1,6 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RouteButton extends StatelessWidget {
   const RouteButton({
@@ -15,18 +16,18 @@ class RouteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Widget result = Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-      height: 40.0,
+      padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+      height: 40.0.w,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(text ?? ''),
           const Spacer(),
-          const RotatedBox(
+          RotatedBox(
             quarterTurns: 2,
             child: Icon(
               Icons.arrow_back_ios_sharp,
-              size: 16.0,
+              size: 16.0.w,
             ),
           )
         ],
@@ -38,14 +39,14 @@ class RouteButton extends StatelessWidget {
       button: true,
       enabled: true,
       child: ClipRRect(
-        borderRadius: const BorderRadius.all(
-          Radius.circular(20.0),
+        borderRadius: BorderRadius.all(
+          Radius.circular(20.0.w),
         ),
         child: Material(
-          textStyle: const TextStyle(
-            fontSize: 14.0,
+          textStyle: TextStyle(
+            fontSize: 14.0.w,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF323233),
+            color: const Color(0xFF323233),
           ),
           type: MaterialType.button,
           color: const Color(0xfff7f8fa),

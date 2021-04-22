@@ -1,13 +1,17 @@
 // 🐦 Flutter imports:
+import 'package:flant/styles/button_theme.dart';
+import 'package:flant/styles/theme.dart';
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/flant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import './_components/main.dart';
 import './_routes/main.dart';
+import 'screen_util.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,66 +36,64 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
+int uuid = 0;
+
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      onGenerateTitle: (BuildContext context) => tr('App.title'),
-      localizationsDelegates: context.localizationDelegates
-        ..add(FlanS.delegate),
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        appBarTheme: const AppBarTheme(
-          elevation: 0.0,
-        ),
-        scaffoldBackgroundColor: Colors.white,
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const MyHomePage(),
-      onGenerateRoute: CompRouter.onGenerateRoute,
+    return FlanScreenUtilInit(
+      builder: () {
+        return FlanTheme(
+          data: FlanThemeData(),
+          child: MaterialApp(
+            // key: ValueKey<int>(uuid++),
+            onGenerateTitle: (BuildContext context) => tr('App.title'),
+            localizationsDelegates: context.localizationDelegates
+              ..add(FlanS.delegate),
+            supportedLocales: context.supportedLocales,
+            locale: context.locale,
+            theme: ThemeData(
+              primaryColor: Colors.white,
+              appBarTheme: const AppBarTheme(
+                elevation: 0.0,
+              ),
+              scaffoldBackgroundColor: Colors.white,
+              primarySwatch: Colors.blue,
+              visualDensity: VisualDensity.adaptivePlatformDensity,
+            ),
+            home: const MyHomePage(),
+            onGenerateRoute: CompRouter.onGenerateRoute,
+          ),
+        );
+      },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  void initState() {
-    CompRouter.init();
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.only(
-            top: 0.0,
-            left: 20.0,
-            right: 20.0,
-            bottom: 20.0,
+          padding: EdgeInsets.only(
+            left: 20.0.w,
+            right: 20.0.w,
+            bottom: 20.0.w,
           ),
           children: <Widget>[
             const _FlantAppTitle(),
             const _FlantAppSubTitle(),
-            ...renderList(CompRouter.routes)
+            ...renderList(context, CompRouter.routes)
           ],
         ),
       ),
     );
   }
 
-  List<Widget> renderList(List<CompRoute> source) {
+  List<Widget> renderList(BuildContext context, List<CompRoute> source) {
     final List<Widget> result = <Widget>[];
 
     for (int i = 0; i < source.length; i++) {
@@ -100,7 +102,11 @@ class _MyHomePageState extends State<MyHomePage> {
       result.add(
         SubTitle(
           text: tr('Nav.${group.name}'),
-          padding: const EdgeInsets.only(top: 24.0, bottom: 16.0, left: 18.0),
+          padding: EdgeInsets.only(
+            top: 24.0.w,
+            bottom: 16.0.w,
+            left: 18.0.w,
+          ),
         ),
       );
 
@@ -117,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ));
         if (i != children.length - 1) {
-          result.add(const SizedBox(height: 20.0));
+          result.add(SizedBox(height: 20.0.w));
         }
       }
     }
@@ -132,18 +138,22 @@ class _FlantAppTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 16.0, top: 45.0, bottom: 16.0),
+      padding: EdgeInsets.only(
+        left: 16.0.w,
+        top: 45.0.w,
+        bottom: 16.0.w,
+      ),
       child: Row(
         children: <Widget>[
           Image.network(
             tr('App.logo'),
-            width: 32.0,
-            height: 32.0,
+            width: 32.0.w,
+            height: 32.0.w,
           ),
-          const SizedBox(width: 16.0),
+          SizedBox(width: 16.0.w),
           Text(
             tr('App.title'),
-            style: const TextStyle(fontSize: 32.0),
+            style: TextStyle(fontSize: 32.0.w),
           )
         ],
       ),
@@ -157,12 +167,13 @@ class _FlantAppSubTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 16.0),
-      padding: const EdgeInsets.only(left: 16.0),
+      margin: EdgeInsets.only(bottom: 16.0.w),
+      padding: EdgeInsets.only(left: 16.0.w),
       child: Text(
         tr('App.description'),
-        style: const TextStyle(
-          color: Color.fromRGBO(69, 90, 100, 0.6),
+        style: TextStyle(
+          fontSize: 14.0.w,
+          color: const Color.fromRGBO(69, 90, 100, 0.6),
         ),
       ),
     );

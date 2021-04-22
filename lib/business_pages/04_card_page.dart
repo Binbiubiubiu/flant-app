@@ -53,7 +53,7 @@ class CardPage extends StatelessWidget {
               title: tr('Card.title'),
               thumb: imageURL,
               tagsSlot: Row(
-                children: [
+                children: <Widget>[
                   FlanTag(
                     plain: true,
                     type: FlanTagType.danger,

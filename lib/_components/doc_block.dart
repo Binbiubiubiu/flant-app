@@ -1,32 +1,34 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-const EdgeInsets defaultDocBlockPadding =
-    EdgeInsets.only(left: 16.0, right: 16.0);
-const EdgeInsets defaultSubTitlePadding =
-    EdgeInsets.only(top: 24.0, bottom: 16.0);
+EdgeInsets defaultDocBlockPadding =
+    EdgeInsets.only(left: 16.0.w, right: 16.0.w);
+EdgeInsets defaultSubTitlePadding =
+    EdgeInsets.only(top: 24.0.w, bottom: 16.0.w);
 
 class DocBlock extends StatelessWidget {
-  const DocBlock({
+  DocBlock({
     Key? key,
     this.title,
     this.size = 14.0,
     this.card = false,
-    this.padding = defaultDocBlockPadding,
+    EdgeInsets? padding,
     this.children = const <Widget>[],
-  }) : super(key: key);
+  })  : padding = padding ?? defaultDocBlockPadding,
+        super(key: key);
 
   const DocBlock.noPadding({
     Key? key,
     this.title,
-    this.size = 14.0,
+    this.size,
     this.card = false,
     this.children = const <Widget>[],
   })  : padding = EdgeInsets.zero,
         super(key: key);
 
   final String? title;
-  final double size;
+  final double? size;
   final bool card;
   final EdgeInsets padding;
   final List<Widget> children;
@@ -43,7 +45,7 @@ class DocBlock extends StatelessWidget {
     final List<Widget> children = <Widget>[];
     if (title != null) {
       children.add(SubTitle(
-        size: size,
+        size: size ?? 14.0.w,
         text: title,
         padding: subTitlePadding,
       ));
@@ -51,7 +53,7 @@ class DocBlock extends StatelessWidget {
 
     if (card) {
       final ClipRRect box = ClipRRect(
-        borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+        borderRadius: BorderRadius.all(Radius.circular(8.0.w)),
         child: Column(
           children: this.children,
         ),
@@ -72,15 +74,16 @@ class DocBlock extends StatelessWidget {
 }
 
 class SubTitle extends StatelessWidget {
-  const SubTitle({
+  SubTitle({
     Key? key,
     this.text = '',
-    this.size = 14.0,
-    this.padding = defaultSubTitlePadding,
-  }) : super(key: key);
+    this.size,
+    EdgeInsets? padding,
+  })  : padding = padding ?? defaultSubTitlePadding,
+        super(key: key);
 
   final String? text;
-  final double size;
+  final double? size;
   final EdgeInsets padding;
 
   @override
@@ -91,7 +94,7 @@ class SubTitle extends StatelessWidget {
         text ?? '',
         style: TextStyle(
           color: const Color.fromRGBO(69, 90, 100, 0.6),
-          fontSize: size,
+          fontSize: size ?? 14.0.w,
           fontWeight: FontWeight.normal,
         ),
       ),
