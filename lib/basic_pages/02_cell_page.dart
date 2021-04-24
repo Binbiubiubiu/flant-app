@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/flant.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import '../_components/main.dart';
@@ -27,6 +28,7 @@ class CellPage extends StatelessWidget {
                   title: tr('Cell.cell'),
                   value: tr('content'),
                   label: tr('desc'),
+                  border: false,
                 ),
               ],
             )
@@ -47,6 +49,7 @@ class CellPage extends StatelessWidget {
                   value: tr('content'),
                   label: tr('desc'),
                   size: FlanCellSize.large,
+                  border: false,
                 ),
               ],
             )
@@ -60,6 +63,7 @@ class CellPage extends StatelessWidget {
               value: tr('content'),
               size: FlanCellSize.large,
               iconName: FlanIcons.location_o,
+              border: false,
             ),
           ],
         ),
@@ -68,6 +72,7 @@ class CellPage extends StatelessWidget {
           children: <FlanCell>[
             FlanCell(
               value: tr('content'),
+              border: false,
             )
           ],
         ),
@@ -90,6 +95,7 @@ class CellPage extends StatelessWidget {
                   value: tr('content'),
                   arrowDirection: FlanCellArrowDirection.down,
                   isLink: true,
+                  border: false,
                 ),
               ],
             )
@@ -115,6 +121,7 @@ class CellPage extends StatelessWidget {
                       arguments: <String, String>{'title': 'Button'},
                     ),
                   ),
+                  border: false,
                 ),
               ],
             )
@@ -129,6 +136,7 @@ class CellPage extends StatelessWidget {
                 FlanCell(
                   title: tr('Cell.cell'),
                   value: tr('content'),
+                  border: false,
                 ),
               ],
             ),
@@ -138,6 +146,7 @@ class CellPage extends StatelessWidget {
                 FlanCell(
                   title: tr('Cell.cell'),
                   value: tr('content'),
+                  border: false,
                 ),
               ],
             ),
@@ -156,7 +165,11 @@ class CellPage extends StatelessWidget {
                 FlanCell(
                   title: tr('Cell.cell'),
                   iconName: FlanIcons.shop_o,
-                  rightIconSlot: const FlanIcon.name(FlanIcons.search),
+                  rightIconSlot: FlanIcon.name(
+                    FlanIcons.search,
+                    size: 16.0.w,
+                  ),
+                  border: false,
                 ),
               ],
             ),
@@ -170,6 +183,7 @@ class CellPage extends StatelessWidget {
               title: tr('Cell.cell'),
               value: tr('content'),
               label: tr('desc'),
+              border: false,
             ),
           ],
         ),

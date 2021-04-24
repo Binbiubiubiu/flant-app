@@ -40,6 +40,12 @@ int uuid = 0;
 
 class _MyAppState extends State<MyApp> {
   @override
+  void initState() {
+    FlanTheme.rpx = (num n) => ScreenUtil().setWidth(n);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return FlanScreenUtilInit(
       builder: () {

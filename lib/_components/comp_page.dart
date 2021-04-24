@@ -46,7 +46,7 @@ class CompPage extends StatelessWidget {
     if (children.isNotEmpty) {
       return ListView(
         padding: pPagePadding,
-        // physics: const NeverScrollableScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         children: children,
       );
     }
