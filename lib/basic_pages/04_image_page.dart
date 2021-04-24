@@ -55,15 +55,17 @@ class _ImagePageState extends State<ImagePage> {
                 return FlanCol(
                   key: ValueKey<String>(txt),
                   span: 8,
-                  children: <Widget>[
-                    FlanImage(
-                      src: image,
-                      width: double.infinity,
-                      height: itemHeight,
-                      fit: fit,
-                    ),
-                    ImagePageText(txt),
-                  ],
+                  child: Column(
+                    children: <Widget>[
+                      FlanImage(
+                        src: image,
+                        width: double.infinity,
+                        height: itemHeight,
+                        fit: fit,
+                      ),
+                      ImagePageText(txt),
+                    ],
+                  ),
                 );
               }).toList(),
             ),
@@ -79,16 +81,18 @@ class _ImagePageState extends State<ImagePage> {
                 return FlanCol(
                   key: ValueKey<String>(txt),
                   span: 8,
-                  children: <Widget>[
-                    FlanImage(
-                      src: image,
-                      width: double.infinity,
-                      height: itemHeight,
-                      fit: fit,
-                      round: true,
-                    ),
-                    ImagePageText(txt),
-                  ],
+                  child: Column(
+                    children: <Widget>[
+                      FlanImage(
+                        src: image,
+                        width: double.infinity,
+                        height: itemHeight,
+                        fit: fit,
+                        round: true,
+                      ),
+                      ImagePageText(txt),
+                    ],
+                  ),
                 );
               }).toList(),
             ),
@@ -102,26 +106,30 @@ class _ImagePageState extends State<ImagePage> {
               children: <Widget>[
                 FlanCol(
                   span: 8,
-                  children: <Widget>[
-                    FlanImage(
-                      width: double.infinity,
-                      height: itemHeight,
-                    ),
-                    ImagePageText(tr('Image.defaultTip')),
-                  ],
+                  child: Column(
+                    children: <Widget>[
+                      FlanImage(
+                        width: double.infinity,
+                        height: itemHeight,
+                      ),
+                      ImagePageText(tr('Image.defaultTip')),
+                    ],
+                  ),
                 ),
                 FlanCol(
                   span: 8,
-                  children: <Widget>[
-                    FlanImage(
-                      width: double.infinity,
-                      height: itemHeight,
-                      loadingSlot: const FlanIcon(
-                        iconName: FlanIcons.shop,
+                  child: Column(
+                    children: <Widget>[
+                      FlanImage(
+                        width: double.infinity,
+                        height: itemHeight,
+                        loadingSlot: const FlanIcon(
+                          iconName: FlanIcons.shop,
+                        ),
                       ),
-                    ),
-                    ImagePageText(tr('Image.customTip')),
-                  ],
+                      ImagePageText(tr('Image.customTip')),
+                    ],
+                  ),
                 )
               ],
             ),
@@ -135,26 +143,30 @@ class _ImagePageState extends State<ImagePage> {
               children: <Widget>[
                 FlanCol(
                   span: 8,
-                  children: <Widget>[
-                    FlanImage(
-                      src: 'https://img01.yzcdn.cn/vant/cat',
-                      width: double.infinity,
-                      height: itemHeight,
-                    ),
-                    ImagePageText(tr('Image.defaultTip')),
-                  ],
+                  child: Column(
+                    children: <Widget>[
+                      FlanImage(
+                        src: 'https://img01.yzcdn.cn/vant/cat',
+                        width: double.infinity,
+                        height: itemHeight,
+                      ),
+                      ImagePageText(tr('Image.defaultTip')),
+                    ],
+                  ),
                 ),
                 FlanCol(
                   span: 8,
-                  children: <Widget>[
-                    FlanImage(
-                      src: 'https://img01.yzcdn.cn/vant/cat',
-                      width: double.infinity,
-                      height: itemHeight,
-                      errorSlot: const Text('加载失败'),
-                    ),
-                    ImagePageText(tr('Image.customTip')),
-                  ],
+                  child: Column(
+                    children: <Widget>[
+                      FlanImage(
+                        src: 'https://img01.yzcdn.cn/vant/cat',
+                        width: double.infinity,
+                        height: itemHeight,
+                        errorSlot: const Text('加载失败'),
+                      ),
+                      ImagePageText(tr('Image.customTip')),
+                    ],
+                  ),
                 ),
               ],
             ),
