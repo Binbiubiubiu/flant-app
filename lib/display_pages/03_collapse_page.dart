@@ -21,11 +21,6 @@ class _CollapsePageState extends State<CollapsePage> {
 
   @override
   Widget build(BuildContext context) {
-    final FlanCollapseItem flanCollapseItem = FlanCollapseItem(
-      title: "${tr('title')}2",
-      // child: Text(tr("Collapse.text")),
-      disabled: true,
-    );
     return CompPage(
       children: <Widget>[
         DocBlock.noPadding(
@@ -89,7 +84,10 @@ class _CollapsePageState extends State<CollapsePage> {
                   title: "${tr('title')}1",
                   child: Text(tr('Collapse.text')),
                 ),
-                flanCollapseItem,
+                FlanCollapseItem(
+                  title: "${tr('title')}2",
+                  disabled: true,
+                ),
                 FlanCollapseItem(
                   title: "${tr('title')}3",
                   child: Text(tr('Collapse.text')),
