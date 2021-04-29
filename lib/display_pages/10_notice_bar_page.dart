@@ -18,7 +18,7 @@ class NoticeBarPage extends StatelessWidget {
           title: tr('basicUsage'),
           children: <Widget>[
             FlanNoticeBar(
-              scrollable: true,
+              // scrollable: true,
               leftIconName: FlanIcons.volume_o,
               text: tr('NoticeBar.text'),
             ),
