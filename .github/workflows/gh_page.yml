@@ -40,7 +40,7 @@ jobs:
       # 执行测试
       # - run: flutter test
       # 打包 Web
-      - run: cd example && flutter build web --release --pwa-strategy=none -t lib/main.dart
+      - run: cd example && flutter build web --release --web-renderer=html --pwa-strategy=none -t lib/main.dart
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

@@ -13,5 +13,8 @@ flutter pub run intl_utils:generate
 # 格式化import sorter
 flutter pub run import_sorter:main
 
-# 打包命令
+# 打包android命令
 flutter build apk --release -t lib/main.dart --target-platform android-arm
+
+# 打包web命令
+flutter build web --release -t lib/main.dart --web-renderer=html --pwa-strategy=none
