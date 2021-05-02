@@ -51,7 +51,6 @@ class _TreeSelectPageState extends State<TreeSelectPage> {
             FlanTreeSelect(
               activeId: activeIds,
               onActiveIdChange: (List<String> activeId) {
-                print(activeId);
                 setState(() => activeIds = activeId);
               },
               mainActiveIndex: activeIndex,
