@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // 🌎 Project imports:
+import '../main.dart' show MyHomePage;
 import './01_basic_comp.dart';
 import './02_form_comp.dart';
 import './03_display_comp.dart';
@@ -37,11 +38,18 @@ class CompRouter {
   }
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
-    final CompRoute route = pathMap[settings.name]!;
+    final CompRoute? route = pathMap[settings.name];
+    if (route == null) {
+      return CompRouter.fallbackRoute;
+    }
     return MaterialPageRoute<dynamic>(
       builder: route.component!,
       settings:
           settings.copyWith(arguments: <String, String>{'title': route.name}),
     );
   }
+
+  static MaterialPageRoute<dynamic> fallbackRoute = MaterialPageRoute<dynamic>(
+    builder: (BuildContext context) => const MyHomePage(),
+  );
 }

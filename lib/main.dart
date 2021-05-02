@@ -1,21 +1,24 @@
 // 🐦 Flutter imports:
 import 'package:flutter/material.dart';
-
 // 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/flant.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // 🌎 Project imports:
 import './_components/main.dart';
 import './_routes/main.dart';
+// import 'configure.dart' if (dart.library.html) 'web/configure.dart';
+import 'doc_mixin.dart' if (dart.library.html) 'web/doc_mixin.dart';
 import 'screen_util.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   CompRouter.init();
-
+  // ignore: always_specify_types
+  EasyLocalization.logger.enableLevels = [];
   runApp(
     EasyLocalization(
       supportedLocales: const <Locale>[Locale('en'), Locale('zh')],
@@ -36,7 +39,7 @@ class MyApp extends StatefulWidget {
 
 int uuid = 0;
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
   @override
   void initState() {
     FlanTheme.rpx = (num n) => ScreenUtil().setWidth(n);
@@ -50,7 +53,7 @@ class _MyAppState extends State<MyApp> {
         return FlanTheme(
           data: FlanThemeData(),
           child: MaterialApp(
-            // key: ValueKey<int>(uuid++),
+            navigatorKey: docNavigatorKey,
             onGenerateTitle: (BuildContext context) => tr('App.title'),
             localizationsDelegates: context.localizationDelegates
               ..add(FlanS.delegate),
@@ -66,6 +69,8 @@ class _MyAppState extends State<MyApp> {
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
             home: const MyHomePage(),
+            onUnknownRoute: (RouteSettings settings) =>
+                CompRouter.fallbackRoute,
             onGenerateRoute: CompRouter.onGenerateRoute,
           ),
         );

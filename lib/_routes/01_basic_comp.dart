@@ -28,7 +28,7 @@ List<CompRoute> basicCompRoutes = <CompRoute>[
   ),
   CompRoute(
     name: 'Layout',
-    path: '/layout',
+    path: '/col',
     component: (BuildContext context) => LayoutPage(),
   ),
   CompRoute(

@@ -14,11 +14,11 @@ class TabbarPage extends StatefulWidget {
 }
 
 class _TabbarPageState extends State<TabbarPage> {
-  int active = 0;
-  int active2 = 0;
-  int active3 = 0;
-  int active4 = 0;
-  int active5 = 0;
+  String active = '0';
+  String active2 = '0';
+  String active3 = '0';
+  String active4 = '0';
+  String active5 = '0';
   String activeName = 'home';
 
   @override
@@ -28,28 +28,28 @@ class _TabbarPageState extends State<TabbarPage> {
         DocBlock.noPadding(
           title: tr('basicUsage'),
           children: <Widget>[
-            FlanTabbar<int>(
+            FlanTabbar(
               value: active,
-              onChange: (int index) {
+              onChange: (String index) {
                 setState(() => active = index);
               },
-              children: <FlanTabbarItem<int>>[
-                FlanTabbarItem<int>(
+              children: <FlanTabbarItem>[
+                FlanTabbarItem(
                   iconName: FlanIcons.home_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.search,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
@@ -61,31 +61,31 @@ class _TabbarPageState extends State<TabbarPage> {
         DocBlock.noPadding(
           title: tr('Tabbar.matchByName'),
           children: <Widget>[
-            FlanTabbar<String>(
+            FlanTabbar(
               value: activeName,
               onChange: (String index) {
                 setState(() => activeName = index);
               },
-              children: <FlanTabbarItem<String>>[
-                FlanTabbarItem<String>(
+              children: <FlanTabbarItem>[
+                FlanTabbarItem(
                   name: 'home',
                   iconName: FlanIcons.home_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<String>(
+                FlanTabbarItem(
                   name: 'search',
                   iconName: FlanIcons.search,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<String>(
+                FlanTabbarItem(
                   name: 'friends',
                   iconName: FlanIcons.friends_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<String>(
+                FlanTabbarItem(
                   name: 'setting',
                   iconName: FlanIcons.setting_o,
                   textBuilder: (BuildContext context, bool active) =>
@@ -98,30 +98,30 @@ class _TabbarPageState extends State<TabbarPage> {
         DocBlock.noPadding(
           title: tr('Tabbar.badge'),
           children: <Widget>[
-            FlanTabbar<int>(
+            FlanTabbar(
               value: active2,
-              onChange: (int index) {
+              onChange: (String index) {
                 setState(() => active2 = index);
               },
-              children: <FlanTabbarItem<int>>[
-                FlanTabbarItem<int>(
+              children: <FlanTabbarItem>[
+                FlanTabbarItem(
                   iconName: FlanIcons.home_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   dot: true,
                   iconName: FlanIcons.search,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   badge: '5',
-                  iconName: FlanIcons.friends_o,
+                  // iconName: FlanIcons.friends_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   badge: '10',
                   iconName: FlanIcons.setting_o,
                   textBuilder: (BuildContext context, bool active) =>
@@ -134,31 +134,30 @@ class _TabbarPageState extends State<TabbarPage> {
         DocBlock.noPadding(
           title: tr('Tabbar.customIcon'),
           children: <Widget>[
-            FlanTabbar<int>(
+            FlanTabbar(
               value: active3,
-              onChange: (int index) {
+              onChange: (String index) {
                 setState(() => active3 = index);
               },
-              children: <FlanTabbarItem<int>>[
-                FlanTabbarItem<int>(
+              children: <FlanTabbarItem>[
+                FlanTabbarItem(
                   badge: '3',
                   iconBuilder: (BuildContext context, bool active) {
-                    return active
-                        ? Image.network(
-                            'https://img01.yzcdn.cn/vant/user-active.png')
-                        : Image.network(
-                            'https://img01.yzcdn.cn/vant/user-inactive.png');
+                    final String src = active
+                        ? 'https://img01.yzcdn.cn/vant/user-active.png'
+                        : 'https://img01.yzcdn.cn/vant/user-inactive.png';
+                    return Image.network(src);
                   },
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
                 // ignore: always_specify_types
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
@@ -170,30 +169,30 @@ class _TabbarPageState extends State<TabbarPage> {
         DocBlock.noPadding(
           title: tr('Tabbar.customColor'),
           children: <Widget>[
-            FlanTabbar<int>(
+            FlanTabbar(
               value: active4,
-              onChange: (int index) {
+              onChange: (String index) {
                 setState(() => active4 = index);
               },
               activeColor: const Color(0xffee0a24),
               inactiveColor: const Color(0xff000000),
-              children: <FlanTabbarItem<int>>[
-                FlanTabbarItem<int>(
+              children: <FlanTabbarItem>[
+                FlanTabbarItem(
                   iconName: FlanIcons.home_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.search,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
@@ -205,29 +204,32 @@ class _TabbarPageState extends State<TabbarPage> {
         DocBlock.noPadding(
           title: tr('Tabbar.switchEvent'),
           children: <Widget>[
-            FlanTabbar<int>(
+            FlanTabbar(
               value: active5,
-              onChange: (int index) {
+              onChange: (String index) {
                 setState(() => active5 = index);
-                showToast(context, message: "${tr('tab')} ${index + 1}");
+                showToast(
+                  context,
+                  message: "${tr('tab')} ${int.parse(index) + 1}",
+                );
               },
-              children: <FlanTabbarItem<int>>[
-                FlanTabbarItem<int>(
+              children: <FlanTabbarItem>[
+                FlanTabbarItem(
                   iconName: FlanIcons.home_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.search,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.friends_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
                 ),
-                FlanTabbarItem<int>(
+                FlanTabbarItem(
                   iconName: FlanIcons.setting_o,
                   textBuilder: (BuildContext context, bool active) =>
                       Text(tr('tab')),
