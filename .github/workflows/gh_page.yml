@@ -35,12 +35,14 @@ jobs:
           channel: "stable" # optional, default is stable
 
       # 下载项目依赖
-      - run: flutter pub get
+      - name: Install dependencies
+        run: flutter pub get
 
       # 执行测试
       # - run: flutter test
       # 打包 Web
-      - run: cd example && flutter build web --release --web-renderer=html --pwa-strategy=none -t lib/main.dart
+      - run: flutter build web --release --web-renderer=html --pwa-strategy=none -t lib/main.dart
+        working-directory: example
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

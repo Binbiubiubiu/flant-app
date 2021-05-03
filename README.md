@@ -1,5 +1,7 @@
 # flant App
 
+![GitHub Repo stars](https://img.shields.io/github/stars/Simon-Bin/flant-app?style=social) [![publish_dry](https://github.com/Simon-Bin/flant-app/actions/workflows/release.yml/badge.svg)](https://github.com/Simon-Bin/flant-app/actions/workflows/release.yml) ![GitHub](https://img.shields.io/github/license/Simon-Bin/flant-app)
+
 flant ui 示例 demo
 
 ### 运行
