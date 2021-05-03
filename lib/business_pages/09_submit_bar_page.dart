@@ -75,17 +75,15 @@ class _SubmitBarPageState extends State<SubmitBarPage> {
               price: 3050,
               buttonText: tr('SubmitBar.submit'),
               onSubmit: onSubmit,
-              tipSlot: Text.rich(
-                TextSpan(
-                  text: tr('SubmitBar.tip2'),
-                  children: <InlineSpan>[
-                    TextSpan(
-                      text: tr('SubmitBar.tip3'),
-                      style: const TextStyle(color: ThemeVars.blue),
-                      recognizer: _tapGestureRecognizer,
-                    )
-                  ],
-                ),
+              tipSlot: TextSpan(
+                text: tr('SubmitBar.tip2'),
+                children: <InlineSpan>[
+                  TextSpan(
+                    text: tr('SubmitBar.tip3'),
+                    style: const TextStyle(color: ThemeVars.blue),
+                    recognizer: _tapGestureRecognizer,
+                  )
+                ],
               ),
             ),
           ],
