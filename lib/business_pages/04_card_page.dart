@@ -21,7 +21,7 @@ class CardPage extends StatelessWidget {
           title: tr('basicUsage'),
           children: <Widget>[
             FlanCard(
-              number: '2',
+              num: '2',
               price: '2.00',
               desc: tr('desc'),
               title: tr('Card.title'),
@@ -33,7 +33,7 @@ class CardPage extends StatelessWidget {
           title: tr('Card.discountInfo'),
           children: <Widget>[
             FlanCard(
-              number: '2',
+              num: '2',
               price: '2.00',
               originPrice: '10.00',
               tag: tr('tag'),
@@ -47,7 +47,7 @@ class CardPage extends StatelessWidget {
           title: tr('Card.customContent'),
           children: <Widget>[
             FlanCard(
-              number: '2',
+              num: '2',
               price: '2.00',
               desc: tr('desc'),
               title: tr('Card.title'),
