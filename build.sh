@@ -14,7 +14,8 @@ flutter pub run intl_utils:generate
 flutter pub run import_sorter:main
 
 # 打包android命令
-flutter build apk --release -t lib/main.dart --target-platform android-arm
+flutter build apk --release -t lib/main.dart --split-per-abi --obfuscate --split-debug-info=./
+
 
 # 打包web命令
 flutter build web --release -t lib/main.dart --web-renderer=html --pwa-strategy=none

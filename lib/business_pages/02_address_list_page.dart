@@ -31,7 +31,7 @@ class _AddressListPageState extends State<AddressListPage> {
         .map((dynamic item) =>
             FlanAddressListAddress.fromJson(item as Map<String, dynamic>))
         .toList();
-    print(list);
+
     super.initState();
   }
 

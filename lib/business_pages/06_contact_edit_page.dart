@@ -17,7 +17,6 @@ class _ContactEditState extends State<ContactEditPage> {
   FlanContactEditInfo editingContact = FlanContactEditInfo();
 
   void _onSave(FlanContactEditInfo info) {
-    print(info);
     showToast(context, message: FlanS.of(context).save);
   }
 

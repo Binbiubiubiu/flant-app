@@ -26,7 +26,7 @@ class _ContactListPageState extends State<ContactListPage> {
         .map((dynamic item) =>
             FlanContactListItem.fromJson(item as Map<String, dynamic>))
         .toList();
-    print(list);
+
     super.initState();
   }
 

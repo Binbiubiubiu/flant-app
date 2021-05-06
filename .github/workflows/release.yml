@@ -50,7 +50,7 @@ jobs:
       # 执行测试
       # - run: flutter test
       # 打包 APK
-      - run: cd example && flutter build apk --release -t lib/main.dart --target-platform android-arm
+      - run: cd example && flutter build apk --release -t lib/main.dart --split-per-abi --obfuscate --split-debug-info=./
       # https://github.com/svenstaro/upload-release-action
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
