@@ -14,12 +14,12 @@ class SwitchPage extends StatefulWidget {
 }
 
 class _SwitchPageState extends State<SwitchPage> {
-  bool checked = true;
-  bool checked2 = true;
-  bool checked3 = true;
-  bool checked4 = true;
-  bool checked5 = true;
-  bool checked6 = false;
+  ValueNotifier<bool> checked = ValueNotifier<bool>(true);
+  ValueNotifier<bool> checked2 = ValueNotifier<bool>(true);
+  ValueNotifier<bool> checked3 = ValueNotifier<bool>(true);
+  ValueNotifier<bool> checked4 = ValueNotifier<bool>(true);
+  ValueNotifier<bool> checked5 = ValueNotifier<bool>(true);
+  ValueNotifier<bool> checked6 = ValueNotifier<bool>(false);
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +29,7 @@ class _SwitchPageState extends State<SwitchPage> {
           title: tr('basicUsage'),
           children: <Widget>[
             FlanSwitch<bool>(
-              value: checked,
-              onChange: (bool value) {
-                setState(() => checked = value);
-              },
+              modalValue: checked,
             ),
           ],
         ),
@@ -40,11 +37,8 @@ class _SwitchPageState extends State<SwitchPage> {
           title: tr('disabled'),
           children: <Widget>[
             FlanSwitch<bool>(
-              value: checked,
+              modalValue: checked,
               disabled: true,
-              onChange: (bool value) {
-                setState(() => checked = value);
-              },
             ),
           ],
         ),
@@ -52,11 +46,8 @@ class _SwitchPageState extends State<SwitchPage> {
           title: tr('loadingStatus'),
           children: <Widget>[
             FlanSwitch<bool>(
-              value: checked,
+              modalValue: checked,
               loading: true,
-              onChange: (bool value) {
-                setState(() => checked = value);
-              },
             ),
           ],
         ),
@@ -64,11 +55,8 @@ class _SwitchPageState extends State<SwitchPage> {
           title: tr('Switch.customSize'),
           children: <Widget>[
             FlanSwitch<bool>(
-              value: checked2,
+              modalValue: checked2,
               size: 24.0,
-              onChange: (bool value) {
-                setState(() => checked2 = value);
-              },
             ),
           ],
         ),
@@ -76,12 +64,9 @@ class _SwitchPageState extends State<SwitchPage> {
           title: tr('Switch.customColor'),
           children: <Widget>[
             FlanSwitch<bool>(
-              value: checked3,
+              modalValue: checked3,
               activeColor: const Color(0xffee0a24),
               inActiveColor: const Color(0xffdcdee0),
-              onChange: (bool value) {
-                setState(() => checked3 = value);
-              },
             ),
           ],
         ),
@@ -89,10 +74,7 @@ class _SwitchPageState extends State<SwitchPage> {
           title: tr('Switch.asyncControl'),
           children: <Widget>[
             FlanSwitch<bool>(
-              value: checked4,
-              onChange: (bool value) {
-                setState(() => checked4 = value);
-              },
+              modalValue: checked4,
             ),
           ],
         ),
@@ -103,11 +85,8 @@ class _SwitchPageState extends State<SwitchPage> {
               center: true,
               title: tr('title'),
               rightIconSlot: FlanSwitch<bool>(
-                value: checked5,
+                modalValue: checked5,
                 size: 24.0,
-                onChange: (bool value) {
-                  setState(() => checked5 = value);
-                },
               ),
             ),
           ],

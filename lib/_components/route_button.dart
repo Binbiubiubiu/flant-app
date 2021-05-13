@@ -1,15 +1,16 @@
 // 🐦 Flutter imports:
+import 'package:flant/components/common/active_response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RouteButton extends StatelessWidget {
   const RouteButton({
     Key? key,
-    this.text,
+    this.text = '',
     required this.onPressed,
   }) : super(key: key);
 
-  final String? text;
+  final String text;
 
   final VoidCallback onPressed;
 
@@ -21,7 +22,7 @@ class RouteButton extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text(text ?? ''),
+          Text(text),
           const Spacer(),
           RotatedBox(
             quarterTurns: 2,
@@ -38,24 +39,25 @@ class RouteButton extends StatelessWidget {
       container: true,
       button: true,
       enabled: true,
-      child: ClipRRect(
-        borderRadius: BorderRadius.all(
-          Radius.circular(20.0.w),
+      child: DefaultTextStyle(
+        style: TextStyle(
+          fontSize: 14.0.w,
+          fontWeight: FontWeight.w600,
+          color: const Color(0xFF323233),
         ),
-        child: Material(
-          textStyle: TextStyle(
-            fontSize: 14.0.w,
-            fontWeight: FontWeight.w600,
-            color: const Color(0xFF323233),
-          ),
-          type: MaterialType.button,
-          color: const Color(0xfff7f8fa),
-          child: InkWell(
-            splashColor: Colors.transparent,
-            highlightColor: const Color(0xFFEEF0F4),
-            onTap: onPressed,
-            child: result,
-          ),
+        child: FlanActiveResponse(
+          builder: (BuildContext contenxt, bool active, Widget? child) {
+            return DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20.0.w)),
+                color:
+                    active ? const Color(0xFFEEF0F4) : const Color(0xfff7f8fa),
+              ),
+              child: child,
+            );
+          },
+          onClick: onPressed,
+          child: result,
         ),
       ),
     );

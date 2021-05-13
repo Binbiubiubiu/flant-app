@@ -34,8 +34,22 @@ class _BasicUsage extends StatefulWidget {
 }
 
 class __BasicUsageState extends State<_BasicUsage> {
-  String username = '';
-  String password = '';
+  late TextEditingController usernameController;
+  late TextEditingController passwordController;
+
+  @override
+  void initState() {
+    usernameController = TextEditingController();
+    passwordController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    usernameController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   void onSubmit(Map<String, dynamic>? values) {
     print('submit' + jsonEncode(values));
@@ -58,12 +72,9 @@ class __BasicUsageState extends State<_BasicUsage> {
           onSubmit: onSubmit,
           onFailed: onFailed,
           scrollToError: true,
-          children: <FlanField<String>>[
-            FlanField<String>(
-              value: username,
-              onInput: (String value) {
-                setState(() => username = value);
-              },
+          children: <FlanField>[
+            FlanField(
+              controller: usernameController,
               name: 'username',
               label: tr('Form.BasicUsage.username'),
               rules: <FlanFieldRule>[
@@ -75,11 +86,8 @@ class __BasicUsageState extends State<_BasicUsage> {
               border: true,
               placeholder: tr('Form.BasicUsage.username'),
             ),
-            FlanField<String>(
-              value: password,
-              onInput: (String value) {
-                setState(() => password = value);
-              },
+            FlanField(
+              controller: passwordController,
               name: 'password',
               type: FlanFieldType.password,
               label: tr('Form.BasicUsage.password'),
@@ -121,10 +129,28 @@ class _ValidateRules extends StatefulWidget {
 }
 
 class __ValidateRulesState extends State<_ValidateRules> {
-  String value1 = '';
-  String value2 = '';
-  String value3 = 'abc';
-  String value4 = '';
+  late TextEditingController value1Controller;
+  late TextEditingController value2Controller;
+  late TextEditingController value3Controller;
+  late TextEditingController value4Controller;
+
+  @override
+  void initState() {
+    value1Controller = TextEditingController();
+    value2Controller = TextEditingController();
+    value3Controller = TextEditingController(text: 'abc');
+    value4Controller = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    value1Controller.dispose();
+    value2Controller.dispose();
+    value3Controller.dispose();
+    value4Controller.dispose();
+    super.dispose();
+  }
 
   RegExp pattern = RegExp(r'\d{6}');
 
@@ -162,12 +188,9 @@ class __ValidateRulesState extends State<_ValidateRules> {
           key: form,
           onSubmit: onSubmit,
           onFailed: onFailed,
-          children: <FlanField<String>>[
-            FlanField<String>(
-              value: value1,
-              onInput: (String value) {
-                setState(() => value1 = value);
-              },
+          children: <FlanField>[
+            FlanField(
+              controller: value1Controller,
               name: 'pattern',
               label: tr('Form.ValidateRules.label'),
               rules: <FlanFieldRule>[
@@ -179,11 +202,8 @@ class __ValidateRulesState extends State<_ValidateRules> {
               border: true,
               placeholder: tr('Form.ValidateRules.pattern'),
             ),
-            FlanField<String>(
-              value: value2,
-              onInput: (String value) {
-                setState(() => value2 = value);
-              },
+            FlanField(
+              controller: value2Controller,
               name: 'validator',
               label: tr('Form.ValidateRules.label'),
               rules: <FlanFieldRule>[
@@ -194,11 +214,8 @@ class __ValidateRulesState extends State<_ValidateRules> {
               ],
               placeholder: tr('Form.ValidateRules.validator'),
             ),
-            FlanField<String>(
-              value: value3,
-              onInput: (String value) {
-                setState(() => value3 = value);
-              },
+            FlanField(
+              controller: value3Controller,
               name: 'validatorMessage',
               label: tr('Form.ValidateRules.label'),
               rules: <FlanFieldRule>[
@@ -209,11 +226,8 @@ class __ValidateRulesState extends State<_ValidateRules> {
               ],
               placeholder: tr('Form.ValidateRules.validatorMessage'),
             ),
-            FlanField<String>(
-              value: value4,
-              onInput: (String value) {
-                setState(() => value4 = value);
-              },
+            FlanField(
+              controller: value4Controller,
               name: 'asyncValidator',
               label: tr('Form.ValidateRules.label'),
               rules: <FlanFieldRule>[

@@ -24,15 +24,17 @@ class _PickerPageState extends State<PickerPage> {
   late List<dynamic> disabledColumns;
   late Map<String, dynamic> column3;
 
-  String fieldValue = '';
   bool showPicker = false;
   FlanPickerFieldNames customFieldName = const FlanPickerFieldNames(
     text: 'cityName',
     children: 'cities',
   );
 
+  late TextEditingController fieldValue;
+
   @override
   void initState() {
+    fieldValue = TextEditingController();
     textColumns = jsonDecode(tr('Picker.textColumns')) as List<dynamic>;
     cascadeColumns = jsonDecode(tr('Picker.cascadeColumns')) as List<dynamic>;
     disabledColumns = jsonDecode(tr('Picker.disabledColumns')) as List<dynamic>;
@@ -41,6 +43,12 @@ class _PickerPageState extends State<PickerPage> {
     dateColumns = jsonDecode(tr('Picker.dateColumns')) as List<dynamic>;
     column3 = jsonDecode(tr('Picker.column3')) as Map<String, dynamic>;
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    fieldValue.dispose();
+    super.dispose();
   }
 
   void onChange1(dynamic value, dynamic index) {
@@ -157,19 +165,14 @@ class _PickerPageState extends State<PickerPage> {
           title: tr('Picker.withPopup'),
           card: true,
           children: <Widget>[
-            FlanField<String>(
-              value: fieldValue,
+            FlanField(
+              controller: fieldValue,
               readonly: true,
               clickable: true,
               placeholder: tr('Picker.chooseCity'),
               onClickInput: () {
                 setState(() {
                   showPicker = true;
-                });
-              },
-              onInput: (String val) {
-                setState(() {
-                  fieldValue = val;
                 });
               },
             ),

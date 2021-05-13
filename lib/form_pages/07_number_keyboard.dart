@@ -19,13 +19,26 @@ class NumberKeyboardPage extends StatefulWidget {
 }
 
 class _NumberKeyboardPageState extends State<NumberKeyboardPage> {
-  String value = '';
   String keyboard = '';
 
   void onInput(String value) =>
       showToast(context, message: '${tr('NumberKeyboard.input')}: $value');
 
   void onDelete() => showToast(context, message: tr(FlanS.of(context).delete));
+
+  late TextEditingController text;
+
+  @override
+  void initState() {
+    text = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    text.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,11 +96,8 @@ class _NumberKeyboardPageState extends State<NumberKeyboardPage> {
               border: true,
               child: Text(tr('NumberKeyboard.button6')),
             ),
-            FlanField<String>(
-              value: value,
-              onInput: (String val) {
-                setState(() => value = val);
-              },
+            FlanField(
+              controller: text,
               readonly: true,
               clickable: true,
               label: tr('NumberKeyboard.bindValue'),
@@ -164,9 +174,9 @@ class _NumberKeyboardPageState extends State<NumberKeyboardPage> {
           onBlur: () {
             setState(() => keyboard = '');
           },
-          value: value,
+          value: text.text,
           onChange: (String val) {
-            setState(() => value = val);
+            setState(() => text.text = val);
           },
           maxlength: 6,
         ),

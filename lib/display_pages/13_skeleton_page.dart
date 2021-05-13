@@ -12,7 +12,7 @@ import '../_components/main.dart';
 class SkeletonPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    bool show = false;
+    final ValueNotifier<bool> show = ValueNotifier<bool>(false);
     return CompPage(
       backgroundColor: Colors.white,
       children: <Widget>[
@@ -44,8 +44,7 @@ class SkeletonPage extends StatelessWidget {
                         right: 16.0,
                       ),
                       child: FlanSwitch<bool>(
-                        value: show,
-                        onChange: (bool s) => setState(() => show = s),
+                        modalValue: show,
                         size: 24.0,
                       ),
                     ),
@@ -53,7 +52,7 @@ class SkeletonPage extends StatelessWidget {
                       title: true,
                       avatar: true,
                       row: 3,
-                      loading: !show,
+                      loading: !show.value,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                           horizontal: ThemeVars.paddingMd,

@@ -36,21 +36,29 @@ class _BasicUsage extends StatefulWidget {
 }
 
 class __BasicUsageState extends State<_BasicUsage> {
-  String value = '';
+  late TextEditingController controller;
+
+  @override
+  void initState() {
+    controller = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('basicUsage'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.BasicUsage.label'),
           placeholder: tr('Field.BasicUsage.placeholder'),
-          value: value,
-          onInput: (String val) {
-            setState(() {
-              value = val;
-            });
-          },
+          controller: controller,
         ),
       ],
     );
@@ -63,6 +71,32 @@ class _CustomType extends StatefulWidget {
 }
 
 class __CustomTypeState extends State<_CustomType> {
+  late TextEditingController textController;
+  late TextEditingController phoneController;
+  late TextEditingController digitController;
+  late TextEditingController numberController;
+  late TextEditingController passwordController;
+
+  @override
+  void initState() {
+    textController = TextEditingController();
+    phoneController = TextEditingController();
+    digitController = TextEditingController();
+    numberController = TextEditingController();
+    passwordController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    phoneController.dispose();
+    digitController.dispose();
+    numberController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   String text = '';
   String phone = '';
   String digit = '';
@@ -73,75 +107,83 @@ class __CustomTypeState extends State<_CustomType> {
     return DocBlock.noPadding(
       title: tr('Field.CustomType.customType'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.CustomType.text'),
           placeholder: tr('Field.CustomType.textPlaceholder'),
-          value: text,
+          controller: textController,
           border: true,
-          onInput: (String val) {
-            setState(() => text = val);
-          },
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('Field.CustomType.phone'),
           placeholder: tr('Field.CustomType.phonePlaceholder'),
           border: true,
           type: FlanFieldType.tel,
-          value: phone,
-          onInput: (String val) {
-            setState(() => phone = val);
-          },
+          controller: phoneController,
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('Field.CustomType.digit'),
           placeholder: tr('Field.CustomType.digitPlaceholder'),
           border: true,
           type: FlanFieldType.digit,
-          value: digit,
-          onInput: (String val) {
-            setState(() => digit = val);
-          },
+          controller: digitController,
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('Field.CustomType.number'),
           placeholder: tr('Field.CustomType.digitPlaceholder'),
           border: true,
           type: FlanFieldType.number,
-          value: number,
-          onInput: (String val) {
-            setState(() => number = val);
-          },
+          controller: numberController,
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('password'),
           placeholder: tr('passwordPlaceholder'),
           type: FlanFieldType.password,
-          value: password,
-          onInput: (String val) {
-            setState(() => password = val);
-          },
+          controller: passwordController,
         ),
       ],
     );
   }
 }
 
-class _Disabled extends StatelessWidget {
+class _Disabled extends StatefulWidget {
+  @override
+  __DisabledState createState() => __DisabledState();
+}
+
+class __DisabledState extends State<_Disabled> {
+  late TextEditingController textController;
+  late TextEditingController phoneController;
+
+  @override
+  void initState() {
+    textController =
+        TextEditingController(text: tr('Field.Disabled.inputReadonly'));
+    phoneController =
+        TextEditingController(text: tr('Field.Disabled.inputDisabled'));
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    phoneController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('Field.Disabled.disabled'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.Disabled.text'),
-          value: tr('Field.Disabled.inputReadonly'),
+          controller: textController,
           readonly: true,
           border: true,
-          onInput: (String val) {},
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('Field.Disabled.text'),
-          value: tr('Field.Disabled.inputDisabled'),
+          controller: phoneController,
           disabled: true,
           onInput: (String val) {},
         ),
@@ -156,27 +198,40 @@ class _ShowIcon extends StatefulWidget {
 }
 
 class __ShowIconState extends State<_ShowIcon> {
-  String icon1 = '';
-  String icon2 = '123';
+  late TextEditingController textController;
+  late TextEditingController phoneController;
+
+  @override
+  void initState() {
+    textController = TextEditingController();
+    phoneController = TextEditingController(text: '123');
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    phoneController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('Field.ShowIcon.showIcon'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.ShowIcon.text'),
           placeholder: tr('Field.ShowIcon.showIcon'),
-          value: icon1,
-          onInput: (String val) => setState(() => icon1 = val),
+          controller: textController,
           leftIconName: FlanIcons.smile_o,
           rightIconName: FlanIcons.warning_o,
           border: true,
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('Field.ShowIcon.text'),
           placeholder: tr('Field.ShowIcon.showClearIcon'),
-          value: icon2,
-          onInput: (String val) => setState(() => icon2 = val),
+          controller: phoneController,
           clearable: true,
           leftIconName: FlanIcons.music_o,
         ),
@@ -191,29 +246,42 @@ class _ErrorInfo extends StatefulWidget {
 }
 
 class __ErrorInfoState extends State<_ErrorInfo> {
-  String phone = '123';
-  String username = '';
+  late TextEditingController textController;
+  late TextEditingController phoneController;
+
+  @override
+  void initState() {
+    textController = TextEditingController();
+    phoneController = TextEditingController(text: '123');
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    phoneController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('Field.ErrorInfo.errorInfo'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('username'),
           placeholder: tr('usernamePlaceholder'),
-          value: username,
-          onInput: (String val) => setState(() => username = val),
+          controller: textController,
           error: true,
           isRequired: true,
           border: true,
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('Field.ErrorInfo.phone'),
           placeholder: tr('Field.ErrorInfo.phonePlaceholder'),
           isRequired: true,
           errorMessage: tr('Field.ErrorInfo.phoneError'),
-          value: phone,
-          onInput: (String val) => setState(() => phone = val),
+          controller: phoneController,
         ),
       ],
     );
@@ -226,17 +294,29 @@ class _InsertButton extends StatefulWidget {
 }
 
 class __InsertButtonState extends State<_InsertButton> {
-  String sms = '';
+  late TextEditingController smsController;
+
+  @override
+  void initState() {
+    smsController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    smsController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('Field.InsertButton.insertButton'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.InsertButton.sms'),
           placeholder: tr('Field.InsertButton.smsPlaceholder'),
-          value: sms,
-          onInput: (String val) => setState(() => sms = val),
+          controller: smsController,
           buttonSlot: FlanButton(
             size: FlanButtonSize.small,
             type: FlanButtonType.primary,
@@ -255,8 +335,22 @@ class _FormatValue extends StatefulWidget {
 }
 
 class __FormatValueState extends State<_FormatValue> {
-  String value1 = '';
-  String value2 = '';
+  late TextEditingController textController;
+  late TextEditingController phoneController;
+
+  @override
+  void initState() {
+    textController = TextEditingController();
+    phoneController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    phoneController.dispose();
+    super.dispose();
+  }
 
   String formatter(String value) => value.replaceAll(RegExp(r'\d'), '');
 
@@ -265,21 +359,19 @@ class __FormatValueState extends State<_FormatValue> {
     return DocBlock.noPadding(
       title: tr('Field.FormatValue.formatValue'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.FormatValue.text'),
           placeholder: tr('Field.FormatValue.formatOnChange'),
           formatter: formatter,
           border: true,
-          value: value1,
-          onInput: (String val) => setState(() => value1 = val),
+          controller: textController,
         ),
-        FlanField<String>(
+        FlanField(
           label: tr('Field.FormatValue.text'),
           placeholder: tr('Field.FormatValue.formatOnBlur'),
           formatter: formatter,
           formatTrigger: FlanFieldFormatTrigger.onBlur,
-          value: value2,
-          onInput: (String val) => setState(() => value2 = val),
+          controller: phoneController,
         ),
       ],
     );
@@ -292,18 +384,29 @@ class _AutoSize extends StatefulWidget {
 }
 
 class __AutoSizeState extends State<_AutoSize> {
-  String value = '';
+  late TextEditingController textController;
+
+  @override
+  void initState() {
+    textController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('Field.Autosize.autosize'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.Autosize.message'),
           placeholder: tr('Field.Autosize.placeholder'),
-          value: value,
-          onInput: (String val) => setState(() => value = val),
+          controller: textController,
           // autosize: true,
           rows: 1,
           type: FlanFieldType.textarea,
@@ -319,17 +422,29 @@ class _ShowWordLimit extends StatefulWidget {
 }
 
 class __ShowWordLimitState extends State<_ShowWordLimit> {
-  String value = '';
+  late TextEditingController textController;
+
+  @override
+  void initState() {
+    textController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('Field.ShowWordLimit.showWordLimit'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.ShowWordLimit.message'),
           placeholder: tr('Field.ShowWordLimit.placeholder'),
-          value: value,
-          onInput: (String val) => setState(() => value = val),
+          controller: textController,
           showWordLimit: true,
           rows: 2,
           maxLength: 50,
@@ -346,17 +461,29 @@ class _InputAlign extends StatefulWidget {
 }
 
 class __InputAlignState extends State<_InputAlign> {
-  String value = '';
+  late TextEditingController textController;
+
+  @override
+  void initState() {
+    textController = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DocBlock.noPadding(
       title: tr('Field.InputAlign.inputAlign'),
       children: <Widget>[
-        FlanField<String>(
+        FlanField(
           label: tr('Field.InputAlign.text'),
           placeholder: tr('Field.InputAlign.alignPlaceHolder'),
-          value: value,
-          onInput: (String val) => setState(() => value = val),
+          controller: textController,
           inputAlign: TextAlign.right,
         ),
       ],

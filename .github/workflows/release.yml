@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout flant
@@ -50,7 +50,11 @@ jobs:
       # 执行测试
       # - run: flutter test
       # 打包 APK
-      - run: cd example && flutter build apk --release -t lib/main.dart --split-per-abi --obfuscate --split-debug-info=./
+      - run: flutter build apk --release -t lib/main.dart --split-per-abi --obfuscate --split-debug-info=./
+        working-directory: example
+      # 打包 ios
+      # - run: flutter build ios --release --no-codesign
+      #   working-directory: example
       # https://github.com/svenstaro/upload-release-action
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2

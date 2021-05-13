@@ -176,7 +176,7 @@ class CellPage extends StatelessWidget {
           ],
         ),
         DocBlock.noPadding(
-          title: '垂直居中',
+          title: tr('Cell.verticalCenter'),
           children: <Widget>[
             FlanCell(
               center: true,

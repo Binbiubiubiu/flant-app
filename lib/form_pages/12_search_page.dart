@@ -16,12 +16,34 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  String value1 = '';
-  String value2 = '';
-  String value3 = '';
-  String value4 = '';
-  String value5 = '';
-  String value6 = '';
+  late TextEditingController value1Controller;
+  late TextEditingController value2Controller;
+  late TextEditingController value3Controller;
+  late TextEditingController value4Controller;
+  late TextEditingController value5Controller;
+  late TextEditingController value6Controller;
+
+  @override
+  void initState() {
+    value1Controller = TextEditingController();
+    value2Controller = TextEditingController();
+    value3Controller = TextEditingController(text: 'abc');
+    value4Controller = TextEditingController();
+    value5Controller = TextEditingController();
+    value6Controller = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    value1Controller.dispose();
+    value2Controller.dispose();
+    value3Controller.dispose();
+    value4Controller.dispose();
+    value5Controller.dispose();
+    value6Controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +55,7 @@ class _SearchPageState extends State<SearchPage> {
           title: tr('basicUsage'),
           children: <Widget>[
             FlanSearch(
-              value: value1,
-              onInput: (String value) {
-                setState(() => value1 = value);
-              },
+              controller: value6Controller,
               placeholder: tr('Search.placeholder'),
             )
           ],
@@ -45,10 +64,7 @@ class _SearchPageState extends State<SearchPage> {
           title: tr('Search.listenToEvents'),
           children: <Widget>[
             FlanSearch(
-              value: value5,
-              onInput: (String value) {
-                setState(() => value5 = value);
-              },
+              controller: value5Controller,
               placeholder: tr('Search.placeholder'),
               showAction: true,
               onSearch: onSearch,
@@ -60,10 +76,7 @@ class _SearchPageState extends State<SearchPage> {
           title: tr('Search.inputAlign'),
           children: <Widget>[
             FlanSearch(
-              value: value4,
-              onInput: (String value) {
-                setState(() => value4 = value);
-              },
+              controller: value4Controller,
               placeholder: tr('Search.placeholder'),
               inputAlign: TextAlign.center,
             )
@@ -73,10 +86,7 @@ class _SearchPageState extends State<SearchPage> {
           title: tr('Search.disabled'),
           children: <Widget>[
             FlanSearch(
-              value: value3,
-              onInput: (String value) {
-                setState(() => value3 = value);
-              },
+              controller: value3Controller,
               placeholder: tr('Search.placeholder'),
               disabled: true,
             )
@@ -86,10 +96,7 @@ class _SearchPageState extends State<SearchPage> {
           title: tr('Search.background'),
           children: <Widget>[
             FlanSearch(
-              value: value2,
-              onInput: (String value) {
-                setState(() => value2 = value);
-              },
+              controller: value2Controller,
               placeholder: tr('Search.placeholder'),
               shape: FlanSearchShape.round,
               background: const Color(0xff4fc08d),
@@ -100,17 +107,13 @@ class _SearchPageState extends State<SearchPage> {
           title: tr('Search.customButton'),
           children: <Widget>[
             FlanSearch(
-              value: value1,
-              onInput: (String value) {
-                print(value);
-                setState(() => value1 = value);
-              },
+              controller: value1Controller,
               showAction: true,
               label: tr('Search.label'),
               placeholder: tr('Search.placeholder'),
               onSearch: onSearch,
               actionSlot: GestureDetector(
-                onTap: () => onSearch(value1),
+                onTap: () => onSearch(value1Controller.text),
                 child: Text(tr('search')),
               ),
             )
