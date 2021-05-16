@@ -682,5 +682,17 @@
     "beforeClose": "Before Close",
     "roundButton": "Round Button Style",
     "componentCall": "Component Call"
+  },
+  "Notify": {
+    "primary": "Primary",
+    "success": "Success",
+    "danger": "Danger",
+    "warning": "Warning",
+    "content": "Notify Message",
+    "notifyType": "Notify Type",
+    "customColor": "Custom Color",
+    "customNotify": "Custom Notify",
+    "componentCall": "Component Call",
+    "customDuration": "Custom Duration"
   }
 }
