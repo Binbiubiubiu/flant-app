@@ -26,8 +26,6 @@ class ToastPage extends StatelessWidget {
               onClick: () {
                 FlanToast(
                   context,
-                  overlay: true,
-                  closeOnClickOverlay: true,
                   message: tr('Toast.title1'),
                 );
               },
