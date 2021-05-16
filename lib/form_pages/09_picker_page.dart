@@ -53,7 +53,7 @@ class _PickerPageState extends State<PickerPage> {
 
   void onChange1(dynamic value, dynamic index) {
     print(value);
-    showToast(
+    FlanToast(
       context,
       message: tr(
         'Picker.toastContent',
@@ -66,7 +66,7 @@ class _PickerPageState extends State<PickerPage> {
   }
 
   void onConfirm(dynamic value, dynamic index) {
-    showToast(
+    FlanToast(
       context,
       message: tr(
         'Picker.toastContent',
@@ -79,7 +79,7 @@ class _PickerPageState extends State<PickerPage> {
   }
 
   void onCancel(dynamic a, dynamic b) =>
-      showToast(context, message: FlanS.of(context).cancel);
+      FlanToast(context, message: FlanS.of(context).cancel);
 
   @override
   Widget build(BuildContext context) {

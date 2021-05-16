@@ -116,7 +116,7 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
   }
 
   void onSelect(FlanShareSheetOption option, int index) {
-    showToast(context, message: option.name);
+    FlanToast(context, message: option.name);
     basic = false;
     withDesc = false;
     multiLine = false;

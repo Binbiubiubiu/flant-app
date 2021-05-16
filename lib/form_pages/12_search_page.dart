@@ -47,8 +47,8 @@ class _SearchPageState extends State<SearchPage> {
 
   @override
   Widget build(BuildContext context) {
-    void onSearch(String val) => showToast(context, message: val);
-    void onCancel() => showToast(context, message: FlanS.of(context).cancel);
+    void onSearch(String val) => FlanToast(context, message: val);
+    void onCancel() => FlanToast(context, message: FlanS.of(context).cancel);
     return CompPage(
       children: <Widget>[
         DocBlock.noPadding(

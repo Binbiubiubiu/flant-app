@@ -31,15 +31,15 @@ class _ContactListPageState extends State<ContactListPage> {
   }
 
   void onAdd() {
-    showToast(context, message: tr('ContactList.add'));
+    FlanToast(context, message: tr('ContactList.add'));
   }
 
   void onEdit(FlanContactListItem contact, int index) {
-    showToast(context, message: tr('ContactList.edit') + contact.id.toString());
+    FlanToast(context, message: tr('ContactList.edit') + contact.id.toString());
   }
 
   void onSelect(FlanContactListItem contact, int index) {
-    showToast(context,
+    FlanToast(context,
         message: tr('ContactList.select') + contact.id.toString());
   }
 

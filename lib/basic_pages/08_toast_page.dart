@@ -1,4 +1,6 @@
 // 🐦 Flutter imports:
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 // 📦 Package imports:
@@ -22,8 +24,10 @@ class ToastPage extends StatelessWidget {
               isLink: true,
               border: true,
               onClick: () {
-                showToast(
+                FlanToast(
                   context,
+                  overlay: true,
+                  closeOnClickOverlay: true,
                   message: tr('Toast.title1'),
                 );
               },
@@ -33,9 +37,8 @@ class ToastPage extends StatelessWidget {
               isLink: true,
               border: true,
               onClick: () {
-                showToast(
+                FlanToast.loading(
                   context,
-                  type: FlanToastType.loading,
                   message: FlanS.current.loading,
                 );
               },
@@ -45,9 +48,8 @@ class ToastPage extends StatelessWidget {
               isLink: true,
               border: true,
               onClick: () {
-                showToast(
+                FlanToast.success(
                   context,
-                  type: FlanToastType.success,
                   message: tr('Toast.text2'),
                 );
               },
@@ -56,9 +58,8 @@ class ToastPage extends StatelessWidget {
               title: tr('Toast.fail'),
               isLink: true,
               onClick: () {
-                showToast(
+                FlanToast.fail(
                   context,
-                  type: FlanToastType.fail,
                   message: tr('Toast.text3'),
                 );
               },
@@ -74,7 +75,7 @@ class ToastPage extends StatelessWidget {
               isLink: true,
               border: true,
               onClick: () {
-                showToast(
+                FlanToast(
                   context,
                   iconName: FlanIcons.like_o,
                   message: tr('Toast.customIcon'),
@@ -86,7 +87,7 @@ class ToastPage extends StatelessWidget {
               isLink: true,
               border: true,
               onClick: () {
-                showToast(
+                FlanToast(
                   context,
                   iconUrl: 'https://img01.yzcdn.cn/vant/logo.png',
                   message: tr('Toast.customImage'),
@@ -97,9 +98,8 @@ class ToastPage extends StatelessWidget {
               title: tr('Toast.loadingType'),
               isLink: true,
               onClick: () {
-                showToast(
+                FlanToast.loading(
                   context,
-                  type: FlanToastType.loading,
                   loadingType: FlanLoadingType.spinner,
                   message: FlanS.current.loading,
                 );
@@ -116,7 +116,7 @@ class ToastPage extends StatelessWidget {
               isLink: true,
               border: true,
               onClick: () {
-                showToast(
+                FlanToast(
                   context,
                   message: tr('Toast.positionTop'),
                   position: FlanToastPosition.top,
@@ -127,7 +127,7 @@ class ToastPage extends StatelessWidget {
               title: tr('Toast.positionBottom'),
               isLink: true,
               onClick: () {
-                showToast(
+                FlanToast(
                   context,
                   message: tr('Toast.positionBottom'),
                   position: FlanToastPosition.bottom,
@@ -143,7 +143,33 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr('Toast.updateMessage'),
               isLink: true,
-              onClick: () {},
+              onClick: () {
+                final FlanToast toast = FlanToast.loading(
+                  context,
+                  duration: Duration.zero,
+                  forbidClick: true,
+                  message: tr(
+                    'Toast.text4',
+                    namedArgs: <String, String>{'second': '3'},
+                  ),
+                );
+                print(tr('Toast.text4', args: <String>['3']));
+                int second = 3;
+                final Timer timer =
+                    Timer.periodic(const Duration(seconds: 1), (Timer timer) {
+                  second--;
+                  if (second > 0) {
+                    toast.open(tr(
+                      'Toast.text4',
+                      namedArgs: <String, String>{'second': second.toString()},
+                    ));
+                  } else {
+                    timer.cancel();
+                    FlanToast.clearAll(false);
+                  }
+                });
+                timer.isActive;
+              },
             ),
           ],
         ),

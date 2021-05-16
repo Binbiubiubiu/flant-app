@@ -28,8 +28,8 @@ class _SubmitBarPageState extends State<SubmitBarPage> {
     super.dispose();
   }
 
-  void onSubmit() => showToast(context, message: tr('SubmitBar.clickButton'));
-  void onClickLink() => showToast(context, message: tr('SubmitBar.clickLink'));
+  void onSubmit() => FlanToast(context, message: tr('SubmitBar.clickButton'));
+  void onClickLink() => FlanToast(context, message: tr('SubmitBar.clickLink'));
 
   @override
   Widget build(BuildContext context) {

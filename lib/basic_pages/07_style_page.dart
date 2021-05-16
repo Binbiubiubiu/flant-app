@@ -68,64 +68,62 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
 
   @override
   Widget build(BuildContext context) {
-    return DocBlock(
-      title: tr('Style.animation'),
-      card: true,
+    return Stack(
       children: <Widget>[
-        FlanCell(
-          title: 'Fade',
-          isLink: true,
-          border: true,
-          onClick: () {
-            _startAnimate(kFlanFadeTransitionBuilder);
-          },
-        ),
-        FlanCell(
-          title: 'Slide Up',
-          isLink: true,
-          border: true,
-          onClick: () {
-            _startAnimate(kFlanSlideUpTransitionBuilder);
-          },
-        ),
-        FlanCell(
-          title: 'Slide Down',
-          isLink: true,
-          border: true,
-          onClick: () {
-            _startAnimate(kFlanSlideDownTransitionBuilder);
-          },
-        ),
-        FlanCell(
-          title: 'Slide Left',
-          isLink: true,
-          border: true,
-          onClick: () {
-            _startAnimate(kFlanSlideLeftTransitionBuilder);
-          },
-        ),
-        FlanCell(
-          title: 'Slide Right',
-          isLink: true,
-          onClick: () {
-            _startAnimate(kFlanSlideRightTransitionBuilder);
-          },
-        ),
-        FlanTransition(
-          transitionBuilder: transitionBuilder,
-          child: Visibility(
-            visible: show,
-            child: Container(
-              width: 100.0,
-              height: 100.0,
-              decoration: const BoxDecoration(
-                color: ThemeVars.blue,
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
-              ),
+        DocBlock(
+          title: tr('Style.animation'),
+          card: true,
+          children: <Widget>[
+            FlanCell(
+              title: 'Fade',
+              isLink: true,
+              border: true,
+              onClick: () {
+                _startAnimate(kFlanFadeTransitionBuilder);
+              },
             ),
+            FlanCell(
+              title: 'Slide Up',
+              isLink: true,
+              border: true,
+              onClick: () {
+                _startAnimate(kFlanSlideUpTransitionBuilder);
+              },
+            ),
+            FlanCell(
+              title: 'Slide Down',
+              isLink: true,
+              border: true,
+              onClick: () {
+                _startAnimate(kFlanSlideDownTransitionBuilder);
+              },
+            ),
+            FlanCell(
+              title: 'Slide Left',
+              isLink: true,
+              border: true,
+              onClick: () {
+                _startAnimate(kFlanSlideLeftTransitionBuilder);
+              },
+            ),
+            FlanCell(
+              title: 'Slide Right',
+              isLink: true,
+              onClick: () {
+                _startAnimate(kFlanSlideRightTransitionBuilder);
+              },
+            ),
+            const SizedBox(height: 100.0),
+          ],
+        ),
+        Align(
+          alignment: Alignment.center,
+          child: FlanTransitionVisiable(
+            visible: show,
+            transitionBuilder: transitionBuilder,
+            child: const _BlueBlock(),
           ),
         ),
-        const SizedBox(height: 100.0),
       ],
     );
   }
@@ -143,5 +141,22 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
         });
       }
     });
+  }
+}
+
+class _BlueBlock extends StatelessWidget {
+  const _BlueBlock({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    print('_BlueBlock ');
+    return Container(
+      width: 100.0,
+      height: 100.0,
+      decoration: const BoxDecoration(
+        color: ThemeVars.blue,
+        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+      ),
+    );
   }
 }

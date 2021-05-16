@@ -17,11 +17,11 @@ class _ContactEditState extends State<ContactEditPage> {
   FlanContactEditInfo editingContact = FlanContactEditInfo();
 
   void _onSave(FlanContactEditInfo info) {
-    showToast(context, message: FlanS.of(context).save);
+    FlanToast(context, message: FlanS.of(context).save);
   }
 
   void _onDelete(FlanContactEditInfo info) {
-    showToast(context, message: FlanS.of(context).delete);
+    FlanToast(context, message: FlanS.of(context).delete);
   }
 
   @override

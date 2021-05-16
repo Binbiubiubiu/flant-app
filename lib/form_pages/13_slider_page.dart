@@ -25,7 +25,7 @@ class _SliderPageState extends State<SliderPage> {
   void onChange(dynamic value) {
     final String text =
         value is List<double> ? value.join(',') : value.toString();
-    showToast(context, message: tr('Slider.text') + text);
+    FlanToast(context, message: tr('Slider.text') + text);
   }
 
   @override

@@ -36,11 +36,11 @@ class _AddressListPageState extends State<AddressListPage> {
   }
 
   void onAdd() {
-    showToast(context, message: tr('AddressList.add'));
+    FlanToast(context, message: tr('AddressList.add'));
   }
 
   void onEdit(FlanAddressListAddress item, int index) {
-    showToast(context, message: tr('AddressList.edit') + ':$index');
+    FlanToast(context, message: tr('AddressList.edit') + ':$index');
   }
 
   @override

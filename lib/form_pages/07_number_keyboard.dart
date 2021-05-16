@@ -22,9 +22,9 @@ class _NumberKeyboardPageState extends State<NumberKeyboardPage> {
   String keyboard = '';
 
   void onInput(String value) =>
-      showToast(context, message: '${tr('NumberKeyboard.input')}: $value');
+      FlanToast(context, message: '${tr('NumberKeyboard.input')}: $value');
 
-  void onDelete() => showToast(context, message: tr(FlanS.of(context).delete));
+  void onDelete() => FlanToast(context, message: tr(FlanS.of(context).delete));
 
   late TextEditingController text;
 

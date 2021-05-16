@@ -12,9 +12,9 @@ class ActionBarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final void Function() onClickIcon =
-        () => showToast(context, message: tr('ActionBar.clickIcon'));
+        () => FlanToast(context, message: tr('ActionBar.clickIcon'));
     final void Function() onClickButton =
-        () => showToast(context, message: tr('ActionBar.clickButton'));
+        () => FlanToast(context, message: tr('ActionBar.clickButton'));
 
     return CompPage(
       children: <Widget>[

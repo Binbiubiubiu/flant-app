@@ -30,7 +30,7 @@ List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Notify',
     path: '/notify',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => NotifyPage(),
   ),
   CompRoute(
     name: 'Overlay',

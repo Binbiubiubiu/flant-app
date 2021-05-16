@@ -11,8 +11,8 @@ import '../_components/main.dart';
 class ContactCardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    void onAdd() => showToast(context, message: tr('ContactCard.add'));
-    void onEdit() => showToast(context, message: tr('ContactCard.edit'));
+    void onAdd() => FlanToast(context, message: tr('ContactCard.add'));
+    void onEdit() => FlanToast(context, message: tr('ContactCard.edit'));
 
     return CompPage(
       children: <Widget>[

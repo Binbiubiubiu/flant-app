@@ -90,7 +90,7 @@ class _SidebarPageState extends State<SidebarPage> {
                     setState(() => active4 = val);
                   },
                   onChange: (int index) {
-                    showToast(context,
+                    FlanToast(context,
                         message: tr('Sidebar.title') + '${index + 1}');
                   },
                   children: <Widget>[

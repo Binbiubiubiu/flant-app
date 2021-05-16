@@ -162,7 +162,7 @@ class __ValidateRulesState extends State<_ValidateRules> {
           namedArgs: <String, String>{'val': val.toString()});
 
   Future<bool> asyncValidator(dynamic val, FlanFieldRule rule) {
-    // showToast(context,type: FlanToastType.loading,message: tr('validating'),);
+    // FlanToast(context,type: FlanToastType.loading,message: tr('validating'),);
     return Future<bool>.delayed(const Duration(seconds: 1), () {
       return val == '1234';
     });

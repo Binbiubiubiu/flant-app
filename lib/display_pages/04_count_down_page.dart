@@ -118,7 +118,7 @@ class _CountDownPageState extends State<CountDownPage> {
   }
 
   void onFinish() {
-    showToast(context, message: tr('CountDown.finished'));
+    FlanToast(context, message: tr('CountDown.finished'));
   }
 
   Widget _buildBlock(String num) {

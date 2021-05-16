@@ -22,10 +22,10 @@ class NavBarPage extends StatelessWidget {
               rightText: '按钮',
               leftArrow: true,
               onClickLeft: () {
-                showToast(context, message: '返回');
+                FlanToast(context, message: '返回');
               },
               onClickRight: () {
-                showToast(context, message: '按钮');
+                FlanToast(context, message: '按钮');
               },
             ),
           ],

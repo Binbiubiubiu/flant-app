@@ -176,10 +176,10 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
     setState(() {
       basic = false;
     });
-    showToast(context, message: item.name);
+    FlanToast(context, message: item.name);
   }
 
-  void _onCancel() => showToast(
+  void _onCancel() => FlanToast(
         context,
         message: FlanS.of(context).cancel,
       );

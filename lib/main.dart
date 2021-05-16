@@ -14,7 +14,7 @@ import 'doc_mixin.dart' if (dart.library.html) 'web/doc_mixin.dart';
 import 'screen_util.dart';
 
 Future<void> main() async {
-  debugProfileBuildsEnabled = true;
+  // debugProfileBuildsEnabled = true;
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   CompRouter.init();

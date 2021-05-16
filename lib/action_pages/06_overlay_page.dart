@@ -8,15 +8,7 @@ import 'package:flant/flant.dart';
 // 🌎 Project imports:
 import '../_components/main.dart';
 
-class OverlayPage extends StatefulWidget {
-  @override
-  _OverlayPageState createState() => _OverlayPageState();
-}
-
-class _OverlayPageState extends State<OverlayPage> {
-  bool show = false;
-  bool showEmbedded = false;
-
+class OverlayPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CompPage(
@@ -29,17 +21,7 @@ class _OverlayPageState extends State<OverlayPage> {
               type: FlanButtonType.primary,
               text: tr('Overlay.showOverlay'),
               onClick: () {
-                setState(() {
-                  show = true;
-                });
-              },
-            ),
-            FlanOverlay(
-              show: show,
-              onClick: () {
-                setState(() {
-                  show = false;
-                });
+                showOverlay(context);
               },
             ),
           ],
@@ -51,29 +33,53 @@ class _OverlayPageState extends State<OverlayPage> {
               type: FlanButtonType.primary,
               text: tr('Overlay.embeddedContent'),
               onClick: () {
-                setState(() {
-                  showEmbedded = true;
-                });
+                showOverlay(
+                  context,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      color: Colors.white,
+                      width: 120.0,
+                      height: 120.0,
+                    ),
+                  ),
+                );
               },
-            ),
-            FlanOverlay(
-              show: showEmbedded,
-              onClick: () {
-                setState(() {
-                  showEmbedded = false;
-                });
-              },
-              child: Center(
-                child: Container(
-                  color: Colors.white,
-                  width: 120.0,
-                  height: 120.0,
-                ),
-              ),
             ),
           ],
         ),
       ],
     );
   }
+}
+
+void showOverlay(BuildContext context, {Widget? child}) {
+  final ValueNotifier<bool> show = ValueNotifier<bool>(false);
+  OverlayEntry entry;
+
+  entry = OverlayEntry(
+    builder: (BuildContext context) {
+      return ValueListenableBuilder<bool>(
+        valueListenable: show,
+        builder: (BuildContext context, bool value, Widget? _child) {
+          return FlanOverlay(
+            show: value,
+            child: child,
+            onClick: () {
+              show.value = false;
+              show.dispose();
+            },
+          );
+        },
+      );
+    },
+  );
+  void onMounted() {
+    WidgetsBinding.instance?.addPostFrameCallback((Duration timestamp) {
+      show.value = true;
+    });
+  }
+
+  entry.addListener(onMounted);
+  Overlay.of(context)?.insert(entry);
 }

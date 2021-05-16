@@ -208,7 +208,7 @@ class _TabbarPageState extends State<TabbarPage> {
               value: active5,
               onChange: (String index) {
                 setState(() => active5 = index);
-                showToast(
+                FlanToast(
                   context,
                   message: "${tr('tab')} ${int.parse(index) + 1}",
                 );
