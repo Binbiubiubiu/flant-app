@@ -61,6 +61,7 @@ class ToastPage extends StatelessWidget {
                   message: tr('Toast.text3'),
                 );
               },
+              border: false,
             ),
           ],
         ),
@@ -102,6 +103,7 @@ class ToastPage extends StatelessWidget {
                   message: FlanS.current.loading,
                 );
               },
+              border: false,
             ),
           ],
         ),
@@ -131,6 +133,7 @@ class ToastPage extends StatelessWidget {
                   position: FlanToastPosition.bottom,
                 );
               },
+              border: false,
             ),
           ],
         ),
@@ -141,6 +144,7 @@ class ToastPage extends StatelessWidget {
             FlanCell(
               title: tr('Toast.updateMessage'),
               isLink: true,
+              border: false,
               onClick: () {
                 final FlanToast toast = FlanToast.loading(
                   context,

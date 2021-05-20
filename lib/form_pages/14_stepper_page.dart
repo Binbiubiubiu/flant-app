@@ -143,7 +143,7 @@ class _StepperPageState extends State<StepperPage> {
             FlanCell(
               center: true,
               title: tr('Stepper.roundTheme'),
-              border: true,
+              border: false,
               child: FlanStepper(
                 value: stepperRound,
                 onChange: (dynamic val, FlanStepperDetails details) {

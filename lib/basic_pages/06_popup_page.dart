@@ -43,6 +43,7 @@ class _PopupPageState extends State<PopupPage> {
                 });
                 // showAboutDialog(context: null)
               },
+              border: false,
             ),
             FlanPopup(
               show: showBasic,
@@ -150,6 +151,7 @@ class _PopupPageState extends State<PopupPage> {
                 });
                 // showAboutDialog(context: null)
               },
+              border: false,
             ),
             FlanPopup(
               show: showRight,
@@ -201,6 +203,7 @@ class _PopupPageState extends State<PopupPage> {
                 });
                 // showAboutDialog(context: null)
               },
+              border: false,
             ),
             FlanPopup(
               show: showCloseIcon,
@@ -260,6 +263,7 @@ class _PopupPageState extends State<PopupPage> {
                 });
                 // showAboutDialog(context: null)
               },
+              border: false,
             ),
             FlanPopup(
               show: showRoundCorner,
@@ -289,6 +293,7 @@ class _PopupPageState extends State<PopupPage> {
                 });
                 // showAboutDialog(context: null)
               },
+              border: false,
             ),
             FlanPopup(
               show: showGetContainer,

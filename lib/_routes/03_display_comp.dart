@@ -84,7 +84,7 @@ List<CompRoute> displayCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Swipe',
     path: '/swipe',
-    component: (BuildContext context) => BadgePage(),
+    component: (BuildContext context) => const SwipePage(),
   ),
   CompRoute(
     name: 'Tag',

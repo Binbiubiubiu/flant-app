@@ -33,6 +33,7 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               onClick: () {
                 setState(() => basic = true);
               },
+              border: false,
             ),
             FlanShareSheet<FlanShareSheetOption>(
               show: basic,
@@ -55,6 +56,7 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               onClick: () {
                 setState(() => multiLine = true);
               },
+              border: false,
             ),
             FlanShareSheet<List<FlanShareSheetOption>>(
               show: multiLine,
@@ -77,6 +79,7 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               onClick: () {
                 setState(() => customIcon = true);
               },
+              border: false,
             ),
             FlanShareSheet<FlanShareSheetOption>(
               show: customIcon,
@@ -98,6 +101,7 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               onClick: () {
                 setState(() => withDesc = true);
               },
+              border: false,
             ),
             FlanShareSheet<FlanShareSheetOption>(
               show: withDesc,

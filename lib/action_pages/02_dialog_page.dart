@@ -43,6 +43,7 @@ class _DialogPageState extends State<DialogPage> {
                   isLink: true,
                   title: tr('Dialog.confirm'),
                   onClick: onClickConfirm,
+                  border: false,
                 ),
               ],
             );
@@ -62,6 +63,7 @@ class _DialogPageState extends State<DialogPage> {
               isLink: true,
               title: tr('Dialog.alert2'),
               onClick: onClickRound2,
+              border: false,
             ),
           ],
         ),
@@ -73,6 +75,7 @@ class _DialogPageState extends State<DialogPage> {
               isLink: true,
               title: tr('Dialog.beforeClose'),
               onClick: onClickBeforeClose,
+              border: false,
             ),
           ],
         ),
@@ -88,7 +91,7 @@ class _DialogPageState extends State<DialogPage> {
                   show = true;
                 });
               },
-              border: true,
+              border: false,
             ),
             FlanDialog(
               show: show,

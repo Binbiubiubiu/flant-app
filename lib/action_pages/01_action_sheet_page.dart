@@ -68,6 +68,7 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
               onClick: () {
                 setState(() => description = true);
               },
+              border: false,
             ),
             FlanActionSheet(
               show: description,
@@ -91,6 +92,7 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
               onClick: () {
                 setState(() => status = true);
               },
+              border: false,
             ),
             FlanActionSheet(
               show: status,
@@ -113,6 +115,7 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
               onClick: () {
                 setState(() => title = true);
               },
+              border: false,
             ),
             FlanActionSheet(
               show: title,

@@ -9,4 +9,5 @@ export './10_notice_bar_page.dart';
 export './12_progress_page.dart';
 export './13_skeleton_page.dart';
 export './14_steps_page.dart';
+export './16_swipe_page.dart';
 export './17_tag_page.dart';

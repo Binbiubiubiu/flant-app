@@ -21,10 +21,10 @@ class NotifyPage extends StatelessWidget {
             FlanCell(
               title: tr('basicUsage'),
               isLink: true,
-              border: false,
               onClick: () {
                 FlanNotify(context, message: tr('Notify.content'));
               },
+              border: false,
             )
           ],
         ),
@@ -75,6 +75,7 @@ class NotifyPage extends StatelessWidget {
                   message: tr('Notify.warning'),
                 );
               },
+              border: false,
             ),
           ],
         ),
@@ -104,35 +105,7 @@ class NotifyPage extends StatelessWidget {
                   message: tr('Notify.customDuration'),
                 );
               },
-            ),
-          ],
-        ),
-        DocBlock(
-          title: tr('Notify.customNotify'),
-          card: true,
-          children: <Widget>[
-            FlanCell(
-              title: tr('Notify.customColor'),
-              isLink: true,
-              onClick: () {
-                FlanNotify(
-                  context,
-                  color: const Color(0xffad0000),
-                  message: tr('Notify.customColor'),
-                  background: const Color(0xffffe1e1),
-                );
-              },
-            ),
-            FlanCell(
-              title: tr('Notify.customDuration'),
-              isLink: true,
-              onClick: () {
-                FlanNotify(
-                  context,
-                  duration: const Duration(seconds: 1),
-                  message: tr('Notify.customDuration'),
-                );
-              },
+              border: false,
             ),
           ],
         ),
@@ -143,6 +116,7 @@ class NotifyPage extends StatelessWidget {
             FlanCell(
               title: tr('Notify.componentCall'),
               isLink: true,
+              border: false,
               onClick: () {
                 FlanNotify(
                   context,

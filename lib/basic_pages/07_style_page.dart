@@ -112,6 +112,7 @@ class _FlanAnimationExampleState extends State<FlanAnimationExample> {
               onClick: () {
                 _startAnimate(kFlanSlideRightTransitionBuilder);
               },
+              border: false,
             ),
             const SizedBox(height: 100.0),
           ],

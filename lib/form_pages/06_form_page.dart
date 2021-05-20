@@ -212,6 +212,7 @@ class __ValidateRulesState extends State<_ValidateRules> {
                   message: tr('Form.ValidateRules.message'),
                 )
               ],
+              border: true,
               placeholder: tr('Form.ValidateRules.validator'),
             ),
             FlanField(
@@ -224,6 +225,7 @@ class __ValidateRulesState extends State<_ValidateRules> {
                   message: tr('Form.ValidateRules.message'),
                 )
               ],
+              border: true,
               placeholder: tr('Form.ValidateRules.validatorMessage'),
             ),
             FlanField(

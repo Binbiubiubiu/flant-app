@@ -694,5 +694,13 @@
     "customNotify": "Custom Notify",
     "componentCall": "Component Call",
     "customDuration": "Custom Duration"
+  },
+  "Swipe": {
+    "title2": "Lazy Render",
+    "title3": "Change Event",
+    "title4": "Vertical Scrolling",
+    "title5": "Set SwipeItem Size",
+    "title6": "Custom indicator",
+    "message": "Current Swipe index:"
   }
 }
