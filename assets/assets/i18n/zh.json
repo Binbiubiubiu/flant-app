@@ -695,5 +695,13 @@
     "customNotify": "自定义配置",
     "componentCall": "组件调用",
     "customDuration": "自定义时长"
+  },
+  "Swipe": {
+    "title2": "懒加载",
+    "title3": "监听 change 事件",
+    "title4": "纵向滚动",
+    "title5": "自定义滑块大小",
+    "title6": "自定义指示器",
+    "message": "当前 Swipe 索引："
   }
 }
