@@ -150,7 +150,6 @@ class _BlueBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('_BlueBlock ');
     return Container(
       width: 100.0,
       height: 100.0,

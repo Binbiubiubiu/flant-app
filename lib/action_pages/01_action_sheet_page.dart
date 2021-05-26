@@ -32,53 +32,42 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
               isLink: true,
               title: tr('basicUsage'),
               onClick: () {
-                setState(() => basic = true);
+                showFlanActionSheet(
+                  context,
+                  actions: simpleActions,
+                  closeOnClickAction: true,
+                  onSelect: _onSelect,
+                );
               },
               border: true,
-            ),
-            FlanActionSheet(
-              show: basic,
-              onShowChange: (bool show) {
-                setState(() => basic = show);
-              },
-              actions: simpleActions,
-              onSelect: _onSelect,
             ),
             FlanCell(
               isLink: true,
               title: tr('ActionSheet.showCancel'),
               onClick: () {
-                setState(() => cancel = true);
+                showFlanActionSheet(
+                  context,
+                  closeOnClickAction: true,
+                  actions: simpleActions,
+                  cancelText: FlanS.of(context).cancel,
+                  onCancel: _onCancel,
+                );
               },
               border: true,
-            ),
-            FlanActionSheet(
-              show: cancel,
-              onShowChange: (bool show) {
-                setState(() => cancel = show);
-              },
-              closeOnClickAction: true,
-              actions: simpleActions,
-              cancelText: FlanS.of(context).cancel,
-              onCancel: _onCancel,
             ),
             FlanCell(
               isLink: true,
               title: tr('ActionSheet.showDescription'),
               onClick: () {
-                setState(() => description = true);
+                showFlanActionSheet(
+                  context,
+                  closeOnClickAction: true,
+                  actions: actionsWithDescription,
+                  cancelText: FlanS.of(context).cancel,
+                  description: tr('ActionSheet.description'),
+                );
               },
               border: false,
-            ),
-            FlanActionSheet(
-              show: description,
-              onShowChange: (bool show) {
-                setState(() => description = show);
-              },
-              closeOnClickAction: true,
-              actions: actionsWithDescription,
-              cancelText: FlanS.of(context).cancel,
-              description: tr('ActionSheet.description'),
             ),
           ],
         ),
@@ -90,18 +79,14 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
               isLink: true,
               title: tr('ActionSheet.optionStatus'),
               onClick: () {
-                setState(() => status = true);
+                showFlanActionSheet(
+                  context,
+                  closeOnClickAction: true,
+                  actions: statusActions,
+                  cancelText: FlanS.of(context).cancel,
+                );
               },
               border: false,
-            ),
-            FlanActionSheet(
-              show: status,
-              onShowChange: (bool show) {
-                setState(() => status = show);
-              },
-              closeOnClickAction: true,
-              actions: statusActions,
-              cancelText: FlanS.of(context).cancel,
             ),
           ],
         ),
@@ -113,28 +98,24 @@ class _ActionSheetPageState extends State<ActionSheetPage> {
               isLink: true,
               title: tr('ActionSheet.customPanel'),
               onClick: () {
-                setState(() => title = true);
+                showFlanActionSheet(
+                  context,
+                  title: tr('title'),
+                  closeOnClickAction: true,
+                  builder: (BuildContext context) {
+                    return Padding(
+                      padding: const EdgeInsets.only(
+                        left: 16.0,
+                        top: 16.0,
+                        right: 16.0,
+                        bottom: 160.0,
+                      ),
+                      child: Text(tr('content')),
+                    );
+                  },
+                );
               },
               border: false,
-            ),
-            FlanActionSheet(
-              show: title,
-              onShowChange: (bool show) {
-                setState(() => title = show);
-              },
-              title: tr('title'),
-              closeOnClickAction: true,
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  left: 16.0,
-                  top: 16.0,
-                  right: 16.0,
-                  bottom: 160.0,
-                ),
-                child: Text(
-                  tr('content'),
-                ),
-              ),
             ),
           ],
         ),

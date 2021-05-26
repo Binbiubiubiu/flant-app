@@ -39,7 +39,7 @@ List<CompRoute> displayCompRoutes = <CompRoute>[
   CompRoute(
     name: 'ImagePreview',
     path: '/imagepreview',
-    component: (BuildContext context) => BadgePage(),
+    component: (BuildContext context) => const ImagePreviewPage(),
   ),
   // CompRoute(
   //   name: 'Lazyload',

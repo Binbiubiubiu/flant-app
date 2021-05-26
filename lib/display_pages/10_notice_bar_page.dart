@@ -75,22 +75,54 @@ class NoticeBarPage extends StatelessWidget {
         ),
         DocBlock.noPadding(
           title: tr('NoticeBar.verticalScroll'),
-          children: <Widget>[
-            FlanNoticeBar(
-              scrollable: false,
-              leftIconName: FlanIcons.volume_o,
-              child: ListView(
-                scrollDirection: Axis.vertical,
-                children: const <Widget>[
-                  Text('123'),
-                  Text('123'),
-                  Text('123'),
-                ],
-              ),
-            ),
+          children: const <Widget>[
+            _VerticalScroll(),
           ],
         ),
       ],
+    );
+  }
+}
+
+class _VerticalScroll extends StatefulWidget {
+  const _VerticalScroll({Key? key}) : super(key: key);
+
+  @override
+  __VerticalScrollState createState() => __VerticalScrollState();
+}
+
+class __VerticalScrollState extends State<_VerticalScroll> {
+  late FlanSwipeController controller;
+
+  @override
+  void initState() {
+    controller = FlanSwipeController(
+      itemCount: 3,
+      loop: true,
+    );
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FlanNoticeBar(
+      scrollable: false,
+      leftIconName: FlanIcons.volume_o,
+      child: FlanSwipe(
+        autoplay: const Duration(seconds: 3),
+        height: double.infinity,
+        vertical: true,
+        showIndicators: false,
+        children: List<Widget>.generate(3, (int index) {
+          return Container(
+            child: Text(
+              tr('content') + ' ${index + 1}',
+              style: const TextStyle(height: 1.0),
+            ),
+            alignment: Alignment.centerLeft,
+          );
+        }),
+      ),
     );
   }
 }

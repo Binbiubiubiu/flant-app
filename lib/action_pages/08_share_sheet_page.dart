@@ -8,19 +8,13 @@ import 'package:flant/flant.dart';
 // 🌎 Project imports:
 import '../_components/main.dart';
 
-class ShareSheetPage extends StatefulWidget {
-  @override
-  _ShareSheetPageState createState() => _ShareSheetPageState();
-}
-
-class _ShareSheetPageState extends State<ShareSheetPage> {
-  bool basic = false;
-  bool withDesc = false;
-  bool multiLine = false;
-  bool customIcon = false;
-
+class ShareSheetPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    void onSelect(FlanShareSheetOption option, int index) {
+      FlanToast(context, message: option.name);
+    }
+
     return CompPage(
       children: <Widget>[
         DocBlock(
@@ -31,18 +25,14 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               isLink: true,
               title: tr('ShareSheet.showSheet'),
               onClick: () {
-                setState(() => basic = true);
+                showFlanShareSheet(
+                  context,
+                  title: tr('ShareSheet.title'),
+                  options: options,
+                  onSelect: onSelect,
+                );
               },
               border: false,
-            ),
-            FlanShareSheet<FlanShareSheetOption>(
-              show: basic,
-              onShowChange: (bool show) {
-                setState(() => basic = show);
-              },
-              title: tr('ShareSheet.title'),
-              options: options,
-              onSelect: onSelect,
             ),
           ],
         ),
@@ -54,18 +44,14 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               isLink: true,
               title: tr('ShareSheet.showSheet'),
               onClick: () {
-                setState(() => multiLine = true);
+                showFlanShareSheet(
+                  context,
+                  title: tr('ShareSheet.title'),
+                  options: multiLineOptions,
+                  onSelect: onSelect,
+                );
               },
               border: false,
-            ),
-            FlanShareSheet<List<FlanShareSheetOption>>(
-              show: multiLine,
-              onShowChange: (bool show) {
-                setState(() => multiLine = show);
-              },
-              title: tr('ShareSheet.title'),
-              options: multiLineOptions,
-              onSelect: onSelect,
             ),
           ],
         ),
@@ -77,17 +63,13 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               isLink: true,
               title: tr('ShareSheet.showSheet'),
               onClick: () {
-                setState(() => customIcon = true);
+                showFlanShareSheet(
+                  context,
+                  options: customIconOptions,
+                  onSelect: onSelect,
+                );
               },
               border: false,
-            ),
-            FlanShareSheet<FlanShareSheetOption>(
-              show: customIcon,
-              onShowChange: (bool show) {
-                setState(() => customIcon = show);
-              },
-              options: customIconOptions,
-              onSelect: onSelect,
             ),
           ],
         ),
@@ -99,33 +81,20 @@ class _ShareSheetPageState extends State<ShareSheetPage> {
               isLink: true,
               title: tr('ShareSheet.showSheet'),
               onClick: () {
-                setState(() => withDesc = true);
+                showFlanShareSheet(
+                  context,
+                  title: tr('ShareSheet.title'),
+                  description: tr('ShareSheet.description'),
+                  options: optionsWithDesc,
+                  onSelect: onSelect,
+                );
               },
               border: false,
-            ),
-            FlanShareSheet<FlanShareSheetOption>(
-              show: withDesc,
-              onShowChange: (bool show) {
-                setState(() => withDesc = show);
-              },
-              title: tr('ShareSheet.title'),
-              description: tr('ShareSheet.description'),
-              options: optionsWithDesc,
-              onSelect: onSelect,
             ),
           ],
         ),
       ],
     );
-  }
-
-  void onSelect(FlanShareSheetOption option, int index) {
-    FlanToast(context, message: option.name);
-    basic = false;
-    withDesc = false;
-    multiLine = false;
-    customIcon = false;
-    setState(() {});
   }
 
   List<FlanShareSheetOption> get options => <FlanShareSheetOption>[

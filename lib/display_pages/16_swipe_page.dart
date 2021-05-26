@@ -32,7 +32,7 @@ class _SwipePageState extends State<SwipePage> {
     _controller = FlanSwipeController(
       itemCount: images.length,
       viewportFraction: .7,
-      loop: true,
+      loop: false,
     );
     super.initState();
   }

@@ -79,40 +79,6 @@ class _DialogPageState extends State<DialogPage> {
             ),
           ],
         ),
-        DocBlock(
-          title: tr('Dialog.componentCall'),
-          card: true,
-          children: <Widget>[
-            FlanCell(
-              isLink: true,
-              title: tr('Dialog.componentCall'),
-              onClick: () {
-                setState(() {
-                  show = true;
-                });
-              },
-              border: false,
-            ),
-            FlanDialog(
-              show: show,
-              onChange: (bool value) {
-                setState(() {
-                  show = value;
-                });
-              },
-              title: tr('title'),
-              showCancelButton: true,
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 25.0,
-                  left: 20.0,
-                  right: 20.0,
-                ),
-                child: Image.network(image),
-              ),
-            ),
-          ],
-        ),
       ],
     );
   }
@@ -163,7 +129,7 @@ class _DialogPageState extends State<DialogPage> {
           () => action == FlanDialogAction.confirm,
         );
 
-    FlanDialog.confirm(
+    FlanDialog.alert(
       context,
       title: tr('title'),
       message: tr('Dialog.content'),

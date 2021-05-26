@@ -75,6 +75,15 @@ class _SwitchPageState extends State<SwitchPage> {
           children: <Widget>[
             FlanSwitch<bool>(
               modalValue: checked4,
+              onChange: (bool value) {
+                FlanDialog.confirm(
+                  context,
+                  title: tr('Switch.title'),
+                  message: tr('Switch.message'),
+                ).then((_) {
+                  checked4.value = value;
+                });
+              },
             ),
           ],
         ),

@@ -4,6 +4,7 @@ export './03_collapse_page.dart';
 export './04_count_down_page.dart';
 export './05_divider_page.dart';
 export './06_empty_page.dart';
+export './07_image_preview_page.dart';
 export './09_list.dart';
 export './10_notice_bar_page.dart';
 export './12_progress_page.dart';

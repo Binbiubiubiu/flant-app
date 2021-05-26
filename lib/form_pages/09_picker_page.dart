@@ -169,26 +169,28 @@ class _PickerPageState extends State<PickerPage> {
               controller: fieldValue,
               readonly: true,
               clickable: true,
+              label: tr('Picker.city'),
               placeholder: tr('Picker.chooseCity'),
               onClickInput: () {
-                setState(() {
-                  showPicker = true;
-                });
+                showFlanPopup(
+                  context,
+                  round: true,
+                  position: FlanPopupPosition.bottom,
+                  builder: (BuildContext context) {
+                    return FlanPicker(
+                      title: tr('title'),
+                      columns: textColumns,
+                      onConfirm: (dynamic value, dynamic index) {
+                        fieldValue.text = value.toString();
+                        Navigator.of(context).maybePop();
+                      },
+                      onCancel: (dynamic value, dynamic index) {
+                        Navigator.of(context).maybePop();
+                      },
+                    );
+                  },
+                );
               },
-            ),
-            FlanPopup(
-              show: showPicker,
-              onChange: (bool show) {
-                setState(() {
-                  showPicker = show;
-                });
-              },
-              round: true,
-              position: FlanPopupPosition.bottom,
-              child: FlanPicker(
-                title: tr('title'),
-                columns: columns,
-              ),
             ),
           ],
         ),
