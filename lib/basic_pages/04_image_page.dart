@@ -162,7 +162,7 @@ class _ImagePageState extends State<ImagePage> {
                         src: 'https://img01.yzcdn.cn/vant/cat',
                         width: double.infinity,
                         height: itemHeight,
-                        errorSlot: const Text('加载失败'),
+                        errorSlot: Text(tr('Image.loadFail')),
                       ),
                       ImagePageText(tr('Image.customTip')),
                     ],
