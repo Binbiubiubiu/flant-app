@@ -702,5 +702,16 @@
     "title5": "Set SwipeItem Size",
     "title6": "Custom indicator",
     "message": "Current Swipe index:"
+  },
+  "ImagePreview": {
+    "closed": "closed",
+    "showClose": "Show Close Icon",
+    "showImages": "Show Images",
+    "beforeClose": "Before Close",
+    "closeEvent": "Close Event",
+    "customConfig": "Custom Config",
+    "startPosition": "Set Start Position",
+    "componentCall": "Component Call",
+    "index": "Page {index}"
   }
 }
