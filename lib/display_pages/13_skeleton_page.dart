@@ -47,11 +47,18 @@ class SkeletonPage extends StatelessWidget {
                         size: 24.0,
                       ),
                     ),
-                    FlanSkeleton(
-                      title: true,
-                      avatar: true,
-                      row: 3,
-                      loading: !show.value,
+                    ValueListenableBuilder<bool>(
+                      valueListenable: show,
+                      builder:
+                          (BuildContext context, bool value, Widget? child) {
+                        return FlanSkeleton(
+                          title: true,
+                          avatar: true,
+                          row: 3,
+                          loading: !show.value,
+                          child: child,
+                        );
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                           horizontal: ThemeVars.paddingMd,
