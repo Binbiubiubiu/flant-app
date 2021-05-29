@@ -18,3 +18,6 @@ flutter build apk --release -t lib/main.dart --split-per-abi --obfuscate --split
 
 # 打包web命令
 flutter build web --release -t lib/main.dart --web-renderer=html --pwa-strategy=none
+
+# changelog
+npx conventional-changelog -p @favoloso/emoji -i CHANGELOG.md -s
