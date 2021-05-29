@@ -703,5 +703,16 @@
     "title5": "自定义滑块大小",
     "title6": "自定义指示器",
     "message": "当前 Swipe 索引："
+  },
+  "ImagePreview": {
+    "closed": "关闭",
+    "showClose": "展示关闭按钮",
+    "showImages": "预览图片",
+    "beforeClose": "异步关闭",
+    "closeEvent": "监听关闭事件",
+    "customConfig": "传入配置项",
+    "startPosition": "指定初始位置",
+    "componentCall": "组件调用",
+    "index": "第{index}页"
   }
 }

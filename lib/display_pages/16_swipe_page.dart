@@ -53,7 +53,10 @@ class _SwipePageState extends State<SwipePage> {
             height: 150.0.w,
             autoplay: const Duration(seconds: 3),
             indicatorColor: Colors.white,
-            children: _buildSwipeItem(4),
+            itemBuilder: (BuildContext context, int index) {
+              return swipeItem[index];
+            },
+            itemCount: swipeItem.length,
           ),
         ],
       ),
@@ -63,19 +66,19 @@ class _SwipePageState extends State<SwipePage> {
           FlanSwipe(
             height: 240.0.w,
             autoplay: const Duration(seconds: 3),
-            children: images.map(
-              (String url) {
-                return Container(
-                  color: Colors.white,
-                  alignment: Alignment.center,
-                  child: Image.network(
-                    url,
-                    key: ValueKey<String>(url),
-                    height: 180.0.w,
-                  ),
-                );
-              },
-            ).toList(),
+            itemBuilder: (BuildContext context, int index) {
+              final String url = images[index];
+              return Container(
+                color: Colors.white,
+                alignment: Alignment.center,
+                child: Image.network(
+                  url,
+                  key: ValueKey<String>(url),
+                  height: 180.0.w,
+                ),
+              );
+            },
+            itemCount: images.length,
           ),
         ],
       ),
@@ -88,7 +91,10 @@ class _SwipePageState extends State<SwipePage> {
               FlanToast(context, message: tr('Swipe.message') + '$current');
             },
             indicatorColor: Colors.white,
-            children: _buildSwipeItem(4),
+            itemBuilder: (BuildContext context, int index) {
+              return swipeItem[index];
+            },
+            itemCount: swipeItem.length,
           ),
         ],
       ),
@@ -100,7 +106,10 @@ class _SwipePageState extends State<SwipePage> {
             vertical: true,
             autoplay: const Duration(seconds: 3),
             indicatorColor: Colors.white,
-            children: _buildSwipeItem(4),
+            itemBuilder: (BuildContext context, int index) {
+              return swipeItem[index];
+            },
+            itemCount: swipeItem.length,
           ),
         ],
       ),
@@ -111,7 +120,10 @@ class _SwipePageState extends State<SwipePage> {
             controller: _controller,
             height: 200.0.w,
             indicatorColor: Colors.white,
-            children: _buildSwipeItem(4),
+            itemBuilder: (BuildContext context, int index) {
+              return swipeItem[index];
+            },
+            itemCount: swipeItem.length,
           ),
         ],
       ),
@@ -120,12 +132,17 @@ class _SwipePageState extends State<SwipePage> {
         children: <Widget>[
           FlanSwipe(
             height: 200.0.w,
-            children: _buildSwipeItem(4),
+            itemBuilder: (BuildContext context, int index) {
+              return swipeItem[index];
+            },
+            itemCount: swipeItem.length,
             indicatorBuilder: (int active) {
               return Positioned(
                 bottom: 5.0.w,
                 right: 5.0.w,
                 child: Container(
+                  width: 30.0,
+                  alignment: Alignment.center,
                   padding: EdgeInsets.symmetric(vertical: 2.w, horizontal: 5.w),
                   color: Colors.black.withOpacity(.1),
                   child: Text(
@@ -144,9 +161,9 @@ class _SwipePageState extends State<SwipePage> {
     ]);
   }
 
-  List<Widget> _buildSwipeItem(int count) {
+  List<Widget> get swipeItem {
     return List<Widget>.generate(
-      count,
+      4,
       (int index) => Container(
         key: ValueKey<int>(index),
         color: index.isOdd ? const Color(0xff66c6f2) : const Color(0xff39a9ed),

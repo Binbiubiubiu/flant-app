@@ -113,7 +113,7 @@ class __VerticalScrollState extends State<_VerticalScroll> {
         height: double.infinity,
         vertical: true,
         showIndicators: false,
-        children: List<Widget>.generate(3, (int index) {
+        itemBuilder: (BuildContext context, int index) {
           return Container(
             child: Text(
               tr('content') + ' ${index + 1}',
@@ -121,7 +121,8 @@ class __VerticalScrollState extends State<_VerticalScroll> {
             ),
             alignment: Alignment.centerLeft,
           );
-        }),
+        },
+        itemCount: 3,
       ),
     );
   }
