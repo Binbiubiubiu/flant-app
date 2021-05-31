@@ -50,6 +50,6 @@ List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(
     name: 'SwipeCell',
     path: '/swipecell',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => SwipeCellPage(),
   ),
 ];

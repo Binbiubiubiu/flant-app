@@ -101,7 +101,7 @@ class _DialogPageState extends State<DialogPage> {
   void onClickRound() {
     FlanDialog.alert(
       context,
-      theme: FlanDialogTheme.roundButton,
+      theme: FlanDialogThemeType.roundButton,
       title: tr('title'),
       message: tr('Dialog.content'),
     );
@@ -110,7 +110,7 @@ class _DialogPageState extends State<DialogPage> {
   void onClickRound2() {
     FlanDialog.alert(
       context,
-      theme: FlanDialogTheme.roundButton,
+      theme: FlanDialogThemeType.roundButton,
       message: tr('Dialog.content'),
     );
   }

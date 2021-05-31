@@ -713,5 +713,15 @@
     "startPosition": "Set Start Position",
     "componentCall": "Component Call",
     "index": "Page {index}"
+  },
+  "SwipeCell": {
+    "select": "Select",
+    "delete": "Delete",
+    "collect": "Collect",
+    "title": "Cell",
+    "confirm": "Are you sure to delete?",
+    "cardTitle": "Title",
+    "beforeClose": "Before Close",
+    "customContent": "Custom Content"
   }
 }

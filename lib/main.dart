@@ -38,8 +38,6 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-int uuid = 0;
-
 class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
   @override
   void initState() {
@@ -54,7 +52,6 @@ class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
         return FlanTheme(
           data: FlanThemeData(),
           child: MaterialApp(
-            navigatorKey: docNavigatorKey,
             onGenerateTitle: (BuildContext context) => tr('App.title'),
             localizationsDelegates: context.localizationDelegates
               ..add(FlanS.delegate),
