@@ -714,5 +714,15 @@
     "startPosition": "指定初始位置",
     "componentCall": "组件调用",
     "index": "第{index}页"
+  },
+  "SwipeCell": {
+    "select": "选择",
+    "delete": "删除",
+    "collect": "收藏",
+    "title": "单元格",
+    "confirm": "确定删除吗？",
+    "cardTitle": "商品标题",
+    "beforeClose": "异步关闭",
+    "customContent": "自定义内容"
   }
 }
