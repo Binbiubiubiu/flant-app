@@ -10,7 +10,7 @@ List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Calendar',
     path: '/calendar',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => CalendarPage(),
   ),
   CompRoute(
     name: 'Cascader',
