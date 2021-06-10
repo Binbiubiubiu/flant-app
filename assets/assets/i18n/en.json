@@ -723,5 +723,29 @@
     "cardTitle": "Title",
     "beforeClose": "Before Close",
     "customContent": "Custom Content"
+  },
+  "Calendar": {
+    "in": "In",
+    "out": "Out",
+    "today": "Today",
+    "laborDay": "Labor day",
+    "youthDay": "Youth Day",
+    "calendar": "Calendar",
+    "maxRange": "Max Range",
+    "selectCount": "$count dates selected",
+    "selectSingle": "Select Single Date",
+    "selectMultiple": "Select Multiple Date",
+    "selectRange": "Select Date Range",
+    "quickSelect": "Quick Select",
+    "confirmText": "OK",
+    "customColor": "Custom Color",
+    "customRange": "Custom Date Range",
+    "customConfirm": "Custom Confirm Text",
+    "customDayText": "Custom Day Text",
+    "customPosition": "Custom Position",
+    "customCalendar": "Custom Calendar",
+    "firstDayOfWeek": "Custom First Day Of Week",
+    "confirmDisabledText": "Select End Time",
+    "tiledDisplay": "Tiled display"
   }
 }

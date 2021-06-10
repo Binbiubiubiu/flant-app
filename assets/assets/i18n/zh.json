@@ -724,5 +724,29 @@
     "cardTitle": "商品标题",
     "beforeClose": "异步关闭",
     "customContent": "自定义内容"
+  },
+  "Calendar": {
+    "in": "入店",
+    "out": "离店",
+    "today": "今天",
+    "laborDay": "劳动节",
+    "youthDay": "青年节",
+    "calendar": "日历",
+    "maxRange": "日期区间最大范围",
+    "selectCount": "选择了 $count 个日期",
+    "selectSingle": "选择单个日期",
+    "selectMultiple": "选择多个日期",
+    "selectRange": "选择日期区间",
+    "quickSelect": "快捷选择",
+    "confirmText": "完成",
+    "customColor": "自定义颜色",
+    "customRange": "自定义日期范围",
+    "customConfirm": "自定义按钮文字",
+    "customDayText": "自定义日期文案",
+    "customPosition": "自定义弹出位置",
+    "customCalendar": "自定义日历",
+    "confirmDisabledText": "请选择结束时间",
+    "firstDayOfWeek": "自定义周起始日",
+    "tiledDisplay": "平铺展示"
   }
 }
