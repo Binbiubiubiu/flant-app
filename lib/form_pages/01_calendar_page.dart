@@ -14,8 +14,8 @@ class CalendarPage extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<CalendarPage> {
-  DateTime tiledMinDate = DateTime(2012, 0, 10);
-  DateTime tiledMaxDate = DateTime(2012, 2, 20);
+  DateTime tiledMinDate = DateTime(2021, 6, 1);
+  DateTime tiledMaxDate = DateTime(2021, 8, 20);
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,9 @@ class _CalendarPageState extends State<CalendarPage> {
             SizedBox(
               height: 500.0,
               child: FlanCalendar(
-                title: tr('Calendar.calendar'),
-                showConfirm: false,
-                minDate: tiledMinDate,
-                maxDate: tiledMaxDate,
-                defaultDate: <DateTime>[tiledMinDate],
+                title: tr('Calendar.selectSingle'),
+                type: FlanCalendarType.range,
+                // defaultDate: <DateTime>[tiledMinDate],
               ),
             ),
           ],

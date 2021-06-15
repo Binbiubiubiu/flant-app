@@ -40,7 +40,7 @@ List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Tab',
     path: '/tab',
-    component: (BuildContext context) => CellPage(),
+    component: (BuildContext context) => TabPage(),
   ),
   CompRoute(
     name: 'Tabbar',
