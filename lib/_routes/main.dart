@@ -43,7 +43,18 @@ class CompRouter {
       return CompRouter.fallbackRoute;
     }
     return MaterialPageRoute<dynamic>(
-      builder: route.component!,
+      builder: (BuildContext context) => FutureBuilder<void>(
+        future: route.future,
+        builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.hasError) {
+              return Text('Error: ${snapshot.error}');
+            }
+            return route.component!(context);
+          }
+          return const CircularProgressIndicator();
+        },
+      ),
       settings:
           settings.copyWith(arguments: <String, String>{'title': route.name}),
     );

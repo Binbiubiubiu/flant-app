@@ -22,9 +22,9 @@ Future<void> main() async {
   EasyLocalization.logger.enableLevels = [];
   runApp(
     EasyLocalization(
-      supportedLocales: const <Locale>[Locale('en')], //, Locale('zh')],
+      supportedLocales: const <Locale>[Locale('en'), Locale('zh')],
       path: 'assets/i18n', // <-- change the path of the translation files
-      fallbackLocale: const Locale('en'),
+      fallbackLocale: const Locale('zh'),
       // assetLoader: CodegenLoader(),
       saveLocale: false,
       useOnlyLangCode: true,

@@ -2,44 +2,66 @@
 import 'package:flutter/widgets.dart';
 
 // 🌎 Project imports:
-import '../display_pages/main.dart';
+// import '../display_pages/main.dart';
+import '../display_pages/01_badge_page.dart' deferred as badge_page;
+import '../display_pages/02_circle_page.dart' deferred as circle_page;
+import '../display_pages/03_collapse_page.dart' deferred as collapse_page;
+import '../display_pages/04_count_down_page.dart' deferred as count_down_page;
+import '../display_pages/05_divider_page.dart' deferred as divider_page;
+import '../display_pages/06_empty_page.dart' deferred as empty_page;
+import '../display_pages/07_image_preview_page.dart'
+    deferred as image_preview_page;
+import '../display_pages/09_list.dart' deferred as list;
+import '../display_pages/10_notice_bar_page.dart' deferred as notice_bar_page;
+import '../display_pages/12_progress_page.dart' deferred as progress_page;
+import '../display_pages/13_skeleton_page.dart' deferred as skeleton_page;
+import '../display_pages/14_steps_page.dart' deferred as steps_page;
+import '../display_pages/16_swipe_page.dart' deferred as swipe_page;
+import '../display_pages/17_tag_page.dart' deferred as tag_page;
 import './_modals.dart';
 
 List<CompRoute> displayCompRoutes = <CompRoute>[
   CompRoute(
     name: 'Badge',
     path: '/badge',
-    component: (BuildContext context) => BadgePage(),
+    future: badge_page.loadLibrary(),
+    component: (BuildContext context) => badge_page.BadgePage(),
   ),
   CompRoute(
     name: 'Circle',
     path: '/circle',
-    component: (BuildContext context) => CirclePage(),
+    future: circle_page.loadLibrary(),
+    component: (BuildContext context) => circle_page.CirclePage(),
   ),
   CompRoute(
     name: 'Collapse',
     path: '/collapse',
-    component: (BuildContext context) => CollapsePage(),
+    future: collapse_page.loadLibrary(),
+    component: (BuildContext context) => collapse_page.CollapsePage(),
   ),
   CompRoute(
     name: 'CountDown',
     path: '/countdown',
-    component: (BuildContext context) => const CountDownPage(),
+    future: count_down_page.loadLibrary(),
+    component: (BuildContext context) => count_down_page.CountDownPage(),
   ),
   CompRoute(
     name: 'Divider',
     path: '/divider',
-    component: (BuildContext context) => DividerPage(),
+    future: divider_page.loadLibrary(),
+    component: (BuildContext context) => divider_page.DividerPage(),
   ),
   CompRoute(
     name: 'Empty',
     path: '/empty',
-    component: (BuildContext context) => EmptyPage(),
+    future: empty_page.loadLibrary(),
+    component: (BuildContext context) => empty_page.EmptyPage(),
   ),
   CompRoute(
     name: 'ImagePreview',
     path: '/imagepreview',
-    component: (BuildContext context) => const ImagePreviewPage(),
+    future: image_preview_page.loadLibrary(),
+    component: (BuildContext context) => image_preview_page.ImagePreviewPage(),
   ),
   // CompRoute(
   //   name: 'Lazyload',
@@ -49,46 +71,55 @@ List<CompRoute> displayCompRoutes = <CompRoute>[
   CompRoute(
     name: 'List',
     path: '/list',
-    component: (BuildContext context) => ListPage(),
+    future: list.loadLibrary(),
+    component: (BuildContext context) => list.ListPage(),
   ),
   CompRoute(
     name: 'NoticeBar',
     path: '/noticebar',
-    component: (BuildContext context) => NoticeBarPage(),
+    future: notice_bar_page.loadLibrary(),
+    component: (BuildContext context) => notice_bar_page.NoticeBarPage(),
   ),
   CompRoute(
     name: 'Popover',
     path: '/popover',
-    component: (BuildContext context) => BadgePage(),
+    future: badge_page.loadLibrary(),
+    component: (BuildContext context) => badge_page.BadgePage(),
   ),
   CompRoute(
     name: 'Progress',
     path: '/progress',
-    component: (BuildContext context) => ProgressPage(),
+    future: progress_page.loadLibrary(),
+    component: (BuildContext context) => progress_page.ProgressPage(),
   ),
   CompRoute(
     name: 'Skeleton',
     path: '/skeleton',
-    component: (BuildContext context) => SkeletonPage(),
+    future: skeleton_page.loadLibrary(),
+    component: (BuildContext context) => skeleton_page.SkeletonPage(),
   ),
   CompRoute(
     name: 'Steps',
     path: '/steps',
-    component: (BuildContext context) => StepsPage(),
+    future: steps_page.loadLibrary(),
+    component: (BuildContext context) => steps_page.StepsPage(),
   ),
   CompRoute(
     name: 'Sticky',
     path: '/sticky',
-    component: (BuildContext context) => BadgePage(),
+    future: badge_page.loadLibrary(),
+    component: (BuildContext context) => badge_page.BadgePage(),
   ),
   CompRoute(
     name: 'Swipe',
     path: '/swipe',
-    component: (BuildContext context) => const SwipePage(),
+    future: swipe_page.loadLibrary(),
+    component: (BuildContext context) => swipe_page.SwipePage(),
   ),
   CompRoute(
     name: 'Tag',
     path: '/tag',
-    component: (BuildContext context) => TagPage(),
+    future: tag_page.loadLibrary(),
+    component: (BuildContext context) => tag_page.TagPage(),
   ),
 ];

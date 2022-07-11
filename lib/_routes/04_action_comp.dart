@@ -2,54 +2,71 @@
 import 'package:flutter/widgets.dart';
 
 // 🌎 Project imports:
-import '../action_pages/main.dart';
-import '../basic_pages/main.dart';
+// import '../action_pages/main.dart';
+// import '../basic_pages/main.dart';
+import '../action_pages/01_action_sheet_page.dart'
+    deferred as action_sheet_page;
+import '../action_pages/02_dialog_page.dart' deferred as dialog_page;
+import '../action_pages/04_loading_page.dart' deferred as loading_page;
+import '../action_pages/05_notify_page.dart' deferred as notify_page;
+import '../action_pages/06_overlay_page.dart' deferred as overlay_page;
+import '../action_pages/08_share_sheet_page.dart' deferred as share_sheet_page;
+import '../action_pages/09_swipe_cell_page.dart' deferred as swipe_cell_page;
 import './_modals.dart';
 
 List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(
     name: 'ActionSheet',
     path: '/ActionSheet',
-    component: (BuildContext context) => ActionSheetPage(),
+    future: action_sheet_page.loadLibrary(),
+    component: (BuildContext context) => action_sheet_page.ActionSheetPage(),
   ),
   CompRoute(
     name: 'Dialog',
     path: '/dialog',
-    component: (BuildContext context) => DialogPage(),
+    future: dialog_page.loadLibrary(),
+    component: (BuildContext context) => dialog_page.DialogPage(),
   ),
   CompRoute(
     name: 'DropdownMenu',
     path: '/dropdownmenu',
-    component: (BuildContext context) => CellPage(),
+    future: dialog_page.loadLibrary(),
+    component: (BuildContext context) => dialog_page.DialogPage(),
   ),
   CompRoute(
     name: 'Loading',
     path: '/loading',
-    component: (BuildContext context) => LoadingPage(),
+    future: loading_page.loadLibrary(),
+    component: (BuildContext context) => loading_page.LoadingPage(),
   ),
   CompRoute(
     name: 'Notify',
     path: '/notify',
-    component: (BuildContext context) => NotifyPage(),
+    future: notify_page.loadLibrary(),
+    component: (BuildContext context) => notify_page.NotifyPage(),
   ),
   CompRoute(
     name: 'Overlay',
     path: '/overlay',
-    component: (BuildContext context) => OverlayPage(),
+    future: overlay_page.loadLibrary(),
+    component: (BuildContext context) => overlay_page.OverlayPage(),
   ),
   CompRoute(
     name: 'PullRefresh',
     path: '/pullRefresh',
-    component: (BuildContext context) => CellPage(),
+    future: dialog_page.loadLibrary(),
+    component: (BuildContext context) => dialog_page.DialogPage(),
   ),
   CompRoute(
     name: 'ShareSheet',
     path: '/shareSheet',
-    component: (BuildContext context) => ShareSheetPage(),
+    future: share_sheet_page.loadLibrary(),
+    component: (BuildContext context) => share_sheet_page.ShareSheetPage(),
   ),
   CompRoute(
     name: 'SwipeCell',
     path: '/swipecell',
-    component: (BuildContext context) => SwipeCellPage(),
+    future: swipe_cell_page.loadLibrary(),
+    component: (BuildContext context) => swipe_cell_page.SwipeCellPage(),
   ),
 ];

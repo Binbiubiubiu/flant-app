@@ -6,10 +6,12 @@ class CompRoute {
     required this.name,
     this.path,
     this.routes,
+    this.future,
     this.component,
   });
   final String name;
   final String? path;
+  final Future<dynamic>? future;
   final WidgetBuilder? component;
   final List<CompRoute>? routes;
 
