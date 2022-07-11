@@ -1,14 +1,10 @@
-// 🐦 Flutter imports:
 import 'dart:convert';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/components/area.dart';
 import 'package:flant_app/area_date.dart';
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
-import 'package:easy_localization/easy_localization.dart';
-
-// 🌎 Project imports:
 import '../_components/main.dart';
 
 class AreaPage extends StatefulWidget {

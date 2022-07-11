@@ -1,6 +1,6 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const Size kIphone6 = Size(375, 667);

@@ -1,6 +1,6 @@
-// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
+import './_modals.dart';
 // 🌎 Project imports:
 // import '../action_pages/main.dart';
 // import '../basic_pages/main.dart';
@@ -12,7 +12,6 @@ import '../action_pages/05_notify_page.dart' deferred as notify_page;
 import '../action_pages/06_overlay_page.dart' deferred as overlay_page;
 import '../action_pages/08_share_sheet_page.dart' deferred as share_sheet_page;
 import '../action_pages/09_swipe_cell_page.dart' deferred as swipe_cell_page;
-import './_modals.dart';
 
 List<CompRoute> actionCompRoutes = <CompRoute>[
   CompRoute(

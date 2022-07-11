@@ -1,14 +1,14 @@
-// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
-// 🌎 Project imports:
-// import '../display_pages/main.dart';
+import './_modals.dart';
 import '../display_pages/01_badge_page.dart' deferred as badge_page;
 import '../display_pages/02_circle_page.dart' deferred as circle_page;
 import '../display_pages/03_collapse_page.dart' deferred as collapse_page;
 import '../display_pages/04_count_down_page.dart' deferred as count_down_page;
 import '../display_pages/05_divider_page.dart' deferred as divider_page;
 import '../display_pages/06_empty_page.dart' deferred as empty_page;
+// 🌎 Project imports:
+// import '../display_pages/main.dart';
 import '../display_pages/07_image_preview_page.dart'
     deferred as image_preview_page;
 import '../display_pages/09_list.dart' deferred as list;
@@ -18,7 +18,6 @@ import '../display_pages/13_skeleton_page.dart' deferred as skeleton_page;
 import '../display_pages/14_steps_page.dart' deferred as steps_page;
 import '../display_pages/16_swipe_page.dart' deferred as swipe_page;
 import '../display_pages/17_tag_page.dart' deferred as tag_page;
-import './_modals.dart';
 
 List<CompRoute> displayCompRoutes = <CompRoute>[
   CompRoute(

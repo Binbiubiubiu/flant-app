@@ -1,6 +1,6 @@
-// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
+import './_modals.dart';
 // 🌎 Project imports:
 // import '../business_pages/main.dart';
 import '../business_pages/02_address_list_page.dart'
@@ -14,8 +14,6 @@ import '../business_pages/06_contact_edit_page.dart'
 import '../business_pages/07_contact_list_page.dart'
     deferred as contact_list_page;
 import '../business_pages/09_submit_bar_page.dart' deferred as submit_bar_page;
-import '../basic_pages/main.dart';
-import './_modals.dart';
 
 List<CompRoute> businessCompRoutes = <CompRoute>[
   CompRoute(

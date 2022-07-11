@@ -1,9 +1,7 @@
-// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-// 🌎 Project imports:
-// import '../basic_pages/main.dart' deferred as basic_pages;
+import './_modals.dart';
 import '../basic_pages/01_button_page.dart' deferred as button_page;
 import '../basic_pages/02_cell_page.dart' deferred as cell_page;
 import '../basic_pages/03_icon_page.dart' deferred as icon_page;
@@ -12,7 +10,9 @@ import '../basic_pages/05_layout_page.dart' deferred as layout_page;
 import '../basic_pages/06_popup_page.dart' deferred as popup_page;
 import '../basic_pages/07_style_page.dart' deferred as style_page;
 import '../basic_pages/08_toast_page.dart' deferred as toast_page;
-import './_modals.dart';
+
+// 🌎 Project imports:
+// import '../basic_pages/main.dart' deferred as basic_pages;
 
 List<CompRoute> basicCompRoutes = <CompRoute>[
   CompRoute(

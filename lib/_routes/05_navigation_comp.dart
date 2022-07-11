@@ -1,6 +1,6 @@
-// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
+import './_modals.dart';
 // 🌎 Project imports:
 // import '../basic_pages/main.dart';
 // import '../navigation_pages/main.dart';
@@ -13,7 +13,6 @@ import '../navigation_pages/06_sidebar_page.dart' deferred as sidebar_page;
 import '../navigation_pages/07_tabbar_page.dart' deferred as tabbar_page;
 import '../navigation_pages/08_tab_page.dart' deferred as tab_page;
 import '../navigation_pages/09_tree_select.dart' deferred as tree_select;
-import './_modals.dart';
 
 List<CompRoute> navigationCompRoutes = <CompRoute>[
   CompRoute(

@@ -1,10 +1,10 @@
-// 🐦 Flutter imports:
 import 'package:flutter/widgets.dart';
 
-// 🌎 Project imports:
-// import '../form_pages/main.dart' deferred as form_pages;
+import './_modals.dart';
 import '../form_pages/01_calendar_page.dart' deferred as calendar_page;
 import '../form_pages/03_checkbox_page.dart' deferred as checkbox_page;
+// 🌎 Project imports:
+// import '../form_pages/main.dart' deferred as form_pages;
 import '../form_pages/04_datetime_picker_page.dart'
     deferred as datetime_picker_page;
 import '../form_pages/05_field_page.dart' deferred as field_page;
@@ -18,7 +18,6 @@ import '../form_pages/12_search_page.dart' deferred as search_page;
 import '../form_pages/13_slider_page.dart' deferred as slider_page;
 import '../form_pages/14_stepper_page.dart' deferred as stepper_page;
 import '../form_pages/15_switch_page.dart' deferred as switch_page;
-import './_modals.dart';
 
 List<CompRoute> formCompRoutes = <CompRoute>[
   CompRoute(

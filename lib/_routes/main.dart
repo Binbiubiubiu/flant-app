@@ -1,8 +1,5 @@
-// 🐦 Flutter imports:
 import 'package:flutter/material.dart';
 
-// 🌎 Project imports:
-import '../main.dart' show MyHomePage;
 import './01_basic_comp.dart';
 import './02_form_comp.dart';
 import './03_display_comp.dart';
@@ -10,6 +7,7 @@ import './04_action_comp.dart';
 import './05_navigation_comp.dart';
 import './06_business_comp.dart';
 import './_modals.dart';
+import '../main.dart' show MyHomePage;
 
 export './_modals.dart';
 

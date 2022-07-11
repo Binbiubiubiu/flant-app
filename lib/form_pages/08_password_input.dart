@@ -1,11 +1,7 @@
-// 🐦 Flutter imports:
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/flant.dart';
 import 'package:flutter/material.dart';
 
-// 📦 Package imports:
-import 'package:easy_localization/easy_localization.dart';
-
-// 🌎 Project imports:
 import '../_components/main.dart';
 
 class PasswordInputPage extends StatefulWidget {

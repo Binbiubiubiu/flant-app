@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # 生成 app icons
 flutter pub run flutter_launcher_icons:main
 
@@ -11,7 +13,7 @@ flutter pub global run dartdoc:dartdoc
 flutter pub run intl_utils:generate
 
 # 格式化import sorter
-flutter pub run import_sorter:main
+dart fix --apply
 
 # 打包android命令
 flutter build apk --release -t lib/main.dart --split-per-abi --obfuscate --split-debug-info=./

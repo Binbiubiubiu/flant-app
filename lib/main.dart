@@ -1,17 +1,14 @@
-// 🐦 Flutter imports:
-import 'package:flutter/material.dart';
-// 📦 Package imports:
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flant/flant.dart';
-
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// 🌎 Project imports:
 import './_components/main.dart';
 import './_routes/main.dart';
-// import 'configure.dart' if (dart.library.html) 'web/configure.dart';
 import 'doc_mixin.dart' if (dart.library.html) 'web/doc_mixin.dart';
 import 'screen_util.dart';
+
+// import 'configure.dart' if (dart.library.html) 'web/configure.dart';
 
 Future<void> main() async {
   // debugProfileBuildsEnabled = true;

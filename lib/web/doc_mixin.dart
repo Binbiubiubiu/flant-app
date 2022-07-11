@@ -32,7 +32,7 @@ mixin DocRouterSyncMixin<T extends StatefulWidget> on State<T> {
     final NavigatorState? docRouter = docNavigatorKey.currentState;
     if (docRouter?.canPop() == true) {
       docRouter?.popAndPushNamed(path);
-    } 
+    }
   }
 
   void _listenFromWindowTop(Event event) {

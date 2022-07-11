@@ -1,4 +1,3 @@
-// 🐦 Flutter imports:
 import 'package:flant/components/common/active_response.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
