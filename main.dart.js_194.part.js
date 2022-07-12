@@ -1,9 +1,9 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
 $__dart_deferred_initializers__.current=function(a,b,c,$){var A={
-aBK(d,e,f,g,h,i){var x=null
-return R.i5(d,x,x,new A.aBL(g,h,e,"",f,x,x,x,x),S.aZ,L.bB,!0,!1,x,x,x,x,x,x,L.cj,!0,!0,x,i)},
+aCO(d,e,f,g,h,i){var x=null
+return R.i5(d,x,x,new A.aCP(g,h,e,"",f,x,x,x,x),S.aZ,L.bB,!0,!1,x,x,x,x,x,x,L.cj,!0,!0,x,i)},
 qi(d){return"https://img.yzcdn.cn/vant/share-sheet-"+d+".png"},
-aBL:function aBL(d,e,f,g,h,i,j,k,l){var _=this
+aCP:function aCP(d,e,f,g,h,i,j,k,l){var _=this
 _.a=d
 _.b=e
 _.c=f
@@ -46,7 +46,7 @@ apT:function apT(){},
 cV:function cV(d,e,f){this.a=d
 this.b=e
 this.c=f},
-aV0(){return new A.rK(null)},
+aW4(){return new A.rK(null)},
 rK:function rK(d){this.a=d},
 ah7:function ah7(d){this.a=d},
 ah3:function ah3(d,e,f){this.a=d
@@ -61,7 +61,7 @@ this.c=f},
 ah6:function ah6(d,e,f){this.a=d
 this.b=e
 this.c=f},
-aD2(d){var x
+aE6(d){var x
 d.H(y.D)
 x=T.ck(d).fx
 return x}},E,B,C,I,F,K,M,J,N,O,P,G,H,D,Q,R,S,L,T
@@ -86,7 +86,7 @@ S=c[127]
 L=c[128]
 T=c[118]
 A.to.prototype={
-q(d,e){var x,w,v=this,u=null,t=A.aD2(e),s=v.d.length!==0,r=v.c,q=r.length===0,p=E.cl(B.G(r,u,u,u,u,B.aE(u,u,t.b,u,u,u,u,u,u,u,u,t.c,u,C.Z,u,t.d,!0,u,u,u,u,u,u,u,u),C.aH,u,I.av),!1,!1,!1,!1,!1,C.o,!q)
+q(d,e){var x,w,v=this,u=null,t=A.aE6(e),s=v.d.length!==0,r=v.c,q=r.length===0,p=E.cl(B.G(r,u,u,u,u,B.aE(u,u,t.b,u,u,u,u,u,u,u,u,t.c,u,C.Z,u,t.d,!0,u,u,u,u,u,u,u,u),C.aH,u,I.av),!1,!1,!1,!1,!1,C.o,!q)
 r=v.e
 x=r.length!==0
 w=E.cl(B.G(r,u,u,u,u,B.aE(u,u,t.e,u,u,u,u,u,u,u,u,t.f,u,u,u,t.r,!0,u,u,u,u,u,u,u,u),C.aH,u,I.av),!1,!1,!1,!1,!1,C.o,x)
@@ -110,10 +110,10 @@ if(v.length===0){B.bD(d,P.S,y.e).toString
 v=B.bl("Cancel",w,"cancel",B.a([],y.f),w)}x=B.G(v,w,w,w,w,w,w,w,w)
 return new A.Xn(x,new A.apU(this,d),w)}}
 A.Xn.prototype={
-q(d,e){var x=null,w=A.aD2(e),v=B.hg(new A.apS(w),B.bc(this.c,x,1,C.aI,!0,B.aE(x,x,C.Y,x,x,x,x,x,x,x,x,w.as,x,x,x,w.at,!0,x,x,x,x,x,x,x,x),x,I.av,C.F),x,!1,!0,this.d)
+q(d,e){var x=null,w=A.aE6(e),v=B.hg(new A.apS(w),B.bc(this.c,x,1,C.aI,!0,B.aE(x,x,C.Y,x,x,x,x,x,x,x,x,w.as,x,x,x,w.at,!0,x,x,x,x,x,x,x,x),x,I.av,C.F),x,!1,!0,this.d)
 return new B.bb(B.bu(x,x,x,x,x,!0,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x),!1,!1,!1,v,x)}}
 A.xI.prototype={
-q(d,e){var x,w=null,v=A.aD2(e),u=this.c,t=u.a,s=$.t().$1(4),r=E.cl(new B.aQ(new B.Q(s,0,s,0),B.G(t,w,w,w,w,B.aE(w,w,v.x,w,w,w,w,w,w,w,w,v.y,w,w,w,w,!0,w,w,w,w,w,w,w,w),w,w,w),w),!1,!1,!1,!1,!1,C.o,t.length!==0)
+q(d,e){var x,w=null,v=A.aE6(e),u=this.c,t=u.a,s=$.t().$1(4),r=E.cl(new B.aQ(new B.Q(s,0,s,0),B.G(t,w,w,w,w,B.aE(w,w,v.x,w,w,w,w,w,w,w,w,v.y,w,w,w,w,!0,w,w,w,w,w,w,w,w),w,w,w),w),!1,!1,!1,!1,!1,C.o,t.length!==0)
 t=u.c
 s=$.t().$1(4)
 x=E.cl(new B.aQ(new B.Q(s,0,s,0),B.G(t,w,w,w,w,B.aE(w,w,v.e,w,w,w,w,w,w,w,w,v.f,w,w,w,w,!0,w,w,w,w,w,w,w,w),w,w,w),w),!1,!1,!1,!1,!1,C.o,t.length!==0)
@@ -133,7 +133,7 @@ w=G.R(!0,B.a([H.ab(D.n,t,!1,!1,t,!1,!1,t,t,t,t,!0,!1,t,t,t,new A.ah5(u,e,r),t,t,
 v=B.c("ShareSheet.withDesc",t,t)
 return new F.b7(t,B.a([q,x,w,G.R(!0,B.a([H.ab(D.n,t,!1,!1,t,!1,!1,t,t,t,t,!0,!1,t,t,t,new A.ah6(u,e,r),t,t,D.p,B.c(s,t,t),t,t,t,t,t,t,t)],p),v)],p),C.K,t,t)}}
 var z=a.updateTypes(["to<I>(n)","xI(q)","kD(n,w,d?)","~(cV,q)"])
-A.aBL.prototype={
+A.aCP.prototype={
 $1(d){var x=this,w=null
 return new A.to(x.b,x.d,x.c,x.a,x.e,x.f,w,w,w,w,y.U)},
 $S:z+0}
@@ -154,7 +154,7 @@ $3(d,e,f){var x=null,w=this.a,v=e?C.bq:w.ax
 return B.U(C.w,f,C.h,v,x,x,x,w.at,x,x,x,x,x,1/0)},
 $C:"$3",
 $R:3,
-$S:52}
+$S:54}
 A.apT.prototype={
 $3(d,e,f){return F.kE(!1,f,e?0.7:1)},
 $C:"$3",
@@ -166,34 +166,34 @@ Q.c_(this.a,x,x,x,x,x,x,x,x,d.a,x,x,x,x,x,x,x)},
 $S:z+3}
 A.ah3.prototype={
 $0(){var x=null,w=B.c("ShareSheet.title",x,x)
-A.aBK(this.b,"",this.c,B.a([new A.cV(B.c("ShareSheet.wechat",x,x),$.aC3(),""),new A.cV(B.c("ShareSheet.weibo",x,x),$.aC4(),""),new A.cV(B.c("ShareSheet.link",x,x),$.aC0(),""),new A.cV(B.c("ShareSheet.poster",x,x),$.aC1(),""),new A.cV(B.c("ShareSheet.qrcode",x,x),$.aC2(),"")],y.I),w,y.X)},
+A.aCO(this.b,"",this.c,B.a([new A.cV(B.c("ShareSheet.wechat",x,x),$.aD7(),""),new A.cV(B.c("ShareSheet.weibo",x,x),$.aD8(),""),new A.cV(B.c("ShareSheet.link",x,x),$.aD4(),""),new A.cV(B.c("ShareSheet.poster",x,x),$.aD5(),""),new A.cV(B.c("ShareSheet.qrcode",x,x),$.aD6(),"")],y.I),w,y.X)},
 $S:0}
 A.ah4.prototype={
 $0(){var x=null,w=B.c("ShareSheet.title",x,x),v=y.I
-A.aBK(this.b,"",this.c,B.a([B.a([new A.cV(B.c("ShareSheet.wechat",x,x),$.aC3(),""),new A.cV(B.c("ShareSheet.wechatMoments",x,x),$.aN5(),""),new A.cV(B.c("ShareSheet.weibo",x,x),$.aC4(),""),new A.cV(B.c("ShareSheet.qq",x,x),$.aN3(),"")],v),B.a([new A.cV(B.c("ShareSheet.link",x,x),$.aC0(),""),new A.cV(B.c("ShareSheet.poster",x,x),$.aC1(),""),new A.cV(B.c("ShareSheet.qrcode",x,x),$.aC2(),""),new A.cV(B.c("ShareSheet.weappQrcode",x,x),$.aN4(),"")],v)],y.i),w,y.X)},
+A.aCO(this.b,"",this.c,B.a([B.a([new A.cV(B.c("ShareSheet.wechat",x,x),$.aD7(),""),new A.cV(B.c("ShareSheet.wechatMoments",x,x),$.aO9(),""),new A.cV(B.c("ShareSheet.weibo",x,x),$.aD8(),""),new A.cV(B.c("ShareSheet.qq",x,x),$.aO7(),"")],v),B.a([new A.cV(B.c("ShareSheet.link",x,x),$.aD4(),""),new A.cV(B.c("ShareSheet.poster",x,x),$.aD5(),""),new A.cV(B.c("ShareSheet.qrcode",x,x),$.aD6(),""),new A.cV(B.c("ShareSheet.weappQrcode",x,x),$.aO8(),"")],v)],y.i),w,y.X)},
 $S:0}
 A.ah5.prototype={
 $0(){var x=null,w="ShareSheet.name"
-A.aBK(this.b,"",this.c,B.a([new A.cV(B.c(w,x,x),"https://img.yzcdn.cn/vant/custom-icon-fire.png",""),new A.cV(B.c(w,x,x),"https://img.yzcdn.cn/vant/custom-icon-light.png",""),new A.cV(B.c(w,x,x),"https://img.yzcdn.cn/vant/custom-icon-water.png","")],y.I),"",y.X)},
+A.aCO(this.b,"",this.c,B.a([new A.cV(B.c(w,x,x),"https://img.yzcdn.cn/vant/custom-icon-fire.png",""),new A.cV(B.c(w,x,x),"https://img.yzcdn.cn/vant/custom-icon-light.png",""),new A.cV(B.c(w,x,x),"https://img.yzcdn.cn/vant/custom-icon-water.png","")],y.I),"",y.X)},
 $S:0}
 A.ah6.prototype={
 $0(){var x=null,w="ShareSheet.description",v=B.c("ShareSheet.title",x,x)
-A.aBK(this.b,B.c(w,x,x),this.c,B.a([new A.cV(B.c("ShareSheet.wechat",x,x),$.aC3(),""),new A.cV(B.c("ShareSheet.weibo",x,x),$.aC4(),""),new A.cV(B.c("ShareSheet.link",x,x),$.aC0(),B.c(w,x,x)),new A.cV(B.c("ShareSheet.poster",x,x),$.aC1(),""),new A.cV(B.c("ShareSheet.qrcode",x,x),$.aC2(),"")],y.I),v,y.X)},
+A.aCO(this.b,B.c(w,x,x),this.c,B.a([new A.cV(B.c("ShareSheet.wechat",x,x),$.aD7(),""),new A.cV(B.c("ShareSheet.weibo",x,x),$.aD8(),""),new A.cV(B.c("ShareSheet.link",x,x),$.aD4(),B.c(w,x,x)),new A.cV(B.c("ShareSheet.poster",x,x),$.aD5(),""),new A.cV(B.c("ShareSheet.qrcode",x,x),$.aD6(),"")],y.I),v,y.X)},
 $S:0};(function inheritance(){var x=a.inheritMany,w=a.inherit
-x(B.aw,[A.aBL,A.apW,A.apS,A.apT])
+x(B.aw,[A.aCP,A.apW,A.apS,A.apT])
 x(B.C,[A.to,A.Xn,A.xI,A.rK])
 x(B.b3,[A.apV,A.apU,A.ah3,A.ah4,A.ah5,A.ah6])
 w(A.cV,B.I)
 w(A.ah7,B.ca)})()
-B.ad(b.typeUniverse,JSON.parse('{"to":{"C":[],"d":[]},"xI":{"C":[],"d":[]},"Xn":{"C":[],"d":[]},"rK":{"C":[],"d":[]},"aSi":{"bg":[],"ak":[],"an":[],"d":[]}}'))
+B.ad(b.typeUniverse,JSON.parse('{"to":{"C":[],"d":[]},"xI":{"C":[],"d":[]},"Xn":{"C":[],"d":[]},"rK":{"C":[],"d":[]},"aTm":{"bg":[],"ak":[],"an":[],"d":[]}}'))
 var y=(function rtii(){var x=B.i
-return{e:x("dl"),D:x("aSi"),I:x("l<cV>"),i:x("l<B<cV>>"),f:x("l<I>"),p:x("l<d>"),z:x("B<cV>"),N:x("k"),l:x("d"),U:x("to<I>"),A:x("@"),X:x("I?")}})();(function constants(){K.N3=new B.Q(16,12,16,4)})();(function lazyInitializers(){var x=a.lazy
-x($,"b2C","aN3",()=>A.qi("qq"))
-x($,"b2A","aC0",()=>A.qi("link"))
-x($,"b2H","aC4",()=>A.qi("weibo"))
-x($,"b2F","aC3",()=>A.qi("wechat"))
-x($,"b2B","aC1",()=>A.qi("poster"))
-x($,"b2D","aC2",()=>A.qi("qrcode"))
-x($,"b2E","aN4",()=>A.qi("weapp-qrcode"))
-x($,"b2G","aN5",()=>A.qi("wechat-moments"))})()}
-$__dart_deferred_initializers__["1AsBijar3LZlGxQGaiTHqItMOKA="] = $__dart_deferred_initializers__.current
+return{e:x("dl"),D:x("aTm"),I:x("l<cV>"),i:x("l<B<cV>>"),f:x("l<I>"),p:x("l<d>"),z:x("B<cV>"),N:x("k"),l:x("d"),U:x("to<I>"),A:x("@"),X:x("I?")}})();(function constants(){K.N3=new B.Q(16,12,16,4)})();(function lazyInitializers(){var x=a.lazy
+x($,"b3G","aO7",()=>A.qi("qq"))
+x($,"b3E","aD4",()=>A.qi("link"))
+x($,"b3L","aD8",()=>A.qi("weibo"))
+x($,"b3J","aD7",()=>A.qi("wechat"))
+x($,"b3F","aD5",()=>A.qi("poster"))
+x($,"b3H","aD6",()=>A.qi("qrcode"))
+x($,"b3I","aO8",()=>A.qi("weapp-qrcode"))
+x($,"b3K","aO9",()=>A.qi("wechat-moments"))})()}
+$__dart_deferred_initializers__["xfjtrY2M1RX3qRi8ZzDtlzoaurw="] = $__dart_deferred_initializers__.current

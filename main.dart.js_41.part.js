@@ -1,6 +1,6 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
 $__dart_deferred_initializers__.current=function(a,b,c,$){var C={
-aSS(){return new C.nP(null)},
+aTW(){return new C.nP(null)},
 nP:function nP(d){this.a=d},
 Y3:function Y3(d,e){var _=this
 _.e=d
@@ -64,4 +64,4 @@ D.Om=new L.kl("https://img01.yzcdn.cn/vant/cat.jpeg",B.cK,100,100,null,!1,!0,nul
 D.Xq=A.a(x([D.Om]),y.u)
 D.OL=new E.hh(0,I.dr,D.Xq,null)
 D.Yx=A.a(x([D.OL]),y.u)})()}
-$__dart_deferred_initializers__["tj7J05lH6gK6sRETQ9/4XTKNQLE="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["JCY77K4feQWHBgh20V6Y1CI9kug="] = $__dart_deferred_initializers__.current

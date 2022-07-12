@@ -1,6 +1,6 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
 $__dart_deferred_initializers__.current=function(a,b,c,$){var B={
-aD4(d,e,f,g){return new B.Bb(d,e,f,g,null)},
+aE8(d,e,f,g){return new B.Bb(d,e,f,g,null)},
 Bb:function Bb(d,e,f,g,h){var _=this
 _.f=d
 _.z=e
@@ -37,11 +37,11 @@ this.b=e},
 Bc:function Bc(d,e){this.a=d
 this.b=e},
 Gh:function Gh(){},
-aHi(d,e){return new B.v0(e,d,null)},
+aIm(d,e){return new B.v0(e,d,null)},
 v0:function v0(d,e,f){this.w=d
 this.b=e
 this.a=f},
-aVo(){return new B.rT(null)},
+aWs(){return new B.rT(null)},
 rT:function rT(d){this.a=d},
 ajF:function ajF(d){this.a=d}},A,C,K,J,E,F,D,H,I,G,L,M,N,O
 B=a.updateHolder(c[44],B)
@@ -159,16 +159,16 @@ this.bP()
 this.f7()}}
 B.v0.prototype={
 bG(d){return!this.w.j(0,d.w)},
-nP(d,e,f){return B.aHi(f,this.w)}}
+nP(d,e,f){return B.aIm(f,this.w)}}
 B.rT.prototype={
 q(d,e){var x,w,v=null,u="SwipeCell.select",t="SwipeCell.title",s="SwipeCell.delete",r=A.c("basicUsage",v,v),q=F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(u,v,v),v,v,v,D.az),p=y.u
-r=H.aC(A.a([B.aD4(v,I.ab(G.n,v,!1,!1,v,!1,!1,v,v,v,v,!1,!1,v,v,v,v,v,v,G.p,A.c(t,v,v),v,v,v,v,v,A.c("content",v,v),v),q,A.bU(A.a([F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(s,v,v),v,v,v,D.aW),F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c("SwipeCell.collect",v,v),v,v,v,D.az)],p),C.z,C.t,C.u))],p),r)
+r=H.aC(A.a([B.aE8(v,I.ab(G.n,v,!1,!1,v,!1,!1,v,v,v,v,!1,!1,v,v,v,v,v,v,G.p,A.c(t,v,v),v,v,v,v,v,A.c("content",v,v),v),q,A.bU(A.a([F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(s,v,v),v,v,v,D.aW),F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c("SwipeCell.collect",v,v),v,v,v,D.az)],p),C.z,C.t,C.u))],p),r)
 q=A.c("SwipeCell.customContent",v,v)
-x=A.aHj(C.j)
-q=H.aC(A.a([B.aD4(v,B.aHi(L.a75(A.c("SwipeCell.desc",v,v),v,"2","","2.00","",v,"https://img.yzcdn.cn/vant/ipad.jpeg",A.c("SwipeCell.cardTitle",v,v)),x),v,F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(s,v,v),v,v,v,D.aW))],p),q)
+x=A.aIn(C.j)
+q=H.aC(A.a([B.aE8(v,B.aIm(L.a75(A.c("SwipeCell.desc",v,v),v,"2","","2.00","",v,"https://img.yzcdn.cn/vant/ipad.jpeg",A.c("SwipeCell.cardTitle",v,v)),x),v,F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(s,v,v),v,v,v,D.aW))],p),q)
 x=A.c("SwipeCell.beforeClose",v,v)
 w=F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(u,v,v),v,v,v,D.az)
-return new M.b7(v,A.a([r,q,H.aC(A.a([B.aD4(new B.ajF(e),I.ab(G.n,v,!1,!1,v,!1,!1,v,v,v,v,!1,!1,v,v,v,v,v,v,G.p,A.c(t,v,v),v,v,v,v,v,A.c("content",v,v),v),w,F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(s,v,v),v,v,v,D.aW))],p),x)],p),C.K,v,v)}}
+return new M.b7(v,A.a([r,q,H.aC(A.a([B.aE8(new B.ajF(e),I.ab(G.n,v,!1,!1,v,!1,!1,v,v,v,v,!1,!1,v,v,v,v,v,v,G.p,A.c(t,v,v),v,v,v,v,v,A.c("content",v,v),v),w,F.bo(!1,!0,v,v,!1,v,!1,v,v,!1,v,!1,v,!1,D.N,!0,A.c(s,v,v),v,v,v,D.aW))],p),x)],p),C.K,v,v)}}
 var z=a.updateTypes(["~(eb)","~(ec)","as<~>(f1)","as<w>(Bc)"])
 B.a8r.prototype={
 $0(){var x=this.a
@@ -183,7 +183,7 @@ B.a8h.prototype={
 $2(d,e){var x=A.b(this.a.e,"_moveAnimation"),w=x.b
 x=x.a
 return N.UC(e,new A.p(w.a5(0,x.gn(x)),0))},
-$S:94}
+$S:88}
 B.a8i.prototype={
 $0(){this.a.zF(E.OU)},
 $S:0}
@@ -194,24 +194,24 @@ v=u.a5(0,v.gn(v))
 w=w.y
 e.toString
 return A.cc(0,e,x,x,v-w,x,0,x)},
-$S:79}
+$S:89}
 B.a8k.prototype={
 $1(d){this.a.zF(E.rt)},
 $S:163}
 B.a8l.prototype={
 $2(d,e){var x=null,w=this.a,v=A.b(w.e,"_moveAnimation"),u=v.b
 v=v.a
-v=J.aP7(u.a5(0,v.gn(v)))
+v=J.aQb(u.a5(0,v.gn(v)))
 w=w.z
 e.toString
 return A.cc(0,e,x,x,x,v-w,0,x)},
-$S:79}
+$S:89}
 B.a8m.prototype={
 $1(d){this.a.zF(E.ru)},
 $S:163}
 B.a8p.prototype={
 $1(d){if(d)this.a.po(0,this.b)},
-$S:64}
+$S:55}
 B.a8n.prototype={
 $0(){this.a.KP()},
 $S:0}
@@ -261,4 +261,4 @@ A.ad(b.typeUniverse,JSON.parse('{"Bb":{"u":[],"d":[]},"Bd":{"D":["Bb"]},"vf":{"M
 var y={v:A.i("bT<L>"),u:A.i("l<d>"),z:A.i("aM<D<u>>"),F:A.i("aI"),g:A.i("ac<L>"),e:A.i("w"),q:A.i("~")};(function constants(){E.rt=new B.vf(0,"left")
 E.ru=new B.vf(1,"right")
 E.OU=new B.vf(2,"cell")})()}
-$__dart_deferred_initializers__["Dv4GmH7O9z8XOFaHG4LCPGUt6kY="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["DRpyLPAoM6ImLXB2CdzHtPKTFk4="] = $__dart_deferred_initializers__.current
