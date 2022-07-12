@@ -1,30 +1,30 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
-$__dart_deferred_initializers__.current=function(a,b,c,$){var A={oe:function oe(d,e,f,g,h,i){var _=this
+$__dart_deferred_initializers__.current=function(a,b,c,$){var A={nA:function nA(d,e,f,g,h,i){var _=this
 _.c=d
 _.d=e
 _.e=f
 _.f=g
 _.r=h
-_.a=i},CX:function CX(d,e,f){this.f=d
+_.a=i},B5:function B5(d,e,f){this.f=d
 this.b=e
 this.a=f},
-iL(d,e,f,g,h){return new A.rf(h,f,d,e,g,null)},
-rf:function rf(d,e,f,g,h,i){var _=this
+ij(d,e,f,g,h){return new A.qj(h,f,d,e,g,null)},
+qj:function qj(d,e,f,g,h,i){var _=this
 _.c=d
 _.d=e
 _.e=f
 _.f=g
 _.r=h
 _.a=i},
-abH:function abH(d,e,f){this.a=d
+a8c:function a8c(d,e,f){this.a=d
 this.b=e
 this.c=f},
-abI:function abI(d,e,f){this.a=d
+a8d:function a8d(d,e,f){this.a=d
 this.b=e
 this.c=f},
-aMT(d){var x
+aHw(d){var x
 d.H(y.l)
-x=G.cr(d).fy
+x=G.ck(d).fy
 return x}},B,C,D,E,F,G
 A=a.updateHolder(c[65],A)
 B=c[0]
@@ -33,22 +33,22 @@ D=c[111]
 E=c[120]
 F=c[116]
 G=c[118]
-A.oe.prototype={
-t(d,e){var x=null,w=A.aMT(e)
-return B.V(x,new A.CX(this,B.S_(this.r,x,x,!0),x),C.h,this.d,x,x,x,x,x,x,x,x,x,w.a)}}
-A.CX.prototype={
-bL(d){return!this.f.eS(0,d.f)}}
-A.rf.prototype={
-t(d,e){var x,w,v,u,t=this,s=null,r=e.H(y.g),q=r==null?s:r.f
+A.nA.prototype={
+q(d,e){var x=null,w=A.aHw(e)
+return B.U(x,new A.B5(this,B.Pe(this.r,x,x,!0),x),C.h,this.d,x,x,x,x,x,x,x,x,x,w.a)}}
+A.B5.prototype={
+bG(d){return!this.f.eJ(0,d.f)}}
+A.qj.prototype={
+q(d,e){var x,w,v,u,t=this,s=null,r=e.H(y.g),q=r==null?s:r.f
 if(q==null)throw B.e("FlanSidebarItem must be a child Widget of FlanSidebar")
-x=C.c.bK(q.r,t)
+x=C.c.bX(q.r,t)
 w=x===q.c
-v=A.aMT(e)
-u=B.xm(new B.em(C.bo,s,s,D.ct(B.V(s,s,C.h,v.as,s,s,s,v.Q,s,s,s,s,s,v.z),!1,!1,!1,!1,!1,C.o,w),s))
-r=B.H(t.c,s,s,s,s,s,s,s,E.av)
-return new B.bS(C.a3,s,C.X,C.M,B.a([B.bM(B.hE(new A.abI(t,w,v),F.w7(r,t.e,s,t.d),s,t.f,!0,new A.abH(t,x,q)),s,1/0),u],y.e),s)}}
+v=A.aHw(e)
+u=B.wb(new B.e9(C.bn,s,s,D.cl(B.U(s,s,C.h,v.as,s,s,s,v.Q,s,s,s,s,s,v.z),!1,!1,!1,!1,!1,C.o,w),s))
+r=B.G(t.c,s,s,s,s,s,s,s,E.av)
+return new B.bM(C.a2,s,C.X,C.M,B.a([B.bE(B.hg(new A.a8d(t,w,v),F.uZ(r,t.e,s,t.d),s,t.f,!0,new A.a8c(t,x,q)),s,1/0),u],y.e),s)}}
 var z=a.updateTypes([])
-A.abH.prototype={
+A.a8c.prototype={
 $0(){var x,w,v
 if(this.a.f)return
 x=this.c
@@ -58,23 +58,23 @@ if(v!=null)v.$1(w)
 x=x.f
 if(x!=null)x.$1(w)}},
 $S:0}
-A.abI.prototype={
+A.a8d.prototype={
 $3(d,e,f){var x,w,v,u,t=this,s=null,r=t.b
 if(r){x=t.c
 w=x.at}else{x=t.c
 w=e?x.r:x.w}v=t.a
 if(v.f)u=x.e
 else u=r?x.y:x.d
-r=B.aI(s,s,u,s,s,s,s,s,s,s,s,x.b,s,s,s,x.c,!0,s,s,s,s,s,s,s,s)
+r=B.aE(s,s,u,s,s,s,s,s,s,s,s,x.b,s,s,s,x.c,!0,s,s,s,s,s,s,s,s)
 v=v.r
-return B.bh(B.V(C.bo,f,C.h,w,s,s,s,s,s,s,v==null?x.f:v,s,s,s),s,s,C.J,!0,r,s,s,C.F)},
+return B.bc(B.U(C.bn,f,C.h,w,s,s,s,s,s,s,v==null?x.f:v,s,s,s),s,s,C.I,!0,r,s,s,C.F)},
 $C:"$3",
 $R:3,
-$S:172};(function inheritance(){var x=a.inheritMany,w=a.inherit
-x(B.D,[A.oe,A.rf])
-w(A.CX,B.an)
-w(A.abH,B.b8)
-w(A.abI,B.aA)})()
-B.am(b.typeUniverse,JSON.parse('{"CX":{"an":[],"ar":[],"d":[]},"oe":{"D":[],"d":[]},"rf":{"D":[],"d":[]},"b_J":{"bk":[],"an":[],"ar":[],"d":[]}}'))
-var y={g:B.h("CX"),l:B.h("b_J"),e:B.h("k<d>")}}
-$__dart_deferred_initializers__["XGBhJqnsEwzScKy0UGf7yketum0="] = $__dart_deferred_initializers__.current
+$S:161};(function inheritance(){var x=a.inheritMany,w=a.inherit
+x(B.C,[A.nA,A.qj])
+w(A.B5,B.ak)
+w(A.a8c,B.b3)
+w(A.a8d,B.aw)})()
+B.ad(b.typeUniverse,JSON.parse('{"B5":{"ak":[],"an":[],"d":[]},"nA":{"C":[],"d":[]},"qj":{"C":[],"d":[]},"aSj":{"bg":[],"ak":[],"an":[],"d":[]}}'))
+var y={g:B.i("B5"),l:B.i("aSj"),e:B.i("l<d>")}}
+$__dart_deferred_initializers__["o7EFSiw6+FDCspRySU6GrwA+HrM="] = $__dart_deferred_initializers__.current
