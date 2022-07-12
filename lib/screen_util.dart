@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -32,11 +31,12 @@ class FlanScreenUtilInit extends StatelessWidget {
         builder: (_, Orientation orientation) {
           if (constraints.maxWidth != 0) {
             ScreenUtil.init(
+              context,
               // constraints,
               // kMaxConstraints,
-              constraints.maxWidth > this.constraints.maxWidth
-                  ? this.constraints
-                  : constraints,
+              // constraints.maxWidth > this.constraints.maxWidth
+              //     ? this.constraints
+              //     : constraints,
               orientation: orientation,
               designSize: designSize,
             );

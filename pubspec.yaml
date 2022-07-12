@@ -32,7 +32,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  flutter_screenutil: ^5.0.0
+  flutter_screenutil: 5.4.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.9.0
@@ -88,8 +88,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
-  deferred-components:
-    - name: button_page
-      libraries:
-        - package:flant_app/basic_pages/01_button_page.dart
