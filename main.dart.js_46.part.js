@@ -1,83 +1,58 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
-$__dart_deferred_initializers__.current=function(a,b,c,$){var B={ST:function ST(d,e,f,g,h,i){var _=this
-_.S=d
-_.bE=e
-_.C=null
-_.a4=f
-_.aJ=g
-_.m$=h
-_.go=_.fy=null
-_.id=!1
-_.k2=_.k1=null
-_.k3=0
-_.d=!1
-_.f=_.e=null
-_.w=_.r=!1
-_.x=null
-_.y=!1
-_.z=!0
-_.Q=null
-_.as=!1
-_.at=null
-_.ax=!1
-_.ay=i
-_.ch=!1
-_.CW=$
-_.cx=!0
-_.cy=null
-_.db=!0
-_.dx=null
-_.a=0
-_.c=_.b=null},
-Bu(d,e,f){return new B.nG(f,e,d,null)},
-nG:function nG(d,e,f,g){var _=this
-_.e=d
-_.f=e
-_.c=f
-_.a=g}},A,C
-B=a.updateHolder(c[89],B)
-A=c[0]
-C=c[2]
-B.ST.prototype={
-sDM(d){if(this.S==d)return
-this.S=d
-this.W()},
-sBS(d){if(this.bE==d)return
-this.bE=d
-this.W()},
-tM(d){var x,w,v,u,t=d.a,s=d.b,r=this.S
-if(r!=null){x=s*r
-s=x
-t=s}w=d.c
-v=d.d
-r=this.bE
-if(r!=null){u=v*r
-v=u
-w=v}return new A.a9(t,s,w,v)},
-bV(d){var x=this.m$
-if(x!=null)return d.bh(x.f_(this.tM(d)))
-return d.bh(this.tM(d).bh(C.B))},
-bu(){var x=this,w=x.m$,v=y.a
-if(w!=null){w.c9(0,x.tM(v.a(A.z.prototype.gU.call(x))),!0)
-w=v.a(A.z.prototype.gU.call(x))
-v=x.m$.k1
-v.toString
-x.k1=w.bh(v)
-x.pc()}else x.k1=v.a(A.z.prototype.gU.call(x)).bh(x.tM(v.a(A.z.prototype.gU.call(x))).bh(C.B))}}
-B.nG.prototype={
-aP(d){var x=new B.ST(this.e,this.f,C.w,A.dj(d),null,A.ax())
-x.gao()
-x.gaL()
-x.CW=!1
-x.sb1(null)
-return x},
-aT(d,e){e.seL(C.w)
-e.sDM(this.e)
-e.sBS(this.f)
-e.sbm(0,A.dj(d))}}
-var z=a.updateTypes([]);(function inheritance(){var x=a.inherit
-x(B.ST,A.rq)
-x(B.nG,A.aY)})()
-A.ad(b.typeUniverse,JSON.parse('{"ST":{"K":[],"aR":["K"],"z":[],"S":[],"ao":[]},"nG":{"aY":[],"aH":[],"d":[]}}'))
-var y={a:A.i("a9")}}
-$__dart_deferred_initializers__["1b/TYFFktDM89ryiJhudsbqOjic="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__.current=function(a,b,c,$){var D={
+aU9(){return new D.qS(null)},
+qS:function qS(d){this.a=d},
+l9:function l9(d,e,f){this.c=d
+this.d=e
+this.a=f}},I,B,H,A,G,F,C,E
+D=a.updateHolder(c[6],D)
+I=c[119]
+B=c[0]
+H=c[109]
+A=c[143]
+G=c[2]
+F=c[144]
+C=c[61]
+E=c[142]
+D.qS.prototype={
+q(d,e){var x=null
+return new I.b7(x,B.a([H.R(!1,A.U_,B.c("basicUsage",x,x)),H.R(!1,A.R9,B.c("Layout.title2",x,x)),H.R(!1,A.Z8,B.c("Layout.justify",x,x))],y.a),G.j,x,x)}}
+D.l9.prototype={
+q(d,e){var x=null,w=$.b3.bn()
+return B.U(G.w,B.G(this.c,x,x,x,x,B.aE(x,x,G.j,x,x,x,x,x,x,x,x,16*(w.gbB()/B.b(w.a,"uiSize").a),x,x,x,x,!0,x,x,x,x,x,x,x,x),x,x,x),G.h,this.d,x,x,x,30,x,x,x,x,x,x)}}
+var z=a.updateTypes([]);(function inheritance(){var x=a.inheritMany
+x(B.C,[D.qS,D.l9])})()
+B.ad(b.typeUniverse,JSON.parse('{"qS":{"C":[],"d":[]},"l9":{"C":[],"d":[]}}'))
+var y={a:B.i("l<d>")};(function constants(){var x=a.makeConstList
+A.ae8=new D.l9("span: 8",F.f1,null)
+A.qZ=new C.ee(null,8,A.ae8,null)
+A.ae3=new D.l9("span: 8",F.hj,null)
+A.NL=new C.ee(null,8,A.ae3,null)
+A.u2=B.a(x([A.qZ,A.NL,A.qZ]),y.a)
+A.OJ=new C.hh(20,E.dq,A.u2,null)
+A.R9=B.a(x([A.OJ]),y.a)
+A.OK=new C.hh(0,E.dq,A.u2,null)
+A.eJ=new B.dr(null,10,null,null)
+A.ae9=new D.l9("span: 4",F.f1,null)
+A.NP=new C.ee(null,4,A.ae9,null)
+A.ae4=new D.l9("offset: 4, span: 10",F.hj,null)
+A.NO=new C.ee(4,10,A.ae4,null)
+A.Wx=B.a(x([A.NP,A.NO]),y.a)
+A.OF=new C.hh(0,E.dq,A.Wx,null)
+A.ae7=new D.l9("offset: 4, span: 10",F.f1,null)
+A.NM=new C.ee(12,12,A.ae7,null)
+A.VS=B.a(x([A.NM]),y.a)
+A.ON=new C.hh(0,E.dq,A.VS,null)
+A.U_=B.a(x([A.OK,A.eJ,A.OF,A.eJ,A.ON]),y.a)
+A.ae6=new D.l9("span: 6",F.f1,null)
+A.r_=new C.ee(null,6,A.ae6,null)
+A.ae5=new D.l9("span: 6",F.hj,null)
+A.NN=new C.ee(null,6,A.ae5,null)
+A.fv=B.a(x([A.r_,A.NN,A.r_]),y.a)
+A.OG=new C.hh(0,E.dq,A.fv,null)
+A.OH=new C.hh(0,E.OB,A.fv,null)
+A.OL=new C.hh(0,E.OC,A.fv,null)
+A.OO=new C.hh(0,E.OE,A.fv,null)
+A.OM=new C.hh(0,E.OD,A.fv,null)
+A.Z8=B.a(x([A.OG,A.eJ,A.OH,A.eJ,A.OL,A.eJ,A.OO,A.eJ,A.OM]),y.a)})()}
+$__dart_deferred_initializers__["0t3Tm4fD/+QDmoyOt0ZEuNtQP94="] = $__dart_deferred_initializers__.current

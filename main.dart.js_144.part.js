@@ -1,61 +1,71 @@
 self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
-$__dart_deferred_initializers__.current=function(a,b,c,$){var B={
-aKy(){return new B.oS(null)},
-oS:function oS(d){this.a=d},
-a0d:function a0d(d,e,f,g,h,i,j){var _=this
-_.d=d
-_.e=e
-_.f=f
-_.r=g
-_.w=h
-_.x=i
-_.a=null
-_.b=j
-_.c=null},
-avP:function avP(d,e){this.a=d
+$__dart_deferred_initializers__.current=function(a,b,c,$){var B={nk:function nk(d,e){this.d=d
+this.a=e},Ah:function Ah(d,e,f){this.f=d
+this.b=e
+this.a=f},
+nm(d,e,f,g,h,i){return new B.nl(h,d,i,f,e,g,null,null,!1,null)},
+nl:function nl(d,e,f,g,h,i,j,k,l,m){var _=this
+_.r=d
+_.w=e
+_.y=f
+_.at=g
+_.ax=h
+_.ay=i
+_.c=j
+_.d=k
+_.e=l
+_.a=m},
+a6R:function a6R(d,e){this.a=d
 this.b=e},
-avO:function avO(d,e){this.a=d
-this.b=e}},A,E,D,C,G,H,I,F,K
-B=a.updateHolder(c[23],B)
+aDY(d){var x
+d.H(y.k)
+x=H.ck(d).b
+return x}},A,C,D,E,F,G,H
+B=a.updateHolder(c[82],B)
 A=c[0]
-E=c[2]
-D=c[109]
-C=c[73]
-G=c[119]
-H=c[103]
-I=c[102]
-F=c[124]
-K=c[79]
-B.oS.prototype={
-I(){var x=$.ar()
-return new B.a0d(new A.bP(!0,x),new A.bP(!0,x),new A.bP(!0,x),new A.bP(!0,x),new A.bP(!0,x),new A.bP(!1,x),E.k)}}
-B.a0d.prototype={
-q(d,e){var x,w,v,u,t,s,r=this,q=null,p=A.c("basicUsage",q,q),o=r.d,n=y.l,m=y.e
-p=D.R(!1,A.a([C.nC(q,!1,q,!1,o,q,q,n)],m),p)
-x=A.c("disabled",q,q)
-x=D.R(!1,A.a([C.nC(q,!0,q,!1,o,q,q,n)],m),x)
-w=A.c("loadingStatus",q,q)
-w=D.R(!1,A.a([C.nC(q,!1,q,!0,o,q,q,n)],m),w)
-o=A.c("Switch.customSize",q,q)
-o=D.R(!1,A.a([C.nC(q,!1,q,!1,r.e,q,24,n)],m),o)
-v=A.c("Switch.customColor",q,q)
-v=D.R(!1,A.a([C.nC(E.P,!1,E.jR,!1,r.f,q,q,n)],m),v)
-u=A.c("Switch.asyncControl",q,q)
-u=D.R(!1,A.a([C.nC(q,!1,q,!1,r.r,new B.avP(r,e),q,n)],m),u)
-t=A.c("Switch.withCell",q,q)
-s=A.c("title",q,q)
-return new G.b7(q,A.a([p,x,w,o,v,u,H.aC(A.a([I.ab(F.n,q,!0,!0,q,!1,!1,q,q,q,q,!1,!1,q,q,q,q,q,C.nC(q,!1,q,!1,r.w,q,24,n),F.p,s,q,q,q,q,q,q,q)],m),t)],m),E.K,q,q)}}
-var z=a.updateTypes(["aI(hN?)"])
-B.avP.prototype={
-$1(d){var x=null,w=A.c("Switch.title",x,x)
-K.AF(this.b,A.c("Switch.message",x,x),w).bF(0,new B.avO(this.a,d),y.p)},
-$S:9}
-B.avO.prototype={
-$1(d){this.a.r.sn(0,this.b)},
-$S:z+0};(function inheritance(){var x=a.inherit,w=a.inheritMany
-x(B.oS,A.u)
-x(B.a0d,A.D)
-w(A.aw,[B.avP,B.avO])})()
-A.ad(b.typeUniverse,JSON.parse('{"oS":{"u":[],"d":[]},"a0d":{"D":["oS"]}}'))
-var y={e:A.i("l<d>"),p:A.i("aI"),l:A.i("w")}}
-$__dart_deferred_initializers__["zzUhHicI27zhTtQfWJxr5NSBU8U="] = $__dart_deferred_initializers__.current
+C=c[2]
+D=c[135]
+E=c[96]
+F=c[106]
+G=c[110]
+H=c[118]
+B.nk.prototype={
+q(d,e){var x=null,w=B.aDY(e)
+return A.U(x,A.jC(!1,new B.Ah(this,A.bU(this.d,C.z,C.t,C.u),x),!1,!1,!1),C.h,w.a,x,x,x,w.b,x,x,x,x,x,x)}}
+B.Ah.prototype={
+bF(d){return!this.f.eI(0,d.f)}}
+B.nl.prototype={
+q(d,e){var x,w,v,u,t,s,r,q,p,o,n,m,l=this,k=null,j=e.H(y.l),i=j==null?k:j.f
+if(i==null)throw A.e("ActionButton must be a child component of FlanActionBar")
+j=i.d
+x=C.c.bW(j,l)
+w=!(x>0&&j[x-1] instanceof B.nl)
+v=!(x<j.length-1&&j[x+1] instanceof B.nl)
+u=B.aDY(e)
+j=w?5:0
+t=v?5:0
+s=l.ax
+if(s==null)s=u.y
+if(w){r=$.t().$1(999)
+r=new A.bN(r,r)}else r=C.S
+if(v){q=$.t().$1(999)
+q=new A.bN(q,q)}else q=C.S
+p=l.y
+o=A.az([D.aW,u.Q,D.dY,u.z],y.n,y.a).h(0,p)
+n=A.aE(k,k,k,k,k,k,k,k,k,k,k,$.t().$1(14),k,C.ai,k,k,!0,k,k,k,k,k,k,k,k)
+m=A.G(l.r,k,k,k,k,k,k,k,k)
+return A.cA(new A.aQ(new A.Q(j,0,t,0),A.bD(E.bo(!1,!0,F.uB(m,n,k),l.w,!1,o,!1,k,k,l.at,new B.a6R(l,e),!1,new A.cn(r,q,r,q),!1,D.f5,!1,"",k,k,k,p),s,k),k),1)}}
+var z=a.updateTypes([])
+B.a6R.prototype={
+$0(){var x=this.a
+x.kH(this.b)
+x=x.ay
+if(x!=null)x.$0()},
+$S:0};(function inheritance(){var x=a.inherit
+x(B.nk,A.C)
+x(B.Ah,A.ak)
+x(B.nl,G.lD)
+x(B.a6R,A.b4)})()
+A.ad(b.typeUniverse,JSON.parse('{"Ah":{"ak":[],"an":[],"d":[]},"nk":{"C":[],"d":[]},"nl":{"C":[],"d":[]},"aSO":{"bg":[],"ak":[],"an":[],"d":[]}}'))
+var y={l:A.i("Ah"),k:A.i("aSO"),n:A.i("ly"),a:A.i("By")}}
+$__dart_deferred_initializers__["U753pd8ipxCoce362hwO37a/94Q="] = $__dart_deferred_initializers__.current
