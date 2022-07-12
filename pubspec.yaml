@@ -85,10 +85,3 @@ flutter:
         - asset: assets/fonts/vant_icon.ttf
           style: normal
           weight: 400
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
-  deferred-components:
-    - name: button_page
-      libraries:
-        - package:flant_app/basic_pages/01_button_page.dart
