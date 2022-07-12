@@ -42,7 +42,7 @@ class CompRouter {
     }
     return MaterialPageRoute<dynamic>(
       builder: (BuildContext context) => FutureBuilder<void>(
-        future: route.future,
+        future: route.future!(),
         builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             if (snapshot.hasError) {

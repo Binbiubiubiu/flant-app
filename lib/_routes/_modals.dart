@@ -10,7 +10,7 @@ class CompRoute {
   });
   final String name;
   final String? path;
-  final Future<dynamic>? future;
+  final Future<dynamic> Function()? future;
   final WidgetBuilder? component;
   final List<CompRoute>? routes;
 
