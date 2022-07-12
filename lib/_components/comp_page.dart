@@ -25,6 +25,8 @@ class CompPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(query['title'] as String),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
       ),
       backgroundColor: backgroundColor,
       body: SafeArea(
