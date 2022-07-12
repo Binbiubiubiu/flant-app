@@ -14,13 +14,13 @@ D=c[114]
 E=c[140]
 G.rA.prototype={
 t(d,e){var x,w,v,u=null,t=B.c("basicUsage",u,u),s=y.a
-t=H.S(!1,B.a([I.cf(C.A,A.WC,C.aa,F.C,u,C.A,20,20)],s),t)
+t=H.S(!1,B.a([I.cf(C.A,A.WC,C.aa,F.D,u,C.A,20,20)],s),t)
 x=B.c("Icon.badge",u,u)
-x=H.S(!1,B.a([I.cf(C.A,A.Ww,C.aa,F.C,u,C.A,20,20)],s),x)
+x=H.S(!1,B.a([I.cf(C.A,A.Ww,C.aa,F.D,u,C.A,20,20)],s),x)
 w=B.c("Icon.color",u,u)
-w=H.S(!1,B.a([I.cf(C.A,A.X0,C.aa,F.C,u,C.A,20,20)],s),w)
+w=H.S(!1,B.a([I.cf(C.A,A.X0,C.aa,F.D,u,C.A,20,20)],s),w)
 v=B.c("Icon.size",u,u)
-return new K.bb(u,B.a([t,x,w,H.S(!1,B.a([I.cf(C.A,A.a_D,C.aa,F.C,u,C.A,20,20)],s),v)],s),F.L,u,u)}}
+return new K.bb(u,B.a([t,x,w,H.S(!1,B.a([I.cf(C.A,A.a_D,C.aa,F.D,u,C.A,20,20)],s),v)],s),F.L,u,u)}}
 var z=a.updateTypes([]);(function inheritance(){var x=a.inherit
 x(G.rA,B.D)})()
 B.am(b.typeUniverse,JSON.parse('{"rA":{"D":[],"d":[]}}'))
@@ -51,4 +51,4 @@ A.X0=B.a(x([A.Qa,A.Q9]),y.a)
 A.Q3=new D.d8(E.cc,null,!1,"",null,40,null,null)
 A.Q4=new D.d8(E.cc,null,!1,"",null,48,null,null)
 A.a_D=B.a(x([A.Q3,A.Q4]),y.a)})()}
-$__dart_deferred_initializers__["jSM1AfGMBMlPVN+bFgM29RZBsIo="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["g1yWCMbMll23kV6fXVmXr1sMPcg="] = $__dart_deferred_initializers__.current

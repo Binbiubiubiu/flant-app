@@ -134,7 +134,7 @@ if(Math.abs(s)>Math.abs(x.a))x=new B.q(s,x.b)
 if(Math.abs(t)>Math.abs(x.b))x=new B.q(x.a,t)}return A.aJ7(x)},
 aJ7(d){return new B.q(B.a5u(C.e.a4(d.a,9)),B.a5u(C.e.a4(d.b,9)))},
 b6_(d,e){if(d.j(0,e))return null
-return Math.abs(e.a-d.a)>Math.abs(e.b-d.b)?C.C:C.Q},
+return Math.abs(e.a-d.a)>Math.abs(e.b-d.b)?C.D:C.Q},
 DJ:function DJ(d,e,f,g,h,i){var _=this
 _.r=d
 _.Q=e
@@ -292,12 +292,12 @@ A.oa.prototype={
 i(d){return"FlanImagePreviewCloseIconPosition."+this.b}}
 A.Lx.prototype={
 l(d){var x=this,w=x.b9$
-if(w!=null)w.L(0,x.gfe())
+if(w!=null)w.L(0,x.gfd())
 x.b9$=null
 x.ag(0)},
 bC(){this.c6()
 this.bY()
-this.ff()}}
+this.fe()}}
 A.rC.prototype={
 t(d,e){var x,w,v,u=null,t="ImagePreview.beforeClose",s="ImagePreview.componentCall",r=B.c("basicUsage",u,u),q=y.p
 r=G.S(!0,B.a([F.ak(E.n,u,!0,!1,u,!1,!1,u,u,u,u,!0,!1,u,u,u,new A.adZ(e),u,u,E.p,B.c("ImagePreview.showImages",u,u),u,u,u,u,u,u,u)],q),r)
@@ -742,4 +742,4 @@ D.rw=new A.oa(3,"bottomRight")
 D.jw=new A.zq(0,"pan")
 D.pu=new A.zq(1,"scale")
 D.agg=new A.zq(2,"rotate")})();(function staticFields(){$.LM=B.a(["https://img.yzcdn.cn/vant/apple-1.jpg","https://img.yzcdn.cn/vant/apple-2.jpg","https://img.yzcdn.cn/vant/apple-3.jpg","https://img.yzcdn.cn/vant/apple-4.jpg"],B.h("k<l>"))})()}
-$__dart_deferred_initializers__["o04ybsVSRxQI0DbCydBbH5D+eiw="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["88jkCeo293wGDB2vhKVdmKfq9VE="] = $__dart_deferred_initializers__.current

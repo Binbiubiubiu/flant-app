@@ -20,20 +20,20 @@ t(d,e){var x=null
 return B.V(x,x,C.h,x,x,A.HS,x,40,x,x,x,x,x,40)}}
 F.qr.prototype={
 t(d,e){var x,w,v,u,t=null,s=B.c("basicUsage",t,t),r=y.a
-s=G.S(!1,B.a([H.cf(D.A,A.a_i,D.aa,C.C,t,D.A,20,20)],r),s)
+s=G.S(!1,B.a([H.cf(D.A,A.a_i,D.aa,C.D,t,D.A,20,20)],r),s)
 x=B.c("Badge.max",t,t)
-x=G.S(!1,B.a([H.cf(D.A,A.VJ,D.aa,C.C,t,D.A,20,20)],r),x)
+x=G.S(!1,B.a([H.cf(D.A,A.VJ,D.aa,C.D,t,D.A,20,20)],r),x)
 w=B.c("Badge.customColor",t,t)
-w=G.S(!1,B.a([H.cf(D.A,A.W3,D.aa,C.C,t,D.A,20,20)],r),w)
+w=G.S(!1,B.a([H.cf(D.A,A.W3,D.aa,C.D,t,D.A,20,20)],r),w)
 v=B.c("Badge.customContent",t,t)
-v=G.S(!1,B.a([H.cf(D.A,B.a([E.w7(A.bB,"",B.V(C.w,A.Q7,C.h,t,t,t,t,16,t,t,t,t,t,t),!1),E.w7(A.bB,"",B.V(C.w,A.Qc,C.h,t,t,t,t,16,t,t,t,t,t,t),!1),E.w7(A.bB,"",B.V(C.w,A.Qd,C.h,t,t,t,t,16,t,t,t,t,t,t),!1)],r),D.aa,C.C,t,D.A,20,20)],r),v)
+v=G.S(!1,B.a([H.cf(D.A,B.a([E.w7(A.bB,"",B.V(C.w,A.Q7,C.h,t,t,t,t,16,t,t,t,t,t,t),!1),E.w7(A.bB,"",B.V(C.w,A.Qc,C.h,t,t,t,t,16,t,t,t,t,t,t),!1),E.w7(A.bB,"",B.V(C.w,A.Qd,C.h,t,t,t,t,16,t,t,t,t,t,t),!1)],r),D.aa,C.D,t,D.A,20,20)],r),v)
 u=B.c("Badge.standalone",t,t)
-return new K.bb(t,B.a([s,x,w,v,G.S(!1,B.a([H.cf(D.A,A.WJ,D.aa,C.C,t,D.A,20,20)],r),u)],r),C.j,t,t)}}
+return new K.bb(t,B.a([s,x,w,v,G.S(!1,B.a([H.cf(D.A,A.WJ,D.aa,C.D,t,D.A,20,20)],r),u)],r),C.j,t,t)}}
 var z=a.updateTypes([]);(function inheritance(){var x=a.inheritMany
 x(B.D,[F.Qf,F.qr])})()
 B.am(b.typeUniverse,JSON.parse('{"Qf":{"D":[],"d":[]},"qr":{"D":[],"d":[]}}'))
 var y={a:B.h("k<d>")};(function constants(){var x=a.makeConstList
-A.HS=new B.aX(C.bs,null,null,C.jO,null,null,C.D)
+A.HS=new B.aX(C.bs,null,null,C.jO,null,null,C.E)
 A.bB=new F.Qf(null)
 A.Q7=new I.d8(L.fo,null,!1,"",null,12,null,null)
 A.Qc=new I.d8(M.aZ,null,!1,"",null,12,null,null)
@@ -55,4 +55,4 @@ A.Pp=new E.fN("10",null,!1,null,A.bB,null,null)
 A.Pr=new E.fN("Hot",null,!1,null,A.bB,null,null)
 A.Pw=new E.fN("",null,!0,null,A.bB,null,null)
 A.a_i=B.a(x([A.Po,A.Pp,A.Pr,A.Pw]),y.a)})()}
-$__dart_deferred_initializers__["TR7XmJsrDVGI9PKBORKxXXPTnsk="] = $__dart_deferred_initializers__.current
+$__dart_deferred_initializers__["9equaGGSFiY/HRoppxurcOtorwI="] = $__dart_deferred_initializers__.current
