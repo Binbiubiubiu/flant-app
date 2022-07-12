@@ -1,5 +1,5 @@
+import 'package:flant/flant.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CompPage extends StatelessWidget {
@@ -25,6 +25,15 @@ class CompPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(query['title'] as String),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+          child: Icon(
+            FlanIcons.arrow_left,
+            size: 24.0.w,
+          ),
+        ),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
       ),

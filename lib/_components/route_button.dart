@@ -1,4 +1,5 @@
 import 'package:flant/components/common/active_response.dart';
+import 'package:flant/flant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,7 +27,7 @@ class RouteButton extends StatelessWidget {
           RotatedBox(
             quarterTurns: 2,
             child: Icon(
-              Icons.arrow_back_ios_sharp,
+              FlanIcons.arrow_left,
               size: 16.0.w,
             ),
           )

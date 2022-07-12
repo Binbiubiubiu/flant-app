@@ -50,7 +50,18 @@ class CompRouter {
             }
             return route.component!(context);
           }
-          return const CircularProgressIndicator();
+          final Size s = MediaQuery.of(context).size;
+          return Container(
+            color: Colors.white,
+            width: s.width,
+            height: s.height,
+            alignment: Alignment.center,
+            child: const SizedBox(
+              width: 100.0,
+              height: 100.0,
+              child: CircularProgressIndicator(),
+            ),
+          );
         },
       ),
       settings:
