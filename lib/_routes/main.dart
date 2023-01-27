@@ -64,8 +64,8 @@ class CompRouter {
           );
         },
       ),
-      settings:
-          settings.copyWith(arguments: <String, String>{'title': route.name}),
+      settings:settings,
+          // settings.copyWith(arguments: <String, String>{'title': route.name}),
     );
   }
 

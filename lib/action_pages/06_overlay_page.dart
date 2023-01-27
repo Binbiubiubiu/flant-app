@@ -77,5 +77,5 @@ void showOverlay(BuildContext context, {Widget? child}) {
   }
 
   entry.addListener(onMounted);
-  Overlay.of(context)?.insert(entry);
+  Overlay.of(context).insert(entry);
 }

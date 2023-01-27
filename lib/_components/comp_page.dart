@@ -2,6 +2,8 @@ import 'package:flant/flant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../_routes/main.dart';
+
 class CompPage extends StatelessWidget {
   const CompPage({
     Key? key,
@@ -18,13 +20,14 @@ class CompPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dynamic query = (ModalRoute.of(context)?.settings.arguments) ??
-        <String, String>{'title': '当前页面'};
+    final RouteSettings? settings = ModalRoute.of(context)?.settings;
+
+    final CompRoute? route = CompRouter.pathMap[settings?.name];
 
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(query['title'] as String),
+        title: Text(route?.name ?? ''),
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pop();
