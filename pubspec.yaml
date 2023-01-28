@@ -27,9 +27,9 @@ dependencies:
   cupertino_icons: ^1.0.0
   easy_localization: ^3.0.0
   flant:
-    path: ../
-    # git:
-    #   url: https://github.com/Binbiubiubiu/flant.git
+    git:
+      url: https://github.com/Binbiubiubiu/flant.git
+    # path: ../
   flutter:
     sdk: flutter
   flutter_localizations:

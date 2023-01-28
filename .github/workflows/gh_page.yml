@@ -14,16 +14,16 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout flant
-        uses: actions/checkout@v2
-        with:
-          repository: Binbiubiubiu/flant
-          ref: master
+      # - name: Checkout flant
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: Binbiubiubiu/flant
+      #     ref: master
       - name: Checkout flant_app
         uses: actions/checkout@v2
         with:
-          path: example
           ref: master
+          # path: example
       - name: Flutter action
         # You may pin to the exact commit or the version.
         # uses: subosito/flutter-action@26bf50084a0c218b5b715a3641c36eac84fd2136
@@ -42,9 +42,10 @@ jobs:
       # - run: flutter test
       # 打包 Web
       - run: flutter build web --release -t lib/main.dart --web-renderer=html --pwa-strategy=none
-        working-directory: example
+        # working-directory: example
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./example/build/web
+          publish_dir: ./build/web
+          # publish_dir: ./example/build/web

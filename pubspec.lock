@@ -124,9 +124,11 @@ packages:
   flant:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "79bbc3bc3825b5675e23cf03798790aa939c6c2f"
+      url: "https://github.com/Binbiubiubiu/flant.git"
+    source: git
     version: "0.0.1-alpha"
   flutter:
     dependency: "direct main"

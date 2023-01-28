@@ -19,16 +19,16 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout flant
-        uses: actions/checkout@v2
-        with:
-          repository: Binbiubiubiu/flant
-          ref: master
+      # - name: Checkout flant
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: Binbiubiubiu/flant
+      #     ref: master
       - name: Checkout flant_app
         uses: actions/checkout@v2
         with:
-          path: example
           ref: master
+          # path: example
 
       - name: Flutter action
         # You may pin to the exact commit or the version.
@@ -50,7 +50,7 @@ jobs:
       # - run: flutter test
       # 打包 APK
       - run: flutter build macos --profile
-        working-directory: example
+        # working-directory: example
       # 打包 ios
       # - run: flutter build ios --release --no-codesign
       #   working-directory: example
@@ -61,6 +61,7 @@ jobs:
           # A personal access token for the GitHub repository in which the release will be created and edited.
           # It is recommended to create the access token with the following scopes: `repo, user, admin:repo_hook`.
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: exmaple/build/macos/Build/Products/Profile/*.app
+          file: build/macos/Build/Products/Profile/*.app
+          # file: exmaple/build/macos/Build/Products/Profile/*.app
           file_glob: true
           tag: ${{ github.ref }}
