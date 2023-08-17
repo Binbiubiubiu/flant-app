@@ -1,31 +1,83 @@
-self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
-$__dart_deferred_initializers__.current=function(a,b,c,$){var B={
-aZw(){return new B.qw(null)},
-qw:function qw(d){this.a=d}},A,F,G,H,C,K,D,L,I,E
-B=a.updateHolder(c[55],B)
-A=c[0]
-F=c[105]
-G=c[60]
-H=c[80]
-C=c[157]
-K=c[161]
-D=c[2]
-L=c[121]
-I=c[98]
-E=c[137]
-B.qw.prototype={
-q(d){var x,w,v,u,t,s=null,r="2.00",q="desc",p="Card.title",o="https://img.yzcdn.cn/vant/ipad.jpeg",n=A.d("basicUsage",s,s),m=y.a
-n=F.aK(A.a([G.acM(A.d(q,s,s),s,"2","",r,"",s,o,A.d(p,s,s))],m),n)
-x=A.d("Card.discountInfo",s,s)
-w=A.d("tag",s,s)
-x=F.aK(A.a([G.acM(A.d(q,s,s),s,"2","10.00",r,w,s,o,A.d(p,s,s))],m),x)
-w=A.d("Card.customContent",s,s)
-v=A.d(q,s,s)
-u=A.d(p,s,s)
-t=A.c6(A.a([H.fg(A.J(A.d("tag",s,s),s,s,s,s,s,s,s,s),!1,s,!1,s,!0,!1,!0,C.bg,s,C.ej),K.HF,H.fg(A.J(A.d("tag",s,s),s,s,s,s,s,s,s,s),!1,s,!1,s,!0,!1,!0,C.bg,s,C.ej)],m),D.w,D.q,D.u)
-return new L.bk(s,A.a([n,x,F.aK(A.a([G.acM(v,A.a([I.bu(!1,!0,A.J(A.d("button",s,s),s,s,s,s,s,s,s,s),s,!1,s,!1,s,s,!1,s,!1,s,!0,E.la,!1,"",s,s,s,E.ch),I.bu(!1,!0,A.J(A.d("button",s,s),s,s,s,s,s,s,s,s),s,!1,s,!1,s,s,!1,s,!1,s,!0,E.la,!1,"",s,s,s,E.ch)],m),"2","",r,"",t,o,u)],m),w)],m),D.h,s,s)}}
-var z=a.updateTypes([]);(function inheritance(){var x=a.inherit
-x(B.qw,A.C)})()
-A.ax(b.typeUniverse,JSON.parse('{"qw":{"C":[],"c":[]}}'))
-var y={a:A.k("m<c>")}}
-$__dart_deferred_initializers__["ASwlEmPFjcvWqRRwIrRBo69hCzw="] = $__dart_deferred_initializers__.current
+((a,b,c)=>{a[b]=a[b]||{}
+a[b][c]=a[b][c]||[]
+a[b][c].push({p:"main.dart.js_211",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
+$__dart_deferred_initializers__.current=function(a,b,c,$){var A={oG:function oG(d,e,f,g,h,i){var _=this
+_.c=d
+_.d=e
+_.e=f
+_.f=g
+_.r=h
+_.a=i},C6:function C6(d,e,f){this.f=d
+this.b=e
+this.a=f},
+j6(d,e,f,g,h){return new A.rQ(h,f,d,e,g,null)},
+rQ:function rQ(d,e,f,g,h,i){var _=this
+_.c=d
+_.d=e
+_.e=f
+_.f=g
+_.r=h
+_.a=i},
+agJ:function agJ(d,e,f){this.a=d
+this.b=e
+this.c=f},
+agK:function agK(d,e,f){this.a=d
+this.b=e
+this.c=f},
+aTs(d){var x
+d.a3(y.l)
+x=G.cw(d)
+return x.fy}},B,C,E,F,D,G
+A=a.updateHolder(c[65],A)
+B=c[0]
+C=c[2]
+E=c[113]
+F=c[123]
+D=c[119]
+G=c[121]
+A.oG.prototype={
+q(d){var x=null,w=A.aTs(d)
+return B.V(x,new A.C6(this,B.S0(this.r,x,x,!0),x),C.f,this.d,x,x,x,x,x,x,x,x,x,w.a)}}
+A.C6.prototype={
+bM(d){return!this.f.fO(0,d.f)}}
+A.rQ.prototype={
+q(d){var x,w,v,u,t=this,s=null,r=d.a3(y.g),q=r==null?s:r.f
+if(q==null)throw B.f("FlanSidebarItem must be a child Widget of FlanSidebar")
+x=C.b.cd(q.r,t)
+w=x===q.c
+v=A.aTs(d)
+u=B.xo(0,new B.ed(C.b0,s,s,E.cA(B.V(s,s,C.f,v.as,s,s,s,v.Q,s,s,s,s,s,v.z),!1,!1,!1,!1,!1,C.m,w),s))
+r=B.K(t.c,s,s,s,s,s,s,s,F.aH)
+return B.cy(C.aa,B.a([B.bH(B.hU(new A.agK(t,w,v),D.we(r,t.e,s,t.d),s,t.f,!0,new A.agJ(t,x,q)),s,1/0),u],y.e),C.J,C.V,s)}}
+var z=a.updateTypes([])
+A.agJ.prototype={
+$0(){var x,w,v
+if(this.a.f)return
+x=this.c
+w=this.b
+if(x.c!==w){v=x.e
+if(v!=null)v.$1(w)
+x=x.f
+if(x!=null)x.$1(w)}},
+$S:0}
+A.agK.prototype={
+$3(d,e,f){var x,w,v,u,t=this,s=null,r=t.b
+if(r){x=t.c
+w=x.at}else{x=t.c
+w=e?x.r:x.w}v=t.a
+if(v.f)u=x.e
+else u=r?x.y:x.d
+r=B.aG(s,s,u,s,s,s,s,s,s,s,s,x.b,s,s,s,s,x.c,!0,s,s,s,s,s,s,s,s)
+v=v.r
+return B.bt(B.V(C.b0,f,C.f,w,s,s,s,s,s,s,v==null?x.f:v,s,s,s),s,s,C.I,!0,r,s,s,C.D)},
+$C:"$3",
+$R:3,
+$S:112};(function inheritance(){var x=a.inheritMany,w=a.inherit
+x(B.C,[A.oG,A.rQ])
+w(A.C6,B.al)
+w(A.agJ,B.bh)
+w(A.agK,B.aZ)})()
+B.ay(b.typeUniverse,JSON.parse('{"C6":{"al":[],"ao":[],"c":[]},"oG":{"C":[],"c":[]},"rQ":{"C":[],"c":[]},"b4l":{"bk":[],"al":[],"ao":[],"c":[]}}'))
+var y={g:B.k("C6"),l:B.k("b4l"),e:B.k("n<c>")}};
+((a,b)=>{a[b]=a.current
+a.eventLog.push({p:"main.dart.js_211",e:"endPart",h:b})})($__dart_deferred_initializers__,"titsgs8qxQ8dxMS5ydL8R6K2b0w=");
