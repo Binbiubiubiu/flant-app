@@ -41,7 +41,7 @@ jobs:
       # 执行测试
       # - run: flutter test
       # 打包 Web
-      - run: flutter build web --release -t lib/main.dart --web-renderer=html --pwa-strategy=none
+      - run: flutter build web --release -t lib/main.dart --web-renderer=html --pwa-strategy=none --no-tree-shake-icons
         # working-directory: example
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
