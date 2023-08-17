@@ -28,11 +28,11 @@ class BadgePage extends StatelessWidget {
       children: <Widget>[
         DocBlock(
           title: tr('basicUsage'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanBadge(
                   content: '5',
                   child: FlanBadgeChildBlock(),
@@ -55,11 +55,11 @@ class BadgePage extends StatelessWidget {
         ),
         DocBlock(
           title: tr('Badge.max'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanBadge(
                   content: '20',
                   max: 9,
@@ -81,11 +81,11 @@ class BadgePage extends StatelessWidget {
         ),
         DocBlock(
           title: tr('Badge.customColor'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanBadge(
                   content: '5',
                   color: Color(0xff1989fa),
@@ -151,11 +151,11 @@ class BadgePage extends StatelessWidget {
         ),
         DocBlock(
           title: tr('Badge.standalone'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanBadge(
                   content: '20',
                 ),

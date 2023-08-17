@@ -6,9 +6,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import './_components/main.dart';
 import './_routes/main.dart';
 import 'doc_mixin.dart' if (dart.library.html) 'web/doc_mixin.dart';
-import 'screen_util.dart';
 
 // import 'configure.dart' if (dart.library.html) 'web/configure.dart';
+
+const Size kIphone6 = Size(375, 667);
+const BoxConstraints kMaxConstraints = BoxConstraints(
+  maxWidth: 375,
+  maxHeight: 667,
+);
 
 Future<void> main() async {
   // debugProfileBuildsEnabled = true;
@@ -44,8 +49,11 @@ class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return FlanScreenUtilInit(
-      builder: () {
+    return ScreenUtilInit(
+      designSize: kIphone6,
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (BuildContext context, Widget? child) {
         return FlanTheme(
           data: FlanThemeData(),
           child: MaterialApp(
@@ -63,13 +71,14 @@ class _MyAppState extends State<MyApp> with DocRouterSyncMixin<MyApp> {
               primarySwatch: Colors.blue,
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
-            home: const MyHomePage(),
+            home: child,
             onUnknownRoute: (RouteSettings settings) =>
                 CompRouter.fallbackRoute,
             onGenerateRoute: CompRouter.onGenerateRoute,
           ),
         );
       },
+      child: const MyHomePage(),
     );
   }
 }

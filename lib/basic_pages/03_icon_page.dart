@@ -11,11 +11,11 @@ class IconPage extends StatelessWidget {
       children: <Widget>[
         DocBlock(
           title: tr('basicUsage'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanIcon.name(
                   FlanIcons.chat_o,
                   size: 32.0,
@@ -30,11 +30,11 @@ class IconPage extends StatelessWidget {
         ),
         DocBlock(
           title: tr('Icon.badge'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanIcon.name(
                   FlanIcons.chat_o,
                   dot: true,
@@ -56,11 +56,11 @@ class IconPage extends StatelessWidget {
         ),
         DocBlock(
           title: tr('Icon.color'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanIcon.name(
                   FlanIcons.cart_o,
                   color: Colors.blue,
@@ -77,11 +77,11 @@ class IconPage extends StatelessWidget {
         ),
         DocBlock(
           title: tr('Icon.size'),
-          children: <Widget>[
+          children: const <Widget>[
             Wrap(
               spacing: 20.0,
               runSpacing: 20.0,
-              children: const <Widget>[
+              children: <Widget>[
                 FlanIcon.name(
                   FlanIcons.chat_o,
                   size: 40.0,
